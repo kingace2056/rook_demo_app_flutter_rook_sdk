@@ -1,16 +1,26 @@
-# rook_sdk_demo_app_flutter
+# Rook SDK demo app flutter
 
-A new Flutter project.
+Demo app for ROOK SDK packages:
 
-## Getting Started
+* [rook_sdk_core](https://pub.dev/packages/rook_sdk_core)
+* [rook_sdk_apple_health](https://pub.dev/packages/rook_sdk_apple_health)
+* [rook_sdk_health_connect](https://pub.dev/packages/rook_sdk_health_connect)
 
-This project is a starting point for a Flutter application.
+## Configure & Run
 
-A few resources to get you started if this is your first Flutter project:
+1. In the lib folder create a secrets.dart file with a Secrets class and add the following
+   constants:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```dart
+class Secrets {
+  static String userID = 'userID';
+  static String clientUUID = 'clientUUID';
+  static String clientPassword = 'clientPassword';
+  static String rookUrl = 'rookUrl';
+  static String connectionsPageUrl = 'connectionsPageUrl';
+}
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Run `flutter pub get`
+3. In the ios folder, ensure that your Podfile is targeted to ios 13+ (`platform :ios, '13.0'`)
+4. In the ios folder, run `pod install`
