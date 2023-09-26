@@ -193,6 +193,25 @@ class _SdkHealthConnectPlaygroundState
     });
   }
 
+ void updateTimeZoneInformation(){
+   logger.info('Updating user timezone...');
+
+   rookConfigurationManager.syncUserTimeZone().then((_) {
+     logger.info('User timezone updated successfully');
+   }).catchError((exception) {
+     final error = switch (exception) {
+       (SDKNotInitializedException it) => 'SDKNotInitializedException: ${it.message}',
+       (UserNotInitializedException it) => 'UserNotInitializedException: ${it.message}',
+       (ConnectTimeoutException it) => 'ConnectTimeoutException: ${it.message}',
+       (HttpRequestException it) => 'HttpRequestException: ${it.message}',
+       _ => exception.toString(),
+     };
+
+     logger.info('Error updating user timezone:');
+     logger.info(error);
+   });
+ }
+
   void checkAvailability() {
     availabilityOutput.clear();
 
@@ -260,7 +279,7 @@ class _SdkHealthConnectPlaygroundState
   }
 
   void requestPermissions() {
-    logger.info("Requesting all permissions...");
+    logger.info('Requesting all permissions...');
 
     rookHealthPermissionsManager.requestAllPermissions().then((_) {
       logger.info('All permissions request sent');
@@ -283,7 +302,7 @@ class _SdkHealthConnectPlaygroundState
   }
 
   void openHealthConnect() {
-    logger.info("Opening Health Connect...");
+    logger.info('Opening Health Connect...');
 
     rookHealthPermissionsManager.openHealthConnectSettings().then((_) {
       logger.info('Health Connect was opened');

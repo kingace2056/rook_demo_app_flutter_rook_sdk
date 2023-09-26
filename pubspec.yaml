@@ -11,8 +11,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   rook_sdk_core: "^0.0.1"
-  rook_sdk_health_connect: "^0.0.1"
-  rook_sdk_apple_health: "^0.0.1"
+  rook_sdk_health_connect: 0.0.2
+  rook_sdk_apple_health: 0.0.2
   logging: ">=1.0.0 <2.0.0"
   url_launcher: ">=6.0.0 <7.0.0"
   receive_intent: ^0.2.3

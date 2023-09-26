@@ -161,8 +161,23 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     });
   }
 
+  void updateTimeZoneInformation(){
+    logger.info('Updating user timezone...');
+
+    rookConfigurationManager.syncUserTimeZone().then((_) {
+      logger.info('User timezone updated successfully');
+    }).catchError((exception) {
+      final error = switch (exception) {
+        _ => exception.toString(),
+      };
+
+      logger.info('Error updating user timezone:');
+      logger.info(error);
+    });
+  }
+
   void requestPermissions() {
-    logger.info("Requesting all permissions...");
+    logger.info('Requesting all permissions...');
 
     rookHealthPermissionsManager.requestAllPermissions().then((_) {
       logger.info('All permissions request sent');
