@@ -13,11 +13,8 @@ Demo app for ROOK SDK packages:
 
 ```dart
 class Secrets {
-  static String userID = 'userID';
   static String clientUUID = 'clientUUID';
   static String clientPassword = 'clientPassword';
-  static String rookUrl = 'rookUrl';
-  static String connectionsPageUrl = 'connectionsPageUrl';
 }
 ```
 

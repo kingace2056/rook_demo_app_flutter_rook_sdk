@@ -1,10 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
+import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/section_title.dart';
 import 'package:rook_sdk_demo_app_flutter/secrets.dart';
-import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_health_connect/rook_sdk_health_connect.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -134,10 +135,13 @@ class _SdkHealthConnectPlaygroundState
   }
 
   void setConfiguration() {
+    const environment =
+        kDebugMode ? RookEnvironment.sandbox : RookEnvironment.production;
+
     final rookConfiguration = RookConfiguration(
-      Secrets.rookUrl,
       Secrets.clientUUID,
       Secrets.clientPassword,
+      environment,
     );
 
     configurationOutput.clear();
@@ -145,7 +149,10 @@ class _SdkHealthConnectPlaygroundState
     configurationOutput.append('Using configuration:');
     configurationOutput.append('$rookConfiguration');
 
-    rookConfigurationManager.setLocalLoggingLevel(LocalLoggingLevel.advanced);
+    if (kDebugMode) {
+      rookConfigurationManager.enableNativeLogs();
+    }
+
     rookConfigurationManager.setConfiguration(rookConfiguration);
 
     setState(
@@ -193,24 +200,27 @@ class _SdkHealthConnectPlaygroundState
     });
   }
 
- void updateTimeZoneInformation(){
-   logger.info('Updating user timezone...');
+  void updateTimeZoneInformation() {
+    logger.info('Updating user timezone...');
 
-   rookConfigurationManager.syncUserTimeZone().then((_) {
-     logger.info('User timezone updated successfully');
-   }).catchError((exception) {
-     final error = switch (exception) {
-       (SDKNotInitializedException it) => 'SDKNotInitializedException: ${it.message}',
-       (UserNotInitializedException it) => 'UserNotInitializedException: ${it.message}',
-       (ConnectTimeoutException it) => 'ConnectTimeoutException: ${it.message}',
-       (HttpRequestException it) => 'HttpRequestException: ${it.message}',
-       _ => exception.toString(),
-     };
+    rookConfigurationManager.syncUserTimeZone().then((_) {
+      logger.info('User timezone updated successfully');
+    }).catchError((exception) {
+      final error = switch (exception) {
+        (SDKNotInitializedException it) =>
+          'SDKNotInitializedException: ${it.message}',
+        (UserNotInitializedException it) =>
+          'UserNotInitializedException: ${it.message}',
+        (ConnectTimeoutException it) =>
+          'ConnectTimeoutException: ${it.message}',
+        (HttpRequestException it) => 'HttpRequestException: ${it.message}',
+        _ => exception.toString(),
+      };
 
-     logger.info('Error updating user timezone:');
-     logger.info(error);
-   });
- }
+      logger.info('Error updating user timezone:');
+      logger.info(error);
+    });
+  }
 
   void checkAvailability() {
     availabilityOutput.clear();

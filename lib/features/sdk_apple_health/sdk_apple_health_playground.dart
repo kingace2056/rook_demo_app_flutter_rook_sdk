@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
@@ -108,10 +109,13 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
   }
 
   void setConfiguration() {
+    const environment =
+    kDebugMode ? RookEnvironment.sandbox : RookEnvironment.production;
+
     final rookConfiguration = RookConfiguration(
-      Secrets.rookUrl,
       Secrets.clientUUID,
       Secrets.clientPassword,
+      environment,
     );
 
     configurationOutput.clear();
@@ -122,7 +126,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     rookConfigurationManager.setConfiguration(rookConfiguration);
 
     setState(
-        () => configurationOutput.append('Configuration set successfully'));
+            () => configurationOutput.append('Configuration set successfully'));
   }
 
   void initialize() {
@@ -135,7 +139,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     }).catchError((exception) {
       final error = switch (exception) {
         (MissingConfigurationException it) =>
-          'MissingConfigurationException: ${it.message}',
+        'MissingConfigurationException: ${it.message}',
         _ => exception.toString(),
       };
 
@@ -212,7 +216,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     await syncBodySummary(yesterday);
 
     setState(
-        () => syncOutput.append('Syncing Physical events of today: $today...'));
+            () => syncOutput.append('Syncing Physical events of today: $today...'));
     await syncPhysicalEvents(today);
 
     setState(() =>
@@ -297,7 +301,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
       await rookEventManager.syncBodyHeartRateEvents(today);
 
       setState(
-          () => syncOutput.append('BodyHeartRate events synced successfully'));
+              () => syncOutput.append('BodyHeartRate events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),

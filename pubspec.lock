@@ -172,26 +172,26 @@ packages:
     dependency: "direct main"
     description:
       name: rook_sdk_apple_health
-      sha256: "8a6bc333a4339e41184e1ed92a7332cec23b9474a9acb0d1685edabebeaf15df"
+      sha256: e6054ab1e97c27f20a3b82c2e03c2149856b390feab7b290d6530b6a6eaa3e67
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.1.0"
   rook_sdk_core:
     dependency: "direct main"
     description:
       name: rook_sdk_core
-      sha256: de37fae4877c7417fc23526c21d20092f7f52e5d15713695678cb4d9d09464c0
+      sha256: "771d84c53e09b766aadab44a07909eb82456b1823c01a7d041bdee6f3b9d34a4"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.0.2"
   rook_sdk_health_connect:
     dependency: "direct main"
     description:
       name: rook_sdk_health_connect
-      sha256: dd31456bee1f49a8f0f3923b0992b7c9166befba783d2541aa0ea9cac9c7acf2
+      sha256: "026de0f1ae98a63c1e167da28e28d4caf3be96103617f1a1ffec18d82f51467c"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
