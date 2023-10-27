@@ -263,7 +263,9 @@ class _SdkHealthConnectPlaygroundState
     setState(() => checkPermissionsOutput
         .append('Checking all permissions (Sleep, Physical and Body)...'));
 
-    rookHealthPermissionsManager.hasAllPermissions().then((hasPermissions) {
+    rookHealthPermissionsManager
+        .checkPermissions(HealthPermission.all)
+        .then((hasPermissions) {
       final string = hasPermissions
           ? 'All permissions are granted! You can skip the next 2 steps'
           : 'There are missing permissions. Please grant them';
@@ -291,18 +293,12 @@ class _SdkHealthConnectPlaygroundState
   void requestPermissions() {
     logger.info('Requesting all permissions...');
 
-    rookHealthPermissionsManager.requestAllPermissions().then((_) {
+    rookHealthPermissionsManager
+        .requestPermissions(HealthPermission.all)
+        .then((_) {
       logger.info('All permissions request sent');
     }).catchError((exception) {
       final error = switch (exception) {
-        (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
-        (UserNotInitializedException it) =>
-          'UserNotInitializedException: ${it.message}',
-        (HealthConnectNotInstalledException it) =>
-          'HealthConnectNotInstalledException: ${it.message}',
-        (DeviceNotSupportedException it) =>
-          'DeviceNotSupportedException: ${it.message}',
         _ => exception.toString(),
       };
 
