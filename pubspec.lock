@@ -88,6 +88,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  focus_detector:
+    dependency: "direct main"
+    description:
+      name: focus_detector
+      sha256: "05e32d9dd378cd54f1a3f9ce813c05156f28eb83f8e68f5bf1a37e9cdb21af1c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   js:
     dependency: transitive
     description:
@@ -172,26 +180,26 @@ packages:
     dependency: "direct main"
     description:
       name: rook_sdk_apple_health
-      sha256: e6054ab1e97c27f20a3b82c2e03c2149856b390feab7b290d6530b6a6eaa3e67
+      sha256: b1b2b20420fb23d9b7e5a94fc58e487250ca8567f3330984796490366a432b66
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.2.0"
   rook_sdk_core:
     dependency: "direct main"
     description:
       name: rook_sdk_core
-      sha256: "771d84c53e09b766aadab44a07909eb82456b1823c01a7d041bdee6f3b9d34a4"
+      sha256: "29b20674fe3ad54691d2e8a33265310d7a82d5289e2b8c7a2b77a25af814784c"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.1.0"
   rook_sdk_health_connect:
     dependency: "direct main"
     description:
       name: rook_sdk_health_connect
-      sha256: "363b540ea6cf4dd00b1eb5c33691aaa519dc470073a2c929718a2e293f858377"
+      sha256: "1ad76c2288f715f238e1bd4c4c8a05e18d1772ae9971acc8b0ec9f10c5e746c7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.1"
+    version: "0.3.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -317,6 +325,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  visibility_detector:
+    dependency: transitive
+    description:
+      name: visibility_detector
+      sha256: ec932527913f32f65aa01d3a393504240b9e9021ecc77123f017755605e48832
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.2"
 sdks:
   dart: ">=3.0.0 <4.0.0"
   flutter: ">=3.10.0"

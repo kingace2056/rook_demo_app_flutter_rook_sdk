@@ -14,7 +14,7 @@ Demo app for ROOK SDK packages:
 ```dart
 class Secrets {
   static String clientUUID = 'clientUUID';
-  static String clientPassword = 'clientPassword';
+  static String secretKey = 'secretKey';
 }
 ```
 

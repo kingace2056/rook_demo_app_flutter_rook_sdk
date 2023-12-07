@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="steps_service_title">F-Rook Mono Demo steps tracking service</string>
+    <string name="steps_service_content">F-Rook Mono Demo is tracking your steps…</string>
+</resources>

@@ -4,6 +4,7 @@ class ScrollableScaffold extends StatelessWidget {
   final String name;
   final double padding;
   final Alignment alignment;
+  final Widget? floatingActionButton;
   final Widget child;
 
   const ScrollableScaffold({
@@ -11,6 +12,7 @@ class ScrollableScaffold extends StatelessWidget {
     required this.name,
     this.padding = 10,
     this.alignment = Alignment.center,
+    this.floatingActionButton,
     required this.child,
   }) : super(key: key);
 
@@ -24,6 +26,7 @@ class ScrollableScaffold extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_rounded),
         ),
       ),
+      floatingActionButton: floatingActionButton,
       body: Container(
         padding: EdgeInsets.all(padding),
         alignment: alignment,

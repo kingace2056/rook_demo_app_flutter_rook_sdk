@@ -5,6 +5,7 @@ import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/section_title.dart';
+import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_steps_tracker_playground.dart';
 import 'package:rook_sdk_demo_app_flutter/secrets.dart';
 import 'package:rook_sdk_health_connect/rook_sdk_health_connect.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -37,12 +38,22 @@ class _SdkHealthConnectPlaygroundState
   final ConsoleOutput syncPendingSummariesOutput = ConsoleOutput();
   final ConsoleOutput syncPendingEventsOutput = ConsoleOutput();
 
+  bool enableNavigation = false;
+
   final _formKey = GlobalKey<FormFieldState<String>>();
 
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
       name: 'SDK Health Connect',
+      floatingActionButton: FilledButton.tonal(
+        onPressed: enableNavigation
+            ? () => Navigator.of(context).pushNamed(
+                  androidStepsTrackerPlaygroundRoute,
+                )
+            : null,
+        child: const Icon(Icons.directions_walk_rounded),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Column(
@@ -140,7 +151,7 @@ class _SdkHealthConnectPlaygroundState
 
     final rookConfiguration = RookConfiguration(
       Secrets.clientUUID,
-      Secrets.clientPassword,
+      Secrets.secretKey,
       environment,
     );
 
@@ -186,7 +197,10 @@ class _SdkHealthConnectPlaygroundState
     setState(() => updateUserOutput.append('Updating userID...'));
 
     rookConfigurationManager.updateUserID(userID!).then((_) {
-      setState(() => updateUserOutput.append('userID updated successfully'));
+      setState(() {
+        updateUserOutput.append('userID updated successfully');
+        enableNavigation = true;
+      });
     }).catchError((exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
@@ -197,6 +211,25 @@ class _SdkHealthConnectPlaygroundState
 
       updateUserOutput.append('Error updating userID:');
       setState(() => updateUserOutput.append(error));
+    });
+  }
+
+  void deleteUser() {
+    logger.info('Deleting user from rook...');
+
+    rookConfigurationManager.deleteUserFromRook().then((_) {
+      logger.info('User deleted from rook');
+    }).catchError((exception) {
+      final error = switch (exception) {
+        (SDKNotInitializedException it) =>
+          'SDKNotInitializedException: ${it.message}',
+        (UserNotInitializedException it) =>
+          'UserNotInitializedException: ${it.message}',
+        _ => exception.toString(),
+      };
+
+      logger.info('Error deleting user from rook:');
+      logger.info(error);
     });
   }
 

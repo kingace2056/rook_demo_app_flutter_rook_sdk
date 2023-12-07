@@ -34,7 +34,7 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="(Flutter) Rook SDK Demo">
+        android:label="F-Rook Mono Demo">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -82,5 +82,17 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <meta-data
+            android:name="io.tryrook.rook.realtime.STEPS_SERVICE_NOTIFICATION_ICON"
+            android:resource="@drawable/ic_launcher_foreground" />
+
+        <meta-data
+            android:name="io.tryrook.rook.realtime.STEPS_SERVICE_NOTIFICATION_TITLE"
+            android:resource="@string/steps_service_title" />
+
+        <meta-data
+            android:name="io.tryrook.rook.realtime.STEPS_SERVICE_NOTIFICATION_CONTENT"
+            android:resource="@string/steps_service_content" />
     </application>
 </manifest>

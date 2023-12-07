@@ -1,12 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
+import 'package:rook_sdk_apple_health/rook_sdk_apple_health.dart';
+import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/section_title.dart';
+import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_calories_tracker_playground.dart';
+import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_steps_tracker_playground.dart';
 import 'package:rook_sdk_demo_app_flutter/secrets.dart';
-import 'package:rook_sdk_apple_health/rook_sdk_apple_health.dart';
-import 'package:rook_sdk_core/rook_sdk_core.dart';
 
 const String sdkAppleHealthPlaygroundRoute = '/sdk-apple-health/playground';
 
@@ -33,12 +35,35 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
   final ConsoleOutput syncPendingSummariesOutput = ConsoleOutput();
   final ConsoleOutput syncPendingEventsOutput = ConsoleOutput();
 
+  bool enableNavigation = false;
+
   final _formKey = GlobalKey<FormFieldState<String>>();
 
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
       name: 'SDK Apple Health',
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FilledButton.tonal(
+            onPressed: enableNavigation
+                ? () => Navigator.of(context).pushNamed(
+                      iosStepsTrackerPlaygroundRoute,
+                    )
+                : null,
+            child: const Icon(Icons.directions_walk_rounded),
+          ),
+          FilledButton.tonal(
+            onPressed: enableNavigation
+                ? () => Navigator.of(context).pushNamed(
+                      iosCaloriesTrackerPlaygroundRoute,
+                    )
+                : null,
+            child: const Icon(Icons.local_fire_department_rounded),
+          ),
+        ],
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Column(
@@ -110,11 +135,11 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
 
   void setConfiguration() {
     const environment =
-    kDebugMode ? RookEnvironment.sandbox : RookEnvironment.production;
+        kDebugMode ? RookEnvironment.sandbox : RookEnvironment.production;
 
     final rookConfiguration = RookConfiguration(
       Secrets.clientUUID,
-      Secrets.clientPassword,
+      Secrets.secretKey,
       environment,
     );
 
@@ -126,7 +151,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     rookConfigurationManager.setConfiguration(rookConfiguration);
 
     setState(
-            () => configurationOutput.append('Configuration set successfully'));
+        () => configurationOutput.append('Configuration set successfully'));
   }
 
   void initialize() {
@@ -139,7 +164,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     }).catchError((exception) {
       final error = switch (exception) {
         (MissingConfigurationException it) =>
-        'MissingConfigurationException: ${it.message}',
+          'MissingConfigurationException: ${it.message}',
         _ => exception.toString(),
       };
 
@@ -165,7 +190,22 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     });
   }
 
-  void updateTimeZoneInformation(){
+  void deleteUser() {
+    logger.info('Deleting user from rook...');
+
+    rookConfigurationManager.deleteUserFromRook().then((_) {
+      logger.info('User deleted from rook');
+    }).catchError((exception) {
+      final error = switch (exception) {
+        _ => exception.toString(),
+      };
+
+      logger.info('Error deleting user from rook:');
+      logger.info(error);
+    });
+  }
+
+  void updateTimeZoneInformation() {
     logger.info('Updating user timezone...');
 
     rookConfigurationManager.syncUserTimeZone().then((_) {
@@ -185,6 +225,8 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
 
     rookHealthPermissionsManager.requestAllPermissions().then((_) {
       logger.info('All permissions request sent');
+
+      setState(() => enableNavigation = true);
     }).catchError((exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -216,7 +258,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     await syncBodySummary(yesterday);
 
     setState(
-            () => syncOutput.append('Syncing Physical events of today: $today...'));
+        () => syncOutput.append('Syncing Physical events of today: $today...'));
     await syncPhysicalEvents(today);
 
     setState(() =>
@@ -301,7 +343,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
       await rookEventManager.syncBodyHeartRateEvents(today);
 
       setState(
-              () => syncOutput.append('BodyHeartRate events synced successfully'));
+          () => syncOutput.append('BodyHeartRate events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
