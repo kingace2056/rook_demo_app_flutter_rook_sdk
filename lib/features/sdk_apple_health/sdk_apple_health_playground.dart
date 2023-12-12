@@ -262,6 +262,14 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     await syncPhysicalEvents(today);
 
     setState(() =>
+        syncOutput.append('Syncing BloodGlucose events of today: $today...'));
+    await syncBloodGlucoseEvents(today);
+
+    setState(() =>
+        syncOutput.append('Syncing BloodPressure events of today: $today...'));
+    await syncBloodPressureEvents(today);
+
+    setState(() =>
         syncOutput.append('Syncing BodyHeartRate events of today: $today...'));
     await syncBodyHeartRateEvents(today);
 
@@ -276,6 +284,10 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     setState(() => syncOutput
         .append('Syncing PhysicalOxygenation events of today: $today...'));
     await syncPhysicalOxygenationEvents(today);
+
+    setState(() =>
+        syncOutput.append('Syncing Temperature events of today: $today...'));
+    await syncTemperatureEvents(today);
   }
 
   Future<void> syncSleepSummary(DateTime yesterday) async {
@@ -334,6 +346,38 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
       };
 
       syncOutput.append('Error syncing Physical events:');
+      setState(() => syncOutput.append(error));
+    }
+  }
+
+  Future<void> syncBloodGlucoseEvents(DateTime today) async {
+    try {
+      await rookEventManager.syncBloodGlucoseEvents(today);
+
+      setState(
+          () => syncOutput.append('BloodGlucose events synced successfully'));
+    } catch (exception) {
+      final error = switch (exception) {
+        _ => exception.toString(),
+      };
+
+      syncOutput.append('Error syncing BloodGlucose events:');
+      setState(() => syncOutput.append(error));
+    }
+  }
+
+  Future<void> syncBloodPressureEvents(DateTime today) async {
+    try {
+      await rookEventManager.syncBloodPressureEvents(today);
+
+      setState(
+          () => syncOutput.append('BloodPressure events synced successfully'));
+    } catch (exception) {
+      final error = switch (exception) {
+        _ => exception.toString(),
+      };
+
+      syncOutput.append('Error syncing BloodPressure events:');
       setState(() => syncOutput.append(error));
     }
   }
@@ -398,6 +442,22 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
       };
 
       syncOutput.append('Error syncing PhysicalOxygenation events:');
+      setState(() => syncOutput.append(error));
+    }
+  }
+
+  Future<void> syncTemperatureEvents(DateTime today) async {
+    try {
+      await rookEventManager.syncTemperatureEvents(today);
+
+      setState(
+          () => syncOutput.append('Temperature events synced successfully'));
+    } catch (exception) {
+      final error = switch (exception) {
+        _ => exception.toString(),
+      };
+
+      syncOutput.append('Error syncing Temperature events:');
       setState(() => syncOutput.append(error));
     }
   }
