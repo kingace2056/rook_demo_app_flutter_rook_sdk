@@ -177,6 +177,7 @@ class _SdkHealthConnectPlaygroundState
 
     rookConfigurationManager.initRook().then((_) {
       setState(() => initializeOutput.append('SDK initialized successfully'));
+      checkUserIDRegistered();
     }).catchError((exception) {
       final error = switch (exception) {
         (MissingConfigurationException it) =>
@@ -188,6 +189,25 @@ class _SdkHealthConnectPlaygroundState
 
       initializeOutput.append('Error initializing SDK:');
       setState(() => initializeOutput.append(error));
+    });
+  }
+
+  void checkUserIDRegistered() {
+    updateUserOutput.clear();
+
+    rookConfigurationManager.getUserID().then((userID) {
+      if (userID != null) {
+        setState(
+          () => updateUserOutput
+              .append('Found local userID $userID, you can skip step 3'),
+        );
+        enableNavigation = true;
+      } else {
+        setState(
+          () => updateUserOutput
+              .append('Local userID not found, please set a userID'),
+        );
+      }
     });
   }
 
@@ -976,5 +996,10 @@ class _SdkHealthConnectPlaygroundState
       syncPendingEventsOutput.append('Error syncing pending events:');
       setState(() => syncPendingEventsOutput.append(error));
     });
+  }
+
+  void syncYesterdayHealthData() async {
+    await rookSummaryManager.syncYesterdaySummaries();
+    await rookEventManager.syncYesterdayEvents();
   }
 }
