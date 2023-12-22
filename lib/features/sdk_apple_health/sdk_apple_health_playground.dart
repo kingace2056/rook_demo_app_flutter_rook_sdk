@@ -498,4 +498,9 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
       setState(() => syncPendingEventsOutput.append(error));
     });
   }
+
+  void syncYesterdayHealthData() async {
+    await rookSummaryManager.syncYesterdaySummaries();
+    await rookEventManager.syncYesterdayEvents();
+  }
 }
