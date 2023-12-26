@@ -180,10 +180,10 @@ packages:
     dependency: "direct main"
     description:
       name: rook_sdk_apple_health
-      sha256: a06c82aff2df39177c6d05308eba89e41e0607a7e7471ed19117f55bcaadc769
+      sha256: "2f0ae41fa99ce19f6a2f349687bb4caca22e37f281c1c7857e26beeffb18577a"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.3"
+    version: "0.2.4"
   rook_sdk_core:
     dependency: "direct main"
     description:
