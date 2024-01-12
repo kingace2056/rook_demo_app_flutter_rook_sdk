@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:logging/logging.dart';
 import 'package:receive_intent/receive_intent.dart';
 import 'package:rook_sdk_demo_app_flutter/app_router.dart';
@@ -21,8 +20,7 @@ void main() {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) => runAppFromIntent());
+  runAppFromIntent();
 }
 
 void runAppFromIntent() async {
