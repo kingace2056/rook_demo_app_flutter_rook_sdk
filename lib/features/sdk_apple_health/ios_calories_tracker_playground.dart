@@ -6,7 +6,8 @@ import 'package:logging/logging.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_apple_health/rook_sdk_apple_health.dart';
 
-const String iosCaloriesTrackerPlaygroundRoute = '/ios/calories-tracker-playground';
+const String iosCaloriesTrackerPlaygroundRoute =
+    '/ios/calories-tracker-playground';
 
 class IosCaloriesTrackerPlayground extends StatefulWidget {
   const IosCaloriesTrackerPlayground({super.key});
@@ -16,7 +17,8 @@ class IosCaloriesTrackerPlayground extends StatefulWidget {
       _IosCaloriesTrackerPlaygroundState();
 }
 
-class _IosCaloriesTrackerPlaygroundState extends State<IosCaloriesTrackerPlayground> {
+class _IosCaloriesTrackerPlaygroundState
+    extends State<IosCaloriesTrackerPlayground> {
   final Logger logger = Logger('IosCaloriesTrackerPlayground');
 
   Timer? timer;
@@ -56,30 +58,27 @@ class _IosCaloriesTrackerPlaygroundState extends State<IosCaloriesTrackerPlaygro
       alignment: Alignment.topCenter,
       child: FocusDetector(
         onFocusGained: checkCaloriesTrackerStatus,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Column(
-            children: [
-              CheckboxListTile(
-                value: isActive,
-                onChanged: (value) {},
-                title: Text(
-                  isActive ? "Tracker is running" : "Tracker is stopped",
-                ),
+        child: Column(
+          children: [
+            CheckboxListTile(
+              value: isActive,
+              onChanged: (value) {},
+              title: Text(
+                isActive ? "Tracker is running" : "Tracker is stopped",
               ),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: isLoading
-                    ? null
-                    : isActive
-                        ? stopCaloriesTracker
-                        : startCaloriesTracker,
-                child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
-              ),
-              const SizedBox(height: 20),
-              Text('Total calories of today: $calories'),
-            ],
-          ),
+            ),
+            const SizedBox(height: 20),
+            FilledButton(
+              onPressed: isLoading
+                  ? null
+                  : isActive
+                  ? stopCaloriesTracker
+                  : startCaloriesTracker,
+              child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
+            ),
+            const SizedBox(height: 20),
+            Text('Total calories of today: $calories'),
+          ],
         ),
       ),
     );

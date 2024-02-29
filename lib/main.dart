@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:receive_intent/receive_intent.dart';
 import 'package:rook_sdk_demo_app_flutter/app_router.dart';
-import 'package:rook_sdk_demo_app_flutter/features/home_screen.dart';
+import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/sdk_apple_health_configuration.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/hc_privacy_policy_screen.dart';
+import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/sdk_health_connect_configuration.dart';
 
 import 'color_schemes.g.dart';
 
@@ -47,10 +48,12 @@ class RookApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Rook demo',
+      title: '(Flutter) Rook SDK',
       theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
       darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
-      initialRoute: homeScreenRoute,
+      initialRoute: defaultTargetPlatform == TargetPlatform.android
+          ? sdkHealthConnectConfigurationRoute
+          : sdkAppleHealthConfigurationRoute,
       onGenerateRoute: _router.onGenerateRoute,
     );
   }

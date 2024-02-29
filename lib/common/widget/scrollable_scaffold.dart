@@ -11,7 +11,7 @@ class ScrollableScaffold extends StatelessWidget {
     Key? key,
     required this.name,
     this.padding = 10,
-    this.alignment = Alignment.center,
+    this.alignment = Alignment.topCenter,
     this.floatingActionButton,
     required this.child,
   }) : super(key: key);
@@ -21,10 +21,12 @@ class ScrollableScaffold extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(name),
-        leading: IconButton(
-          onPressed: Navigator.of(context).pop,
+        leading: Navigator.of(context).canPop()
+            ? IconButton(
+          onPressed: () => Navigator.of(context).pop(),
           icon: const Icon(Icons.arrow_back_rounded),
-        ),
+        )
+            : null,
       ),
       floatingActionButton: floatingActionButton,
       body: Container(

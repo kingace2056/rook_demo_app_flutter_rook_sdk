@@ -56,30 +56,27 @@ class _IosStepsTrackerPlaygroundState extends State<IosStepsTrackerPlayground> {
       alignment: Alignment.topCenter,
       child: FocusDetector(
         onFocusGained: checkStepsTrackerStatus,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Column(
-            children: [
-              CheckboxListTile(
-                value: isActive,
-                onChanged: (value) {},
-                title: Text(
-                  isActive ? "Tracker is running" : "Tracker is stopped",
-                ),
+        child: Column(
+          children: [
+            CheckboxListTile(
+              value: isActive,
+              onChanged: (value) {},
+              title: Text(
+                isActive ? "Tracker is running" : "Tracker is stopped",
               ),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: isLoading
-                    ? null
-                    : isActive
-                        ? stopStepsTracker
-                        : startStepsTracker,
-                child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
-              ),
-              const SizedBox(height: 20),
-              Text('Total steps of today: $steps'),
-            ],
-          ),
+            ),
+            const SizedBox(height: 20),
+            FilledButton(
+              onPressed: isLoading
+                  ? null
+                  : isActive
+                  ? stopStepsTracker
+                  : startStepsTracker,
+              child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
+            ),
+            const SizedBox(height: 20),
+            Text('Total steps of today: $steps'),
+          ],
         ),
       ),
     );

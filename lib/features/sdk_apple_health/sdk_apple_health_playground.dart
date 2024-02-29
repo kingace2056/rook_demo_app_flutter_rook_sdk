@@ -1,13 +1,10 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:rook_sdk_apple_health/rook_sdk_apple_health.dart';
-import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
+import 'package:rook_sdk_demo_app_flutter/common/environments.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/section_title.dart';
-import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_calories_tracker_playground.dart';
-import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_steps_tracker_playground.dart';
 import 'package:rook_sdk_demo_app_flutter/secrets.dart';
 
 const String sdkAppleHealthPlaygroundRoute = '/sdk-apple-health/playground';
@@ -16,225 +13,56 @@ class SdkAppleHealthPlayground extends StatefulWidget {
   const SdkAppleHealthPlayground({super.key});
 
   @override
-  State<SdkAppleHealthPlayground> createState() =>
-      _SdkAppleHealthPlaygroundState();
+  State<SdkAppleHealthPlayground> createState() => _SdkAppleHealthPlaygroundState();
 }
 
 class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
   final Logger logger = Logger('SdkAppleHealthPlayground');
 
-  final rookConfigurationManager = AHRookConfigurationManager();
-  final rookHealthPermissionsManager = AHRookHealthPermissionsManager();
   final rookSummaryManager = AHRookSummaryManager();
   final rookEventManager = AHRookEventManager();
+  final rookBackgroundSync = AHRookBackgroundSync();
 
-  final ConsoleOutput configurationOutput = ConsoleOutput();
-  final ConsoleOutput initializeOutput = ConsoleOutput();
-  final ConsoleOutput updateUserOutput = ConsoleOutput();
   final ConsoleOutput syncOutput = ConsoleOutput();
   final ConsoleOutput syncPendingSummariesOutput = ConsoleOutput();
   final ConsoleOutput syncPendingEventsOutput = ConsoleOutput();
 
   bool enableNavigation = false;
 
-  final _formKey = GlobalKey<FormFieldState<String>>();
+  @override
+  void initState() {
+    enableBackGroundForSummaries();
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
       name: 'SDK Apple Health',
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
+      child: Column(
         children: [
-          FilledButton.tonal(
-            onPressed: enableNavigation
-                ? () => Navigator.of(context).pushNamed(
-                      iosStepsTrackerPlaygroundRoute,
-                    )
-                : null,
-            child: const Icon(Icons.directions_walk_rounded),
+          const SectionTitle('5. Sync health data'),
+          Text(syncOutput.current),
+          FilledButton(
+            onPressed: syncHealthData,
+            child: const Text('Sync health data'),
           ),
-          FilledButton.tonal(
-            onPressed: enableNavigation
-                ? () => Navigator.of(context).pushNamed(
-                      iosCaloriesTrackerPlaygroundRoute,
-                    )
-                : null,
-            child: const Icon(Icons.local_fire_department_rounded),
+          const SectionTitle('Sync pending summaries (optional)'),
+          Text(syncPendingSummariesOutput.current),
+          FilledButton(
+            onPressed: syncPendingSummaries,
+            child: const Text('Sync pending summaries'),
+          ),
+          const SectionTitle('Sync pending events (optional)'),
+          Text(syncPendingEventsOutput.current),
+          FilledButton(
+            onPressed: syncPendingEvents,
+            child: const Text('Sync pending events'),
           ),
         ],
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        child: Column(
-          children: [
-            const SectionTitle('1. Configure SDK'),
-            Text(configurationOutput.current),
-            ElevatedButton(
-              onPressed: setConfiguration,
-              child: const Text('Set configuration'),
-            ),
-            const SectionTitle('2. Initialize SDK'),
-            Text(initializeOutput.current),
-            ElevatedButton(
-              onPressed: initialize,
-              child: const Text('Initialize'),
-            ),
-            const SectionTitle('3. Update user ID'),
-            TextFormField(
-              key: _formKey,
-              decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'User ID'),
-              validator: validate,
-              onSaved: updateUserID,
-            ),
-            Text(updateUserOutput.current),
-            ElevatedButton(
-              onPressed: () {
-                if (_formKey.currentState?.validate() == true) {
-                  _formKey.currentState?.save();
-                }
-              },
-              child: const Text('Update user'),
-            ),
-            const SectionTitle('4. Request permissions'),
-            ElevatedButton(
-              onPressed: requestPermissions,
-              child: const Text('Request permissions'),
-            ),
-            const SectionTitle('5. Sync health data'),
-            Text(syncOutput.current),
-            ElevatedButton(
-              onPressed: syncHealthData,
-              child: const Text('Sync health data'),
-            ),
-            const SectionTitle('Sync pending summaries (optional)'),
-            Text(syncPendingSummariesOutput.current),
-            ElevatedButton(
-              onPressed: syncPendingSummaries,
-              child: const Text('Sync pending summaries'),
-            ),
-            const SectionTitle('Sync pending events (optional)'),
-            Text(syncPendingEventsOutput.current),
-            ElevatedButton(
-              onPressed: syncPendingEvents,
-              child: const Text('Sync pending events'),
-            ),
-          ],
-        ),
-      ),
     );
-  }
-
-  String? validate(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Cannot be empty';
-    }
-    return null;
-  }
-
-  void setConfiguration() {
-    const environment =
-        kDebugMode ? RookEnvironment.sandbox : RookEnvironment.production;
-
-    final rookConfiguration = RookConfiguration(
-      Secrets.clientUUID,
-      Secrets.secretKey,
-      environment,
-    );
-
-    configurationOutput.clear();
-
-    configurationOutput.append('Using configuration:');
-    configurationOutput.append('$rookConfiguration');
-
-    rookConfigurationManager.setConfiguration(rookConfiguration);
-
-    setState(
-        () => configurationOutput.append('Configuration set successfully'));
-  }
-
-  void initialize() {
-    initializeOutput.clear();
-
-    setState(() => initializeOutput.append('Initializing...'));
-
-    rookConfigurationManager.initRook().then((_) {
-      setState(() => initializeOutput.append('SDK initialized successfully'));
-    }).catchError((exception) {
-      final error = switch (exception) {
-        (MissingConfigurationException it) =>
-          'MissingConfigurationException: ${it.message}',
-        _ => exception.toString(),
-      };
-
-      initializeOutput.append('Error initializing SDK:');
-      setState(() => initializeOutput.append(error));
-    });
-  }
-
-  void updateUserID(String? userID) {
-    updateUserOutput.clear();
-
-    setState(() => updateUserOutput.append('Updating userID...'));
-
-    rookConfigurationManager.updateUserID(userID!).then((_) {
-      setState(() => updateUserOutput.append('userID updated successfully'));
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      updateUserOutput.append('Error updating userID:');
-      setState(() => updateUserOutput.append(error));
-    });
-  }
-
-  void deleteUser() {
-    logger.info('Deleting user from rook...');
-
-    rookConfigurationManager.deleteUserFromRook().then((_) {
-      logger.info('User deleted from rook');
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      logger.info('Error deleting user from rook:');
-      logger.info(error);
-    });
-  }
-
-  void updateTimeZoneInformation() {
-    logger.info('Updating user timezone...');
-
-    rookConfigurationManager.syncUserTimeZone().then((_) {
-      logger.info('User timezone updated successfully');
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      logger.info('Error updating user timezone:');
-      logger.info(error);
-    });
-  }
-
-  void requestPermissions() {
-    logger.info('Requesting all permissions...');
-
-    rookHealthPermissionsManager.requestAllPermissions().then((_) {
-      logger.info('All permissions request sent');
-
-      setState(() => enableNavigation = true);
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      logger.info('Error requesting all permissions:');
-      logger.info(error);
-    });
   }
 
   void syncHealthData() async {
@@ -245,48 +73,40 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
 
     setState(() => syncOutput.append('Syncing health data...'));
 
-    setState(() =>
-        syncOutput.append('Syncing Sleep summary of yesterday: $yesterday...'));
+    setState(() => syncOutput.append('Syncing Sleep summary of yesterday: $yesterday...'));
     await syncSleepSummary(yesterday);
 
-    setState(() => syncOutput
-        .append('Syncing Physical summary of yesterday: $yesterday...'));
+    setState(() => syncOutput.append('Syncing Physical summary of yesterday: $yesterday...'));
     await syncPhysicalSummary(yesterday);
 
-    setState(() =>
-        syncOutput.append('Syncing Body summary of yesterday: $yesterday...'));
+    setState(() => syncOutput.append('Syncing Body summary of yesterday: $yesterday...'));
     await syncBodySummary(yesterday);
 
-    setState(
-        () => syncOutput.append('Syncing Physical events of today: $today...'));
+    setState(() => syncOutput.append('Syncing Physical events of today: $today...'));
     await syncPhysicalEvents(today);
 
-    setState(() =>
-        syncOutput.append('Syncing BloodGlucose events of today: $today...'));
+    setState(() => syncOutput.append('Syncing BloodGlucose events of today: $today...'));
     await syncBloodGlucoseEvents(today);
 
-    setState(() =>
-        syncOutput.append('Syncing BloodPressure events of today: $today...'));
+    setState(() => syncOutput.append('Syncing BloodPressure events of today: $today...'));
     await syncBloodPressureEvents(today);
 
-    setState(() =>
-        syncOutput.append('Syncing BodyHeartRate events of today: $today...'));
+    setState(() => syncOutput.append('Syncing BodyMetrics events of today: $today...'));
+    await syncBodyMetricsEvents(today);
+
+    setState(() => syncOutput.append('Syncing BodyHeartRate events of today: $today...'));
     await syncBodyHeartRateEvents(today);
 
-    setState(() => syncOutput
-        .append('Syncing PhysicalHeartRate events of today: $today...'));
+    setState(() => syncOutput.append('Syncing PhysicalHeartRate events of today: $today...'));
     await syncPhysicalHeartRateEvents(today);
 
-    setState(() => syncOutput
-        .append('Syncing BodyOxygenation events of today: $today...'));
+    setState(() => syncOutput.append('Syncing BodyOxygenation events of today: $today...'));
     await syncBodyOxygenationEvents(today);
 
-    setState(() => syncOutput
-        .append('Syncing PhysicalOxygenation events of today: $today...'));
+    setState(() => syncOutput.append('Syncing PhysicalOxygenation events of today: $today...'));
     await syncPhysicalOxygenationEvents(today);
 
-    setState(() =>
-        syncOutput.append('Syncing Temperature events of today: $today...'));
+    setState(() => syncOutput.append('Syncing Temperature events of today: $today...'));
     await syncTemperatureEvents(today);
   }
 
@@ -354,8 +174,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     try {
       await rookEventManager.syncBloodGlucoseEvents(today);
 
-      setState(
-          () => syncOutput.append('BloodGlucose events synced successfully'));
+      setState(() => syncOutput.append('BloodGlucose events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -370,8 +189,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     try {
       await rookEventManager.syncBloodPressureEvents(today);
 
-      setState(
-          () => syncOutput.append('BloodPressure events synced successfully'));
+      setState(() => syncOutput.append('BloodPressure events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -382,12 +200,26 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     }
   }
 
+  Future<void> syncBodyMetricsEvents(DateTime today) async {
+    try {
+      await rookEventManager.syncBodyMetricsEvents(today);
+
+      setState(() => syncOutput.append('BodyMetrics events synced successfully'));
+    } catch (exception) {
+      final error = switch (exception) {
+        _ => exception.toString(),
+      };
+
+      syncOutput.append('Error syncing BodyMetrics events:');
+      setState(() => syncOutput.append(error));
+    }
+  }
+
   Future<void> syncBodyHeartRateEvents(DateTime today) async {
     try {
       await rookEventManager.syncBodyHeartRateEvents(today);
 
-      setState(
-          () => syncOutput.append('BodyHeartRate events synced successfully'));
+      setState(() => syncOutput.append('BodyHeartRate events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -402,8 +234,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     try {
       await rookEventManager.syncPhysicalHeartRateEvents(today);
 
-      setState(() =>
-          syncOutput.append('PhysicalHeartRate events synced successfully'));
+      setState(() => syncOutput.append('PhysicalHeartRate events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -418,8 +249,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     try {
       await rookEventManager.syncBodyOxygenationEvents(today);
 
-      setState(() =>
-          syncOutput.append('BodyOxygenation events synced successfully'));
+      setState(() => syncOutput.append('BodyOxygenation events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -434,8 +264,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     try {
       await rookEventManager.syncPhysicalOxygenationEvents(today);
 
-      setState(() =>
-          syncOutput.append('PhysicalOxygenation events synced successfully'));
+      setState(() => syncOutput.append('PhysicalOxygenation events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -450,8 +279,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     try {
       await rookEventManager.syncTemperatureEvents(today);
 
-      setState(
-          () => syncOutput.append('Temperature events synced successfully'));
+      setState(() => syncOutput.append('Temperature events synced successfully'));
     } catch (exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -465,12 +293,10 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
   void syncPendingSummaries() {
     syncPendingSummariesOutput.clear();
 
-    setState(() =>
-        syncPendingSummariesOutput.append('Syncing pending summaries...'));
+    setState(() => syncPendingSummariesOutput.append('Syncing pending summaries...'));
 
     rookSummaryManager.syncPendingSummaries().then((_) {
-      setState(() => syncPendingSummariesOutput
-          .append('Pending summaries synced successfully'));
+      setState(() => syncPendingSummariesOutput.append('Pending summaries synced successfully'));
     }).catchError((exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -487,8 +313,7 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
     setState(() => syncPendingEventsOutput.append('Syncing pending events...'));
 
     rookEventManager.syncPendingEvents().then((_) {
-      setState(() =>
-          syncPendingEventsOutput.append('Pending events synced successfully'));
+      setState(() => syncPendingEventsOutput.append('Pending events synced successfully'));
     }).catchError((exception) {
       final error = switch (exception) {
         _ => exception.toString(),
@@ -500,7 +325,23 @@ class _SdkAppleHealthPlaygroundState extends State<SdkAppleHealthPlayground> {
   }
 
   void syncYesterdayHealthData() async {
+    logger.info('Syncing yesterday health data...');
+
     await rookSummaryManager.syncYesterdaySummaries();
     await rookEventManager.syncYesterdayEvents();
+
+    logger.info('Synced yesterday health data...');
+  }
+
+  void enableBackGroundForSummaries() async {
+    try {
+      rookBackgroundSync.enableBackGroundForSummaries(
+        Secrets.clientUUID,
+        Secrets.secretKey,
+        rookEnvironment,
+      );
+    } catch (exception) {
+      logger.severe('enableBackGroundForSummaries error: $exception');
+    }
   }
 }

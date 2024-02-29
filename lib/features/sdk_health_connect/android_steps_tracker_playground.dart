@@ -39,7 +39,7 @@ class _AndroidStepsTrackerPlaygroundState
       }).catchError((exception) {
         final error = switch (exception) {
           (SDKNotInitializedException it) =>
-            'SDKNotInitializedException: ${it.message}',
+          'SDKNotInitializedException: ${it.message}',
           _ => exception.toString(),
         };
 
@@ -63,47 +63,44 @@ class _AndroidStepsTrackerPlaygroundState
       alignment: Alignment.topCenter,
       child: FocusDetector(
         onFocusGained: checkStepsTrackerStatus,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Column(
-            children: [
-              CheckboxListTile(
-                value: isActive,
-                onChanged: (value) {},
-                title: Text(
-                  isActive ? "Tracker is running" : "Tracker is stopped",
-                ),
+        child: Column(
+          children: [
+            CheckboxListTile(
+              value: isActive,
+              onChanged: (value) {},
+              title: Text(
+                isActive ? "Tracker is running" : "Tracker is stopped",
               ),
-              CheckboxListTile(
-                value: hasPermissions,
-                onChanged: (value) {},
-                title: Text(
-                  hasPermissions
-                      ? "Permissions are granted"
-                      : "Missing permissions!",
-                ),
+            ),
+            CheckboxListTile(
+              value: hasPermissions,
+              onChanged: (value) {},
+              title: Text(
+                hasPermissions
+                    ? "Permissions are granted"
+                    : "Missing permissions!",
               ),
-              const SizedBox(height: 20),
-              if (isAvailable)
-                ElevatedButton(
-                  onPressed: hasPermissions
-                      ? null
-                      : AndroidStepsTracker.requestPermissions,
-                  child: const Text('Request permissions'),
-                ),
-              if (isAvailable)
-                ElevatedButton(
-                  onPressed: isLoading
-                      ? null
-                      : isActive
-                          ? stopStepsTracker
-                          : startStepsTracker,
-                  child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
-                ),
-              const SizedBox(height: 20),
-              Text('Total steps of today: $steps'),
-            ],
-          ),
+            ),
+            const SizedBox(height: 20),
+            if (isAvailable)
+              FilledButton(
+                onPressed: hasPermissions
+                    ? null
+                    : AndroidStepsTracker.requestPermissions,
+                child: const Text('Request permissions'),
+              ),
+            if (isAvailable)
+              FilledButton(
+                onPressed: isLoading
+                    ? null
+                    : isActive
+                    ? stopStepsTracker
+                    : startStepsTracker,
+                child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
+              ),
+            const SizedBox(height: 20),
+            Text('Total steps of today: $steps'),
+          ],
         ),
       ),
     );
@@ -133,9 +130,9 @@ class _AndroidStepsTrackerPlaygroundState
     } catch (exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
+        'SDKNotInitializedException: ${it.message}',
         (MissingAndroidPermissionsException it) =>
-          'MissingAndroidPermissionsException: ${it.message}',
+        'MissingAndroidPermissionsException: ${it.message}',
         _ => exception.toString(),
       };
 
@@ -155,7 +152,7 @@ class _AndroidStepsTrackerPlaygroundState
     } catch (exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
+        'SDKNotInitializedException: ${it.message}',
         _ => exception.toString(),
       };
 
