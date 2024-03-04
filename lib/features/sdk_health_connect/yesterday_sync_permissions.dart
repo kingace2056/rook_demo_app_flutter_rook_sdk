@@ -41,7 +41,8 @@ class _YesterdaySyncPermissionsState extends State<YesterdaySyncPermissions> {
             CheckboxListTile(
               title: const Text("Android permissions"),
               subtitle: const Text(
-                  "POST_NOTIFICATIONS, FOREGROUND_SERVICE, FOREGROUND_SERVICE_HEALTH"),
+                "POST_NOTIFICATIONS, FOREGROUND_SERVICE, FOREGROUND_SERVICE_HEALTH, ACTIVITY_RECOGNITION",
+              ),
               value: androidPermissionsChecked,
               onChanged: (value) {},
             ),
