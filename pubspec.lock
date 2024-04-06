@@ -196,10 +196,10 @@ packages:
     dependency: "direct main"
     description:
       name: rook_sdk_health_connect
-      sha256: "71a52a35fb8dbbe41a3b5c0d43bfc31ef83e6b0c04d97d102850a85b4d470211"
+      sha256: b1e498668437345dcdb11798663eec4d01b20bc5923a156547f58a37516b378a
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.5.1"
   sky_engine:
     dependency: transitive
     description: flutter
