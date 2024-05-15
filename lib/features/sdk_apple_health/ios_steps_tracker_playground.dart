@@ -70,8 +70,8 @@ class _IosStepsTrackerPlaygroundState extends State<IosStepsTrackerPlayground> {
               onPressed: isLoading
                   ? null
                   : isActive
-                  ? stopStepsTracker
-                  : startStepsTracker,
+                      ? stopStepsTracker
+                      : startStepsTracker,
               child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
             ),
             const SizedBox(height: 20),

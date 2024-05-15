@@ -72,8 +72,8 @@ class _IosCaloriesTrackerPlaygroundState
               onPressed: isLoading
                   ? null
                   : isActive
-                  ? stopCaloriesTracker
-                  : startCaloriesTracker,
+                      ? stopCaloriesTracker
+                      : startCaloriesTracker,
               child: Text(isActive ? 'Stop tracker' : 'Start tracker'),
             ),
             const SizedBox(height: 20),

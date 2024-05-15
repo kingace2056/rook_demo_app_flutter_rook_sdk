@@ -23,9 +23,9 @@ class ScrollableScaffold extends StatelessWidget {
         title: Text(name),
         leading: Navigator.of(context).canPop()
             ? IconButton(
-          onPressed: () => Navigator.of(context).pop(),
-          icon: const Icon(Icons.arrow_back_rounded),
-        )
+                onPressed: () => Navigator.of(context).pop(),
+                icon: const Icon(Icons.arrow_back_rounded),
+              )
             : null,
       ),
       floatingActionButton: floatingActionButton,

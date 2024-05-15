@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
 import 'package:rook_sdk_demo_app_flutter/common/environments.dart';
+import 'package:rook_sdk_demo_app_flutter/common/widget/data_sources_bottom_sheet.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/section_title.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_calories_tracker_playground.dart';
@@ -102,6 +103,18 @@ class _SdkAppleHealthConfigurationState
                 : null,
             child: const Text('Calories Tracker'),
           ),
+          FilledButton(
+            onPressed: enableNavigation ? loadDataSources : null,
+            child: const Text('Connections page (data sources list)'),
+          ),
+          FilledButton(
+            onPressed: enableNavigation
+                ? () {
+                    AHRookDataSources.presentDataSourceView();
+                  }
+                : null,
+            child: const Text('Connections page (pre-built)'),
+          ),
         ],
       ),
     );
@@ -125,6 +138,10 @@ class _SdkAppleHealthConfigurationState
 
     configurationOutput.append('Using configuration:');
     configurationOutput.append('$rookConfiguration');
+
+    if (isDebug) {
+      rookConfigurationManager.enableNativeLogs();
+    }
 
     rookConfigurationManager.setConfiguration(rookConfiguration);
 
@@ -234,5 +251,36 @@ class _SdkAppleHealthConfigurationState
       logger.info('Error requesting all permissions:');
       logger.info(error);
     });
+  }
+
+  void loadDataSources() {
+    showModalBottomSheet<void>(
+      context: context,
+      enableDrag: false,
+      builder: (BuildContext context) {
+        return FutureBuilder(
+          future: AHRookDataSources.getAvailableDataSources(),
+          builder: (
+            BuildContext ctx,
+            AsyncSnapshot<List<DataSource>> snapshot,
+          ) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text('Error: ${snapshot.error}'),
+              );
+            } else {
+              return dataSourcesBottomSheet(
+                ctx,
+                snapshot.data!,
+              );
+            }
+          },
+        );
+      },
+    );
   }
 }
