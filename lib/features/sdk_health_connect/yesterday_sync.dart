@@ -18,8 +18,6 @@ class YesterdaySync extends StatefulWidget {
 class _YesterdaySyncState extends State<YesterdaySync> {
   final Logger logger = Logger('YesterdaySync');
 
-  final rookHealthPermissionsManager = HCRookHealthPermissionsManager();
-
   SharedPreferences? sharedPreferences;
 
   bool androidPermissionsChecked = false;
@@ -49,7 +47,7 @@ class _YesterdaySyncState extends State<YesterdaySync> {
             const SizedBox(height: 10),
             const FilledButton(
               onPressed:
-                  HCRookYesterdaySyncPermissions.requestAndroidPermissions,
+              HCRookYesterdaySyncPermissions.requestAndroidPermissions,
               child: Text("Request Permissions"),
             ),
             const SizedBox(height: 20),
@@ -103,7 +101,7 @@ class _YesterdaySyncState extends State<YesterdaySync> {
     HCRookYesterdaySyncPermissions.hasHealthConnectPermissions()
         .then((hasHealthConnectPermissions) {
       setState(
-          () => healthConnectPermissionsChecked = hasHealthConnectPermissions);
+              () => healthConnectPermissionsChecked = hasHealthConnectPermissions);
     }).catchError((error) {
       logger.severe("hasHealthConnectPermissions - error: $error");
     });
@@ -112,18 +110,18 @@ class _YesterdaySyncState extends State<YesterdaySync> {
   void openHealthConnect() {
     logger.info('Opening Health Connect...');
 
-    rookHealthPermissionsManager.openHealthConnectSettings().then((_) {
+    HCRookHealthPermissionsManager.openHealthConnectSettings().then((_) {
       logger.info('Health Connect was opened');
     }).catchError((exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
+        'SDKNotInitializedException: ${it.message}',
         (UserNotInitializedException it) =>
-          'UserNotInitializedException: ${it.message}',
+        'UserNotInitializedException: ${it.message}',
         (HealthConnectNotInstalledException it) =>
-          'HealthConnectNotInstalledException: ${it.message}',
+        'HealthConnectNotInstalledException: ${it.message}',
         (DeviceNotSupportedException it) =>
-          'DeviceNotSupportedException: ${it.message}',
+        'DeviceNotSupportedException: ${it.message}',
         _ => exception.toString(),
       };
 

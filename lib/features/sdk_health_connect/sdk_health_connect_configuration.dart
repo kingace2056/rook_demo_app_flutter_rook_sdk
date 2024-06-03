@@ -29,8 +29,6 @@ class _SdkHealthConnectConfigurationState
     extends State<SdkHealthConnectConfiguration> {
   final Logger logger = Logger('SdkHealthConnectConfiguration');
 
-  final rookConfigurationManager = HCRookConfigurationManager();
-
   final ConsoleOutput configurationOutput = ConsoleOutput();
   final ConsoleOutput initializeOutput = ConsoleOutput();
   final ConsoleOutput updateUserOutput = ConsoleOutput();
@@ -80,22 +78,24 @@ class _SdkHealthConnectConfigurationState
             FilledButton(
               onPressed: enableNavigation
                   ? () => Navigator.of(context).pushNamed(
-                        sdkHealthConnectPlaygroundRoute,
-                      )
+                sdkHealthConnectPlaygroundRoute,
+              )
                   : null,
               child: const Text('Health Connect'),
             ),
             FilledButton(
               onPressed: enableNavigation
                   ? () => Navigator.of(context).pushNamed(
-                        androidBackgroundStepsRoute,
-                      )
+                androidBackgroundStepsRoute,
+              )
                   : null,
               child: const Text('Background Steps'),
             ),
             FilledButton(
               onPressed: enableNavigation
-                  ? () => Navigator.of(context).pushNamed(yesterdaySyncRoute)
+                  ? () => Navigator.of(context).pushNamed(
+                yesterdaySyncRoute,
+              )
                   : null,
               child: const Text('Yesterday Sync'),
             ),
@@ -106,8 +106,8 @@ class _SdkHealthConnectConfigurationState
             FilledButton(
               onPressed: enableNavigation
                   ? () {
-                      HCRookDataSources.presentDataSourceView();
-                    }
+                HCRookDataSources.presentDataSourceView();
+              }
                   : null,
               child: const Text('Connections page (pre-built)'),
             ),
@@ -160,13 +160,13 @@ class _SdkHealthConnectConfigurationState
     configurationOutput.append('$rookConfiguration');
 
     if (isDebug) {
-      rookConfigurationManager.enableNativeLogs();
+      HCRookConfigurationManager.enableNativeLogs();
     }
 
-    rookConfigurationManager.setConfiguration(rookConfiguration);
+    HCRookConfigurationManager.setConfiguration(rookConfiguration);
 
     setState(
-        () => configurationOutput.append('Configuration set successfully'));
+            () => configurationOutput.append('Configuration set successfully'));
   }
 
   void initialize() {
@@ -174,13 +174,13 @@ class _SdkHealthConnectConfigurationState
 
     setState(() => initializeOutput.append('Initializing...'));
 
-    rookConfigurationManager.initRook().then((_) {
+    HCRookConfigurationManager.initRook().then((_) {
       setState(() => initializeOutput.append('SDK initialized successfully'));
       checkUserIDRegistered();
     }).catchError((exception) {
       final error = switch (exception) {
         (MissingConfigurationException it) =>
-          'MissingConfigurationException: ${it.message}',
+        'MissingConfigurationException: ${it.message}',
         (NotAuthorizedException it) => 'NotAuthorizedException: ${it.message}',
         (ConnectTimeoutException it) => 'TimeoutException: ${it.message}',
         _ => exception.toString(),
@@ -194,7 +194,7 @@ class _SdkHealthConnectConfigurationState
   void checkUserIDRegistered() {
     updateUserOutput.clear();
 
-    rookConfigurationManager.getUserID().then((userID) {
+    HCRookConfigurationManager.getUserID().then((userID) {
       if (userID != null) {
         setState(() {
           updateUserOutput
@@ -203,7 +203,7 @@ class _SdkHealthConnectConfigurationState
         });
       } else {
         setState(
-          () => updateUserOutput
+              () => updateUserOutput
               .append('Local userID not found, please set a userID'),
         );
       }
@@ -215,7 +215,7 @@ class _SdkHealthConnectConfigurationState
 
     setState(() => updateUserOutput.append('Updating userID...'));
 
-    rookConfigurationManager.updateUserID(userID!).then((_) {
+    HCRookConfigurationManager.updateUserID(userID!).then((_) {
       setState(() {
         updateUserOutput.append('userID updated successfully');
         enableNavigation = true;
@@ -223,7 +223,7 @@ class _SdkHealthConnectConfigurationState
     }).catchError((exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
+        'SDKNotInitializedException: ${it.message}',
         (ConnectTimeoutException it) => 'TimeoutException: ${it.message}',
         _ => exception.toString(),
       };
@@ -236,14 +236,14 @@ class _SdkHealthConnectConfigurationState
   void deleteUser() {
     logger.info('Deleting user from rook...');
 
-    rookConfigurationManager.deleteUserFromRook().then((_) {
+    HCRookConfigurationManager.deleteUserFromRook().then((_) {
       logger.info('User deleted from rook');
     }).catchError((exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
+        'SDKNotInitializedException: ${it.message}',
         (UserNotInitializedException it) =>
-          'UserNotInitializedException: ${it.message}',
+        'UserNotInitializedException: ${it.message}',
         _ => exception.toString(),
       };
 
@@ -255,16 +255,16 @@ class _SdkHealthConnectConfigurationState
   void updateTimeZoneInformation() {
     logger.info('Updating user timezone...');
 
-    rookConfigurationManager.syncUserTimeZone().then((_) {
+    HCRookConfigurationManager.syncUserTimeZone().then((_) {
       logger.info('User timezone updated successfully');
     }).catchError((exception) {
       final error = switch (exception) {
         (SDKNotInitializedException it) =>
-          'SDKNotInitializedException: ${it.message}',
+        'SDKNotInitializedException: ${it.message}',
         (UserNotInitializedException it) =>
-          'UserNotInitializedException: ${it.message}',
+        'UserNotInitializedException: ${it.message}',
         (ConnectTimeoutException it) =>
-          'ConnectTimeoutException: ${it.message}',
+        'ConnectTimeoutException: ${it.message}',
         (HttpRequestException it) => 'HttpRequestException: ${it.message}',
         _ => exception.toString(),
       };
@@ -282,9 +282,9 @@ class _SdkHealthConnectConfigurationState
         return FutureBuilder(
           future: HCRookDataSources.getAvailableDataSources(),
           builder: (
-            BuildContext ctx,
-            AsyncSnapshot<List<DataSource>> snapshot,
-          ) {
+              BuildContext ctx,
+              AsyncSnapshot<List<DataSource>> snapshot,
+              ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),
