@@ -10,6 +10,7 @@ import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/sdk_health
 import 'color_schemes.g.dart';
 
 const String hc = 'androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE';
+const String hc14 = 'android.intent.action.VIEW_PERMISSION_USAGE';
 
 void main() {
   Logger.root.level = Level.ALL; // defaults to Level.INFO
@@ -29,8 +30,9 @@ void runAppFromIntent() async {
 
   try {
     final receivedIntent = await ReceiveIntent.getInitialIntent();
+    final action = receivedIntent?.action;
 
-    if (receivedIntent?.action == hc) {
+    if (action == hc || action == hc14) {
       app = const HCPrivacyPolicyApp();
     }
   } catch (error) {
