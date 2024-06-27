@@ -16,7 +16,7 @@ dependencies:
   focus_detector: ">=2.0.0 <3.0.0"
   shared_preferences: "2.1.0"
   rook_sdk_core: ^0.2.1
-  rook_sdk_apple_health: ^1.1.0
+  rook_sdk_apple_health: ^1.1.1
   rook_sdk_health_connect: ^2.1.0
 
 dev_dependencies:
