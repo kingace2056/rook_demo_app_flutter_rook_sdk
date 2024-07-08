@@ -244,10 +244,10 @@ packages:
     dependency: "direct main"
     description:
       name: rook_sdk_health_connect
-      sha256: d6f56c705aa0b4e0ee6787845981e6dc0b77f60fd250d0ef08fba1b5039c1e10
+      sha256: b7aba3bfc7776b49b1579bb40562d831bf5beef003ed79cac1c8cd4d5a20dacc
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   shared_preferences:
     dependency: "direct main"
     description:

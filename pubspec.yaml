@@ -17,7 +17,7 @@ dependencies:
   shared_preferences: "2.1.0"
   rook_sdk_core: ^0.2.1
   rook_sdk_apple_health: ^1.1.1
-  rook_sdk_health_connect: ^2.1.0
+  rook_sdk_health_connect: ^2.1.1
 
 dev_dependencies:
   flutter_test:
