@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:receive_intent/receive_intent.dart';
 import 'package:rook_sdk_demo_app_flutter/app_router.dart';
+import 'package:rook_sdk_demo_app_flutter/color_schemes.g.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/sdk_apple_health_configuration.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/hc_privacy_policy_screen.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/sdk_health_connect_configuration.dart';
-
-import 'color_schemes.g.dart';
 
 const String hc = 'androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE';
 const String hc14 = 'android.intent.action.VIEW_PERMISSION_USAGE';

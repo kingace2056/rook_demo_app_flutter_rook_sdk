@@ -77,8 +77,8 @@ class _SdkAppleHealthConfigurationState
           FilledButton(
             onPressed: enableNavigation
                 ? () => Navigator.of(context).pushNamed(
-              sdkAppleHealthPlaygroundRoute,
-            )
+                      sdkAppleHealthPlaygroundRoute,
+                    )
                 : null,
             child: const Text('Apple Health'),
           ),
@@ -89,8 +89,10 @@ class _SdkAppleHealthConfigurationState
           FilledButton(
             onPressed: enableNavigation
                 ? () {
-              AHRookDataSources.presentDataSourceView();
-            }
+                    AHRookDataSources.presentDataSourceView(
+                      redirectUrl: "https://tryrook.io",
+                    );
+                  }
                 : null,
             child: const Text('Connections page (pre-built)'),
           ),
@@ -108,9 +110,10 @@ class _SdkAppleHealthConfigurationState
 
   void setConfiguration() {
     final rookConfiguration = RookConfiguration(
-      Secrets.clientUUID,
-      Secrets.secretKey,
-      rookEnvironment,
+      clientUUID: Secrets.clientUUID,
+      secretKey: Secrets.secretKey,
+      environment: rookEnvironment,
+      enableBackgroundSync: true,
     );
 
     configurationOutput.clear();
@@ -125,26 +128,26 @@ class _SdkAppleHealthConfigurationState
     AHRookConfigurationManager.setConfiguration(rookConfiguration);
 
     setState(
-            () => configurationOutput.append('Configuration set successfully'));
+      () => configurationOutput.append('Configuration set successfully'),
+    );
   }
 
   void initialize() {
     initializeOutput.clear();
 
-    setState(() => initializeOutput.append('Initializing...'));
+    setState(
+      () => initializeOutput.append('Initializing...'),
+    );
 
     AHRookConfigurationManager.initRook().then((_) {
-      setState(() => initializeOutput.append('SDK initialized successfully'));
+      setState(
+        () => initializeOutput.append('SDK initialized successfully'),
+      );
       checkUserIDRegistered();
-    }).catchError((exception) {
-      final error = switch (exception) {
-        (MissingConfigurationException it) =>
-        'MissingConfigurationException: ${it.message}',
-        _ => exception.toString(),
-      };
-
-      initializeOutput.append('Error initializing SDK:');
-      setState(() => initializeOutput.append(error));
+    }).catchError((error) {
+      setState(
+        () => initializeOutput.append('Error initializing SDK: $error'),
+      );
     });
   }
 
@@ -159,7 +162,7 @@ class _SdkAppleHealthConfigurationState
         });
       } else {
         setState(
-              () => updateUserOutput
+          () => updateUserOutput
               .append('Local userID not found, please set a userID'),
         );
       }
@@ -169,19 +172,18 @@ class _SdkAppleHealthConfigurationState
   void updateUserID(String? userID) {
     updateUserOutput.clear();
 
-    setState(() => updateUserOutput.append('Updating userID...'));
+    setState(
+      () => updateUserOutput.append('Updating userID...'),
+    );
 
     AHRookConfigurationManager.updateUserID(userID!).then((_) {
       setState(() {
         updateUserOutput.append('userID updated successfully');
       });
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      updateUserOutput.append('Error updating userID:');
-      setState(() => updateUserOutput.append(error));
+    }).catchError((error) {
+      setState(
+        () => updateUserOutput.append('Error updating userID: $error'),
+      );
     });
   }
 
@@ -190,13 +192,8 @@ class _SdkAppleHealthConfigurationState
 
     AHRookConfigurationManager.deleteUserFromRook().then((_) {
       logger.info('User deleted from rook');
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      logger.info('Error deleting user from rook:');
-      logger.info(error);
+    }).catchError((error) {
+      logger.info('Error deleting user from rook: $error');
     });
   }
 
@@ -205,13 +202,8 @@ class _SdkAppleHealthConfigurationState
 
     AHRookConfigurationManager.syncUserTimeZone().then((_) {
       logger.info('User timezone updated successfully');
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      logger.info('Error updating user timezone:');
-      logger.info(error);
+    }).catchError((error) {
+      logger.info('Error updating user timezone: $error');
     });
   }
 
@@ -221,14 +213,11 @@ class _SdkAppleHealthConfigurationState
     AHRookHealthPermissionsManager.requestPermissions().then((_) {
       logger.info('All permissions request sent');
 
-      setState(() => enableNavigation = true);
-    }).catchError((exception) {
-      final error = switch (exception) {
-        _ => exception.toString(),
-      };
-
-      logger.info('Error requesting all permissions:');
-      logger.info(error);
+      setState(
+        () => enableNavigation = true,
+      );
+    }).catchError((error) {
+      logger.severe('Error requesting permissions: $error');
     });
   }
 
@@ -238,11 +227,13 @@ class _SdkAppleHealthConfigurationState
       enableDrag: false,
       builder: (BuildContext context) {
         return FutureBuilder(
-          future: AHRookDataSources.getAvailableDataSources(),
+          future: AHRookDataSources.getAvailableDataSources(
+            redirectUrl: null,
+          ),
           builder: (
-              BuildContext ctx,
-              AsyncSnapshot<List<DataSource>> snapshot,
-              ) {
+            BuildContext ctx,
+            AsyncSnapshot<List<DataSource>> snapshot,
+          ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),

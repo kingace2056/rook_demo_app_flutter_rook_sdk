@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:logging/logging.dart';
-import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
 import 'package:rook_sdk_demo_app_flutter/common/environments.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/data_sources_bottom_sheet.dart';
@@ -11,6 +10,7 @@ import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_ba
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/sdk_health_connect_playground.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/yesterday_sync.dart';
 import 'package:rook_sdk_demo_app_flutter/secrets.dart';
+import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_health_connect/rook_sdk_health_connect.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -78,24 +78,24 @@ class _SdkHealthConnectConfigurationState
             FilledButton(
               onPressed: enableNavigation
                   ? () => Navigator.of(context).pushNamed(
-                sdkHealthConnectPlaygroundRoute,
-              )
+                        sdkHealthConnectPlaygroundRoute,
+                      )
                   : null,
               child: const Text('Health Connect'),
             ),
             FilledButton(
               onPressed: enableNavigation
                   ? () => Navigator.of(context).pushNamed(
-                androidBackgroundStepsRoute,
-              )
+                        androidBackgroundStepsRoute,
+                      )
                   : null,
               child: const Text('Background Steps'),
             ),
             FilledButton(
               onPressed: enableNavigation
                   ? () => Navigator.of(context).pushNamed(
-                yesterdaySyncRoute,
-              )
+                        yesterdaySyncRoute,
+                      )
                   : null,
               child: const Text('Yesterday Sync'),
             ),
@@ -106,8 +106,10 @@ class _SdkHealthConnectConfigurationState
             FilledButton(
               onPressed: enableNavigation
                   ? () {
-                HCRookDataSources.presentDataSourceView();
-              }
+                      HCRookDataSources.presentDataSourceView(
+                        redirectUrl: "https://tryrook.io",
+                      );
+                    }
                   : null,
               child: const Text('Connections page (pre-built)'),
             ),
@@ -118,26 +120,28 @@ class _SdkHealthConnectConfigurationState
   }
 
   void attemptToEnableYesterdaySync() {
-    logger.info('Attempting to enable yesterday sync...');
+    // Already using the enableBackgroundSync parameter on RookConfiguration,
+    // the following is not necessary
 
-    SharedPreferences.getInstance().then((prefs) {
-      final userAcceptedYesterdaySync =
-          prefs.getBool("ACCEPTED_YESTERDAY_SYNC") ?? false;
-
-      if (userAcceptedYesterdaySync) {
-        logger.info('User accepted yesterday sync');
-
-        HCRookYesterdaySyncManager.scheduleYesterdaySync(
-          enableNativeLogs: isDebug,
-          clientUUID: Secrets.clientUUID,
-          secretKey: Secrets.secretKey,
-          environment: rookEnvironment,
-          doOnEnd: HCSyncInstruction.nothing,
-        );
-      } else {
-        logger.info('User did not accept yesterday sync');
-      }
-    });
+    // logger.info('Attempting to enable yesterday sync...');
+    //
+    // SharedPreferences.getInstance().then((prefs) {
+    //   final userAcceptedYesterdaySync =
+    //       prefs.getBool("ACCEPTED_YESTERDAY_SYNC") ?? false;
+    //
+    //   if (userAcceptedYesterdaySync) {
+    //     logger.info('User accepted yesterday sync');
+    //
+    //     HCRookYesterdaySyncManager.scheduleYesterdaySync(
+    //       enableNativeLogs: isDebug,
+    //       clientUUID: Secrets.clientUUID,
+    //       secretKey: Secrets.secretKey,
+    //       environment: rookEnvironment,
+    //     );
+    //   } else {
+    //     logger.info('User did not accept yesterday sync');
+    //   }
+    // });
   }
 
   String? validate(String? value) {
@@ -147,11 +151,17 @@ class _SdkHealthConnectConfigurationState
     return null;
   }
 
-  void setConfiguration() {
+  void setConfiguration() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final enableBackgroundSync = sharedPreferences.getBool(
+      "ACCEPTED_YESTERDAY_SYNC",
+    );
+
     final rookConfiguration = RookConfiguration(
-      Secrets.clientUUID,
-      Secrets.secretKey,
-      rookEnvironment,
+      clientUUID: Secrets.clientUUID,
+      secretKey: Secrets.secretKey,
+      environment: rookEnvironment,
+      enableBackgroundSync: enableBackgroundSync ?? false,
     );
 
     configurationOutput.clear();
@@ -166,28 +176,26 @@ class _SdkHealthConnectConfigurationState
     HCRookConfigurationManager.setConfiguration(rookConfiguration);
 
     setState(
-            () => configurationOutput.append('Configuration set successfully'));
+      () => configurationOutput.append('Configuration set successfully'),
+    );
   }
 
   void initialize() {
     initializeOutput.clear();
 
-    setState(() => initializeOutput.append('Initializing...'));
+    setState(
+      () => initializeOutput.append('Initializing...'),
+    );
 
     HCRookConfigurationManager.initRook().then((_) {
-      setState(() => initializeOutput.append('SDK initialized successfully'));
+      setState(
+        () => initializeOutput.append('SDK initialized successfully'),
+      );
       checkUserIDRegistered();
-    }).catchError((exception) {
-      final error = switch (exception) {
-        (MissingConfigurationException it) =>
-        'MissingConfigurationException: ${it.message}',
-        (SDKNotAuthorizedException it) => 'SDKNotAuthorizedException: ${it.message}',
-        (ConnectTimeoutException it) => 'TimeoutException: ${it.message}',
-        _ => exception.toString(),
-      };
-
-      initializeOutput.append('Error initializing SDK:');
-      setState(() => initializeOutput.append(error));
+    }).catchError((error) {
+      setState(
+        () => initializeOutput.append('Error initializing SDK: $error'),
+      );
     });
   }
 
@@ -203,7 +211,7 @@ class _SdkHealthConnectConfigurationState
         });
       } else {
         setState(
-              () => updateUserOutput
+          () => updateUserOutput
               .append('Local userID not found, please set a userID'),
         );
       }
@@ -213,23 +221,19 @@ class _SdkHealthConnectConfigurationState
   void updateUserID(String? userID) {
     updateUserOutput.clear();
 
-    setState(() => updateUserOutput.append('Updating userID...'));
+    setState(
+      () => updateUserOutput.append('Updating userID...'),
+    );
 
     HCRookConfigurationManager.updateUserID(userID!).then((_) {
       setState(() {
         updateUserOutput.append('userID updated successfully');
         enableNavigation = true;
       });
-    }).catchError((exception) {
-      final error = switch (exception) {
-        (SDKNotInitializedException it) =>
-        'SDKNotInitializedException: ${it.message}',
-        (ConnectTimeoutException it) => 'TimeoutException: ${it.message}',
-        _ => exception.toString(),
-      };
-
-      updateUserOutput.append('Error updating userID:');
-      setState(() => updateUserOutput.append(error));
+    }).catchError((error) {
+      setState(
+        () => updateUserOutput.append('Error updating userID: $error'),
+      );
     });
   }
 
@@ -238,17 +242,8 @@ class _SdkHealthConnectConfigurationState
 
     HCRookConfigurationManager.deleteUserFromRook().then((_) {
       logger.info('User deleted from rook');
-    }).catchError((exception) {
-      final error = switch (exception) {
-        (SDKNotInitializedException it) =>
-        'SDKNotInitializedException: ${it.message}',
-        (UserNotInitializedException it) =>
-        'UserNotInitializedException: ${it.message}',
-        _ => exception.toString(),
-      };
-
-      logger.info('Error deleting user from rook:');
-      logger.info(error);
+    }).catchError((error) {
+      logger.info('Error deleting user from rook: $error');
     });
   }
 
@@ -257,20 +252,8 @@ class _SdkHealthConnectConfigurationState
 
     HCRookConfigurationManager.syncUserTimeZone().then((_) {
       logger.info('User timezone updated successfully');
-    }).catchError((exception) {
-      final error = switch (exception) {
-        (SDKNotInitializedException it) =>
-        'SDKNotInitializedException: ${it.message}',
-        (UserNotInitializedException it) =>
-        'UserNotInitializedException: ${it.message}',
-        (ConnectTimeoutException it) =>
-        'ConnectTimeoutException: ${it.message}',
-        (HttpRequestException it) => 'HttpRequestException: ${it.message}',
-        _ => exception.toString(),
-      };
-
-      logger.info('Error updating user timezone:');
-      logger.info(error);
+    }).catchError((error) {
+      logger.info('Error updating user timezone: $error');
     });
   }
 
@@ -280,11 +263,13 @@ class _SdkHealthConnectConfigurationState
       enableDrag: false,
       builder: (BuildContext context) {
         return FutureBuilder(
-          future: HCRookDataSources.getAvailableDataSources(),
+          future: HCRookDataSources.getAvailableDataSources(
+            redirectUrl: null,
+          ),
           builder: (
-              BuildContext ctx,
-              AsyncSnapshot<List<DataSource>> snapshot,
-              ) {
+            BuildContext ctx,
+            AsyncSnapshot<List<DataSource>> snapshot,
+          ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),
