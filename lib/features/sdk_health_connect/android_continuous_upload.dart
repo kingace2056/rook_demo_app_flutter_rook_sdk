@@ -4,32 +4,38 @@ import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:logging/logging.dart';
+import 'package:rook_sdk_demo_app_flutter/common/console_output.dart';
+import 'package:rook_sdk_demo_app_flutter/common/environments.dart';
 import 'package:rook_sdk_demo_app_flutter/common/widget/scrollable_scaffold.dart';
 import 'package:rook_sdk_core/rook_sdk_core.dart';
 import 'package:rook_sdk_health_connect/rook_sdk_health_connect.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const String yesterdaySyncRoute = '/android/yesterday-sync';
+const String androidContinuousUploadRoute = '/android/continuous-upload';
 
-class YesterdaySync extends StatefulWidget {
-  const YesterdaySync({super.key});
+class AndroidContinuousUpload extends StatefulWidget {
+  const AndroidContinuousUpload({super.key});
 
   @override
-  State<YesterdaySync> createState() => _YesterdaySyncState();
+  State<AndroidContinuousUpload> createState() =>
+      _AndroidContinuousUploadState();
 }
 
-class _YesterdaySyncState extends State<YesterdaySync> {
-  final Logger logger = Logger('YesterdaySync');
+class _AndroidContinuousUploadState extends State<AndroidContinuousUpload> {
+  final Logger logger = Logger('AndroidContinuousUpload');
 
   SharedPreferences? sharedPreferences;
 
   bool androidPermissionsChecked = false;
   bool androidPermissionsPreviouslyDenied = false;
   bool healthConnectPermissionsChecked = false;
-  bool yesterdaySyncChecked = false;
+  bool continuousChecked = false;
 
-  StreamSubscription<bool>? androidPermissionsSubscription;
-  StreamSubscription<bool>? healthConnectPermissionsSubscription;
+  ConsoleOutput continuousUploadOutput = ConsoleOutput();
+
+  StreamSubscription<AndroidPermissionsSummary>? androidPermissionsSubscription;
+  StreamSubscription<HealthConnectPermissionsSummary>?
+      healthConnectPermissionsSubscription;
 
   @override
   void initState() {
@@ -37,26 +43,31 @@ class _YesterdaySyncState extends State<YesterdaySync> {
 
     androidPermissionsSubscription = HCRookHealthPermissionsManager
         .requestAndroidPermissionsUpdates
-        .listen((permissionsGranted) {
-      setState(
-        () => androidPermissionsChecked = permissionsGranted,
-      );
+        .listen((permissionsSummary) {
+      setState(() {
+        androidPermissionsChecked = permissionsSummary.permissionsGranted;
+        androidPermissionsPreviouslyDenied =
+            !permissionsSummary.dialogDisplayed;
+      });
     });
 
     healthConnectPermissionsSubscription = HCRookHealthPermissionsManager
         .requestHealthConnectPermissionsUpdates
-        .listen((permissionsGranted) {
-      setState(
-        () => healthConnectPermissionsChecked = permissionsGranted,
-      );
+        .listen((permissionsSummary) {
+      setState(() {
+        healthConnectPermissionsChecked = permissionsSummary.dataTypesGranted ||
+            permissionsSummary.dataTypesPartiallyGranted;
+      });
     });
 
-    HCRookHealthPermissionsManager.shouldRequestAndroidPermissions().then(
-      (shouldRequestPermissions) => setState(
-        () => androidPermissionsPreviouslyDenied = !shouldRequestPermissions,
-      ),
-    );
+    HCRookHealthPermissionsManager.shouldRequestAndroidPermissions()
+        .then((shouldRequestPermissions) {
+      setState(() {
+        androidPermissionsPreviouslyDenied = !shouldRequestPermissions;
+      });
+    });
 
+    automaticallyStartContinuousUpload();
     super.initState();
   }
 
@@ -71,13 +82,10 @@ class _YesterdaySyncState extends State<YesterdaySync> {
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
-      name: 'Yesterday Sync Permissions',
+      name: 'Continuous upload',
       alignment: Alignment.topCenter,
       child: FocusDetector(
-        onFocusGained: () {
-          checkPermissions();
-          checkYesterdaySyncAcceptation();
-        },
+        onFocusGained: checkPermissions,
         child: Column(
           children: [
             CheckboxListTile(
@@ -139,18 +147,19 @@ class _YesterdaySyncState extends State<YesterdaySync> {
             ),
             const SizedBox(height: 20),
             CheckboxListTile(
-              title: const Text("Yesterday Sync"),
-              value: yesterdaySyncChecked,
+              title: const Text("Continuous Upload"),
+              value: continuousChecked,
               onChanged: (value) {},
             ),
+            Text(continuousUploadOutput.current),
             FilledButton(
-              onPressed: yesterdaySyncChecked
-                  ? disableYesterdaySync
-                  : enableYesterdaySync,
+              onPressed: continuousChecked
+                  ? disableContinuousUpload
+                  : enableContinuousUpload,
               child: Text(
-                yesterdaySyncChecked
-                    ? "Disable Yesterday Sync"
-                    : "Enable Yesterday Sync",
+                continuousChecked
+                    ? "Disable Continuous Upload"
+                    : "Enable Continuous Upload",
               ),
             ),
           ],
@@ -232,23 +241,46 @@ class _YesterdaySyncState extends State<YesterdaySync> {
     });
   }
 
-  void checkYesterdaySyncAcceptation() {
-    final acceptedYesterdaySync = sharedPreferences?.getBool(
-      "ACCEPTED_YESTERDAY_SYNC",
-    );
+  void automaticallyStartContinuousUpload() async {
+    final acceptedContinuous =
+        sharedPreferences?.getBool(acceptedAndroidContinuousKey) ?? false;
 
-    setState(
-      () => yesterdaySyncChecked = acceptedYesterdaySync ?? false,
-    );
+    if (acceptedContinuous) {
+      continuousUploadOutput.clear();
+
+      setState(() {
+        continuousUploadOutput.append("Enabling continuous upload...");
+      });
+
+      HCRookYesterdaySyncManager.scheduleYesterdaySync(
+        enableNativeLogs: isDebug,
+      ).then((_) {
+        setState(() {
+          continuousUploadOutput.append("Continuous upload enabled");
+        });
+      }).catchError((error) {
+        setState(() {
+          continuousUploadOutput.append(
+            "Error enabling continuous upload $error",
+          );
+        });
+      });
+    }
+
+    setState(() {
+      continuousChecked = acceptedContinuous;
+    });
   }
 
-  void enableYesterdaySync() {
-    sharedPreferences?.setBool("ACCEPTED_YESTERDAY_SYNC", true);
-    checkYesterdaySyncAcceptation();
+  void enableContinuousUpload() {
+    sharedPreferences?.setBool(acceptedAndroidContinuousKey, true);
+    automaticallyStartContinuousUpload();
   }
 
-  void disableYesterdaySync() {
-    sharedPreferences?.setBool("ACCEPTED_YESTERDAY_SYNC", false);
-    checkYesterdaySyncAcceptation();
+  void disableContinuousUpload() {
+    sharedPreferences?.setBool(acceptedAndroidContinuousKey, false);
+    automaticallyStartContinuousUpload();
   }
 }
+
+const acceptedAndroidContinuousKey = "ACCEPTED_ANDROID_CONTINUOUS";
