@@ -228,26 +228,26 @@ packages:
     dependency: "direct main"
     description:
       name: rook_sdk_apple_health
-      sha256: "95c3ade1a691f11791a1bb6ce676791018954caeb650b284527523079ab2dc82"
+      sha256: "1c5c7c6182aead3a7c2eb5a7c6414c80663454d7f74dc8219b5d895a7de4d6ab"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.1"
+    version: "1.4.0"
   rook_sdk_core:
     dependency: "direct main"
     description:
       name: rook_sdk_core
-      sha256: "500927e978306e018a60e3cea0bbafb3833e18e947fa7b2b018b1384d54b3161"
+      sha256: "54a4f3f7020c941e8c39fdb184987906ac5b9841d3f932aba80401b746672ca7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.3"
+    version: "0.4.4"
   rook_sdk_health_connect:
     dependency: "direct main"
     description:
       name: rook_sdk_health_connect
-      sha256: baffcc569610f260b4612f4c386146b270002346c748dd36f23cc64dc4162138
+      sha256: bf6856ef5695a2a385b11b425e404295e728f301df5d47bdec3befdd917229fd
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.0"
+    version: "2.6.0"
   shared_preferences:
     dependency: "direct main"
     description:
