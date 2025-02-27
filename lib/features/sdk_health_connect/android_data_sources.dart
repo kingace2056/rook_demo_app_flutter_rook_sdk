@@ -86,9 +86,9 @@ class _AndroidDataSourcesState extends State<AndroidDataSources> {
             redirectUrl: null,
           ),
           builder: (
-              BuildContext ctx,
-              AsyncSnapshot<List<DataSource>> snapshot,
-              ) {
+            BuildContext ctx,
+            AsyncSnapshot<List<DataSource>> snapshot,
+          ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),

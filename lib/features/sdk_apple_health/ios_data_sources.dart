@@ -86,9 +86,9 @@ class _IOSDataSourcesState extends State<IOSDataSources> {
             redirectUrl: null,
           ),
           builder: (
-              BuildContext ctx,
-              AsyncSnapshot<List<DataSource>> snapshot,
-              ) {
+            BuildContext ctx,
+            AsyncSnapshot<List<DataSource>> snapshot,
+          ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                 child: CircularProgressIndicator(),
