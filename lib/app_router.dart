@@ -6,6 +6,7 @@ import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_data_sou
 import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_sync.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_apple_health/ios_user_management.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_background_steps.dart';
+import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_background_sync.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_configuration.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_continuous_upload.dart';
 import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/android_data_sources.dart';
@@ -43,6 +44,10 @@ class AppRouter {
       case androidContinuousUploadRoute:
         return MaterialPageRoute(
           builder: (context) => const AndroidContinuousUpload(),
+        );
+      case androidBackgroundSyncRoute:
+        return MaterialPageRoute(
+          builder: (context) => const AndroidBackgroundSync(),
         );
       case iosConfigurationRoute:
         return MaterialPageRoute(
