@@ -38,9 +38,7 @@ class AppRouter {
           builder: (context) => const AndroidPermissions(),
         );
       case androidSyncRoute:
-        return MaterialPageRoute(
-          builder: (context) => const AndroidSync(),
-        );
+        return MaterialPageRoute(builder: (context) => const AndroidSync());
       case androidContinuousUploadRoute:
         return MaterialPageRoute(
           builder: (context) => const AndroidContinuousUpload(),
@@ -58,13 +56,9 @@ class AppRouter {
           builder: (context) => const IOSUserManagement(),
         );
       case iosDataSourcesRoute:
-        return MaterialPageRoute(
-          builder: (context) => const IOSDataSources(),
-        );
+        return MaterialPageRoute(builder: (context) => const IOSDataSources());
       case iosSyncRoute:
-        return MaterialPageRoute(
-          builder: (context) => const IOSSync(),
-        );
+        return MaterialPageRoute(builder: (context) => const IOSSync());
       case iosContinuousUploadRoute:
         return MaterialPageRoute(
           builder: (context) => const IOSContinuousUpload(),

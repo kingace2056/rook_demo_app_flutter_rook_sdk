@@ -40,7 +40,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   app_settings: 58017cd26b604ae98c3e65acbdd8ba173703cc82
-  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   rook_sdk_apple_health: 72fd371f569747f077b05fa10f5b5030b4ddf822
   RookSDK: fb9924a8ab965a8648236aa20fbbce9831bcf93a
   shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
@@ -49,4 +49,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a57f30d18f102dd3ce366b1d62a55ecbef2158e5
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.16.2

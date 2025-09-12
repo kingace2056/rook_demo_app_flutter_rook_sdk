@@ -1,10 +1,10 @@
 name: rook_sdk_demo_app_flutter
 description: Demo app of rook_sdk packages
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -19,6 +19,9 @@ dependencies:
   shared_preferences: ^2.5.2
   url_launcher: ">=6.0.0 <7.0.0"
   focus_detector: ">=2.0.0 <3.0.0"
+  flutter_dotenv: ^6.0.0
+  get: ^4.7.2
+  dio: ^5.9.0
 
 dev_dependencies:
   flutter_test:
@@ -29,9 +32,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - .env.dev
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

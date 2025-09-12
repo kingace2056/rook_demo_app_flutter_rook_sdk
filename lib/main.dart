@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:logging/logging.dart';
 import 'package:receive_intent/receive_intent.dart';
 import 'package:rook_sdk_demo_app_flutter/app_router.dart';
@@ -11,7 +12,8 @@ import 'package:rook_sdk_demo_app_flutter/features/sdk_health_connect/hc_privacy
 const String hc = 'androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE';
 const String hc14 = 'android.intent.action.VIEW_PERMISSION_USAGE';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: ".env.dev");
   Logger.root.level = Level.ALL; // defaults to Level.INFO
   Logger.root.onRecord.listen((record) {
     if (kDebugMode) {
