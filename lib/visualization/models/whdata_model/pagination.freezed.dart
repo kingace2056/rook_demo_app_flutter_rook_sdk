@@ -12,8 +12,7 @@ part of 'pagination.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Pagination _$PaginationFromJson(Map<String, dynamic> json) {
   return _Pagination.fromJson(json);
@@ -37,9 +36,8 @@ mixin _$Pagination {
 /// @nodoc
 abstract class $PaginationCopyWith<$Res> {
   factory $PaginationCopyWith(
-    Pagination value,
-    $Res Function(Pagination) then,
-  ) = _$PaginationCopyWithImpl<$Res, Pagination>;
+          Pagination value, $Res Function(Pagination) then) =
+      _$PaginationCopyWithImpl<$Res, Pagination>;
   @useResult
   $Res call({int? limit, int? skip});
 }
@@ -58,20 +56,20 @@ class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? limit = freezed, Object? skip = freezed}) {
-    return _then(
-      _value.copyWith(
-            limit: freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            skip: freezed == skip
-                ? _value.skip
-                : skip // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? limit = freezed,
+    Object? skip = freezed,
+  }) {
+    return _then(_value.copyWith(
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      skip: freezed == skip
+          ? _value.skip
+          : skip // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -79,9 +77,8 @@ class _$PaginationCopyWithImpl<$Res, $Val extends Pagination>
 abstract class _$$PaginationImplCopyWith<$Res>
     implements $PaginationCopyWith<$Res> {
   factory _$$PaginationImplCopyWith(
-    _$PaginationImpl value,
-    $Res Function(_$PaginationImpl) then,
-  ) = __$$PaginationImplCopyWithImpl<$Res>;
+          _$PaginationImpl value, $Res Function(_$PaginationImpl) then) =
+      __$$PaginationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, int? skip});
@@ -92,27 +89,27 @@ class __$$PaginationImplCopyWithImpl<$Res>
     extends _$PaginationCopyWithImpl<$Res, _$PaginationImpl>
     implements _$$PaginationImplCopyWith<$Res> {
   __$$PaginationImplCopyWithImpl(
-    _$PaginationImpl _value,
-    $Res Function(_$PaginationImpl) _then,
-  ) : super(_value, _then);
+      _$PaginationImpl _value, $Res Function(_$PaginationImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Pagination
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? limit = freezed, Object? skip = freezed}) {
-    return _then(
-      _$PaginationImpl(
-        limit: freezed == limit
-            ? _value.limit
-            : limit // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        skip: freezed == skip
-            ? _value.skip
-            : skip // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+  $Res call({
+    Object? limit = freezed,
+    Object? skip = freezed,
+  }) {
+    return _then(_$PaginationImpl(
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      skip: freezed == skip
+          ? _value.skip
+          : skip // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
@@ -157,7 +154,9 @@ class _$PaginationImpl implements _Pagination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PaginationImplToJson(this);
+    return _$$PaginationImplToJson(
+      this,
+    );
   }
 }
 

@@ -12,8 +12,7 @@ part of 'sleep_health_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SleepHealthScore _$SleepHealthScoreFromJson(Map<String, dynamic> json) {
   return _SleepHealthScore.fromJson(json);
@@ -45,17 +44,16 @@ mixin _$SleepHealthScore {
 /// @nodoc
 abstract class $SleepHealthScoreCopyWith<$Res> {
   factory $SleepHealthScoreCopyWith(
-    SleepHealthScore value,
-    $Res Function(SleepHealthScore) then,
-  ) = _$SleepHealthScoreCopyWithImpl<$Res, SleepHealthScore>;
+          SleepHealthScore value, $Res Function(SleepHealthScore) then) =
+      _$SleepHealthScoreCopyWithImpl<$Res, SleepHealthScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'sleep_duration_score')
-    SleepDurationScore? sleepDurationScore,
-    @JsonKey(name: 'sleep_quality_score') SleepQualityScore? sleepQualityScore,
-    @JsonKey(name: 'readiness_score') ReadinessScore? readinessScore,
-  });
+  $Res call(
+      {@JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'sleep_duration_score')
+      SleepDurationScore? sleepDurationScore,
+      @JsonKey(name: 'sleep_quality_score')
+      SleepQualityScore? sleepQualityScore,
+      @JsonKey(name: 'readiness_score') ReadinessScore? readinessScore});
 
   $SleepDurationScoreCopyWith<$Res>? get sleepDurationScore;
   $SleepQualityScoreCopyWith<$Res>? get sleepQualityScore;
@@ -82,27 +80,24 @@ class _$SleepHealthScoreCopyWithImpl<$Res, $Val extends SleepHealthScore>
     Object? sleepQualityScore = freezed,
     Object? readinessScore = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            score0100Int: freezed == score0100Int
-                ? _value.score0100Int
-                : score0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            sleepDurationScore: freezed == sleepDurationScore
-                ? _value.sleepDurationScore
-                : sleepDurationScore // ignore: cast_nullable_to_non_nullable
-                      as SleepDurationScore?,
-            sleepQualityScore: freezed == sleepQualityScore
-                ? _value.sleepQualityScore
-                : sleepQualityScore // ignore: cast_nullable_to_non_nullable
-                      as SleepQualityScore?,
-            readinessScore: freezed == readinessScore
-                ? _value.readinessScore
-                : readinessScore // ignore: cast_nullable_to_non_nullable
-                      as ReadinessScore?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sleepDurationScore: freezed == sleepDurationScore
+          ? _value.sleepDurationScore
+          : sleepDurationScore // ignore: cast_nullable_to_non_nullable
+              as SleepDurationScore?,
+      sleepQualityScore: freezed == sleepQualityScore
+          ? _value.sleepQualityScore
+          : sleepQualityScore // ignore: cast_nullable_to_non_nullable
+              as SleepQualityScore?,
+      readinessScore: freezed == readinessScore
+          ? _value.readinessScore
+          : readinessScore // ignore: cast_nullable_to_non_nullable
+              as ReadinessScore?,
+    ) as $Val);
   }
 
   /// Create a copy of SleepHealthScore
@@ -114,9 +109,8 @@ class _$SleepHealthScoreCopyWithImpl<$Res, $Val extends SleepHealthScore>
       return null;
     }
 
-    return $SleepDurationScoreCopyWith<$Res>(_value.sleepDurationScore!, (
-      value,
-    ) {
+    return $SleepDurationScoreCopyWith<$Res>(_value.sleepDurationScore!,
+        (value) {
       return _then(_value.copyWith(sleepDurationScore: value) as $Val);
     });
   }
@@ -153,19 +147,18 @@ class _$SleepHealthScoreCopyWithImpl<$Res, $Val extends SleepHealthScore>
 /// @nodoc
 abstract class _$$SleepHealthScoreImplCopyWith<$Res>
     implements $SleepHealthScoreCopyWith<$Res> {
-  factory _$$SleepHealthScoreImplCopyWith(
-    _$SleepHealthScoreImpl value,
-    $Res Function(_$SleepHealthScoreImpl) then,
-  ) = __$$SleepHealthScoreImplCopyWithImpl<$Res>;
+  factory _$$SleepHealthScoreImplCopyWith(_$SleepHealthScoreImpl value,
+          $Res Function(_$SleepHealthScoreImpl) then) =
+      __$$SleepHealthScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'sleep_duration_score')
-    SleepDurationScore? sleepDurationScore,
-    @JsonKey(name: 'sleep_quality_score') SleepQualityScore? sleepQualityScore,
-    @JsonKey(name: 'readiness_score') ReadinessScore? readinessScore,
-  });
+  $Res call(
+      {@JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'sleep_duration_score')
+      SleepDurationScore? sleepDurationScore,
+      @JsonKey(name: 'sleep_quality_score')
+      SleepQualityScore? sleepQualityScore,
+      @JsonKey(name: 'readiness_score') ReadinessScore? readinessScore});
 
   @override
   $SleepDurationScoreCopyWith<$Res>? get sleepDurationScore;
@@ -179,10 +172,9 @@ abstract class _$$SleepHealthScoreImplCopyWith<$Res>
 class __$$SleepHealthScoreImplCopyWithImpl<$Res>
     extends _$SleepHealthScoreCopyWithImpl<$Res, _$SleepHealthScoreImpl>
     implements _$$SleepHealthScoreImplCopyWith<$Res> {
-  __$$SleepHealthScoreImplCopyWithImpl(
-    _$SleepHealthScoreImpl _value,
-    $Res Function(_$SleepHealthScoreImpl) _then,
-  ) : super(_value, _then);
+  __$$SleepHealthScoreImplCopyWithImpl(_$SleepHealthScoreImpl _value,
+      $Res Function(_$SleepHealthScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SleepHealthScore
   /// with the given fields replaced by the non-null parameter values.
@@ -194,38 +186,35 @@ class __$$SleepHealthScoreImplCopyWithImpl<$Res>
     Object? sleepQualityScore = freezed,
     Object? readinessScore = freezed,
   }) {
-    return _then(
-      _$SleepHealthScoreImpl(
-        score0100Int: freezed == score0100Int
-            ? _value.score0100Int
-            : score0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        sleepDurationScore: freezed == sleepDurationScore
-            ? _value.sleepDurationScore
-            : sleepDurationScore // ignore: cast_nullable_to_non_nullable
-                  as SleepDurationScore?,
-        sleepQualityScore: freezed == sleepQualityScore
-            ? _value.sleepQualityScore
-            : sleepQualityScore // ignore: cast_nullable_to_non_nullable
-                  as SleepQualityScore?,
-        readinessScore: freezed == readinessScore
-            ? _value.readinessScore
-            : readinessScore // ignore: cast_nullable_to_non_nullable
-                  as ReadinessScore?,
-      ),
-    );
+    return _then(_$SleepHealthScoreImpl(
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sleepDurationScore: freezed == sleepDurationScore
+          ? _value.sleepDurationScore
+          : sleepDurationScore // ignore: cast_nullable_to_non_nullable
+              as SleepDurationScore?,
+      sleepQualityScore: freezed == sleepQualityScore
+          ? _value.sleepQualityScore
+          : sleepQualityScore // ignore: cast_nullable_to_non_nullable
+              as SleepQualityScore?,
+      readinessScore: freezed == readinessScore
+          ? _value.readinessScore
+          : readinessScore // ignore: cast_nullable_to_non_nullable
+              as ReadinessScore?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SleepHealthScoreImpl implements _SleepHealthScore {
-  _$SleepHealthScoreImpl({
-    @JsonKey(name: 'score_0_100_int') this.score0100Int,
-    @JsonKey(name: 'sleep_duration_score') this.sleepDurationScore,
-    @JsonKey(name: 'sleep_quality_score') this.sleepQualityScore,
-    @JsonKey(name: 'readiness_score') this.readinessScore,
-  });
+  _$SleepHealthScoreImpl(
+      {@JsonKey(name: 'score_0_100_int') this.score0100Int,
+      @JsonKey(name: 'sleep_duration_score') this.sleepDurationScore,
+      @JsonKey(name: 'sleep_quality_score') this.sleepQualityScore,
+      @JsonKey(name: 'readiness_score') this.readinessScore});
 
   factory _$SleepHealthScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$SleepHealthScoreImplFromJson(json);
@@ -265,13 +254,8 @@ class _$SleepHealthScoreImpl implements _SleepHealthScore {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    score0100Int,
-    sleepDurationScore,
-    sleepQualityScore,
-    readinessScore,
-  );
+  int get hashCode => Object.hash(runtimeType, score0100Int, sleepDurationScore,
+      sleepQualityScore, readinessScore);
 
   /// Create a copy of SleepHealthScore
   /// with the given fields replaced by the non-null parameter values.
@@ -280,25 +264,25 @@ class _$SleepHealthScoreImpl implements _SleepHealthScore {
   @pragma('vm:prefer-inline')
   _$$SleepHealthScoreImplCopyWith<_$SleepHealthScoreImpl> get copyWith =>
       __$$SleepHealthScoreImplCopyWithImpl<_$SleepHealthScoreImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SleepHealthScoreImplToJson(this);
+    return _$$SleepHealthScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SleepHealthScore implements SleepHealthScore {
-  factory _SleepHealthScore({
-    @JsonKey(name: 'score_0_100_int') final int? score0100Int,
-    @JsonKey(name: 'sleep_duration_score')
-    final SleepDurationScore? sleepDurationScore,
-    @JsonKey(name: 'sleep_quality_score')
-    final SleepQualityScore? sleepQualityScore,
-    @JsonKey(name: 'readiness_score') final ReadinessScore? readinessScore,
-  }) = _$SleepHealthScoreImpl;
+  factory _SleepHealthScore(
+      {@JsonKey(name: 'score_0_100_int') final int? score0100Int,
+      @JsonKey(name: 'sleep_duration_score')
+      final SleepDurationScore? sleepDurationScore,
+      @JsonKey(name: 'sleep_quality_score')
+      final SleepQualityScore? sleepQualityScore,
+      @JsonKey(name: 'readiness_score')
+      final ReadinessScore? readinessScore}) = _$SleepHealthScoreImpl;
 
   factory _SleepHealthScore.fromJson(Map<String, dynamic> json) =
       _$SleepHealthScoreImpl.fromJson;

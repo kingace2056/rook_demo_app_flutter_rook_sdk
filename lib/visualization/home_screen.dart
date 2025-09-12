@@ -4,6 +4,7 @@ import 'controllers/available_data_controller.dart';
 import 'health_summary_page.dart';
 import 'screens/sleep_summary_page.dart';
 import 'screens/dashboard_page.dart';
+import 'screens/rook_api_dashboard_page.dart';
 import 'widgets/heart_rate_chart.dart';
 import 'widgets/sleep_summary_widget.dart';
 
@@ -21,6 +22,18 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         actions: [
+          // ROOK API Dashboard navigation button
+          IconButton(
+            icon: const Icon(Icons.api),
+            tooltip: 'ROOK API Dashboard',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const RookApiDashboard()),
+              );
+            },
+          ),
           // Dashboard navigation button
           IconButton(
             icon: const Icon(Icons.dashboard),
@@ -90,8 +103,8 @@ class HomePage extends StatelessWidget {
                       Text(
                         'Check Available Data Types',
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
                       const SizedBox(height: 8),
                       // Show saved user ID info
@@ -299,8 +312,8 @@ class HomePage extends StatelessWidget {
                     Text(
                       'Available Data Types for ${controller.lastCheckedUserId}',
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                     const SizedBox(height: 16),
                     ...groupedData.entries.map((entry) {
@@ -317,7 +330,9 @@ class HomePage extends StatelessWidget {
                             children: [
                               Text(
                                 category,
-                                style: Theme.of(context).textTheme.titleMedium
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
                                     ?.copyWith(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.blue[800],

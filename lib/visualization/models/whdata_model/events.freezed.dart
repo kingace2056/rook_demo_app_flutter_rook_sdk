@@ -12,8 +12,7 @@ part of 'events.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Events _$EventsFromJson(Map<String, dynamic> json) {
   return _Events.fromJson(json);
@@ -39,9 +38,9 @@ abstract class $EventsCopyWith<$Res> {
   factory $EventsCopyWith(Events value, $Res Function(Events) then) =
       _$EventsCopyWithImpl<$Res, Events>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'heart_rate_event') List<HeartRateEvent>? heartRateEvent,
-  });
+  $Res call(
+      {@JsonKey(name: 'heart_rate_event')
+      List<HeartRateEvent>? heartRateEvent});
 }
 
 /// @nodoc
@@ -58,30 +57,28 @@ class _$EventsCopyWithImpl<$Res, $Val extends Events>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? heartRateEvent = freezed}) {
-    return _then(
-      _value.copyWith(
-            heartRateEvent: freezed == heartRateEvent
-                ? _value.heartRateEvent
-                : heartRateEvent // ignore: cast_nullable_to_non_nullable
-                      as List<HeartRateEvent>?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? heartRateEvent = freezed,
+  }) {
+    return _then(_value.copyWith(
+      heartRateEvent: freezed == heartRateEvent
+          ? _value.heartRateEvent
+          : heartRateEvent // ignore: cast_nullable_to_non_nullable
+              as List<HeartRateEvent>?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$EventsImplCopyWith<$Res> implements $EventsCopyWith<$Res> {
   factory _$$EventsImplCopyWith(
-    _$EventsImpl value,
-    $Res Function(_$EventsImpl) then,
-  ) = __$$EventsImplCopyWithImpl<$Res>;
+          _$EventsImpl value, $Res Function(_$EventsImpl) then) =
+      __$$EventsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'heart_rate_event') List<HeartRateEvent>? heartRateEvent,
-  });
+  $Res call(
+      {@JsonKey(name: 'heart_rate_event')
+      List<HeartRateEvent>? heartRateEvent});
 }
 
 /// @nodoc
@@ -89,33 +86,32 @@ class __$$EventsImplCopyWithImpl<$Res>
     extends _$EventsCopyWithImpl<$Res, _$EventsImpl>
     implements _$$EventsImplCopyWith<$Res> {
   __$$EventsImplCopyWithImpl(
-    _$EventsImpl _value,
-    $Res Function(_$EventsImpl) _then,
-  ) : super(_value, _then);
+      _$EventsImpl _value, $Res Function(_$EventsImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Events
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? heartRateEvent = freezed}) {
-    return _then(
-      _$EventsImpl(
-        heartRateEvent: freezed == heartRateEvent
-            ? _value._heartRateEvent
-            : heartRateEvent // ignore: cast_nullable_to_non_nullable
-                  as List<HeartRateEvent>?,
-      ),
-    );
+  $Res call({
+    Object? heartRateEvent = freezed,
+  }) {
+    return _then(_$EventsImpl(
+      heartRateEvent: freezed == heartRateEvent
+          ? _value._heartRateEvent
+          : heartRateEvent // ignore: cast_nullable_to_non_nullable
+              as List<HeartRateEvent>?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$EventsImpl implements _Events {
-  _$EventsImpl({
-    @JsonKey(name: 'heart_rate_event')
-    final List<HeartRateEvent>? heartRateEvent,
-  }) : _heartRateEvent = heartRateEvent;
+  _$EventsImpl(
+      {@JsonKey(name: 'heart_rate_event')
+      final List<HeartRateEvent>? heartRateEvent})
+      : _heartRateEvent = heartRateEvent;
 
   factory _$EventsImpl.fromJson(Map<String, dynamic> json) =>
       _$$EventsImplFromJson(json);
@@ -141,18 +137,14 @@ class _$EventsImpl implements _Events {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EventsImpl &&
-            const DeepCollectionEquality().equals(
-              other._heartRateEvent,
-              _heartRateEvent,
-            ));
+            const DeepCollectionEquality()
+                .equals(other._heartRateEvent, _heartRateEvent));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_heartRateEvent),
-  );
+      runtimeType, const DeepCollectionEquality().hash(_heartRateEvent));
 
   /// Create a copy of Events
   /// with the given fields replaced by the non-null parameter values.
@@ -164,15 +156,16 @@ class _$EventsImpl implements _Events {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EventsImplToJson(this);
+    return _$$EventsImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Events implements Events {
-  factory _Events({
-    @JsonKey(name: 'heart_rate_event')
-    final List<HeartRateEvent>? heartRateEvent,
-  }) = _$EventsImpl;
+  factory _Events(
+      {@JsonKey(name: 'heart_rate_event')
+      final List<HeartRateEvent>? heartRateEvent}) = _$EventsImpl;
 
   factory _Events.fromJson(Map<String, dynamic> json) = _$EventsImpl.fromJson;
 

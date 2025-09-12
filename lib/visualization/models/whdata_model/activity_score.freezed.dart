@@ -12,8 +12,7 @@ part of 'activity_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ActivityScore _$ActivityScoreFromJson(Map<String, dynamic> json) {
   return _ActivityScore.fromJson(json);
@@ -46,18 +45,16 @@ mixin _$ActivityScore {
 /// @nodoc
 abstract class $ActivityScoreCopyWith<$Res> {
   factory $ActivityScoreCopyWith(
-    ActivityScore value,
-    $Res Function(ActivityScore) then,
-  ) = _$ActivityScoreCopyWithImpl<$Res, ActivityScore>;
+          ActivityScore value, $Res Function(ActivityScore) then) =
+      _$ActivityScoreCopyWithImpl<$Res, ActivityScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    bool? calculatedWithMissingUserInfoBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      bool? calculatedWithMissingUserInfoBool});
 }
 
 /// @nodoc
@@ -81,32 +78,29 @@ class _$ActivityScoreCopyWithImpl<$Res, $Val extends ActivityScore>
     Object? score0100Int = freezed,
     Object? calculatedWithMissingUserInfoBool = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            datetimeString: freezed == datetimeString
-                ? _value.datetimeString
-                : datetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAtString: freezed == createdAtString
-                ? _value.createdAtString
-                : createdAtString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAtString: freezed == updatedAtString
-                ? _value.updatedAtString
-                : updatedAtString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            score0100Int: freezed == score0100Int
-                ? _value.score0100Int
-                : score0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            calculatedWithMissingUserInfoBool:
-                freezed == calculatedWithMissingUserInfoBool
-                ? _value.calculatedWithMissingUserInfoBool
-                : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAtString: freezed == createdAtString
+          ? _value.createdAtString
+          : createdAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAtString: freezed == updatedAtString
+          ? _value.updatedAtString
+          : updatedAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      calculatedWithMissingUserInfoBool: freezed ==
+              calculatedWithMissingUserInfoBool
+          ? _value.calculatedWithMissingUserInfoBool
+          : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
   }
 }
 
@@ -114,19 +108,17 @@ class _$ActivityScoreCopyWithImpl<$Res, $Val extends ActivityScore>
 abstract class _$$ActivityScoreImplCopyWith<$Res>
     implements $ActivityScoreCopyWith<$Res> {
   factory _$$ActivityScoreImplCopyWith(
-    _$ActivityScoreImpl value,
-    $Res Function(_$ActivityScoreImpl) then,
-  ) = __$$ActivityScoreImplCopyWithImpl<$Res>;
+          _$ActivityScoreImpl value, $Res Function(_$ActivityScoreImpl) then) =
+      __$$ActivityScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    bool? calculatedWithMissingUserInfoBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      bool? calculatedWithMissingUserInfoBool});
 }
 
 /// @nodoc
@@ -134,9 +126,8 @@ class __$$ActivityScoreImplCopyWithImpl<$Res>
     extends _$ActivityScoreCopyWithImpl<$Res, _$ActivityScoreImpl>
     implements _$$ActivityScoreImplCopyWith<$Res> {
   __$$ActivityScoreImplCopyWithImpl(
-    _$ActivityScoreImpl _value,
-    $Res Function(_$ActivityScoreImpl) _then,
-  ) : super(_value, _then);
+      _$ActivityScoreImpl _value, $Res Function(_$ActivityScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ActivityScore
   /// with the given fields replaced by the non-null parameter values.
@@ -149,45 +140,42 @@ class __$$ActivityScoreImplCopyWithImpl<$Res>
     Object? score0100Int = freezed,
     Object? calculatedWithMissingUserInfoBool = freezed,
   }) {
-    return _then(
-      _$ActivityScoreImpl(
-        datetimeString: freezed == datetimeString
-            ? _value.datetimeString
-            : datetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAtString: freezed == createdAtString
-            ? _value.createdAtString
-            : createdAtString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAtString: freezed == updatedAtString
-            ? _value.updatedAtString
-            : updatedAtString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        score0100Int: freezed == score0100Int
-            ? _value.score0100Int
-            : score0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        calculatedWithMissingUserInfoBool:
-            freezed == calculatedWithMissingUserInfoBool
-            ? _value.calculatedWithMissingUserInfoBool
-            : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      ),
-    );
+    return _then(_$ActivityScoreImpl(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAtString: freezed == createdAtString
+          ? _value.createdAtString
+          : createdAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAtString: freezed == updatedAtString
+          ? _value.updatedAtString
+          : updatedAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      calculatedWithMissingUserInfoBool: freezed ==
+              calculatedWithMissingUserInfoBool
+          ? _value.calculatedWithMissingUserInfoBool
+          : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ActivityScoreImpl implements _ActivityScore {
-  _$ActivityScoreImpl({
-    @JsonKey(name: 'datetime_string') this.datetimeString,
-    @JsonKey(name: 'created_at_string') this.createdAtString,
-    @JsonKey(name: 'updated_at_string') this.updatedAtString,
-    @JsonKey(name: 'score_0_100_int') this.score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    this.calculatedWithMissingUserInfoBool,
-  });
+  _$ActivityScoreImpl(
+      {@JsonKey(name: 'datetime_string') this.datetimeString,
+      @JsonKey(name: 'created_at_string') this.createdAtString,
+      @JsonKey(name: 'updated_at_string') this.updatedAtString,
+      @JsonKey(name: 'score_0_100_int') this.score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      this.calculatedWithMissingUserInfoBool});
 
   factory _$ActivityScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$ActivityScoreImplFromJson(json);
@@ -226,24 +214,16 @@ class _$ActivityScoreImpl implements _ActivityScore {
                 other.updatedAtString == updatedAtString) &&
             (identical(other.score0100Int, score0100Int) ||
                 other.score0100Int == score0100Int) &&
-            (identical(
-                  other.calculatedWithMissingUserInfoBool,
-                  calculatedWithMissingUserInfoBool,
-                ) ||
+            (identical(other.calculatedWithMissingUserInfoBool,
+                    calculatedWithMissingUserInfoBool) ||
                 other.calculatedWithMissingUserInfoBool ==
                     calculatedWithMissingUserInfoBool));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    datetimeString,
-    createdAtString,
-    updatedAtString,
-    score0100Int,
-    calculatedWithMissingUserInfoBool,
-  );
+  int get hashCode => Object.hash(runtimeType, datetimeString, createdAtString,
+      updatedAtString, score0100Int, calculatedWithMissingUserInfoBool);
 
   /// Create a copy of ActivityScore
   /// with the given fields replaced by the non-null parameter values.
@@ -255,19 +235,20 @@ class _$ActivityScoreImpl implements _ActivityScore {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ActivityScoreImplToJson(this);
+    return _$$ActivityScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ActivityScore implements ActivityScore {
-  factory _ActivityScore({
-    @JsonKey(name: 'datetime_string') final DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') final DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') final DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') final int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    final bool? calculatedWithMissingUserInfoBool,
-  }) = _$ActivityScoreImpl;
+  factory _ActivityScore(
+      {@JsonKey(name: 'datetime_string') final DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') final DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') final DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') final int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      final bool? calculatedWithMissingUserInfoBool}) = _$ActivityScoreImpl;
 
   factory _ActivityScore.fromJson(Map<String, dynamic> json) =
       _$ActivityScoreImpl.fromJson;

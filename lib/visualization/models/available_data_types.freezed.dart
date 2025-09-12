@@ -12,8 +12,7 @@ part of 'available_data_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DataSummary _$DataSummaryFromJson(Map<String, dynamic> json) {
   return _DataSummary.fromJson(json);
@@ -43,16 +42,14 @@ mixin _$DataSummary {
 /// @nodoc
 abstract class $DataSummaryCopyWith<$Res> {
   factory $DataSummaryCopyWith(
-    DataSummary value,
-    $Res Function(DataSummary) then,
-  ) = _$DataSummaryCopyWithImpl<$Res, DataSummary>;
+          DataSummary value, $Res Function(DataSummary) then) =
+      _$DataSummaryCopyWithImpl<$Res, DataSummary>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'total_data_types') int? totalDataTypes,
-    @JsonKey(name: 'total_records') int? totalRecords,
-    @JsonKey(name: 'data_structures_found') List<String>? dataStructuresFound,
-    @JsonKey(name: 'date_range') DateRange? dateRange,
-  });
+  $Res call(
+      {@JsonKey(name: 'total_data_types') int? totalDataTypes,
+      @JsonKey(name: 'total_records') int? totalRecords,
+      @JsonKey(name: 'data_structures_found') List<String>? dataStructuresFound,
+      @JsonKey(name: 'date_range') DateRange? dateRange});
 
   $DateRangeCopyWith<$Res>? get dateRange;
 }
@@ -77,27 +74,24 @@ class _$DataSummaryCopyWithImpl<$Res, $Val extends DataSummary>
     Object? dataStructuresFound = freezed,
     Object? dateRange = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            totalDataTypes: freezed == totalDataTypes
-                ? _value.totalDataTypes
-                : totalDataTypes // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            totalRecords: freezed == totalRecords
-                ? _value.totalRecords
-                : totalRecords // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructuresFound: freezed == dataStructuresFound
-                ? _value.dataStructuresFound
-                : dataStructuresFound // ignore: cast_nullable_to_non_nullable
-                      as List<String>?,
-            dateRange: freezed == dateRange
-                ? _value.dateRange
-                : dateRange // ignore: cast_nullable_to_non_nullable
-                      as DateRange?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      totalDataTypes: freezed == totalDataTypes
+          ? _value.totalDataTypes
+          : totalDataTypes // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalRecords: freezed == totalRecords
+          ? _value.totalRecords
+          : totalRecords // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructuresFound: freezed == dataStructuresFound
+          ? _value.dataStructuresFound
+          : dataStructuresFound // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      dateRange: freezed == dateRange
+          ? _value.dateRange
+          : dateRange // ignore: cast_nullable_to_non_nullable
+              as DateRange?,
+    ) as $Val);
   }
 
   /// Create a copy of DataSummary
@@ -119,17 +113,15 @@ class _$DataSummaryCopyWithImpl<$Res, $Val extends DataSummary>
 abstract class _$$DataSummaryImplCopyWith<$Res>
     implements $DataSummaryCopyWith<$Res> {
   factory _$$DataSummaryImplCopyWith(
-    _$DataSummaryImpl value,
-    $Res Function(_$DataSummaryImpl) then,
-  ) = __$$DataSummaryImplCopyWithImpl<$Res>;
+          _$DataSummaryImpl value, $Res Function(_$DataSummaryImpl) then) =
+      __$$DataSummaryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'total_data_types') int? totalDataTypes,
-    @JsonKey(name: 'total_records') int? totalRecords,
-    @JsonKey(name: 'data_structures_found') List<String>? dataStructuresFound,
-    @JsonKey(name: 'date_range') DateRange? dateRange,
-  });
+  $Res call(
+      {@JsonKey(name: 'total_data_types') int? totalDataTypes,
+      @JsonKey(name: 'total_records') int? totalRecords,
+      @JsonKey(name: 'data_structures_found') List<String>? dataStructuresFound,
+      @JsonKey(name: 'date_range') DateRange? dateRange});
 
   @override
   $DateRangeCopyWith<$Res>? get dateRange;
@@ -140,9 +132,8 @@ class __$$DataSummaryImplCopyWithImpl<$Res>
     extends _$DataSummaryCopyWithImpl<$Res, _$DataSummaryImpl>
     implements _$$DataSummaryImplCopyWith<$Res> {
   __$$DataSummaryImplCopyWithImpl(
-    _$DataSummaryImpl _value,
-    $Res Function(_$DataSummaryImpl) _then,
-  ) : super(_value, _then);
+      _$DataSummaryImpl _value, $Res Function(_$DataSummaryImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DataSummary
   /// with the given fields replaced by the non-null parameter values.
@@ -154,39 +145,37 @@ class __$$DataSummaryImplCopyWithImpl<$Res>
     Object? dataStructuresFound = freezed,
     Object? dateRange = freezed,
   }) {
-    return _then(
-      _$DataSummaryImpl(
-        totalDataTypes: freezed == totalDataTypes
-            ? _value.totalDataTypes
-            : totalDataTypes // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        totalRecords: freezed == totalRecords
-            ? _value.totalRecords
-            : totalRecords // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructuresFound: freezed == dataStructuresFound
-            ? _value._dataStructuresFound
-            : dataStructuresFound // ignore: cast_nullable_to_non_nullable
-                  as List<String>?,
-        dateRange: freezed == dateRange
-            ? _value.dateRange
-            : dateRange // ignore: cast_nullable_to_non_nullable
-                  as DateRange?,
-      ),
-    );
+    return _then(_$DataSummaryImpl(
+      totalDataTypes: freezed == totalDataTypes
+          ? _value.totalDataTypes
+          : totalDataTypes // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalRecords: freezed == totalRecords
+          ? _value.totalRecords
+          : totalRecords // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructuresFound: freezed == dataStructuresFound
+          ? _value._dataStructuresFound
+          : dataStructuresFound // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      dateRange: freezed == dateRange
+          ? _value.dateRange
+          : dateRange // ignore: cast_nullable_to_non_nullable
+              as DateRange?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DataSummaryImpl implements _DataSummary {
-  const _$DataSummaryImpl({
-    @JsonKey(name: 'total_data_types') this.totalDataTypes,
-    @JsonKey(name: 'total_records') this.totalRecords,
-    @JsonKey(name: 'data_structures_found')
-    final List<String>? dataStructuresFound,
-    @JsonKey(name: 'date_range') this.dateRange,
-  }) : _dataStructuresFound = dataStructuresFound;
+  const _$DataSummaryImpl(
+      {@JsonKey(name: 'total_data_types') this.totalDataTypes,
+      @JsonKey(name: 'total_records') this.totalRecords,
+      @JsonKey(name: 'data_structures_found')
+      final List<String>? dataStructuresFound,
+      @JsonKey(name: 'date_range') this.dateRange})
+      : _dataStructuresFound = dataStructuresFound;
 
   factory _$DataSummaryImpl.fromJson(Map<String, dynamic> json) =>
       _$$DataSummaryImplFromJson(json);
@@ -227,23 +216,16 @@ class _$DataSummaryImpl implements _DataSummary {
                 other.totalDataTypes == totalDataTypes) &&
             (identical(other.totalRecords, totalRecords) ||
                 other.totalRecords == totalRecords) &&
-            const DeepCollectionEquality().equals(
-              other._dataStructuresFound,
-              _dataStructuresFound,
-            ) &&
+            const DeepCollectionEquality()
+                .equals(other._dataStructuresFound, _dataStructuresFound) &&
             (identical(other.dateRange, dateRange) ||
                 other.dateRange == dateRange));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    totalDataTypes,
-    totalRecords,
-    const DeepCollectionEquality().hash(_dataStructuresFound),
-    dateRange,
-  );
+  int get hashCode => Object.hash(runtimeType, totalDataTypes, totalRecords,
+      const DeepCollectionEquality().hash(_dataStructuresFound), dateRange);
 
   /// Create a copy of DataSummary
   /// with the given fields replaced by the non-null parameter values.
@@ -255,18 +237,20 @@ class _$DataSummaryImpl implements _DataSummary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DataSummaryImplToJson(this);
+    return _$$DataSummaryImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _DataSummary implements DataSummary {
-  const factory _DataSummary({
-    @JsonKey(name: 'total_data_types') final int? totalDataTypes,
-    @JsonKey(name: 'total_records') final int? totalRecords,
-    @JsonKey(name: 'data_structures_found')
-    final List<String>? dataStructuresFound,
-    @JsonKey(name: 'date_range') final DateRange? dateRange,
-  }) = _$DataSummaryImpl;
+  const factory _DataSummary(
+          {@JsonKey(name: 'total_data_types') final int? totalDataTypes,
+          @JsonKey(name: 'total_records') final int? totalRecords,
+          @JsonKey(name: 'data_structures_found')
+          final List<String>? dataStructuresFound,
+          @JsonKey(name: 'date_range') final DateRange? dateRange}) =
+      _$DataSummaryImpl;
 
   factory _DataSummary.fromJson(Map<String, dynamic> json) =
       _$DataSummaryImpl.fromJson;
@@ -333,20 +317,20 @@ class _$DateRangeCopyWithImpl<$Res, $Val extends DateRange>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? earliest = freezed, Object? latest = freezed}) {
-    return _then(
-      _value.copyWith(
-            earliest: freezed == earliest
-                ? _value.earliest
-                : earliest // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            latest: freezed == latest
-                ? _value.latest
-                : latest // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? earliest = freezed,
+    Object? latest = freezed,
+  }) {
+    return _then(_value.copyWith(
+      earliest: freezed == earliest
+          ? _value.earliest
+          : earliest // ignore: cast_nullable_to_non_nullable
+              as int?,
+      latest: freezed == latest
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -354,9 +338,8 @@ class _$DateRangeCopyWithImpl<$Res, $Val extends DateRange>
 abstract class _$$DateRangeImplCopyWith<$Res>
     implements $DateRangeCopyWith<$Res> {
   factory _$$DateRangeImplCopyWith(
-    _$DateRangeImpl value,
-    $Res Function(_$DateRangeImpl) then,
-  ) = __$$DateRangeImplCopyWithImpl<$Res>;
+          _$DateRangeImpl value, $Res Function(_$DateRangeImpl) then) =
+      __$$DateRangeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? earliest, int? latest});
@@ -367,27 +350,27 @@ class __$$DateRangeImplCopyWithImpl<$Res>
     extends _$DateRangeCopyWithImpl<$Res, _$DateRangeImpl>
     implements _$$DateRangeImplCopyWith<$Res> {
   __$$DateRangeImplCopyWithImpl(
-    _$DateRangeImpl _value,
-    $Res Function(_$DateRangeImpl) _then,
-  ) : super(_value, _then);
+      _$DateRangeImpl _value, $Res Function(_$DateRangeImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DateRange
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? earliest = freezed, Object? latest = freezed}) {
-    return _then(
-      _$DateRangeImpl(
-        earliest: freezed == earliest
-            ? _value.earliest
-            : earliest // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        latest: freezed == latest
-            ? _value.latest
-            : latest // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+  $Res call({
+    Object? earliest = freezed,
+    Object? latest = freezed,
+  }) {
+    return _then(_$DateRangeImpl(
+      earliest: freezed == earliest
+          ? _value.earliest
+          : earliest // ignore: cast_nullable_to_non_nullable
+              as int?,
+      latest: freezed == latest
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
@@ -433,7 +416,9 @@ class _$DateRangeImpl implements _DateRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DateRangeImplToJson(this);
+    return _$$DateRangeImplToJson(
+      this,
+    );
   }
 }
 
@@ -458,8 +443,7 @@ abstract class _DateRange implements DateRange {
 }
 
 AvailableDataTypesData _$AvailableDataTypesDataFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _AvailableDataTypesData.fromJson(json);
 }
 
@@ -483,25 +467,21 @@ mixin _$AvailableDataTypesData {
 
 /// @nodoc
 abstract class $AvailableDataTypesDataCopyWith<$Res> {
-  factory $AvailableDataTypesDataCopyWith(
-    AvailableDataTypesData value,
-    $Res Function(AvailableDataTypesData) then,
-  ) = _$AvailableDataTypesDataCopyWithImpl<$Res, AvailableDataTypesData>;
+  factory $AvailableDataTypesDataCopyWith(AvailableDataTypesData value,
+          $Res Function(AvailableDataTypesData) then) =
+      _$AvailableDataTypesDataCopyWithImpl<$Res, AvailableDataTypesData>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'available_data_types') List<String>? availableDataTypes,
-    DataSummary? summary,
-  });
+  $Res call(
+      {@JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'available_data_types') List<String>? availableDataTypes,
+      DataSummary? summary});
 
   $DataSummaryCopyWith<$Res>? get summary;
 }
 
 /// @nodoc
-class _$AvailableDataTypesDataCopyWithImpl<
-  $Res,
-  $Val extends AvailableDataTypesData
->
+class _$AvailableDataTypesDataCopyWithImpl<$Res,
+        $Val extends AvailableDataTypesData>
     implements $AvailableDataTypesDataCopyWith<$Res> {
   _$AvailableDataTypesDataCopyWithImpl(this._value, this._then);
 
@@ -519,23 +499,20 @@ class _$AvailableDataTypesDataCopyWithImpl<
     Object? availableDataTypes = freezed,
     Object? summary = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            availableDataTypes: freezed == availableDataTypes
-                ? _value.availableDataTypes
-                : availableDataTypes // ignore: cast_nullable_to_non_nullable
-                      as List<String>?,
-            summary: freezed == summary
-                ? _value.summary
-                : summary // ignore: cast_nullable_to_non_nullable
-                      as DataSummary?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      availableDataTypes: freezed == availableDataTypes
+          ? _value.availableDataTypes
+          : availableDataTypes // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      summary: freezed == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as DataSummary?,
+    ) as $Val);
   }
 
   /// Create a copy of AvailableDataTypesData
@@ -557,16 +534,15 @@ class _$AvailableDataTypesDataCopyWithImpl<
 abstract class _$$AvailableDataTypesDataImplCopyWith<$Res>
     implements $AvailableDataTypesDataCopyWith<$Res> {
   factory _$$AvailableDataTypesDataImplCopyWith(
-    _$AvailableDataTypesDataImpl value,
-    $Res Function(_$AvailableDataTypesDataImpl) then,
-  ) = __$$AvailableDataTypesDataImplCopyWithImpl<$Res>;
+          _$AvailableDataTypesDataImpl value,
+          $Res Function(_$AvailableDataTypesDataImpl) then) =
+      __$$AvailableDataTypesDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'available_data_types') List<String>? availableDataTypes,
-    DataSummary? summary,
-  });
+  $Res call(
+      {@JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'available_data_types') List<String>? availableDataTypes,
+      DataSummary? summary});
 
   @override
   $DataSummaryCopyWith<$Res>? get summary;
@@ -574,13 +550,13 @@ abstract class _$$AvailableDataTypesDataImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AvailableDataTypesDataImplCopyWithImpl<$Res>
-    extends
-        _$AvailableDataTypesDataCopyWithImpl<$Res, _$AvailableDataTypesDataImpl>
+    extends _$AvailableDataTypesDataCopyWithImpl<$Res,
+        _$AvailableDataTypesDataImpl>
     implements _$$AvailableDataTypesDataImplCopyWith<$Res> {
   __$$AvailableDataTypesDataImplCopyWithImpl(
-    _$AvailableDataTypesDataImpl _value,
-    $Res Function(_$AvailableDataTypesDataImpl) _then,
-  ) : super(_value, _then);
+      _$AvailableDataTypesDataImpl _value,
+      $Res Function(_$AvailableDataTypesDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of AvailableDataTypesData
   /// with the given fields replaced by the non-null parameter values.
@@ -591,34 +567,32 @@ class __$$AvailableDataTypesDataImplCopyWithImpl<$Res>
     Object? availableDataTypes = freezed,
     Object? summary = freezed,
   }) {
-    return _then(
-      _$AvailableDataTypesDataImpl(
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        availableDataTypes: freezed == availableDataTypes
-            ? _value._availableDataTypes
-            : availableDataTypes // ignore: cast_nullable_to_non_nullable
-                  as List<String>?,
-        summary: freezed == summary
-            ? _value.summary
-            : summary // ignore: cast_nullable_to_non_nullable
-                  as DataSummary?,
-      ),
-    );
+    return _then(_$AvailableDataTypesDataImpl(
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      availableDataTypes: freezed == availableDataTypes
+          ? _value._availableDataTypes
+          : availableDataTypes // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      summary: freezed == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as DataSummary?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AvailableDataTypesDataImpl implements _AvailableDataTypesData {
-  const _$AvailableDataTypesDataImpl({
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'available_data_types')
-    final List<String>? availableDataTypes,
-    this.summary,
-  }) : _availableDataTypes = availableDataTypes;
+  const _$AvailableDataTypesDataImpl(
+      {@JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'available_data_types')
+      final List<String>? availableDataTypes,
+      this.summary})
+      : _availableDataTypes = availableDataTypes;
 
   factory _$AvailableDataTypesDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$AvailableDataTypesDataImplFromJson(json);
@@ -652,21 +626,15 @@ class _$AvailableDataTypesDataImpl implements _AvailableDataTypesData {
         (other.runtimeType == runtimeType &&
             other is _$AvailableDataTypesDataImpl &&
             (identical(other.userId, userId) || other.userId == userId) &&
-            const DeepCollectionEquality().equals(
-              other._availableDataTypes,
-              _availableDataTypes,
-            ) &&
+            const DeepCollectionEquality()
+                .equals(other._availableDataTypes, _availableDataTypes) &&
             (identical(other.summary, summary) || other.summary == summary));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    userId,
-    const DeepCollectionEquality().hash(_availableDataTypes),
-    summary,
-  );
+  int get hashCode => Object.hash(runtimeType, userId,
+      const DeepCollectionEquality().hash(_availableDataTypes), summary);
 
   /// Create a copy of AvailableDataTypesData
   /// with the given fields replaced by the non-null parameter values.
@@ -674,25 +642,23 @@ class _$AvailableDataTypesDataImpl implements _AvailableDataTypesData {
   @override
   @pragma('vm:prefer-inline')
   _$$AvailableDataTypesDataImplCopyWith<_$AvailableDataTypesDataImpl>
-  get copyWith =>
-      __$$AvailableDataTypesDataImplCopyWithImpl<_$AvailableDataTypesDataImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$AvailableDataTypesDataImplCopyWithImpl<
+          _$AvailableDataTypesDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AvailableDataTypesDataImplToJson(this);
+    return _$$AvailableDataTypesDataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _AvailableDataTypesData implements AvailableDataTypesData {
-  const factory _AvailableDataTypesData({
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'available_data_types')
-    final List<String>? availableDataTypes,
-    final DataSummary? summary,
-  }) = _$AvailableDataTypesDataImpl;
+  const factory _AvailableDataTypesData(
+      {@JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'available_data_types')
+      final List<String>? availableDataTypes,
+      final DataSummary? summary}) = _$AvailableDataTypesDataImpl;
 
   factory _AvailableDataTypesData.fromJson(Map<String, dynamic> json) =
       _$AvailableDataTypesDataImpl.fromJson;
@@ -711,12 +677,11 @@ abstract class _AvailableDataTypesData implements AvailableDataTypesData {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AvailableDataTypesDataImplCopyWith<_$AvailableDataTypesDataImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 AvailableDataTypesResponse _$AvailableDataTypesResponseFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _AvailableDataTypesResponse.fromJson(json);
 }
 
@@ -732,19 +697,15 @@ mixin _$AvailableDataTypesResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $AvailableDataTypesResponseCopyWith<AvailableDataTypesResponse>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AvailableDataTypesResponseCopyWith<$Res> {
-  factory $AvailableDataTypesResponseCopyWith(
-    AvailableDataTypesResponse value,
-    $Res Function(AvailableDataTypesResponse) then,
-  ) =
-      _$AvailableDataTypesResponseCopyWithImpl<
-        $Res,
-        AvailableDataTypesResponse
-      >;
+  factory $AvailableDataTypesResponseCopyWith(AvailableDataTypesResponse value,
+          $Res Function(AvailableDataTypesResponse) then) =
+      _$AvailableDataTypesResponseCopyWithImpl<$Res,
+          AvailableDataTypesResponse>;
   @useResult
   $Res call({bool? success, AvailableDataTypesData? data});
 
@@ -752,10 +713,8 @@ abstract class $AvailableDataTypesResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AvailableDataTypesResponseCopyWithImpl<
-  $Res,
-  $Val extends AvailableDataTypesResponse
->
+class _$AvailableDataTypesResponseCopyWithImpl<$Res,
+        $Val extends AvailableDataTypesResponse>
     implements $AvailableDataTypesResponseCopyWith<$Res> {
   _$AvailableDataTypesResponseCopyWithImpl(this._value, this._then);
 
@@ -768,20 +727,20 @@ class _$AvailableDataTypesResponseCopyWithImpl<
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? success = freezed, Object? data = freezed}) {
-    return _then(
-      _value.copyWith(
-            success: freezed == success
-                ? _value.success
-                : success // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            data: freezed == data
-                ? _value.data
-                : data // ignore: cast_nullable_to_non_nullable
-                      as AvailableDataTypesData?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? success = freezed,
+    Object? data = freezed,
+  }) {
+    return _then(_value.copyWith(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as AvailableDataTypesData?,
+    ) as $Val);
   }
 
   /// Create a copy of AvailableDataTypesResponse
@@ -803,9 +762,9 @@ class _$AvailableDataTypesResponseCopyWithImpl<
 abstract class _$$AvailableDataTypesResponseImplCopyWith<$Res>
     implements $AvailableDataTypesResponseCopyWith<$Res> {
   factory _$$AvailableDataTypesResponseImplCopyWith(
-    _$AvailableDataTypesResponseImpl value,
-    $Res Function(_$AvailableDataTypesResponseImpl) then,
-  ) = __$$AvailableDataTypesResponseImplCopyWithImpl<$Res>;
+          _$AvailableDataTypesResponseImpl value,
+          $Res Function(_$AvailableDataTypesResponseImpl) then) =
+      __$$AvailableDataTypesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success, AvailableDataTypesData? data});
@@ -816,34 +775,32 @@ abstract class _$$AvailableDataTypesResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AvailableDataTypesResponseImplCopyWithImpl<$Res>
-    extends
-        _$AvailableDataTypesResponseCopyWithImpl<
-          $Res,
-          _$AvailableDataTypesResponseImpl
-        >
+    extends _$AvailableDataTypesResponseCopyWithImpl<$Res,
+        _$AvailableDataTypesResponseImpl>
     implements _$$AvailableDataTypesResponseImplCopyWith<$Res> {
   __$$AvailableDataTypesResponseImplCopyWithImpl(
-    _$AvailableDataTypesResponseImpl _value,
-    $Res Function(_$AvailableDataTypesResponseImpl) _then,
-  ) : super(_value, _then);
+      _$AvailableDataTypesResponseImpl _value,
+      $Res Function(_$AvailableDataTypesResponseImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of AvailableDataTypesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? success = freezed, Object? data = freezed}) {
-    return _then(
-      _$AvailableDataTypesResponseImpl(
-        success: freezed == success
-            ? _value.success
-            : success // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        data: freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                  as AvailableDataTypesData?,
-      ),
-    );
+  $Res call({
+    Object? success = freezed,
+    Object? data = freezed,
+  }) {
+    return _then(_$AvailableDataTypesResponseImpl(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as AvailableDataTypesData?,
+    ));
   }
 }
 
@@ -853,8 +810,8 @@ class _$AvailableDataTypesResponseImpl implements _AvailableDataTypesResponse {
   const _$AvailableDataTypesResponseImpl({this.success, this.data});
 
   factory _$AvailableDataTypesResponseImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$AvailableDataTypesResponseImplFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$AvailableDataTypesResponseImplFromJson(json);
 
   @override
   final bool? success;
@@ -885,23 +842,22 @@ class _$AvailableDataTypesResponseImpl implements _AvailableDataTypesResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$AvailableDataTypesResponseImplCopyWith<_$AvailableDataTypesResponseImpl>
-  get copyWith =>
-      __$$AvailableDataTypesResponseImplCopyWithImpl<
-        _$AvailableDataTypesResponseImpl
-      >(this, _$identity);
+      get copyWith => __$$AvailableDataTypesResponseImplCopyWithImpl<
+          _$AvailableDataTypesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AvailableDataTypesResponseImplToJson(this);
+    return _$$AvailableDataTypesResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _AvailableDataTypesResponse
     implements AvailableDataTypesResponse {
-  const factory _AvailableDataTypesResponse({
-    final bool? success,
-    final AvailableDataTypesData? data,
-  }) = _$AvailableDataTypesResponseImpl;
+  const factory _AvailableDataTypesResponse(
+      {final bool? success,
+      final AvailableDataTypesData? data}) = _$AvailableDataTypesResponseImpl;
 
   factory _AvailableDataTypesResponse.fromJson(Map<String, dynamic> json) =
       _$AvailableDataTypesResponseImpl.fromJson;
@@ -916,5 +872,5 @@ abstract class _AvailableDataTypesResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AvailableDataTypesResponseImplCopyWith<_$AvailableDataTypesResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

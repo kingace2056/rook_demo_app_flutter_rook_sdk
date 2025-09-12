@@ -12,8 +12,7 @@ part of 'sleep_summary.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SleepSummaryData _$SleepSummaryDataFromJson(Map<String, dynamic> json) {
   return _SleepSummaryData.fromJson(json);
@@ -42,18 +41,16 @@ mixin _$SleepSummaryData {
 /// @nodoc
 abstract class $SleepSummaryDataCopyWith<$Res> {
   factory $SleepSummaryDataCopyWith(
-    SleepSummaryData value,
-    $Res Function(SleepSummaryData) then,
-  ) = _$SleepSummaryDataCopyWithImpl<$Res, SleepSummaryData>;
+          SleepSummaryData value, $Res Function(SleepSummaryData) then) =
+      _$SleepSummaryDataCopyWithImpl<$Res, SleepSummaryData>;
   @useResult
-  $Res call({
-    Breathing? breathing,
-    Duration? duration,
-    @JsonKey(name: 'heart_rate') HeartRate? heartRate,
-    Scores? scores,
-    Temperature? temperature,
-    Metadata? metadata,
-  });
+  $Res call(
+      {Breathing? breathing,
+      Duration? duration,
+      @JsonKey(name: 'heart_rate') HeartRate? heartRate,
+      Scores? scores,
+      Temperature? temperature,
+      Metadata? metadata});
 
   $BreathingCopyWith<$Res>? get breathing;
   $DurationCopyWith<$Res>? get duration;
@@ -85,35 +82,32 @@ class _$SleepSummaryDataCopyWithImpl<$Res, $Val extends SleepSummaryData>
     Object? temperature = freezed,
     Object? metadata = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            breathing: freezed == breathing
-                ? _value.breathing
-                : breathing // ignore: cast_nullable_to_non_nullable
-                      as Breathing?,
-            duration: freezed == duration
-                ? _value.duration
-                : duration // ignore: cast_nullable_to_non_nullable
-                      as Duration?,
-            heartRate: freezed == heartRate
-                ? _value.heartRate
-                : heartRate // ignore: cast_nullable_to_non_nullable
-                      as HeartRate?,
-            scores: freezed == scores
-                ? _value.scores
-                : scores // ignore: cast_nullable_to_non_nullable
-                      as Scores?,
-            temperature: freezed == temperature
-                ? _value.temperature
-                : temperature // ignore: cast_nullable_to_non_nullable
-                      as Temperature?,
-            metadata: freezed == metadata
-                ? _value.metadata
-                : metadata // ignore: cast_nullable_to_non_nullable
-                      as Metadata?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      breathing: freezed == breathing
+          ? _value.breathing
+          : breathing // ignore: cast_nullable_to_non_nullable
+              as Breathing?,
+      duration: freezed == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      heartRate: freezed == heartRate
+          ? _value.heartRate
+          : heartRate // ignore: cast_nullable_to_non_nullable
+              as HeartRate?,
+      scores: freezed == scores
+          ? _value.scores
+          : scores // ignore: cast_nullable_to_non_nullable
+              as Scores?,
+      temperature: freezed == temperature
+          ? _value.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as Temperature?,
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+    ) as $Val);
   }
 
   /// Create a copy of SleepSummaryData
@@ -204,20 +198,18 @@ class _$SleepSummaryDataCopyWithImpl<$Res, $Val extends SleepSummaryData>
 /// @nodoc
 abstract class _$$SleepSummaryDataImplCopyWith<$Res>
     implements $SleepSummaryDataCopyWith<$Res> {
-  factory _$$SleepSummaryDataImplCopyWith(
-    _$SleepSummaryDataImpl value,
-    $Res Function(_$SleepSummaryDataImpl) then,
-  ) = __$$SleepSummaryDataImplCopyWithImpl<$Res>;
+  factory _$$SleepSummaryDataImplCopyWith(_$SleepSummaryDataImpl value,
+          $Res Function(_$SleepSummaryDataImpl) then) =
+      __$$SleepSummaryDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    Breathing? breathing,
-    Duration? duration,
-    @JsonKey(name: 'heart_rate') HeartRate? heartRate,
-    Scores? scores,
-    Temperature? temperature,
-    Metadata? metadata,
-  });
+  $Res call(
+      {Breathing? breathing,
+      Duration? duration,
+      @JsonKey(name: 'heart_rate') HeartRate? heartRate,
+      Scores? scores,
+      Temperature? temperature,
+      Metadata? metadata});
 
   @override
   $BreathingCopyWith<$Res>? get breathing;
@@ -237,10 +229,9 @@ abstract class _$$SleepSummaryDataImplCopyWith<$Res>
 class __$$SleepSummaryDataImplCopyWithImpl<$Res>
     extends _$SleepSummaryDataCopyWithImpl<$Res, _$SleepSummaryDataImpl>
     implements _$$SleepSummaryDataImplCopyWith<$Res> {
-  __$$SleepSummaryDataImplCopyWithImpl(
-    _$SleepSummaryDataImpl _value,
-    $Res Function(_$SleepSummaryDataImpl) _then,
-  ) : super(_value, _then);
+  __$$SleepSummaryDataImplCopyWithImpl(_$SleepSummaryDataImpl _value,
+      $Res Function(_$SleepSummaryDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SleepSummaryData
   /// with the given fields replaced by the non-null parameter values.
@@ -254,48 +245,45 @@ class __$$SleepSummaryDataImplCopyWithImpl<$Res>
     Object? temperature = freezed,
     Object? metadata = freezed,
   }) {
-    return _then(
-      _$SleepSummaryDataImpl(
-        breathing: freezed == breathing
-            ? _value.breathing
-            : breathing // ignore: cast_nullable_to_non_nullable
-                  as Breathing?,
-        duration: freezed == duration
-            ? _value.duration
-            : duration // ignore: cast_nullable_to_non_nullable
-                  as Duration?,
-        heartRate: freezed == heartRate
-            ? _value.heartRate
-            : heartRate // ignore: cast_nullable_to_non_nullable
-                  as HeartRate?,
-        scores: freezed == scores
-            ? _value.scores
-            : scores // ignore: cast_nullable_to_non_nullable
-                  as Scores?,
-        temperature: freezed == temperature
-            ? _value.temperature
-            : temperature // ignore: cast_nullable_to_non_nullable
-                  as Temperature?,
-        metadata: freezed == metadata
-            ? _value.metadata
-            : metadata // ignore: cast_nullable_to_non_nullable
-                  as Metadata?,
-      ),
-    );
+    return _then(_$SleepSummaryDataImpl(
+      breathing: freezed == breathing
+          ? _value.breathing
+          : breathing // ignore: cast_nullable_to_non_nullable
+              as Breathing?,
+      duration: freezed == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      heartRate: freezed == heartRate
+          ? _value.heartRate
+          : heartRate // ignore: cast_nullable_to_non_nullable
+              as HeartRate?,
+      scores: freezed == scores
+          ? _value.scores
+          : scores // ignore: cast_nullable_to_non_nullable
+              as Scores?,
+      temperature: freezed == temperature
+          ? _value.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as Temperature?,
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SleepSummaryDataImpl implements _SleepSummaryData {
-  _$SleepSummaryDataImpl({
-    this.breathing,
-    this.duration,
-    @JsonKey(name: 'heart_rate') this.heartRate,
-    this.scores,
-    this.temperature,
-    this.metadata,
-  });
+  _$SleepSummaryDataImpl(
+      {this.breathing,
+      this.duration,
+      @JsonKey(name: 'heart_rate') this.heartRate,
+      this.scores,
+      this.temperature,
+      this.metadata});
 
   factory _$SleepSummaryDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$SleepSummaryDataImplFromJson(json);
@@ -339,15 +327,8 @@ class _$SleepSummaryDataImpl implements _SleepSummaryData {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    breathing,
-    duration,
-    heartRate,
-    scores,
-    temperature,
-    metadata,
-  );
+  int get hashCode => Object.hash(runtimeType, breathing, duration, heartRate,
+      scores, temperature, metadata);
 
   /// Create a copy of SleepSummaryData
   /// with the given fields replaced by the non-null parameter values.
@@ -356,25 +337,24 @@ class _$SleepSummaryDataImpl implements _SleepSummaryData {
   @pragma('vm:prefer-inline')
   _$$SleepSummaryDataImplCopyWith<_$SleepSummaryDataImpl> get copyWith =>
       __$$SleepSummaryDataImplCopyWithImpl<_$SleepSummaryDataImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SleepSummaryDataImplToJson(this);
+    return _$$SleepSummaryDataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SleepSummaryData implements SleepSummaryData {
-  factory _SleepSummaryData({
-    final Breathing? breathing,
-    final Duration? duration,
-    @JsonKey(name: 'heart_rate') final HeartRate? heartRate,
-    final Scores? scores,
-    final Temperature? temperature,
-    final Metadata? metadata,
-  }) = _$SleepSummaryDataImpl;
+  factory _SleepSummaryData(
+      {final Breathing? breathing,
+      final Duration? duration,
+      @JsonKey(name: 'heart_rate') final HeartRate? heartRate,
+      final Scores? scores,
+      final Temperature? temperature,
+      final Metadata? metadata}) = _$SleepSummaryDataImpl;
 
   factory _SleepSummaryData.fromJson(Map<String, dynamic> json) =
       _$SleepSummaryDataImpl.fromJson;

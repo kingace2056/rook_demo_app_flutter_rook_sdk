@@ -9,20 +9,20 @@ part of 'nutrition.dart';
 _$NutritionImpl _$$NutritionImplFromJson(Map<String, dynamic> json) =>
     _$NutritionImpl(
       foodIntakeFloat: (json['food_intake_float'] as num?)?.toDouble(),
-      caloriesIntakeKcalFloat: (json['calories_intake_kcal_float'] as num?)
-          ?.toDouble(),
+      caloriesIntakeKcalFloat:
+          (json['calories_intake_kcal_float'] as num?)?.toDouble(),
       proteinIntakeGFloat: (json['protein_intake_g_float'] as num?)?.toDouble(),
       sugarIntakeGFloat: (json['sugar_intake_g_float'] as num?)?.toDouble(),
       fatIntakeGFloat: (json['fat_intake_g_float'] as num?)?.toDouble(),
-      transFatIntakeGFloat: (json['trans_fat_intake_g_float'] as num?)
-          ?.toDouble(),
-      carbohydratesIntakeGFloat: (json['carbohydrates_intake_g_float'] as num?)
-          ?.toDouble(),
+      transFatIntakeGFloat:
+          (json['trans_fat_intake_g_float'] as num?)?.toDouble(),
+      carbohydratesIntakeGFloat:
+          (json['carbohydrates_intake_g_float'] as num?)?.toDouble(),
       fiberIntakeGFloat: (json['fiber_intake_g_float'] as num?)?.toDouble(),
       alcoholIntakeGFloat: (json['alcohol_intake_g_float'] as num?)?.toDouble(),
       sodiumIntakeMgFloat: (json['sodium_intake_mg_float'] as num?)?.toDouble(),
-      cholesterolIntakeMgFloat: (json['cholesterol_intake_mg_float'] as num?)
-          ?.toDouble(),
+      cholesterolIntakeMgFloat:
+          (json['cholesterol_intake_mg_float'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$NutritionImplToJson(_$NutritionImpl instance) =>

@@ -12,8 +12,7 @@ part of 'oxygenation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Oxygenation _$OxygenationFromJson(Map<String, dynamic> json) {
   return _Oxygenation.fromJson(json);
@@ -39,15 +38,14 @@ mixin _$Oxygenation {
 /// @nodoc
 abstract class $OxygenationCopyWith<$Res> {
   factory $OxygenationCopyWith(
-    Oxygenation value,
-    $Res Function(Oxygenation) then,
-  ) = _$OxygenationCopyWithImpl<$Res, Oxygenation>;
+          Oxygenation value, $Res Function(Oxygenation) then) =
+      _$OxygenationCopyWithImpl<$Res, Oxygenation>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'saturation_avg_percentage_int')
-    int? saturationAvgPercentageInt,
-    @JsonKey(name: 'vo2max_mL_per_min_per_kg_int') int? vo2maxMLPerMinPerKgInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'saturation_avg_percentage_int')
+      int? saturationAvgPercentageInt,
+      @JsonKey(name: 'vo2max_mL_per_min_per_kg_int')
+      int? vo2maxMLPerMinPerKgInt});
 }
 
 /// @nodoc
@@ -68,19 +66,16 @@ class _$OxygenationCopyWithImpl<$Res, $Val extends Oxygenation>
     Object? saturationAvgPercentageInt = freezed,
     Object? vo2maxMLPerMinPerKgInt = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            saturationAvgPercentageInt: freezed == saturationAvgPercentageInt
-                ? _value.saturationAvgPercentageInt
-                : saturationAvgPercentageInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            vo2maxMLPerMinPerKgInt: freezed == vo2maxMLPerMinPerKgInt
-                ? _value.vo2maxMLPerMinPerKgInt
-                : vo2maxMLPerMinPerKgInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      saturationAvgPercentageInt: freezed == saturationAvgPercentageInt
+          ? _value.saturationAvgPercentageInt
+          : saturationAvgPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      vo2maxMLPerMinPerKgInt: freezed == vo2maxMLPerMinPerKgInt
+          ? _value.vo2maxMLPerMinPerKgInt
+          : vo2maxMLPerMinPerKgInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -88,16 +83,15 @@ class _$OxygenationCopyWithImpl<$Res, $Val extends Oxygenation>
 abstract class _$$OxygenationImplCopyWith<$Res>
     implements $OxygenationCopyWith<$Res> {
   factory _$$OxygenationImplCopyWith(
-    _$OxygenationImpl value,
-    $Res Function(_$OxygenationImpl) then,
-  ) = __$$OxygenationImplCopyWithImpl<$Res>;
+          _$OxygenationImpl value, $Res Function(_$OxygenationImpl) then) =
+      __$$OxygenationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'saturation_avg_percentage_int')
-    int? saturationAvgPercentageInt,
-    @JsonKey(name: 'vo2max_mL_per_min_per_kg_int') int? vo2maxMLPerMinPerKgInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'saturation_avg_percentage_int')
+      int? saturationAvgPercentageInt,
+      @JsonKey(name: 'vo2max_mL_per_min_per_kg_int')
+      int? vo2maxMLPerMinPerKgInt});
 }
 
 /// @nodoc
@@ -105,9 +99,8 @@ class __$$OxygenationImplCopyWithImpl<$Res>
     extends _$OxygenationCopyWithImpl<$Res, _$OxygenationImpl>
     implements _$$OxygenationImplCopyWith<$Res> {
   __$$OxygenationImplCopyWithImpl(
-    _$OxygenationImpl _value,
-    $Res Function(_$OxygenationImpl) _then,
-  ) : super(_value, _then);
+      _$OxygenationImpl _value, $Res Function(_$OxygenationImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Oxygenation
   /// with the given fields replaced by the non-null parameter values.
@@ -117,29 +110,27 @@ class __$$OxygenationImplCopyWithImpl<$Res>
     Object? saturationAvgPercentageInt = freezed,
     Object? vo2maxMLPerMinPerKgInt = freezed,
   }) {
-    return _then(
-      _$OxygenationImpl(
-        saturationAvgPercentageInt: freezed == saturationAvgPercentageInt
-            ? _value.saturationAvgPercentageInt
-            : saturationAvgPercentageInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        vo2maxMLPerMinPerKgInt: freezed == vo2maxMLPerMinPerKgInt
-            ? _value.vo2maxMLPerMinPerKgInt
-            : vo2maxMLPerMinPerKgInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$OxygenationImpl(
+      saturationAvgPercentageInt: freezed == saturationAvgPercentageInt
+          ? _value.saturationAvgPercentageInt
+          : saturationAvgPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      vo2maxMLPerMinPerKgInt: freezed == vo2maxMLPerMinPerKgInt
+          ? _value.vo2maxMLPerMinPerKgInt
+          : vo2maxMLPerMinPerKgInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$OxygenationImpl implements _Oxygenation {
-  _$OxygenationImpl({
-    @JsonKey(name: 'saturation_avg_percentage_int')
-    this.saturationAvgPercentageInt,
-    @JsonKey(name: 'vo2max_mL_per_min_per_kg_int') this.vo2maxMLPerMinPerKgInt,
-  });
+  _$OxygenationImpl(
+      {@JsonKey(name: 'saturation_avg_percentage_int')
+      this.saturationAvgPercentageInt,
+      @JsonKey(name: 'vo2max_mL_per_min_per_kg_int')
+      this.vo2maxMLPerMinPerKgInt});
 
   factory _$OxygenationImpl.fromJson(Map<String, dynamic> json) =>
       _$$OxygenationImplFromJson(json);
@@ -161,10 +152,8 @@ class _$OxygenationImpl implements _Oxygenation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OxygenationImpl &&
-            (identical(
-                  other.saturationAvgPercentageInt,
-                  saturationAvgPercentageInt,
-                ) ||
+            (identical(other.saturationAvgPercentageInt,
+                    saturationAvgPercentageInt) ||
                 other.saturationAvgPercentageInt ==
                     saturationAvgPercentageInt) &&
             (identical(other.vo2maxMLPerMinPerKgInt, vo2maxMLPerMinPerKgInt) ||
@@ -174,10 +163,7 @@ class _$OxygenationImpl implements _Oxygenation {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    saturationAvgPercentageInt,
-    vo2maxMLPerMinPerKgInt,
-  );
+      runtimeType, saturationAvgPercentageInt, vo2maxMLPerMinPerKgInt);
 
   /// Create a copy of Oxygenation
   /// with the given fields replaced by the non-null parameter values.
@@ -189,17 +175,18 @@ class _$OxygenationImpl implements _Oxygenation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$OxygenationImplToJson(this);
+    return _$$OxygenationImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Oxygenation implements Oxygenation {
-  factory _Oxygenation({
-    @JsonKey(name: 'saturation_avg_percentage_int')
-    final int? saturationAvgPercentageInt,
-    @JsonKey(name: 'vo2max_mL_per_min_per_kg_int')
-    final int? vo2maxMLPerMinPerKgInt,
-  }) = _$OxygenationImpl;
+  factory _Oxygenation(
+      {@JsonKey(name: 'saturation_avg_percentage_int')
+      final int? saturationAvgPercentageInt,
+      @JsonKey(name: 'vo2max_mL_per_min_per_kg_int')
+      final int? vo2maxMLPerMinPerKgInt}) = _$OxygenationImpl;
 
   factory _Oxygenation.fromJson(Map<String, dynamic> json) =
       _$OxygenationImpl.fromJson;

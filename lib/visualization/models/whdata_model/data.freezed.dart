@@ -12,8 +12,7 @@ part of 'data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Data _$DataFromJson(Map<String, dynamic> json) {
   return _Data.fromJson(json);
@@ -42,11 +41,10 @@ abstract class $DataCopyWith<$Res> {
   factory $DataCopyWith(Data value, $Res Function(Data) then) =
       _$DataCopyWithImpl<$Res, Data>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'total_records') int? totalRecords,
-    @JsonKey(name: 'data') DataType? types,
-  });
+  $Res call(
+      {@JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'total_records') int? totalRecords,
+      @JsonKey(name: 'data') DataType? types});
 
   $DataTypeCopyWith<$Res>? get types;
 }
@@ -70,23 +68,20 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
     Object? totalRecords = freezed,
     Object? types = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            totalRecords: freezed == totalRecords
-                ? _value.totalRecords
-                : totalRecords // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            types: freezed == types
-                ? _value.types
-                : types // ignore: cast_nullable_to_non_nullable
-                      as DataType?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalRecords: freezed == totalRecords
+          ? _value.totalRecords
+          : totalRecords // ignore: cast_nullable_to_non_nullable
+              as int?,
+      types: freezed == types
+          ? _value.types
+          : types // ignore: cast_nullable_to_non_nullable
+              as DataType?,
+    ) as $Val);
   }
 
   /// Create a copy of Data
@@ -107,16 +102,14 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
 /// @nodoc
 abstract class _$$DataImplCopyWith<$Res> implements $DataCopyWith<$Res> {
   factory _$$DataImplCopyWith(
-    _$DataImpl value,
-    $Res Function(_$DataImpl) then,
-  ) = __$$DataImplCopyWithImpl<$Res>;
+          _$DataImpl value, $Res Function(_$DataImpl) then) =
+      __$$DataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'total_records') int? totalRecords,
-    @JsonKey(name: 'data') DataType? types,
-  });
+  $Res call(
+      {@JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'total_records') int? totalRecords,
+      @JsonKey(name: 'data') DataType? types});
 
   @override
   $DataTypeCopyWith<$Res>? get types;
@@ -127,7 +120,7 @@ class __$$DataImplCopyWithImpl<$Res>
     extends _$DataCopyWithImpl<$Res, _$DataImpl>
     implements _$$DataImplCopyWith<$Res> {
   __$$DataImplCopyWithImpl(_$DataImpl _value, $Res Function(_$DataImpl) _then)
-    : super(_value, _then);
+      : super(_value, _then);
 
   /// Create a copy of Data
   /// with the given fields replaced by the non-null parameter values.
@@ -138,33 +131,30 @@ class __$$DataImplCopyWithImpl<$Res>
     Object? totalRecords = freezed,
     Object? types = freezed,
   }) {
-    return _then(
-      _$DataImpl(
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        totalRecords: freezed == totalRecords
-            ? _value.totalRecords
-            : totalRecords // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        types: freezed == types
-            ? _value.types
-            : types // ignore: cast_nullable_to_non_nullable
-                  as DataType?,
-      ),
-    );
+    return _then(_$DataImpl(
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      totalRecords: freezed == totalRecords
+          ? _value.totalRecords
+          : totalRecords // ignore: cast_nullable_to_non_nullable
+              as int?,
+      types: freezed == types
+          ? _value.types
+          : types // ignore: cast_nullable_to_non_nullable
+              as DataType?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DataImpl implements _Data {
-  _$DataImpl({
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'total_records') this.totalRecords,
-    @JsonKey(name: 'data') this.types,
-  });
+  _$DataImpl(
+      {@JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'total_records') this.totalRecords,
+      @JsonKey(name: 'data') this.types});
 
   factory _$DataImpl.fromJson(Map<String, dynamic> json) =>
       _$$DataImplFromJson(json);
@@ -209,16 +199,17 @@ class _$DataImpl implements _Data {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DataImplToJson(this);
+    return _$$DataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Data implements Data {
-  factory _Data({
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'total_records') final int? totalRecords,
-    @JsonKey(name: 'data') final DataType? types,
-  }) = _$DataImpl;
+  factory _Data(
+      {@JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'total_records') final int? totalRecords,
+      @JsonKey(name: 'data') final DataType? types}) = _$DataImpl;
 
   factory _Data.fromJson(Map<String, dynamic> json) = _$DataImpl.fromJson;
 
@@ -275,15 +266,14 @@ abstract class $DataTypeCopyWith<$Res> {
   factory $DataTypeCopyWith(DataType value, $Res Function(DataType) then) =
       _$DataTypeCopyWithImpl<$Res, DataType>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'health_scores') List<HealthScore>? healthScores,
-    @JsonKey(name: 'health_events') List<HealthEvent>? healthEvents,
-    @JsonKey(name: 'body_summaries') List<BodySummary>? bodySummaries,
-    @JsonKey(name: 'sleep_summaries') List<SleepSummary>? sleepSummaries,
-    @JsonKey(name: 'physical_summaries')
-    List<PhysicalSummary>? physicalSummaries,
-    @JsonKey(name: 'raw_webhooks') List<RawWebhook>? rawWebhooks,
-  });
+  $Res call(
+      {@JsonKey(name: 'health_scores') List<HealthScore>? healthScores,
+      @JsonKey(name: 'health_events') List<HealthEvent>? healthEvents,
+      @JsonKey(name: 'body_summaries') List<BodySummary>? bodySummaries,
+      @JsonKey(name: 'sleep_summaries') List<SleepSummary>? sleepSummaries,
+      @JsonKey(name: 'physical_summaries')
+      List<PhysicalSummary>? physicalSummaries,
+      @JsonKey(name: 'raw_webhooks') List<RawWebhook>? rawWebhooks});
 }
 
 /// @nodoc
@@ -308,35 +298,32 @@ class _$DataTypeCopyWithImpl<$Res, $Val extends DataType>
     Object? physicalSummaries = freezed,
     Object? rawWebhooks = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            healthScores: freezed == healthScores
-                ? _value.healthScores
-                : healthScores // ignore: cast_nullable_to_non_nullable
-                      as List<HealthScore>?,
-            healthEvents: freezed == healthEvents
-                ? _value.healthEvents
-                : healthEvents // ignore: cast_nullable_to_non_nullable
-                      as List<HealthEvent>?,
-            bodySummaries: freezed == bodySummaries
-                ? _value.bodySummaries
-                : bodySummaries // ignore: cast_nullable_to_non_nullable
-                      as List<BodySummary>?,
-            sleepSummaries: freezed == sleepSummaries
-                ? _value.sleepSummaries
-                : sleepSummaries // ignore: cast_nullable_to_non_nullable
-                      as List<SleepSummary>?,
-            physicalSummaries: freezed == physicalSummaries
-                ? _value.physicalSummaries
-                : physicalSummaries // ignore: cast_nullable_to_non_nullable
-                      as List<PhysicalSummary>?,
-            rawWebhooks: freezed == rawWebhooks
-                ? _value.rawWebhooks
-                : rawWebhooks // ignore: cast_nullable_to_non_nullable
-                      as List<RawWebhook>?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      healthScores: freezed == healthScores
+          ? _value.healthScores
+          : healthScores // ignore: cast_nullable_to_non_nullable
+              as List<HealthScore>?,
+      healthEvents: freezed == healthEvents
+          ? _value.healthEvents
+          : healthEvents // ignore: cast_nullable_to_non_nullable
+              as List<HealthEvent>?,
+      bodySummaries: freezed == bodySummaries
+          ? _value.bodySummaries
+          : bodySummaries // ignore: cast_nullable_to_non_nullable
+              as List<BodySummary>?,
+      sleepSummaries: freezed == sleepSummaries
+          ? _value.sleepSummaries
+          : sleepSummaries // ignore: cast_nullable_to_non_nullable
+              as List<SleepSummary>?,
+      physicalSummaries: freezed == physicalSummaries
+          ? _value.physicalSummaries
+          : physicalSummaries // ignore: cast_nullable_to_non_nullable
+              as List<PhysicalSummary>?,
+      rawWebhooks: freezed == rawWebhooks
+          ? _value.rawWebhooks
+          : rawWebhooks // ignore: cast_nullable_to_non_nullable
+              as List<RawWebhook>?,
+    ) as $Val);
   }
 }
 
@@ -344,20 +331,18 @@ class _$DataTypeCopyWithImpl<$Res, $Val extends DataType>
 abstract class _$$DataTypeImplCopyWith<$Res>
     implements $DataTypeCopyWith<$Res> {
   factory _$$DataTypeImplCopyWith(
-    _$DataTypeImpl value,
-    $Res Function(_$DataTypeImpl) then,
-  ) = __$$DataTypeImplCopyWithImpl<$Res>;
+          _$DataTypeImpl value, $Res Function(_$DataTypeImpl) then) =
+      __$$DataTypeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'health_scores') List<HealthScore>? healthScores,
-    @JsonKey(name: 'health_events') List<HealthEvent>? healthEvents,
-    @JsonKey(name: 'body_summaries') List<BodySummary>? bodySummaries,
-    @JsonKey(name: 'sleep_summaries') List<SleepSummary>? sleepSummaries,
-    @JsonKey(name: 'physical_summaries')
-    List<PhysicalSummary>? physicalSummaries,
-    @JsonKey(name: 'raw_webhooks') List<RawWebhook>? rawWebhooks,
-  });
+  $Res call(
+      {@JsonKey(name: 'health_scores') List<HealthScore>? healthScores,
+      @JsonKey(name: 'health_events') List<HealthEvent>? healthEvents,
+      @JsonKey(name: 'body_summaries') List<BodySummary>? bodySummaries,
+      @JsonKey(name: 'sleep_summaries') List<SleepSummary>? sleepSummaries,
+      @JsonKey(name: 'physical_summaries')
+      List<PhysicalSummary>? physicalSummaries,
+      @JsonKey(name: 'raw_webhooks') List<RawWebhook>? rawWebhooks});
 }
 
 /// @nodoc
@@ -365,9 +350,8 @@ class __$$DataTypeImplCopyWithImpl<$Res>
     extends _$DataTypeCopyWithImpl<$Res, _$DataTypeImpl>
     implements _$$DataTypeImplCopyWith<$Res> {
   __$$DataTypeImplCopyWithImpl(
-    _$DataTypeImpl _value,
-    $Res Function(_$DataTypeImpl) _then,
-  ) : super(_value, _then);
+      _$DataTypeImpl _value, $Res Function(_$DataTypeImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DataType
   /// with the given fields replaced by the non-null parameter values.
@@ -381,54 +365,53 @@ class __$$DataTypeImplCopyWithImpl<$Res>
     Object? physicalSummaries = freezed,
     Object? rawWebhooks = freezed,
   }) {
-    return _then(
-      _$DataTypeImpl(
-        healthScores: freezed == healthScores
-            ? _value._healthScores
-            : healthScores // ignore: cast_nullable_to_non_nullable
-                  as List<HealthScore>?,
-        healthEvents: freezed == healthEvents
-            ? _value._healthEvents
-            : healthEvents // ignore: cast_nullable_to_non_nullable
-                  as List<HealthEvent>?,
-        bodySummaries: freezed == bodySummaries
-            ? _value._bodySummaries
-            : bodySummaries // ignore: cast_nullable_to_non_nullable
-                  as List<BodySummary>?,
-        sleepSummaries: freezed == sleepSummaries
-            ? _value._sleepSummaries
-            : sleepSummaries // ignore: cast_nullable_to_non_nullable
-                  as List<SleepSummary>?,
-        physicalSummaries: freezed == physicalSummaries
-            ? _value._physicalSummaries
-            : physicalSummaries // ignore: cast_nullable_to_non_nullable
-                  as List<PhysicalSummary>?,
-        rawWebhooks: freezed == rawWebhooks
-            ? _value._rawWebhooks
-            : rawWebhooks // ignore: cast_nullable_to_non_nullable
-                  as List<RawWebhook>?,
-      ),
-    );
+    return _then(_$DataTypeImpl(
+      healthScores: freezed == healthScores
+          ? _value._healthScores
+          : healthScores // ignore: cast_nullable_to_non_nullable
+              as List<HealthScore>?,
+      healthEvents: freezed == healthEvents
+          ? _value._healthEvents
+          : healthEvents // ignore: cast_nullable_to_non_nullable
+              as List<HealthEvent>?,
+      bodySummaries: freezed == bodySummaries
+          ? _value._bodySummaries
+          : bodySummaries // ignore: cast_nullable_to_non_nullable
+              as List<BodySummary>?,
+      sleepSummaries: freezed == sleepSummaries
+          ? _value._sleepSummaries
+          : sleepSummaries // ignore: cast_nullable_to_non_nullable
+              as List<SleepSummary>?,
+      physicalSummaries: freezed == physicalSummaries
+          ? _value._physicalSummaries
+          : physicalSummaries // ignore: cast_nullable_to_non_nullable
+              as List<PhysicalSummary>?,
+      rawWebhooks: freezed == rawWebhooks
+          ? _value._rawWebhooks
+          : rawWebhooks // ignore: cast_nullable_to_non_nullable
+              as List<RawWebhook>?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DataTypeImpl implements _DataType {
-  _$DataTypeImpl({
-    @JsonKey(name: 'health_scores') final List<HealthScore>? healthScores,
-    @JsonKey(name: 'health_events') final List<HealthEvent>? healthEvents,
-    @JsonKey(name: 'body_summaries') final List<BodySummary>? bodySummaries,
-    @JsonKey(name: 'sleep_summaries') final List<SleepSummary>? sleepSummaries,
-    @JsonKey(name: 'physical_summaries')
-    final List<PhysicalSummary>? physicalSummaries,
-    @JsonKey(name: 'raw_webhooks') final List<RawWebhook>? rawWebhooks,
-  }) : _healthScores = healthScores,
-       _healthEvents = healthEvents,
-       _bodySummaries = bodySummaries,
-       _sleepSummaries = sleepSummaries,
-       _physicalSummaries = physicalSummaries,
-       _rawWebhooks = rawWebhooks;
+  _$DataTypeImpl(
+      {@JsonKey(name: 'health_scores') final List<HealthScore>? healthScores,
+      @JsonKey(name: 'health_events') final List<HealthEvent>? healthEvents,
+      @JsonKey(name: 'body_summaries') final List<BodySummary>? bodySummaries,
+      @JsonKey(name: 'sleep_summaries')
+      final List<SleepSummary>? sleepSummaries,
+      @JsonKey(name: 'physical_summaries')
+      final List<PhysicalSummary>? physicalSummaries,
+      @JsonKey(name: 'raw_webhooks') final List<RawWebhook>? rawWebhooks})
+      : _healthScores = healthScores,
+        _healthEvents = healthEvents,
+        _bodySummaries = bodySummaries,
+        _sleepSummaries = sleepSummaries,
+        _physicalSummaries = physicalSummaries,
+        _rawWebhooks = rawWebhooks;
 
   factory _$DataTypeImpl.fromJson(Map<String, dynamic> json) =>
       _$$DataTypeImplFromJson(json);
@@ -510,43 +493,30 @@ class _$DataTypeImpl implements _DataType {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataTypeImpl &&
-            const DeepCollectionEquality().equals(
-              other._healthScores,
-              _healthScores,
-            ) &&
-            const DeepCollectionEquality().equals(
-              other._healthEvents,
-              _healthEvents,
-            ) &&
-            const DeepCollectionEquality().equals(
-              other._bodySummaries,
-              _bodySummaries,
-            ) &&
-            const DeepCollectionEquality().equals(
-              other._sleepSummaries,
-              _sleepSummaries,
-            ) &&
-            const DeepCollectionEquality().equals(
-              other._physicalSummaries,
-              _physicalSummaries,
-            ) &&
-            const DeepCollectionEquality().equals(
-              other._rawWebhooks,
-              _rawWebhooks,
-            ));
+            const DeepCollectionEquality()
+                .equals(other._healthScores, _healthScores) &&
+            const DeepCollectionEquality()
+                .equals(other._healthEvents, _healthEvents) &&
+            const DeepCollectionEquality()
+                .equals(other._bodySummaries, _bodySummaries) &&
+            const DeepCollectionEquality()
+                .equals(other._sleepSummaries, _sleepSummaries) &&
+            const DeepCollectionEquality()
+                .equals(other._physicalSummaries, _physicalSummaries) &&
+            const DeepCollectionEquality()
+                .equals(other._rawWebhooks, _rawWebhooks));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_healthScores),
-    const DeepCollectionEquality().hash(_healthEvents),
-    const DeepCollectionEquality().hash(_bodySummaries),
-    const DeepCollectionEquality().hash(_sleepSummaries),
-    const DeepCollectionEquality().hash(_physicalSummaries),
-    const DeepCollectionEquality().hash(_rawWebhooks),
-  );
+      runtimeType,
+      const DeepCollectionEquality().hash(_healthScores),
+      const DeepCollectionEquality().hash(_healthEvents),
+      const DeepCollectionEquality().hash(_bodySummaries),
+      const DeepCollectionEquality().hash(_sleepSummaries),
+      const DeepCollectionEquality().hash(_physicalSummaries),
+      const DeepCollectionEquality().hash(_rawWebhooks));
 
   /// Create a copy of DataType
   /// with the given fields replaced by the non-null parameter values.
@@ -558,20 +528,23 @@ class _$DataTypeImpl implements _DataType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DataTypeImplToJson(this);
+    return _$$DataTypeImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _DataType implements DataType {
-  factory _DataType({
-    @JsonKey(name: 'health_scores') final List<HealthScore>? healthScores,
-    @JsonKey(name: 'health_events') final List<HealthEvent>? healthEvents,
-    @JsonKey(name: 'body_summaries') final List<BodySummary>? bodySummaries,
-    @JsonKey(name: 'sleep_summaries') final List<SleepSummary>? sleepSummaries,
-    @JsonKey(name: 'physical_summaries')
-    final List<PhysicalSummary>? physicalSummaries,
-    @JsonKey(name: 'raw_webhooks') final List<RawWebhook>? rawWebhooks,
-  }) = _$DataTypeImpl;
+  factory _DataType(
+      {@JsonKey(name: 'health_scores') final List<HealthScore>? healthScores,
+      @JsonKey(name: 'health_events') final List<HealthEvent>? healthEvents,
+      @JsonKey(name: 'body_summaries') final List<BodySummary>? bodySummaries,
+      @JsonKey(name: 'sleep_summaries')
+      final List<SleepSummary>? sleepSummaries,
+      @JsonKey(name: 'physical_summaries')
+      final List<PhysicalSummary>? physicalSummaries,
+      @JsonKey(name: 'raw_webhooks')
+      final List<RawWebhook>? rawWebhooks}) = _$DataTypeImpl;
 
   factory _DataType.fromJson(Map<String, dynamic> json) =
       _$DataTypeImpl.fromJson;

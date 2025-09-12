@@ -12,8 +12,7 @@ part of 'heart_rate.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HeartRate _$HeartRateFromJson(Map<String, dynamic> json) {
   return _HeartRate.fromJson(json);
@@ -52,16 +51,15 @@ abstract class $HeartRateCopyWith<$Res> {
   factory $HeartRateCopyWith(HeartRate value, $Res Function(HeartRate) then) =
       _$HeartRateCopyWithImpl<$Res, HeartRate>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'hr_maximum_bpm_int') int? hrMaximumBpmInt,
-    @JsonKey(name: 'hr_minimum_bpm_int') int? hrMinimumBpmInt,
-    @JsonKey(name: 'hr_avg_bpm_int') int? hrAvgBpmInt,
-    @JsonKey(name: 'hr_resting_bpm_int') int? hrRestingBpmInt,
-    @JsonKey(name: 'hrv_avg_rmssd_float') int? hrvAvgRmssdFloat,
-    @JsonKey(name: 'hrv_avg_sdnn_float') int? hrvAvgSdnnFloat,
-    @JsonKey(name: 'hr_granular_data_array')
-    List<HrGranularDataArray>? hrGranularDataArray,
-  });
+  $Res call(
+      {@JsonKey(name: 'hr_maximum_bpm_int') int? hrMaximumBpmInt,
+      @JsonKey(name: 'hr_minimum_bpm_int') int? hrMinimumBpmInt,
+      @JsonKey(name: 'hr_avg_bpm_int') int? hrAvgBpmInt,
+      @JsonKey(name: 'hr_resting_bpm_int') int? hrRestingBpmInt,
+      @JsonKey(name: 'hrv_avg_rmssd_float') int? hrvAvgRmssdFloat,
+      @JsonKey(name: 'hrv_avg_sdnn_float') int? hrvAvgSdnnFloat,
+      @JsonKey(name: 'hr_granular_data_array')
+      List<HrGranularDataArray>? hrGranularDataArray});
 }
 
 /// @nodoc
@@ -87,39 +85,36 @@ class _$HeartRateCopyWithImpl<$Res, $Val extends HeartRate>
     Object? hrvAvgSdnnFloat = freezed,
     Object? hrGranularDataArray = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            hrMaximumBpmInt: freezed == hrMaximumBpmInt
-                ? _value.hrMaximumBpmInt
-                : hrMaximumBpmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hrMinimumBpmInt: freezed == hrMinimumBpmInt
-                ? _value.hrMinimumBpmInt
-                : hrMinimumBpmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hrAvgBpmInt: freezed == hrAvgBpmInt
-                ? _value.hrAvgBpmInt
-                : hrAvgBpmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hrRestingBpmInt: freezed == hrRestingBpmInt
-                ? _value.hrRestingBpmInt
-                : hrRestingBpmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hrvAvgRmssdFloat: freezed == hrvAvgRmssdFloat
-                ? _value.hrvAvgRmssdFloat
-                : hrvAvgRmssdFloat // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hrvAvgSdnnFloat: freezed == hrvAvgSdnnFloat
-                ? _value.hrvAvgSdnnFloat
-                : hrvAvgSdnnFloat // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hrGranularDataArray: freezed == hrGranularDataArray
-                ? _value.hrGranularDataArray
-                : hrGranularDataArray // ignore: cast_nullable_to_non_nullable
-                      as List<HrGranularDataArray>?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      hrMaximumBpmInt: freezed == hrMaximumBpmInt
+          ? _value.hrMaximumBpmInt
+          : hrMaximumBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrMinimumBpmInt: freezed == hrMinimumBpmInt
+          ? _value.hrMinimumBpmInt
+          : hrMinimumBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrAvgBpmInt: freezed == hrAvgBpmInt
+          ? _value.hrAvgBpmInt
+          : hrAvgBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrRestingBpmInt: freezed == hrRestingBpmInt
+          ? _value.hrRestingBpmInt
+          : hrRestingBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrvAvgRmssdFloat: freezed == hrvAvgRmssdFloat
+          ? _value.hrvAvgRmssdFloat
+          : hrvAvgRmssdFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrvAvgSdnnFloat: freezed == hrvAvgSdnnFloat
+          ? _value.hrvAvgSdnnFloat
+          : hrvAvgSdnnFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrGranularDataArray: freezed == hrGranularDataArray
+          ? _value.hrGranularDataArray
+          : hrGranularDataArray // ignore: cast_nullable_to_non_nullable
+              as List<HrGranularDataArray>?,
+    ) as $Val);
   }
 }
 
@@ -127,21 +122,19 @@ class _$HeartRateCopyWithImpl<$Res, $Val extends HeartRate>
 abstract class _$$HeartRateImplCopyWith<$Res>
     implements $HeartRateCopyWith<$Res> {
   factory _$$HeartRateImplCopyWith(
-    _$HeartRateImpl value,
-    $Res Function(_$HeartRateImpl) then,
-  ) = __$$HeartRateImplCopyWithImpl<$Res>;
+          _$HeartRateImpl value, $Res Function(_$HeartRateImpl) then) =
+      __$$HeartRateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'hr_maximum_bpm_int') int? hrMaximumBpmInt,
-    @JsonKey(name: 'hr_minimum_bpm_int') int? hrMinimumBpmInt,
-    @JsonKey(name: 'hr_avg_bpm_int') int? hrAvgBpmInt,
-    @JsonKey(name: 'hr_resting_bpm_int') int? hrRestingBpmInt,
-    @JsonKey(name: 'hrv_avg_rmssd_float') int? hrvAvgRmssdFloat,
-    @JsonKey(name: 'hrv_avg_sdnn_float') int? hrvAvgSdnnFloat,
-    @JsonKey(name: 'hr_granular_data_array')
-    List<HrGranularDataArray>? hrGranularDataArray,
-  });
+  $Res call(
+      {@JsonKey(name: 'hr_maximum_bpm_int') int? hrMaximumBpmInt,
+      @JsonKey(name: 'hr_minimum_bpm_int') int? hrMinimumBpmInt,
+      @JsonKey(name: 'hr_avg_bpm_int') int? hrAvgBpmInt,
+      @JsonKey(name: 'hr_resting_bpm_int') int? hrRestingBpmInt,
+      @JsonKey(name: 'hrv_avg_rmssd_float') int? hrvAvgRmssdFloat,
+      @JsonKey(name: 'hrv_avg_sdnn_float') int? hrvAvgSdnnFloat,
+      @JsonKey(name: 'hr_granular_data_array')
+      List<HrGranularDataArray>? hrGranularDataArray});
 }
 
 /// @nodoc
@@ -149,9 +142,8 @@ class __$$HeartRateImplCopyWithImpl<$Res>
     extends _$HeartRateCopyWithImpl<$Res, _$HeartRateImpl>
     implements _$$HeartRateImplCopyWith<$Res> {
   __$$HeartRateImplCopyWithImpl(
-    _$HeartRateImpl _value,
-    $Res Function(_$HeartRateImpl) _then,
-  ) : super(_value, _then);
+      _$HeartRateImpl _value, $Res Function(_$HeartRateImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of HeartRate
   /// with the given fields replaced by the non-null parameter values.
@@ -166,54 +158,52 @@ class __$$HeartRateImplCopyWithImpl<$Res>
     Object? hrvAvgSdnnFloat = freezed,
     Object? hrGranularDataArray = freezed,
   }) {
-    return _then(
-      _$HeartRateImpl(
-        hrMaximumBpmInt: freezed == hrMaximumBpmInt
-            ? _value.hrMaximumBpmInt
-            : hrMaximumBpmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hrMinimumBpmInt: freezed == hrMinimumBpmInt
-            ? _value.hrMinimumBpmInt
-            : hrMinimumBpmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hrAvgBpmInt: freezed == hrAvgBpmInt
-            ? _value.hrAvgBpmInt
-            : hrAvgBpmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hrRestingBpmInt: freezed == hrRestingBpmInt
-            ? _value.hrRestingBpmInt
-            : hrRestingBpmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hrvAvgRmssdFloat: freezed == hrvAvgRmssdFloat
-            ? _value.hrvAvgRmssdFloat
-            : hrvAvgRmssdFloat // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hrvAvgSdnnFloat: freezed == hrvAvgSdnnFloat
-            ? _value.hrvAvgSdnnFloat
-            : hrvAvgSdnnFloat // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hrGranularDataArray: freezed == hrGranularDataArray
-            ? _value._hrGranularDataArray
-            : hrGranularDataArray // ignore: cast_nullable_to_non_nullable
-                  as List<HrGranularDataArray>?,
-      ),
-    );
+    return _then(_$HeartRateImpl(
+      hrMaximumBpmInt: freezed == hrMaximumBpmInt
+          ? _value.hrMaximumBpmInt
+          : hrMaximumBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrMinimumBpmInt: freezed == hrMinimumBpmInt
+          ? _value.hrMinimumBpmInt
+          : hrMinimumBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrAvgBpmInt: freezed == hrAvgBpmInt
+          ? _value.hrAvgBpmInt
+          : hrAvgBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrRestingBpmInt: freezed == hrRestingBpmInt
+          ? _value.hrRestingBpmInt
+          : hrRestingBpmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrvAvgRmssdFloat: freezed == hrvAvgRmssdFloat
+          ? _value.hrvAvgRmssdFloat
+          : hrvAvgRmssdFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrvAvgSdnnFloat: freezed == hrvAvgSdnnFloat
+          ? _value.hrvAvgSdnnFloat
+          : hrvAvgSdnnFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hrGranularDataArray: freezed == hrGranularDataArray
+          ? _value._hrGranularDataArray
+          : hrGranularDataArray // ignore: cast_nullable_to_non_nullable
+              as List<HrGranularDataArray>?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HeartRateImpl implements _HeartRate {
-  _$HeartRateImpl({
-    @JsonKey(name: 'hr_maximum_bpm_int') this.hrMaximumBpmInt,
-    @JsonKey(name: 'hr_minimum_bpm_int') this.hrMinimumBpmInt,
-    @JsonKey(name: 'hr_avg_bpm_int') this.hrAvgBpmInt,
-    @JsonKey(name: 'hr_resting_bpm_int') this.hrRestingBpmInt,
-    @JsonKey(name: 'hrv_avg_rmssd_float') this.hrvAvgRmssdFloat,
-    @JsonKey(name: 'hrv_avg_sdnn_float') this.hrvAvgSdnnFloat,
-    @JsonKey(name: 'hr_granular_data_array')
-    final List<HrGranularDataArray>? hrGranularDataArray,
-  }) : _hrGranularDataArray = hrGranularDataArray;
+  _$HeartRateImpl(
+      {@JsonKey(name: 'hr_maximum_bpm_int') this.hrMaximumBpmInt,
+      @JsonKey(name: 'hr_minimum_bpm_int') this.hrMinimumBpmInt,
+      @JsonKey(name: 'hr_avg_bpm_int') this.hrAvgBpmInt,
+      @JsonKey(name: 'hr_resting_bpm_int') this.hrRestingBpmInt,
+      @JsonKey(name: 'hrv_avg_rmssd_float') this.hrvAvgRmssdFloat,
+      @JsonKey(name: 'hrv_avg_sdnn_float') this.hrvAvgSdnnFloat,
+      @JsonKey(name: 'hr_granular_data_array')
+      final List<HrGranularDataArray>? hrGranularDataArray})
+      : _hrGranularDataArray = hrGranularDataArray;
 
   factory _$HeartRateImpl.fromJson(Map<String, dynamic> json) =>
       _$$HeartRateImplFromJson(json);
@@ -270,24 +260,21 @@ class _$HeartRateImpl implements _HeartRate {
                 other.hrvAvgRmssdFloat == hrvAvgRmssdFloat) &&
             (identical(other.hrvAvgSdnnFloat, hrvAvgSdnnFloat) ||
                 other.hrvAvgSdnnFloat == hrvAvgSdnnFloat) &&
-            const DeepCollectionEquality().equals(
-              other._hrGranularDataArray,
-              _hrGranularDataArray,
-            ));
+            const DeepCollectionEquality()
+                .equals(other._hrGranularDataArray, _hrGranularDataArray));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    hrMaximumBpmInt,
-    hrMinimumBpmInt,
-    hrAvgBpmInt,
-    hrRestingBpmInt,
-    hrvAvgRmssdFloat,
-    hrvAvgSdnnFloat,
-    const DeepCollectionEquality().hash(_hrGranularDataArray),
-  );
+      runtimeType,
+      hrMaximumBpmInt,
+      hrMinimumBpmInt,
+      hrAvgBpmInt,
+      hrRestingBpmInt,
+      hrvAvgRmssdFloat,
+      hrvAvgSdnnFloat,
+      const DeepCollectionEquality().hash(_hrGranularDataArray));
 
   /// Create a copy of HeartRate
   /// with the given fields replaced by the non-null parameter values.
@@ -299,21 +286,22 @@ class _$HeartRateImpl implements _HeartRate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HeartRateImplToJson(this);
+    return _$$HeartRateImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _HeartRate implements HeartRate {
-  factory _HeartRate({
-    @JsonKey(name: 'hr_maximum_bpm_int') final int? hrMaximumBpmInt,
-    @JsonKey(name: 'hr_minimum_bpm_int') final int? hrMinimumBpmInt,
-    @JsonKey(name: 'hr_avg_bpm_int') final int? hrAvgBpmInt,
-    @JsonKey(name: 'hr_resting_bpm_int') final int? hrRestingBpmInt,
-    @JsonKey(name: 'hrv_avg_rmssd_float') final int? hrvAvgRmssdFloat,
-    @JsonKey(name: 'hrv_avg_sdnn_float') final int? hrvAvgSdnnFloat,
-    @JsonKey(name: 'hr_granular_data_array')
-    final List<HrGranularDataArray>? hrGranularDataArray,
-  }) = _$HeartRateImpl;
+  factory _HeartRate(
+      {@JsonKey(name: 'hr_maximum_bpm_int') final int? hrMaximumBpmInt,
+      @JsonKey(name: 'hr_minimum_bpm_int') final int? hrMinimumBpmInt,
+      @JsonKey(name: 'hr_avg_bpm_int') final int? hrAvgBpmInt,
+      @JsonKey(name: 'hr_resting_bpm_int') final int? hrRestingBpmInt,
+      @JsonKey(name: 'hrv_avg_rmssd_float') final int? hrvAvgRmssdFloat,
+      @JsonKey(name: 'hrv_avg_sdnn_float') final int? hrvAvgSdnnFloat,
+      @JsonKey(name: 'hr_granular_data_array')
+      final List<HrGranularDataArray>? hrGranularDataArray}) = _$HeartRateImpl;
 
   factory _HeartRate.fromJson(Map<String, dynamic> json) =
       _$HeartRateImpl.fromJson;

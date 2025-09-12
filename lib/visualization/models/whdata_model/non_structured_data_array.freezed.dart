@@ -12,12 +12,10 @@ part of 'non_structured_data_array.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 NonStructuredDataArray _$NonStructuredDataArrayFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _NonStructuredDataArray.fromJson(json);
 }
 
@@ -48,26 +46,22 @@ mixin _$NonStructuredDataArray {
 
 /// @nodoc
 abstract class $NonStructuredDataArrayCopyWith<$Res> {
-  factory $NonStructuredDataArrayCopyWith(
-    NonStructuredDataArray value,
-    $Res Function(NonStructuredDataArray) then,
-  ) = _$NonStructuredDataArrayCopyWithImpl<$Res, NonStructuredDataArray>;
+  factory $NonStructuredDataArrayCopyWith(NonStructuredDataArray value,
+          $Res Function(NonStructuredDataArray) then) =
+      _$NonStructuredDataArrayCopyWithImpl<$Res, NonStructuredDataArray>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'source_of_data_string') String? sourceOfDataString,
-    @JsonKey(name: 'time_zone') String? timeZone,
-    @JsonKey(name: 'offset_time_zone') int? offsetTimeZone,
-    @JsonKey(name: 'uuid_device') String? uuidDevice,
-    @JsonKey(name: 'walking_speed') int? walkingSpeed,
-    @JsonKey(name: 'walking_step_length') int? walkingStepLength,
-  });
+  $Res call(
+      {@JsonKey(name: 'source_of_data_string') String? sourceOfDataString,
+      @JsonKey(name: 'time_zone') String? timeZone,
+      @JsonKey(name: 'offset_time_zone') int? offsetTimeZone,
+      @JsonKey(name: 'uuid_device') String? uuidDevice,
+      @JsonKey(name: 'walking_speed') int? walkingSpeed,
+      @JsonKey(name: 'walking_step_length') int? walkingStepLength});
 }
 
 /// @nodoc
-class _$NonStructuredDataArrayCopyWithImpl<
-  $Res,
-  $Val extends NonStructuredDataArray
->
+class _$NonStructuredDataArrayCopyWithImpl<$Res,
+        $Val extends NonStructuredDataArray>
     implements $NonStructuredDataArrayCopyWith<$Res> {
   _$NonStructuredDataArrayCopyWithImpl(this._value, this._then);
 
@@ -88,35 +82,32 @@ class _$NonStructuredDataArrayCopyWithImpl<
     Object? walkingSpeed = freezed,
     Object? walkingStepLength = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            sourceOfDataString: freezed == sourceOfDataString
-                ? _value.sourceOfDataString
-                : sourceOfDataString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            timeZone: freezed == timeZone
-                ? _value.timeZone
-                : timeZone // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            offsetTimeZone: freezed == offsetTimeZone
-                ? _value.offsetTimeZone
-                : offsetTimeZone // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            uuidDevice: freezed == uuidDevice
-                ? _value.uuidDevice
-                : uuidDevice // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            walkingSpeed: freezed == walkingSpeed
-                ? _value.walkingSpeed
-                : walkingSpeed // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            walkingStepLength: freezed == walkingStepLength
-                ? _value.walkingStepLength
-                : walkingStepLength // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      sourceOfDataString: freezed == sourceOfDataString
+          ? _value.sourceOfDataString
+          : sourceOfDataString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      timeZone: freezed == timeZone
+          ? _value.timeZone
+          : timeZone // ignore: cast_nullable_to_non_nullable
+              as String?,
+      offsetTimeZone: freezed == offsetTimeZone
+          ? _value.offsetTimeZone
+          : offsetTimeZone // ignore: cast_nullable_to_non_nullable
+              as int?,
+      uuidDevice: freezed == uuidDevice
+          ? _value.uuidDevice
+          : uuidDevice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      walkingSpeed: freezed == walkingSpeed
+          ? _value.walkingSpeed
+          : walkingSpeed // ignore: cast_nullable_to_non_nullable
+              as int?,
+      walkingStepLength: freezed == walkingStepLength
+          ? _value.walkingStepLength
+          : walkingStepLength // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -124,30 +115,29 @@ class _$NonStructuredDataArrayCopyWithImpl<
 abstract class _$$NonStructuredDataArrayImplCopyWith<$Res>
     implements $NonStructuredDataArrayCopyWith<$Res> {
   factory _$$NonStructuredDataArrayImplCopyWith(
-    _$NonStructuredDataArrayImpl value,
-    $Res Function(_$NonStructuredDataArrayImpl) then,
-  ) = __$$NonStructuredDataArrayImplCopyWithImpl<$Res>;
+          _$NonStructuredDataArrayImpl value,
+          $Res Function(_$NonStructuredDataArrayImpl) then) =
+      __$$NonStructuredDataArrayImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'source_of_data_string') String? sourceOfDataString,
-    @JsonKey(name: 'time_zone') String? timeZone,
-    @JsonKey(name: 'offset_time_zone') int? offsetTimeZone,
-    @JsonKey(name: 'uuid_device') String? uuidDevice,
-    @JsonKey(name: 'walking_speed') int? walkingSpeed,
-    @JsonKey(name: 'walking_step_length') int? walkingStepLength,
-  });
+  $Res call(
+      {@JsonKey(name: 'source_of_data_string') String? sourceOfDataString,
+      @JsonKey(name: 'time_zone') String? timeZone,
+      @JsonKey(name: 'offset_time_zone') int? offsetTimeZone,
+      @JsonKey(name: 'uuid_device') String? uuidDevice,
+      @JsonKey(name: 'walking_speed') int? walkingSpeed,
+      @JsonKey(name: 'walking_step_length') int? walkingStepLength});
 }
 
 /// @nodoc
 class __$$NonStructuredDataArrayImplCopyWithImpl<$Res>
-    extends
-        _$NonStructuredDataArrayCopyWithImpl<$Res, _$NonStructuredDataArrayImpl>
+    extends _$NonStructuredDataArrayCopyWithImpl<$Res,
+        _$NonStructuredDataArrayImpl>
     implements _$$NonStructuredDataArrayImplCopyWith<$Res> {
   __$$NonStructuredDataArrayImplCopyWithImpl(
-    _$NonStructuredDataArrayImpl _value,
-    $Res Function(_$NonStructuredDataArrayImpl) _then,
-  ) : super(_value, _then);
+      _$NonStructuredDataArrayImpl _value,
+      $Res Function(_$NonStructuredDataArrayImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of NonStructuredDataArray
   /// with the given fields replaced by the non-null parameter values.
@@ -161,48 +151,45 @@ class __$$NonStructuredDataArrayImplCopyWithImpl<$Res>
     Object? walkingSpeed = freezed,
     Object? walkingStepLength = freezed,
   }) {
-    return _then(
-      _$NonStructuredDataArrayImpl(
-        sourceOfDataString: freezed == sourceOfDataString
-            ? _value.sourceOfDataString
-            : sourceOfDataString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        timeZone: freezed == timeZone
-            ? _value.timeZone
-            : timeZone // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        offsetTimeZone: freezed == offsetTimeZone
-            ? _value.offsetTimeZone
-            : offsetTimeZone // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        uuidDevice: freezed == uuidDevice
-            ? _value.uuidDevice
-            : uuidDevice // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        walkingSpeed: freezed == walkingSpeed
-            ? _value.walkingSpeed
-            : walkingSpeed // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        walkingStepLength: freezed == walkingStepLength
-            ? _value.walkingStepLength
-            : walkingStepLength // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$NonStructuredDataArrayImpl(
+      sourceOfDataString: freezed == sourceOfDataString
+          ? _value.sourceOfDataString
+          : sourceOfDataString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      timeZone: freezed == timeZone
+          ? _value.timeZone
+          : timeZone // ignore: cast_nullable_to_non_nullable
+              as String?,
+      offsetTimeZone: freezed == offsetTimeZone
+          ? _value.offsetTimeZone
+          : offsetTimeZone // ignore: cast_nullable_to_non_nullable
+              as int?,
+      uuidDevice: freezed == uuidDevice
+          ? _value.uuidDevice
+          : uuidDevice // ignore: cast_nullable_to_non_nullable
+              as String?,
+      walkingSpeed: freezed == walkingSpeed
+          ? _value.walkingSpeed
+          : walkingSpeed // ignore: cast_nullable_to_non_nullable
+              as int?,
+      walkingStepLength: freezed == walkingStepLength
+          ? _value.walkingStepLength
+          : walkingStepLength // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NonStructuredDataArrayImpl implements _NonStructuredDataArray {
-  _$NonStructuredDataArrayImpl({
-    @JsonKey(name: 'source_of_data_string') this.sourceOfDataString,
-    @JsonKey(name: 'time_zone') this.timeZone,
-    @JsonKey(name: 'offset_time_zone') this.offsetTimeZone,
-    @JsonKey(name: 'uuid_device') this.uuidDevice,
-    @JsonKey(name: 'walking_speed') this.walkingSpeed,
-    @JsonKey(name: 'walking_step_length') this.walkingStepLength,
-  });
+  _$NonStructuredDataArrayImpl(
+      {@JsonKey(name: 'source_of_data_string') this.sourceOfDataString,
+      @JsonKey(name: 'time_zone') this.timeZone,
+      @JsonKey(name: 'offset_time_zone') this.offsetTimeZone,
+      @JsonKey(name: 'uuid_device') this.uuidDevice,
+      @JsonKey(name: 'walking_speed') this.walkingSpeed,
+      @JsonKey(name: 'walking_step_length') this.walkingStepLength});
 
   factory _$NonStructuredDataArrayImpl.fromJson(Map<String, dynamic> json) =>
       _$$NonStructuredDataArrayImplFromJson(json);
@@ -252,15 +239,8 @@ class _$NonStructuredDataArrayImpl implements _NonStructuredDataArray {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    sourceOfDataString,
-    timeZone,
-    offsetTimeZone,
-    uuidDevice,
-    walkingSpeed,
-    walkingStepLength,
-  );
+  int get hashCode => Object.hash(runtimeType, sourceOfDataString, timeZone,
+      offsetTimeZone, uuidDevice, walkingSpeed, walkingStepLength);
 
   /// Create a copy of NonStructuredDataArray
   /// with the given fields replaced by the non-null parameter values.
@@ -268,27 +248,26 @@ class _$NonStructuredDataArrayImpl implements _NonStructuredDataArray {
   @override
   @pragma('vm:prefer-inline')
   _$$NonStructuredDataArrayImplCopyWith<_$NonStructuredDataArrayImpl>
-  get copyWith =>
-      __$$NonStructuredDataArrayImplCopyWithImpl<_$NonStructuredDataArrayImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$NonStructuredDataArrayImplCopyWithImpl<
+          _$NonStructuredDataArrayImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NonStructuredDataArrayImplToJson(this);
+    return _$$NonStructuredDataArrayImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _NonStructuredDataArray implements NonStructuredDataArray {
-  factory _NonStructuredDataArray({
-    @JsonKey(name: 'source_of_data_string') final String? sourceOfDataString,
-    @JsonKey(name: 'time_zone') final String? timeZone,
-    @JsonKey(name: 'offset_time_zone') final int? offsetTimeZone,
-    @JsonKey(name: 'uuid_device') final String? uuidDevice,
-    @JsonKey(name: 'walking_speed') final int? walkingSpeed,
-    @JsonKey(name: 'walking_step_length') final int? walkingStepLength,
-  }) = _$NonStructuredDataArrayImpl;
+  factory _NonStructuredDataArray(
+      {@JsonKey(name: 'source_of_data_string') final String? sourceOfDataString,
+      @JsonKey(name: 'time_zone') final String? timeZone,
+      @JsonKey(name: 'offset_time_zone') final int? offsetTimeZone,
+      @JsonKey(name: 'uuid_device') final String? uuidDevice,
+      @JsonKey(name: 'walking_speed') final int? walkingSpeed,
+      @JsonKey(name: 'walking_step_length')
+      final int? walkingStepLength}) = _$NonStructuredDataArrayImpl;
 
   factory _NonStructuredDataArray.fromJson(Map<String, dynamic> json) =
       _$NonStructuredDataArrayImpl.fromJson;
@@ -317,5 +296,5 @@ abstract class _NonStructuredDataArray implements NonStructuredDataArray {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NonStructuredDataArrayImplCopyWith<_$NonStructuredDataArrayImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

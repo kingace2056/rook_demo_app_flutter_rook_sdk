@@ -12,12 +12,10 @@ part of 'temperature_maximum_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TemperatureMaximumObject _$TemperatureMaximumObjectFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _TemperatureMaximumObject.fromJson(json);
 }
 
@@ -40,22 +38,19 @@ mixin _$TemperatureMaximumObject {
 
 /// @nodoc
 abstract class $TemperatureMaximumObjectCopyWith<$Res> {
-  factory $TemperatureMaximumObjectCopyWith(
-    TemperatureMaximumObject value,
-    $Res Function(TemperatureMaximumObject) then,
-  ) = _$TemperatureMaximumObjectCopyWithImpl<$Res, TemperatureMaximumObject>;
+  factory $TemperatureMaximumObjectCopyWith(TemperatureMaximumObject value,
+          $Res Function(TemperatureMaximumObject) then) =
+      _$TemperatureMaximumObjectCopyWithImpl<$Res, TemperatureMaximumObject>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
-class _$TemperatureMaximumObjectCopyWithImpl<
-  $Res,
-  $Val extends TemperatureMaximumObject
->
+class _$TemperatureMaximumObjectCopyWithImpl<$Res,
+        $Val extends TemperatureMaximumObject>
     implements $TemperatureMaximumObjectCopyWith<$Res> {
   _$TemperatureMaximumObjectCopyWithImpl(this._value, this._then);
 
@@ -72,19 +67,16 @@ class _$TemperatureMaximumObjectCopyWithImpl<
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-                ? _value.temperatureCelsiusFloat
-                : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            measurementTypeString: freezed == measurementTypeString
-                ? _value.measurementTypeString
-                : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -92,29 +84,26 @@ class _$TemperatureMaximumObjectCopyWithImpl<
 abstract class _$$TemperatureMaximumObjectImplCopyWith<$Res>
     implements $TemperatureMaximumObjectCopyWith<$Res> {
   factory _$$TemperatureMaximumObjectImplCopyWith(
-    _$TemperatureMaximumObjectImpl value,
-    $Res Function(_$TemperatureMaximumObjectImpl) then,
-  ) = __$$TemperatureMaximumObjectImplCopyWithImpl<$Res>;
+          _$TemperatureMaximumObjectImpl value,
+          $Res Function(_$TemperatureMaximumObjectImpl) then) =
+      __$$TemperatureMaximumObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
 class __$$TemperatureMaximumObjectImplCopyWithImpl<$Res>
-    extends
-        _$TemperatureMaximumObjectCopyWithImpl<
-          $Res,
-          _$TemperatureMaximumObjectImpl
-        >
+    extends _$TemperatureMaximumObjectCopyWithImpl<$Res,
+        _$TemperatureMaximumObjectImpl>
     implements _$$TemperatureMaximumObjectImplCopyWith<$Res> {
   __$$TemperatureMaximumObjectImplCopyWithImpl(
-    _$TemperatureMaximumObjectImpl _value,
-    $Res Function(_$TemperatureMaximumObjectImpl) _then,
-  ) : super(_value, _then);
+      _$TemperatureMaximumObjectImpl _value,
+      $Res Function(_$TemperatureMaximumObjectImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TemperatureMaximumObject
   /// with the given fields replaced by the non-null parameter values.
@@ -124,28 +113,25 @@ class __$$TemperatureMaximumObjectImplCopyWithImpl<$Res>
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _$TemperatureMaximumObjectImpl(
-        temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-            ? _value.temperatureCelsiusFloat
-            : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        measurementTypeString: freezed == measurementTypeString
-            ? _value.measurementTypeString
-            : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$TemperatureMaximumObjectImpl(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$TemperatureMaximumObjectImpl implements _TemperatureMaximumObject {
-  _$TemperatureMaximumObjectImpl({
-    @JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') this.measurementTypeString,
-  });
+  _$TemperatureMaximumObjectImpl(
+      {@JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') this.measurementTypeString});
 
   factory _$TemperatureMaximumObjectImpl.fromJson(Map<String, dynamic> json) =>
       _$$TemperatureMaximumObjectImplFromJson(json);
@@ -168,9 +154,7 @@ class _$TemperatureMaximumObjectImpl implements _TemperatureMaximumObject {
         (other.runtimeType == runtimeType &&
             other is _$TemperatureMaximumObjectImpl &&
             (identical(
-                  other.temperatureCelsiusFloat,
-                  temperatureCelsiusFloat,
-                ) ||
+                    other.temperatureCelsiusFloat, temperatureCelsiusFloat) ||
                 other.temperatureCelsiusFloat == temperatureCelsiusFloat) &&
             (identical(other.measurementTypeString, measurementTypeString) ||
                 other.measurementTypeString == measurementTypeString));
@@ -187,24 +171,23 @@ class _$TemperatureMaximumObjectImpl implements _TemperatureMaximumObject {
   @override
   @pragma('vm:prefer-inline')
   _$$TemperatureMaximumObjectImplCopyWith<_$TemperatureMaximumObjectImpl>
-  get copyWith =>
-      __$$TemperatureMaximumObjectImplCopyWithImpl<
-        _$TemperatureMaximumObjectImpl
-      >(this, _$identity);
+      get copyWith => __$$TemperatureMaximumObjectImplCopyWithImpl<
+          _$TemperatureMaximumObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TemperatureMaximumObjectImplToJson(this);
+    return _$$TemperatureMaximumObjectImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TemperatureMaximumObject implements TemperatureMaximumObject {
-  factory _TemperatureMaximumObject({
-    @JsonKey(name: 'temperature_celsius_float')
-    final double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string')
-    final String? measurementTypeString,
-  }) = _$TemperatureMaximumObjectImpl;
+  factory _TemperatureMaximumObject(
+      {@JsonKey(name: 'temperature_celsius_float')
+      final double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string')
+      final String? measurementTypeString}) = _$TemperatureMaximumObjectImpl;
 
   factory _TemperatureMaximumObject.fromJson(Map<String, dynamic> json) =
       _$TemperatureMaximumObjectImpl.fromJson;
@@ -221,5 +204,5 @@ abstract class _TemperatureMaximumObject implements TemperatureMaximumObject {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TemperatureMaximumObjectImplCopyWith<_$TemperatureMaximumObjectImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

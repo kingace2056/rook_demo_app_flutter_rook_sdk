@@ -12,8 +12,7 @@ part of 'stress.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Stress _$StressFromJson(Map<String, dynamic> json) {
   return _Stress.fromJson(json);
@@ -50,19 +49,19 @@ abstract class $StressCopyWith<$Res> {
   factory $StressCopyWith(Stress value, $Res Function(Stress) then) =
       _$StressCopyWithImpl<$Res, Stress>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'stress_at_rest_duration_seconds_int')
-    int? stressAtRestDurationSecondsInt,
-    @JsonKey(name: 'stress_duration_seconds_int') int? stressDurationSecondsInt,
-    @JsonKey(name: 'low_stress_duration_seconds_int')
-    int? lowStressDurationSecondsInt,
-    @JsonKey(name: 'medium_stress_duration_seconds_int')
-    int? mediumStressDurationSecondsInt,
-    @JsonKey(name: 'high_stress_duration_seconds_int')
-    int? highStressDurationSecondsInt,
-    @JsonKey(name: 'stress_avg_level_int') int? stressAvgLevelInt,
-    @JsonKey(name: 'stress_maximum_level_int') int? stressMaximumLevelInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'stress_at_rest_duration_seconds_int')
+      int? stressAtRestDurationSecondsInt,
+      @JsonKey(name: 'stress_duration_seconds_int')
+      int? stressDurationSecondsInt,
+      @JsonKey(name: 'low_stress_duration_seconds_int')
+      int? lowStressDurationSecondsInt,
+      @JsonKey(name: 'medium_stress_duration_seconds_int')
+      int? mediumStressDurationSecondsInt,
+      @JsonKey(name: 'high_stress_duration_seconds_int')
+      int? highStressDurationSecondsInt,
+      @JsonKey(name: 'stress_avg_level_int') int? stressAvgLevelInt,
+      @JsonKey(name: 'stress_maximum_level_int') int? stressMaximumLevelInt});
 }
 
 /// @nodoc
@@ -88,66 +87,59 @@ class _$StressCopyWithImpl<$Res, $Val extends Stress>
     Object? stressAvgLevelInt = freezed,
     Object? stressMaximumLevelInt = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            stressAtRestDurationSecondsInt:
-                freezed == stressAtRestDurationSecondsInt
-                ? _value.stressAtRestDurationSecondsInt
-                : stressAtRestDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            stressDurationSecondsInt: freezed == stressDurationSecondsInt
-                ? _value.stressDurationSecondsInt
-                : stressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            lowStressDurationSecondsInt: freezed == lowStressDurationSecondsInt
-                ? _value.lowStressDurationSecondsInt
-                : lowStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            mediumStressDurationSecondsInt:
-                freezed == mediumStressDurationSecondsInt
-                ? _value.mediumStressDurationSecondsInt
-                : mediumStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            highStressDurationSecondsInt:
-                freezed == highStressDurationSecondsInt
-                ? _value.highStressDurationSecondsInt
-                : highStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            stressAvgLevelInt: freezed == stressAvgLevelInt
-                ? _value.stressAvgLevelInt
-                : stressAvgLevelInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            stressMaximumLevelInt: freezed == stressMaximumLevelInt
-                ? _value.stressMaximumLevelInt
-                : stressMaximumLevelInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      stressAtRestDurationSecondsInt: freezed == stressAtRestDurationSecondsInt
+          ? _value.stressAtRestDurationSecondsInt
+          : stressAtRestDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      stressDurationSecondsInt: freezed == stressDurationSecondsInt
+          ? _value.stressDurationSecondsInt
+          : stressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lowStressDurationSecondsInt: freezed == lowStressDurationSecondsInt
+          ? _value.lowStressDurationSecondsInt
+          : lowStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      mediumStressDurationSecondsInt: freezed == mediumStressDurationSecondsInt
+          ? _value.mediumStressDurationSecondsInt
+          : mediumStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      highStressDurationSecondsInt: freezed == highStressDurationSecondsInt
+          ? _value.highStressDurationSecondsInt
+          : highStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      stressAvgLevelInt: freezed == stressAvgLevelInt
+          ? _value.stressAvgLevelInt
+          : stressAvgLevelInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      stressMaximumLevelInt: freezed == stressMaximumLevelInt
+          ? _value.stressMaximumLevelInt
+          : stressMaximumLevelInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$StressImplCopyWith<$Res> implements $StressCopyWith<$Res> {
   factory _$$StressImplCopyWith(
-    _$StressImpl value,
-    $Res Function(_$StressImpl) then,
-  ) = __$$StressImplCopyWithImpl<$Res>;
+          _$StressImpl value, $Res Function(_$StressImpl) then) =
+      __$$StressImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'stress_at_rest_duration_seconds_int')
-    int? stressAtRestDurationSecondsInt,
-    @JsonKey(name: 'stress_duration_seconds_int') int? stressDurationSecondsInt,
-    @JsonKey(name: 'low_stress_duration_seconds_int')
-    int? lowStressDurationSecondsInt,
-    @JsonKey(name: 'medium_stress_duration_seconds_int')
-    int? mediumStressDurationSecondsInt,
-    @JsonKey(name: 'high_stress_duration_seconds_int')
-    int? highStressDurationSecondsInt,
-    @JsonKey(name: 'stress_avg_level_int') int? stressAvgLevelInt,
-    @JsonKey(name: 'stress_maximum_level_int') int? stressMaximumLevelInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'stress_at_rest_duration_seconds_int')
+      int? stressAtRestDurationSecondsInt,
+      @JsonKey(name: 'stress_duration_seconds_int')
+      int? stressDurationSecondsInt,
+      @JsonKey(name: 'low_stress_duration_seconds_int')
+      int? lowStressDurationSecondsInt,
+      @JsonKey(name: 'medium_stress_duration_seconds_int')
+      int? mediumStressDurationSecondsInt,
+      @JsonKey(name: 'high_stress_duration_seconds_int')
+      int? highStressDurationSecondsInt,
+      @JsonKey(name: 'stress_avg_level_int') int? stressAvgLevelInt,
+      @JsonKey(name: 'stress_maximum_level_int') int? stressMaximumLevelInt});
 }
 
 /// @nodoc
@@ -155,9 +147,8 @@ class __$$StressImplCopyWithImpl<$Res>
     extends _$StressCopyWithImpl<$Res, _$StressImpl>
     implements _$$StressImplCopyWith<$Res> {
   __$$StressImplCopyWithImpl(
-    _$StressImpl _value,
-    $Res Function(_$StressImpl) _then,
-  ) : super(_value, _then);
+      _$StressImpl _value, $Res Function(_$StressImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Stress
   /// with the given fields replaced by the non-null parameter values.
@@ -172,59 +163,55 @@ class __$$StressImplCopyWithImpl<$Res>
     Object? stressAvgLevelInt = freezed,
     Object? stressMaximumLevelInt = freezed,
   }) {
-    return _then(
-      _$StressImpl(
-        stressAtRestDurationSecondsInt:
-            freezed == stressAtRestDurationSecondsInt
-            ? _value.stressAtRestDurationSecondsInt
-            : stressAtRestDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        stressDurationSecondsInt: freezed == stressDurationSecondsInt
-            ? _value.stressDurationSecondsInt
-            : stressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        lowStressDurationSecondsInt: freezed == lowStressDurationSecondsInt
-            ? _value.lowStressDurationSecondsInt
-            : lowStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        mediumStressDurationSecondsInt:
-            freezed == mediumStressDurationSecondsInt
-            ? _value.mediumStressDurationSecondsInt
-            : mediumStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        highStressDurationSecondsInt: freezed == highStressDurationSecondsInt
-            ? _value.highStressDurationSecondsInt
-            : highStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        stressAvgLevelInt: freezed == stressAvgLevelInt
-            ? _value.stressAvgLevelInt
-            : stressAvgLevelInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        stressMaximumLevelInt: freezed == stressMaximumLevelInt
-            ? _value.stressMaximumLevelInt
-            : stressMaximumLevelInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$StressImpl(
+      stressAtRestDurationSecondsInt: freezed == stressAtRestDurationSecondsInt
+          ? _value.stressAtRestDurationSecondsInt
+          : stressAtRestDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      stressDurationSecondsInt: freezed == stressDurationSecondsInt
+          ? _value.stressDurationSecondsInt
+          : stressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lowStressDurationSecondsInt: freezed == lowStressDurationSecondsInt
+          ? _value.lowStressDurationSecondsInt
+          : lowStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      mediumStressDurationSecondsInt: freezed == mediumStressDurationSecondsInt
+          ? _value.mediumStressDurationSecondsInt
+          : mediumStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      highStressDurationSecondsInt: freezed == highStressDurationSecondsInt
+          ? _value.highStressDurationSecondsInt
+          : highStressDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      stressAvgLevelInt: freezed == stressAvgLevelInt
+          ? _value.stressAvgLevelInt
+          : stressAvgLevelInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      stressMaximumLevelInt: freezed == stressMaximumLevelInt
+          ? _value.stressMaximumLevelInt
+          : stressMaximumLevelInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$StressImpl implements _Stress {
-  _$StressImpl({
-    @JsonKey(name: 'stress_at_rest_duration_seconds_int')
-    this.stressAtRestDurationSecondsInt,
-    @JsonKey(name: 'stress_duration_seconds_int') this.stressDurationSecondsInt,
-    @JsonKey(name: 'low_stress_duration_seconds_int')
-    this.lowStressDurationSecondsInt,
-    @JsonKey(name: 'medium_stress_duration_seconds_int')
-    this.mediumStressDurationSecondsInt,
-    @JsonKey(name: 'high_stress_duration_seconds_int')
-    this.highStressDurationSecondsInt,
-    @JsonKey(name: 'stress_avg_level_int') this.stressAvgLevelInt,
-    @JsonKey(name: 'stress_maximum_level_int') this.stressMaximumLevelInt,
-  });
+  _$StressImpl(
+      {@JsonKey(name: 'stress_at_rest_duration_seconds_int')
+      this.stressAtRestDurationSecondsInt,
+      @JsonKey(name: 'stress_duration_seconds_int')
+      this.stressDurationSecondsInt,
+      @JsonKey(name: 'low_stress_duration_seconds_int')
+      this.lowStressDurationSecondsInt,
+      @JsonKey(name: 'medium_stress_duration_seconds_int')
+      this.mediumStressDurationSecondsInt,
+      @JsonKey(name: 'high_stress_duration_seconds_int')
+      this.highStressDurationSecondsInt,
+      @JsonKey(name: 'stress_avg_level_int') this.stressAvgLevelInt,
+      @JsonKey(name: 'stress_maximum_level_int') this.stressMaximumLevelInt});
 
   factory _$StressImpl.fromJson(Map<String, dynamic> json) =>
       _$$StressImplFromJson(json);
@@ -261,33 +248,23 @@ class _$StressImpl implements _Stress {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StressImpl &&
-            (identical(
-                  other.stressAtRestDurationSecondsInt,
-                  stressAtRestDurationSecondsInt,
-                ) ||
+            (identical(other.stressAtRestDurationSecondsInt,
+                    stressAtRestDurationSecondsInt) ||
                 other.stressAtRestDurationSecondsInt ==
                     stressAtRestDurationSecondsInt) &&
             (identical(
-                  other.stressDurationSecondsInt,
-                  stressDurationSecondsInt,
-                ) ||
+                    other.stressDurationSecondsInt, stressDurationSecondsInt) ||
                 other.stressDurationSecondsInt == stressDurationSecondsInt) &&
-            (identical(
-                  other.lowStressDurationSecondsInt,
-                  lowStressDurationSecondsInt,
-                ) ||
+            (identical(other.lowStressDurationSecondsInt,
+                    lowStressDurationSecondsInt) ||
                 other.lowStressDurationSecondsInt ==
                     lowStressDurationSecondsInt) &&
-            (identical(
-                  other.mediumStressDurationSecondsInt,
-                  mediumStressDurationSecondsInt,
-                ) ||
+            (identical(other.mediumStressDurationSecondsInt,
+                    mediumStressDurationSecondsInt) ||
                 other.mediumStressDurationSecondsInt ==
                     mediumStressDurationSecondsInt) &&
-            (identical(
-                  other.highStressDurationSecondsInt,
-                  highStressDurationSecondsInt,
-                ) ||
+            (identical(other.highStressDurationSecondsInt,
+                    highStressDurationSecondsInt) ||
                 other.highStressDurationSecondsInt ==
                     highStressDurationSecondsInt) &&
             (identical(other.stressAvgLevelInt, stressAvgLevelInt) ||
@@ -299,15 +276,14 @@ class _$StressImpl implements _Stress {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    stressAtRestDurationSecondsInt,
-    stressDurationSecondsInt,
-    lowStressDurationSecondsInt,
-    mediumStressDurationSecondsInt,
-    highStressDurationSecondsInt,
-    stressAvgLevelInt,
-    stressMaximumLevelInt,
-  );
+      runtimeType,
+      stressAtRestDurationSecondsInt,
+      stressDurationSecondsInt,
+      lowStressDurationSecondsInt,
+      mediumStressDurationSecondsInt,
+      highStressDurationSecondsInt,
+      stressAvgLevelInt,
+      stressMaximumLevelInt);
 
   /// Create a copy of Stress
   /// with the given fields replaced by the non-null parameter values.
@@ -319,25 +295,27 @@ class _$StressImpl implements _Stress {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StressImplToJson(this);
+    return _$$StressImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Stress implements Stress {
-  factory _Stress({
-    @JsonKey(name: 'stress_at_rest_duration_seconds_int')
-    final int? stressAtRestDurationSecondsInt,
-    @JsonKey(name: 'stress_duration_seconds_int')
-    final int? stressDurationSecondsInt,
-    @JsonKey(name: 'low_stress_duration_seconds_int')
-    final int? lowStressDurationSecondsInt,
-    @JsonKey(name: 'medium_stress_duration_seconds_int')
-    final int? mediumStressDurationSecondsInt,
-    @JsonKey(name: 'high_stress_duration_seconds_int')
-    final int? highStressDurationSecondsInt,
-    @JsonKey(name: 'stress_avg_level_int') final int? stressAvgLevelInt,
-    @JsonKey(name: 'stress_maximum_level_int') final int? stressMaximumLevelInt,
-  }) = _$StressImpl;
+  factory _Stress(
+      {@JsonKey(name: 'stress_at_rest_duration_seconds_int')
+      final int? stressAtRestDurationSecondsInt,
+      @JsonKey(name: 'stress_duration_seconds_int')
+      final int? stressDurationSecondsInt,
+      @JsonKey(name: 'low_stress_duration_seconds_int')
+      final int? lowStressDurationSecondsInt,
+      @JsonKey(name: 'medium_stress_duration_seconds_int')
+      final int? mediumStressDurationSecondsInt,
+      @JsonKey(name: 'high_stress_duration_seconds_int')
+      final int? highStressDurationSecondsInt,
+      @JsonKey(name: 'stress_avg_level_int') final int? stressAvgLevelInt,
+      @JsonKey(name: 'stress_maximum_level_int')
+      final int? stressMaximumLevelInt}) = _$StressImpl;
 
   factory _Stress.fromJson(Map<String, dynamic> json) = _$StressImpl.fromJson;
 

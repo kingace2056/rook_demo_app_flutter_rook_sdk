@@ -11,23 +11,19 @@ _$TemperatureImpl _$$TemperatureImplFromJson(Map<String, dynamic> json) =>
       temperatureAvgObject: json['temperature_avg_object'] == null
           ? null
           : TemperatureAvgObject.fromJson(
-              json['temperature_avg_object'] as Map<String, dynamic>,
-            ),
+              json['temperature_avg_object'] as Map<String, dynamic>),
       temperatureMaximumObject: json['temperature_maximum_object'] == null
           ? null
           : TemperatureMaximumObject.fromJson(
-              json['temperature_maximum_object'] as Map<String, dynamic>,
-            ),
+              json['temperature_maximum_object'] as Map<String, dynamic>),
       temperatureMinimumObject: json['temperature_minimum_object'] == null
           ? null
           : TemperatureMinimumObject.fromJson(
-              json['temperature_minimum_object'] as Map<String, dynamic>,
-            ),
+              json['temperature_minimum_object'] as Map<String, dynamic>),
       temperatureDeltaObject: json['temperature_delta_object'] == null
           ? null
           : TemperatureDeltaObject.fromJson(
-              json['temperature_delta_object'] as Map<String, dynamic>,
-            ),
+              json['temperature_delta_object'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$TemperatureImplToJson(_$TemperatureImpl instance) =>

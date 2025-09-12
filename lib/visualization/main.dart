@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:rook_impl/app.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/app.dart';
+
 import 'core/di/dependency_injection.dart';
 import 'services/storage_service.dart';
 

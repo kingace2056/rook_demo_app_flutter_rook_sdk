@@ -12,8 +12,7 @@ part of 'heart_rate_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HeartRateEvent _$HeartRateEventFromJson(Map<String, dynamic> json) {
   return _HeartRateEvent.fromJson(json);
@@ -41,16 +40,14 @@ mixin _$HeartRateEvent {
 /// @nodoc
 abstract class $HeartRateEventCopyWith<$Res> {
   factory $HeartRateEventCopyWith(
-    HeartRateEvent value,
-    $Res Function(HeartRateEvent) then,
-  ) = _$HeartRateEventCopyWithImpl<$Res, HeartRateEvent>;
+          HeartRateEvent value, $Res Function(HeartRateEvent) then) =
+      _$HeartRateEventCopyWithImpl<$Res, HeartRateEvent>;
   @useResult
-  $Res call({
-    Metadata? metadata,
-    @JsonKey(name: 'heart_rate') HeartRate? heartRate,
-    @JsonKey(name: 'non_structured_data_array')
-    List<NonStructuredDataArray>? nonStructuredDataArray,
-  });
+  $Res call(
+      {Metadata? metadata,
+      @JsonKey(name: 'heart_rate') HeartRate? heartRate,
+      @JsonKey(name: 'non_structured_data_array')
+      List<NonStructuredDataArray>? nonStructuredDataArray});
 
   $MetadataCopyWith<$Res>? get metadata;
   $HeartRateCopyWith<$Res>? get heartRate;
@@ -75,23 +72,20 @@ class _$HeartRateEventCopyWithImpl<$Res, $Val extends HeartRateEvent>
     Object? heartRate = freezed,
     Object? nonStructuredDataArray = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            metadata: freezed == metadata
-                ? _value.metadata
-                : metadata // ignore: cast_nullable_to_non_nullable
-                      as Metadata?,
-            heartRate: freezed == heartRate
-                ? _value.heartRate
-                : heartRate // ignore: cast_nullable_to_non_nullable
-                      as HeartRate?,
-            nonStructuredDataArray: freezed == nonStructuredDataArray
-                ? _value.nonStructuredDataArray
-                : nonStructuredDataArray // ignore: cast_nullable_to_non_nullable
-                      as List<NonStructuredDataArray>?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+      heartRate: freezed == heartRate
+          ? _value.heartRate
+          : heartRate // ignore: cast_nullable_to_non_nullable
+              as HeartRate?,
+      nonStructuredDataArray: freezed == nonStructuredDataArray
+          ? _value.nonStructuredDataArray
+          : nonStructuredDataArray // ignore: cast_nullable_to_non_nullable
+              as List<NonStructuredDataArray>?,
+    ) as $Val);
   }
 
   /// Create a copy of HeartRateEvent
@@ -126,18 +120,16 @@ class _$HeartRateEventCopyWithImpl<$Res, $Val extends HeartRateEvent>
 /// @nodoc
 abstract class _$$HeartRateEventImplCopyWith<$Res>
     implements $HeartRateEventCopyWith<$Res> {
-  factory _$$HeartRateEventImplCopyWith(
-    _$HeartRateEventImpl value,
-    $Res Function(_$HeartRateEventImpl) then,
-  ) = __$$HeartRateEventImplCopyWithImpl<$Res>;
+  factory _$$HeartRateEventImplCopyWith(_$HeartRateEventImpl value,
+          $Res Function(_$HeartRateEventImpl) then) =
+      __$$HeartRateEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    Metadata? metadata,
-    @JsonKey(name: 'heart_rate') HeartRate? heartRate,
-    @JsonKey(name: 'non_structured_data_array')
-    List<NonStructuredDataArray>? nonStructuredDataArray,
-  });
+  $Res call(
+      {Metadata? metadata,
+      @JsonKey(name: 'heart_rate') HeartRate? heartRate,
+      @JsonKey(name: 'non_structured_data_array')
+      List<NonStructuredDataArray>? nonStructuredDataArray});
 
   @override
   $MetadataCopyWith<$Res>? get metadata;
@@ -150,9 +142,8 @@ class __$$HeartRateEventImplCopyWithImpl<$Res>
     extends _$HeartRateEventCopyWithImpl<$Res, _$HeartRateEventImpl>
     implements _$$HeartRateEventImplCopyWith<$Res> {
   __$$HeartRateEventImplCopyWithImpl(
-    _$HeartRateEventImpl _value,
-    $Res Function(_$HeartRateEventImpl) _then,
-  ) : super(_value, _then);
+      _$HeartRateEventImpl _value, $Res Function(_$HeartRateEventImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of HeartRateEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -163,34 +154,32 @@ class __$$HeartRateEventImplCopyWithImpl<$Res>
     Object? heartRate = freezed,
     Object? nonStructuredDataArray = freezed,
   }) {
-    return _then(
-      _$HeartRateEventImpl(
-        metadata: freezed == metadata
-            ? _value.metadata
-            : metadata // ignore: cast_nullable_to_non_nullable
-                  as Metadata?,
-        heartRate: freezed == heartRate
-            ? _value.heartRate
-            : heartRate // ignore: cast_nullable_to_non_nullable
-                  as HeartRate?,
-        nonStructuredDataArray: freezed == nonStructuredDataArray
-            ? _value._nonStructuredDataArray
-            : nonStructuredDataArray // ignore: cast_nullable_to_non_nullable
-                  as List<NonStructuredDataArray>?,
-      ),
-    );
+    return _then(_$HeartRateEventImpl(
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+      heartRate: freezed == heartRate
+          ? _value.heartRate
+          : heartRate // ignore: cast_nullable_to_non_nullable
+              as HeartRate?,
+      nonStructuredDataArray: freezed == nonStructuredDataArray
+          ? _value._nonStructuredDataArray
+          : nonStructuredDataArray // ignore: cast_nullable_to_non_nullable
+              as List<NonStructuredDataArray>?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HeartRateEventImpl implements _HeartRateEvent {
-  _$HeartRateEventImpl({
-    this.metadata,
-    @JsonKey(name: 'heart_rate') this.heartRate,
-    @JsonKey(name: 'non_structured_data_array')
-    final List<NonStructuredDataArray>? nonStructuredDataArray,
-  }) : _nonStructuredDataArray = nonStructuredDataArray;
+  _$HeartRateEventImpl(
+      {this.metadata,
+      @JsonKey(name: 'heart_rate') this.heartRate,
+      @JsonKey(name: 'non_structured_data_array')
+      final List<NonStructuredDataArray>? nonStructuredDataArray})
+      : _nonStructuredDataArray = nonStructuredDataArray;
 
   factory _$HeartRateEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$HeartRateEventImplFromJson(json);
@@ -227,19 +216,13 @@ class _$HeartRateEventImpl implements _HeartRateEvent {
             (identical(other.heartRate, heartRate) ||
                 other.heartRate == heartRate) &&
             const DeepCollectionEquality().equals(
-              other._nonStructuredDataArray,
-              _nonStructuredDataArray,
-            ));
+                other._nonStructuredDataArray, _nonStructuredDataArray));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    metadata,
-    heartRate,
-    const DeepCollectionEquality().hash(_nonStructuredDataArray),
-  );
+  int get hashCode => Object.hash(runtimeType, metadata, heartRate,
+      const DeepCollectionEquality().hash(_nonStructuredDataArray));
 
   /// Create a copy of HeartRateEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -248,23 +231,23 @@ class _$HeartRateEventImpl implements _HeartRateEvent {
   @pragma('vm:prefer-inline')
   _$$HeartRateEventImplCopyWith<_$HeartRateEventImpl> get copyWith =>
       __$$HeartRateEventImplCopyWithImpl<_$HeartRateEventImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HeartRateEventImplToJson(this);
+    return _$$HeartRateEventImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _HeartRateEvent implements HeartRateEvent {
-  factory _HeartRateEvent({
-    final Metadata? metadata,
-    @JsonKey(name: 'heart_rate') final HeartRate? heartRate,
-    @JsonKey(name: 'non_structured_data_array')
-    final List<NonStructuredDataArray>? nonStructuredDataArray,
-  }) = _$HeartRateEventImpl;
+  factory _HeartRateEvent(
+          {final Metadata? metadata,
+          @JsonKey(name: 'heart_rate') final HeartRate? heartRate,
+          @JsonKey(name: 'non_structured_data_array')
+          final List<NonStructuredDataArray>? nonStructuredDataArray}) =
+      _$HeartRateEventImpl;
 
   factory _HeartRateEvent.fromJson(Map<String, dynamic> json) =
       _$HeartRateEventImpl.fromJson;

@@ -12,8 +12,7 @@ part of 'datum.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Datum _$DatumFromJson(Map<String, dynamic> json) {
   return _Datum.fromJson(json);
@@ -58,21 +57,20 @@ abstract class $DatumCopyWith<$Res> {
   factory $DatumCopyWith(Datum value, $Res Function(Datum) then) =
       _$DatumCopyWithImpl<$Res, Datum>;
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'raw_data') RawData? rawData,
-    bool? processed,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'raw_data') RawData? rawData,
+      bool? processed,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   $RawDataCopyWith<$Res>? get rawData;
 }
@@ -106,63 +104,60 @@ class _$DatumCopyWithImpl<$Res, $Val extends Datum>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            id: freezed == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            version: freezed == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            documentVersion: freezed == documentVersion
-                ? _value.documentVersion
-                : documentVersion // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            rawData: freezed == rawData
-                ? _value.rawData
-                : rawData // ignore: cast_nullable_to_non_nullable
-                      as RawData?,
-            processed: freezed == processed
-                ? _value.processed
-                : processed // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            createdAtRook: freezed == createdAtRook
-                ? _value.createdAtRook
-                : createdAtRook // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            webhookReceivedAt: freezed == webhookReceivedAt
-                ? _value.webhookReceivedAt
-                : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAt: freezed == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAt: freezed == updatedAt
-                ? _value.updatedAt
-                : updatedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            v: freezed == v
-                ? _value.v
-                : v // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rawData: freezed == rawData
+          ? _value.rawData
+          : rawData // ignore: cast_nullable_to_non_nullable
+              as RawData?,
+      processed: freezed == processed
+          ? _value.processed
+          : processed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 
   /// Create a copy of Datum
@@ -183,26 +178,24 @@ class _$DatumCopyWithImpl<$Res, $Val extends Datum>
 /// @nodoc
 abstract class _$$DatumImplCopyWith<$Res> implements $DatumCopyWith<$Res> {
   factory _$$DatumImplCopyWith(
-    _$DatumImpl value,
-    $Res Function(_$DatumImpl) then,
-  ) = __$$DatumImplCopyWithImpl<$Res>;
+          _$DatumImpl value, $Res Function(_$DatumImpl) then) =
+      __$$DatumImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'raw_data') RawData? rawData,
-    bool? processed,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'raw_data') RawData? rawData,
+      bool? processed,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   @override
   $RawDataCopyWith<$Res>? get rawData;
@@ -213,9 +206,8 @@ class __$$DatumImplCopyWithImpl<$Res>
     extends _$DatumCopyWithImpl<$Res, _$DatumImpl>
     implements _$$DatumImplCopyWith<$Res> {
   __$$DatumImplCopyWithImpl(
-    _$DatumImpl _value,
-    $Res Function(_$DatumImpl) _then,
-  ) : super(_value, _then);
+      _$DatumImpl _value, $Res Function(_$DatumImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Datum
   /// with the given fields replaced by the non-null parameter values.
@@ -236,83 +228,80 @@ class __$$DatumImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _$DatumImpl(
-        id: freezed == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        version: freezed == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        documentVersion: freezed == documentVersion
-            ? _value.documentVersion
-            : documentVersion // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        rawData: freezed == rawData
-            ? _value.rawData
-            : rawData // ignore: cast_nullable_to_non_nullable
-                  as RawData?,
-        processed: freezed == processed
-            ? _value.processed
-            : processed // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        createdAtRook: freezed == createdAtRook
-            ? _value.createdAtRook
-            : createdAtRook // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        webhookReceivedAt: freezed == webhookReceivedAt
-            ? _value.webhookReceivedAt
-            : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAt: freezed == createdAt
-            ? _value.createdAt
-            : createdAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAt: freezed == updatedAt
-            ? _value.updatedAt
-            : updatedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        v: freezed == v
-            ? _value.v
-            : v // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$DatumImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rawData: freezed == rawData
+          ? _value.rawData
+          : rawData // ignore: cast_nullable_to_non_nullable
+              as RawData?,
+      processed: freezed == processed
+          ? _value.processed
+          : processed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DatumImpl implements _Datum {
-  _$DatumImpl({
-    @JsonKey(name: '_id') this.id,
-    this.version,
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'document_version') this.documentVersion,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'raw_data') this.rawData,
-    this.processed,
-    @JsonKey(name: 'created_at') this.createdAtRook,
-    @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
-    this.createdAt,
-    this.updatedAt,
-    @JsonKey(name: '__v') this.v,
-  });
+  _$DatumImpl(
+      {@JsonKey(name: '_id') this.id,
+      this.version,
+      @JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'document_version') this.documentVersion,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'raw_data') this.rawData,
+      this.processed,
+      @JsonKey(name: 'created_at') this.createdAtRook,
+      @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
+      this.createdAt,
+      this.updatedAt,
+      @JsonKey(name: '__v') this.v});
 
   factory _$DatumImpl.fromJson(Map<String, dynamic> json) =>
       _$$DatumImplFromJson(json);
@@ -389,21 +378,20 @@ class _$DatumImpl implements _Datum {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    version,
-    clientUuid,
-    userId,
-    documentVersion,
-    dataStructure,
-    rawData,
-    processed,
-    createdAtRook,
-    webhookReceivedAt,
-    createdAt,
-    updatedAt,
-    v,
-  );
+      runtimeType,
+      id,
+      version,
+      clientUuid,
+      userId,
+      documentVersion,
+      dataStructure,
+      rawData,
+      processed,
+      createdAtRook,
+      webhookReceivedAt,
+      createdAt,
+      updatedAt,
+      v);
 
   /// Create a copy of Datum
   /// with the given fields replaced by the non-null parameter values.
@@ -415,26 +403,27 @@ class _$DatumImpl implements _Datum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DatumImplToJson(this);
+    return _$$DatumImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Datum implements Datum {
-  factory _Datum({
-    @JsonKey(name: '_id') final String? id,
-    final int? version,
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'document_version') final int? documentVersion,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'raw_data') final RawData? rawData,
-    final bool? processed,
-    @JsonKey(name: 'created_at') final DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
-    final DateTime? createdAt,
-    final DateTime? updatedAt,
-    @JsonKey(name: '__v') final int? v,
-  }) = _$DatumImpl;
+  factory _Datum(
+      {@JsonKey(name: '_id') final String? id,
+      final int? version,
+      @JsonKey(name: 'client_uuid') final String? clientUuid,
+      @JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'document_version') final int? documentVersion,
+      @JsonKey(name: 'data_structure') final String? dataStructure,
+      @JsonKey(name: 'raw_data') final RawData? rawData,
+      final bool? processed,
+      @JsonKey(name: 'created_at') final DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
+      @JsonKey(name: '__v') final int? v}) = _$DatumImpl;
 
   factory _Datum.fromJson(Map<String, dynamic> json) = _$DatumImpl.fromJson;
 

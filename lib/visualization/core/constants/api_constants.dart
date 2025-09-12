@@ -1,5 +1,13 @@
 class ApiConstants {
-  static const String baseUrl = 'https://rook.mantralabs.com.np';
+  // ROOK API URLs
+  static const String rookProductionUrl = 'https://api.rook-connect.com';
+  static const String rookSandboxUrl = 'https://api.rook-connect.review';
+
+  // Use sandbox for demo/testing
+  static const String baseUrl = rookSandboxUrl;
+
+  // Legacy endpoint for existing functionality
+  static const String legacyBaseUrl = 'https://rook.mantralabs.com.np';
   static const String apiPrefix = '/api';
 
   // Endpoints

@@ -12,8 +12,7 @@ part of 'body_health_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BodyHealthScore _$BodyHealthScoreFromJson(Map<String, dynamic> json) {
   return _BodyHealthScore.fromJson(json);
@@ -39,14 +38,12 @@ mixin _$BodyHealthScore {
 /// @nodoc
 abstract class $BodyHealthScoreCopyWith<$Res> {
   factory $BodyHealthScoreCopyWith(
-    BodyHealthScore value,
-    $Res Function(BodyHealthScore) then,
-  ) = _$BodyHealthScoreCopyWithImpl<$Res, BodyHealthScore>;
+          BodyHealthScore value, $Res Function(BodyHealthScore) then) =
+      _$BodyHealthScoreCopyWithImpl<$Res, BodyHealthScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'bmi_score') BmiScore? bmiScore,
-  });
+  $Res call(
+      {@JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'bmi_score') BmiScore? bmiScore});
 
   $BmiScoreCopyWith<$Res>? get bmiScore;
 }
@@ -65,20 +62,20 @@ class _$BodyHealthScoreCopyWithImpl<$Res, $Val extends BodyHealthScore>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? score0100Int = freezed, Object? bmiScore = freezed}) {
-    return _then(
-      _value.copyWith(
-            score0100Int: freezed == score0100Int
-                ? _value.score0100Int
-                : score0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            bmiScore: freezed == bmiScore
-                ? _value.bmiScore
-                : bmiScore // ignore: cast_nullable_to_non_nullable
-                      as BmiScore?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? score0100Int = freezed,
+    Object? bmiScore = freezed,
+  }) {
+    return _then(_value.copyWith(
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      bmiScore: freezed == bmiScore
+          ? _value.bmiScore
+          : bmiScore // ignore: cast_nullable_to_non_nullable
+              as BmiScore?,
+    ) as $Val);
   }
 
   /// Create a copy of BodyHealthScore
@@ -99,16 +96,14 @@ class _$BodyHealthScoreCopyWithImpl<$Res, $Val extends BodyHealthScore>
 /// @nodoc
 abstract class _$$BodyHealthScoreImplCopyWith<$Res>
     implements $BodyHealthScoreCopyWith<$Res> {
-  factory _$$BodyHealthScoreImplCopyWith(
-    _$BodyHealthScoreImpl value,
-    $Res Function(_$BodyHealthScoreImpl) then,
-  ) = __$$BodyHealthScoreImplCopyWithImpl<$Res>;
+  factory _$$BodyHealthScoreImplCopyWith(_$BodyHealthScoreImpl value,
+          $Res Function(_$BodyHealthScoreImpl) then) =
+      __$$BodyHealthScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'bmi_score') BmiScore? bmiScore,
-  });
+  $Res call(
+      {@JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'bmi_score') BmiScore? bmiScore});
 
   @override
   $BmiScoreCopyWith<$Res>? get bmiScore;
@@ -119,37 +114,36 @@ class __$$BodyHealthScoreImplCopyWithImpl<$Res>
     extends _$BodyHealthScoreCopyWithImpl<$Res, _$BodyHealthScoreImpl>
     implements _$$BodyHealthScoreImplCopyWith<$Res> {
   __$$BodyHealthScoreImplCopyWithImpl(
-    _$BodyHealthScoreImpl _value,
-    $Res Function(_$BodyHealthScoreImpl) _then,
-  ) : super(_value, _then);
+      _$BodyHealthScoreImpl _value, $Res Function(_$BodyHealthScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BodyHealthScore
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? score0100Int = freezed, Object? bmiScore = freezed}) {
-    return _then(
-      _$BodyHealthScoreImpl(
-        score0100Int: freezed == score0100Int
-            ? _value.score0100Int
-            : score0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        bmiScore: freezed == bmiScore
-            ? _value.bmiScore
-            : bmiScore // ignore: cast_nullable_to_non_nullable
-                  as BmiScore?,
-      ),
-    );
+  $Res call({
+    Object? score0100Int = freezed,
+    Object? bmiScore = freezed,
+  }) {
+    return _then(_$BodyHealthScoreImpl(
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      bmiScore: freezed == bmiScore
+          ? _value.bmiScore
+          : bmiScore // ignore: cast_nullable_to_non_nullable
+              as BmiScore?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$BodyHealthScoreImpl implements _BodyHealthScore {
-  _$BodyHealthScoreImpl({
-    @JsonKey(name: 'score_0_100_int') this.score0100Int,
-    @JsonKey(name: 'bmi_score') this.bmiScore,
-  });
+  _$BodyHealthScoreImpl(
+      {@JsonKey(name: 'score_0_100_int') this.score0100Int,
+      @JsonKey(name: 'bmi_score') this.bmiScore});
 
   factory _$BodyHealthScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$BodyHealthScoreImplFromJson(json);
@@ -188,21 +182,21 @@ class _$BodyHealthScoreImpl implements _BodyHealthScore {
   @pragma('vm:prefer-inline')
   _$$BodyHealthScoreImplCopyWith<_$BodyHealthScoreImpl> get copyWith =>
       __$$BodyHealthScoreImplCopyWithImpl<_$BodyHealthScoreImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BodyHealthScoreImplToJson(this);
+    return _$$BodyHealthScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _BodyHealthScore implements BodyHealthScore {
-  factory _BodyHealthScore({
-    @JsonKey(name: 'score_0_100_int') final int? score0100Int,
-    @JsonKey(name: 'bmi_score') final BmiScore? bmiScore,
-  }) = _$BodyHealthScoreImpl;
+  factory _BodyHealthScore(
+          {@JsonKey(name: 'score_0_100_int') final int? score0100Int,
+          @JsonKey(name: 'bmi_score') final BmiScore? bmiScore}) =
+      _$BodyHealthScoreImpl;
 
   factory _BodyHealthScore.fromJson(Map<String, dynamic> json) =
       _$BodyHealthScoreImpl.fromJson;

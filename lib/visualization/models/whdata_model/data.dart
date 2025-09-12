@@ -1,12 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rook_impl/models/whdata_model/body_summary.dart';
-import 'package:rook_impl/models/whdata_model/health_event.dart';
-import 'package:rook_impl/models/whdata_model/health_score.dart';
-import 'package:rook_impl/models/whdata_model/physical_summary.dart';
-import 'package:rook_impl/models/whdata_model/raw_webhook.dart';
-import 'package:rook_impl/models/whdata_model/sleep_summary.dart';
-
-import 'data.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/health_event.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/body_summary.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/health_score.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/physical_summary.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/raw_webhook.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/sleep_summary.dart';
 
 part 'data.freezed.dart';
 part 'data.g.dart';

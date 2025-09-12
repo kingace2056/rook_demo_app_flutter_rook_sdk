@@ -12,8 +12,7 @@ part of 'metadata.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Metadata _$MetadataFromJson(Map<String, dynamic> json) {
   return _Metadata.fromJson(json);
@@ -46,13 +45,12 @@ abstract class $MetadataCopyWith<$Res> {
   factory $MetadataCopyWith(Metadata value, $Res Function(Metadata) then) =
       _$MetadataCopyWithImpl<$Res, Metadata>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'user_id_string') String? userIdString,
-    @JsonKey(name: 'sources_of_data_array') List<String>? sourcesOfDataArray,
-    @JsonKey(name: 'was_the_user_under_physical_activity_bool')
-    bool? wasTheUserUnderPhysicalActivityBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'user_id_string') String? userIdString,
+      @JsonKey(name: 'sources_of_data_array') List<String>? sourcesOfDataArray,
+      @JsonKey(name: 'was_the_user_under_physical_activity_bool')
+      bool? wasTheUserUnderPhysicalActivityBool});
 }
 
 /// @nodoc
@@ -75,28 +73,25 @@ class _$MetadataCopyWithImpl<$Res, $Val extends Metadata>
     Object? sourcesOfDataArray = freezed,
     Object? wasTheUserUnderPhysicalActivityBool = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            datetimeString: freezed == datetimeString
-                ? _value.datetimeString
-                : datetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            userIdString: freezed == userIdString
-                ? _value.userIdString
-                : userIdString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            sourcesOfDataArray: freezed == sourcesOfDataArray
-                ? _value.sourcesOfDataArray
-                : sourcesOfDataArray // ignore: cast_nullable_to_non_nullable
-                      as List<String>?,
-            wasTheUserUnderPhysicalActivityBool:
-                freezed == wasTheUserUnderPhysicalActivityBool
-                ? _value.wasTheUserUnderPhysicalActivityBool
-                : wasTheUserUnderPhysicalActivityBool // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      userIdString: freezed == userIdString
+          ? _value.userIdString
+          : userIdString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sourcesOfDataArray: freezed == sourcesOfDataArray
+          ? _value.sourcesOfDataArray
+          : sourcesOfDataArray // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      wasTheUserUnderPhysicalActivityBool: freezed ==
+              wasTheUserUnderPhysicalActivityBool
+          ? _value.wasTheUserUnderPhysicalActivityBool
+          : wasTheUserUnderPhysicalActivityBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
   }
 }
 
@@ -104,18 +99,16 @@ class _$MetadataCopyWithImpl<$Res, $Val extends Metadata>
 abstract class _$$MetadataImplCopyWith<$Res>
     implements $MetadataCopyWith<$Res> {
   factory _$$MetadataImplCopyWith(
-    _$MetadataImpl value,
-    $Res Function(_$MetadataImpl) then,
-  ) = __$$MetadataImplCopyWithImpl<$Res>;
+          _$MetadataImpl value, $Res Function(_$MetadataImpl) then) =
+      __$$MetadataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'user_id_string') String? userIdString,
-    @JsonKey(name: 'sources_of_data_array') List<String>? sourcesOfDataArray,
-    @JsonKey(name: 'was_the_user_under_physical_activity_bool')
-    bool? wasTheUserUnderPhysicalActivityBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'user_id_string') String? userIdString,
+      @JsonKey(name: 'sources_of_data_array') List<String>? sourcesOfDataArray,
+      @JsonKey(name: 'was_the_user_under_physical_activity_bool')
+      bool? wasTheUserUnderPhysicalActivityBool});
 }
 
 /// @nodoc
@@ -123,9 +116,8 @@ class __$$MetadataImplCopyWithImpl<$Res>
     extends _$MetadataCopyWithImpl<$Res, _$MetadataImpl>
     implements _$$MetadataImplCopyWith<$Res> {
   __$$MetadataImplCopyWithImpl(
-    _$MetadataImpl _value,
-    $Res Function(_$MetadataImpl) _then,
-  ) : super(_value, _then);
+      _$MetadataImpl _value, $Res Function(_$MetadataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Metadata
   /// with the given fields replaced by the non-null parameter values.
@@ -137,41 +129,39 @@ class __$$MetadataImplCopyWithImpl<$Res>
     Object? sourcesOfDataArray = freezed,
     Object? wasTheUserUnderPhysicalActivityBool = freezed,
   }) {
-    return _then(
-      _$MetadataImpl(
-        datetimeString: freezed == datetimeString
-            ? _value.datetimeString
-            : datetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        userIdString: freezed == userIdString
-            ? _value.userIdString
-            : userIdString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        sourcesOfDataArray: freezed == sourcesOfDataArray
-            ? _value._sourcesOfDataArray
-            : sourcesOfDataArray // ignore: cast_nullable_to_non_nullable
-                  as List<String>?,
-        wasTheUserUnderPhysicalActivityBool:
-            freezed == wasTheUserUnderPhysicalActivityBool
-            ? _value.wasTheUserUnderPhysicalActivityBool
-            : wasTheUserUnderPhysicalActivityBool // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      ),
-    );
+    return _then(_$MetadataImpl(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      userIdString: freezed == userIdString
+          ? _value.userIdString
+          : userIdString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sourcesOfDataArray: freezed == sourcesOfDataArray
+          ? _value._sourcesOfDataArray
+          : sourcesOfDataArray // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      wasTheUserUnderPhysicalActivityBool: freezed ==
+              wasTheUserUnderPhysicalActivityBool
+          ? _value.wasTheUserUnderPhysicalActivityBool
+          : wasTheUserUnderPhysicalActivityBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MetadataImpl implements _Metadata {
-  _$MetadataImpl({
-    @JsonKey(name: 'datetime_string') this.datetimeString,
-    @JsonKey(name: 'user_id_string') this.userIdString,
-    @JsonKey(name: 'sources_of_data_array')
-    final List<String>? sourcesOfDataArray,
-    @JsonKey(name: 'was_the_user_under_physical_activity_bool')
-    this.wasTheUserUnderPhysicalActivityBool,
-  }) : _sourcesOfDataArray = sourcesOfDataArray;
+  _$MetadataImpl(
+      {@JsonKey(name: 'datetime_string') this.datetimeString,
+      @JsonKey(name: 'user_id_string') this.userIdString,
+      @JsonKey(name: 'sources_of_data_array')
+      final List<String>? sourcesOfDataArray,
+      @JsonKey(name: 'was_the_user_under_physical_activity_bool')
+      this.wasTheUserUnderPhysicalActivityBool})
+      : _sourcesOfDataArray = sourcesOfDataArray;
 
   factory _$MetadataImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetadataImplFromJson(json);
@@ -212,14 +202,10 @@ class _$MetadataImpl implements _Metadata {
                 other.datetimeString == datetimeString) &&
             (identical(other.userIdString, userIdString) ||
                 other.userIdString == userIdString) &&
-            const DeepCollectionEquality().equals(
-              other._sourcesOfDataArray,
-              _sourcesOfDataArray,
-            ) &&
-            (identical(
-                  other.wasTheUserUnderPhysicalActivityBool,
-                  wasTheUserUnderPhysicalActivityBool,
-                ) ||
+            const DeepCollectionEquality()
+                .equals(other._sourcesOfDataArray, _sourcesOfDataArray) &&
+            (identical(other.wasTheUserUnderPhysicalActivityBool,
+                    wasTheUserUnderPhysicalActivityBool) ||
                 other.wasTheUserUnderPhysicalActivityBool ==
                     wasTheUserUnderPhysicalActivityBool));
   }
@@ -227,12 +213,11 @@ class _$MetadataImpl implements _Metadata {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    datetimeString,
-    userIdString,
-    const DeepCollectionEquality().hash(_sourcesOfDataArray),
-    wasTheUserUnderPhysicalActivityBool,
-  );
+      runtimeType,
+      datetimeString,
+      userIdString,
+      const DeepCollectionEquality().hash(_sourcesOfDataArray),
+      wasTheUserUnderPhysicalActivityBool);
 
   /// Create a copy of Metadata
   /// with the given fields replaced by the non-null parameter values.
@@ -244,19 +229,20 @@ class _$MetadataImpl implements _Metadata {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MetadataImplToJson(this);
+    return _$$MetadataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Metadata implements Metadata {
-  factory _Metadata({
-    @JsonKey(name: 'datetime_string') final DateTime? datetimeString,
-    @JsonKey(name: 'user_id_string') final String? userIdString,
-    @JsonKey(name: 'sources_of_data_array')
-    final List<String>? sourcesOfDataArray,
-    @JsonKey(name: 'was_the_user_under_physical_activity_bool')
-    final bool? wasTheUserUnderPhysicalActivityBool,
-  }) = _$MetadataImpl;
+  factory _Metadata(
+      {@JsonKey(name: 'datetime_string') final DateTime? datetimeString,
+      @JsonKey(name: 'user_id_string') final String? userIdString,
+      @JsonKey(name: 'sources_of_data_array')
+      final List<String>? sourcesOfDataArray,
+      @JsonKey(name: 'was_the_user_under_physical_activity_bool')
+      final bool? wasTheUserUnderPhysicalActivityBool}) = _$MetadataImpl;
 
   factory _Metadata.fromJson(Map<String, dynamic> json) =
       _$MetadataImpl.fromJson;

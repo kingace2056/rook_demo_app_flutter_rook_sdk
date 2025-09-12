@@ -12,8 +12,7 @@ part of 'summary.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Summary _$SummaryFromJson(Map<String, dynamic> json) {
   return _Summary.fromJson(json);
@@ -57,16 +56,15 @@ class _$SummaryCopyWithImpl<$Res, $Val extends Summary>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? sleepSummary = freezed}) {
-    return _then(
-      _value.copyWith(
-            sleepSummary: freezed == sleepSummary
-                ? _value.sleepSummary
-                : sleepSummary // ignore: cast_nullable_to_non_nullable
-                      as SleepSummaryData?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? sleepSummary = freezed,
+  }) {
+    return _then(_value.copyWith(
+      sleepSummary: freezed == sleepSummary
+          ? _value.sleepSummary
+          : sleepSummary // ignore: cast_nullable_to_non_nullable
+              as SleepSummaryData?,
+    ) as $Val);
   }
 
   /// Create a copy of Summary
@@ -87,9 +85,8 @@ class _$SummaryCopyWithImpl<$Res, $Val extends Summary>
 /// @nodoc
 abstract class _$$SummaryImplCopyWith<$Res> implements $SummaryCopyWith<$Res> {
   factory _$$SummaryImplCopyWith(
-    _$SummaryImpl value,
-    $Res Function(_$SummaryImpl) then,
-  ) = __$$SummaryImplCopyWithImpl<$Res>;
+          _$SummaryImpl value, $Res Function(_$SummaryImpl) then) =
+      __$$SummaryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'sleep_summary') SleepSummaryData? sleepSummary});
@@ -103,23 +100,22 @@ class __$$SummaryImplCopyWithImpl<$Res>
     extends _$SummaryCopyWithImpl<$Res, _$SummaryImpl>
     implements _$$SummaryImplCopyWith<$Res> {
   __$$SummaryImplCopyWithImpl(
-    _$SummaryImpl _value,
-    $Res Function(_$SummaryImpl) _then,
-  ) : super(_value, _then);
+      _$SummaryImpl _value, $Res Function(_$SummaryImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Summary
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? sleepSummary = freezed}) {
-    return _then(
-      _$SummaryImpl(
-        sleepSummary: freezed == sleepSummary
-            ? _value.sleepSummary
-            : sleepSummary // ignore: cast_nullable_to_non_nullable
-                  as SleepSummaryData?,
-      ),
-    );
+  $Res call({
+    Object? sleepSummary = freezed,
+  }) {
+    return _then(_$SummaryImpl(
+      sleepSummary: freezed == sleepSummary
+          ? _value.sleepSummary
+          : sleepSummary // ignore: cast_nullable_to_non_nullable
+              as SleepSummaryData?,
+    ));
   }
 }
 
@@ -163,14 +159,16 @@ class _$SummaryImpl implements _Summary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SummaryImplToJson(this);
+    return _$$SummaryImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Summary implements Summary {
-  factory _Summary({
-    @JsonKey(name: 'sleep_summary') final SleepSummaryData? sleepSummary,
-  }) = _$SummaryImpl;
+  factory _Summary(
+      {@JsonKey(name: 'sleep_summary')
+      final SleepSummaryData? sleepSummary}) = _$SummaryImpl;
 
   factory _Summary.fromJson(Map<String, dynamic> json) = _$SummaryImpl.fromJson;
 

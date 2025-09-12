@@ -23,12 +23,12 @@ _$ReadinessScoreImpl _$$ReadinessScoreImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$ReadinessScoreImplToJson(
-  _$ReadinessScoreImpl instance,
-) => <String, dynamic>{
-  'datetime_string': instance.datetimeString?.toIso8601String(),
-  'created_at_string': instance.createdAtString?.toIso8601String(),
-  'updated_at_string': instance.updatedAtString?.toIso8601String(),
-  'score_0_100_int': instance.score0100Int,
-  'calculated_with_missing_user_info_bool':
-      instance.calculatedWithMissingUserInfoBool,
-};
+        _$ReadinessScoreImpl instance) =>
+    <String, dynamic>{
+      'datetime_string': instance.datetimeString?.toIso8601String(),
+      'created_at_string': instance.createdAtString?.toIso8601String(),
+      'updated_at_string': instance.updatedAtString?.toIso8601String(),
+      'score_0_100_int': instance.score0100Int,
+      'calculated_with_missing_user_info_bool':
+          instance.calculatedWithMissingUserInfoBool,
+    };

@@ -10,8 +10,8 @@ _$OxygenationImpl _$$OxygenationImplFromJson(Map<String, dynamic> json) =>
     _$OxygenationImpl(
       saturationAvgPercentageInt:
           (json['saturation_avg_percentage_int'] as num?)?.toInt(),
-      vo2maxMLPerMinPerKgInt: (json['vo2max_mL_per_min_per_kg_int'] as num?)
-          ?.toInt(),
+      vo2maxMLPerMinPerKgInt:
+          (json['vo2max_mL_per_min_per_kg_int'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$OxygenationImplToJson(_$OxygenationImpl instance) =>

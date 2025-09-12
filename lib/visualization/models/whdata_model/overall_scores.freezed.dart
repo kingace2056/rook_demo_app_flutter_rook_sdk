@@ -12,8 +12,7 @@ part of 'overall_scores.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 OverallScores _$OverallScoresFromJson(Map<String, dynamic> json) {
   return _OverallScores.fromJson(json);
@@ -39,15 +38,13 @@ mixin _$OverallScores {
 /// @nodoc
 abstract class $OverallScoresCopyWith<$Res> {
   factory $OverallScoresCopyWith(
-    OverallScores value,
-    $Res Function(OverallScores) then,
-  ) = _$OverallScoresCopyWithImpl<$Res, OverallScores>;
+          OverallScores value, $Res Function(OverallScores) then) =
+      _$OverallScoresCopyWithImpl<$Res, OverallScores>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'global_score_0_100_int') int? globalScore0100Int,
-    @JsonKey(name: 'seven_days_avg_score_0_100_int')
-    int? sevenDaysAvgScore0100Int,
-  });
+  $Res call(
+      {@JsonKey(name: 'global_score_0_100_int') int? globalScore0100Int,
+      @JsonKey(name: 'seven_days_avg_score_0_100_int')
+      int? sevenDaysAvgScore0100Int});
 }
 
 /// @nodoc
@@ -68,19 +65,16 @@ class _$OverallScoresCopyWithImpl<$Res, $Val extends OverallScores>
     Object? globalScore0100Int = freezed,
     Object? sevenDaysAvgScore0100Int = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            globalScore0100Int: freezed == globalScore0100Int
-                ? _value.globalScore0100Int
-                : globalScore0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            sevenDaysAvgScore0100Int: freezed == sevenDaysAvgScore0100Int
-                ? _value.sevenDaysAvgScore0100Int
-                : sevenDaysAvgScore0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      globalScore0100Int: freezed == globalScore0100Int
+          ? _value.globalScore0100Int
+          : globalScore0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sevenDaysAvgScore0100Int: freezed == sevenDaysAvgScore0100Int
+          ? _value.sevenDaysAvgScore0100Int
+          : sevenDaysAvgScore0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -88,16 +82,14 @@ class _$OverallScoresCopyWithImpl<$Res, $Val extends OverallScores>
 abstract class _$$OverallScoresImplCopyWith<$Res>
     implements $OverallScoresCopyWith<$Res> {
   factory _$$OverallScoresImplCopyWith(
-    _$OverallScoresImpl value,
-    $Res Function(_$OverallScoresImpl) then,
-  ) = __$$OverallScoresImplCopyWithImpl<$Res>;
+          _$OverallScoresImpl value, $Res Function(_$OverallScoresImpl) then) =
+      __$$OverallScoresImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'global_score_0_100_int') int? globalScore0100Int,
-    @JsonKey(name: 'seven_days_avg_score_0_100_int')
-    int? sevenDaysAvgScore0100Int,
-  });
+  $Res call(
+      {@JsonKey(name: 'global_score_0_100_int') int? globalScore0100Int,
+      @JsonKey(name: 'seven_days_avg_score_0_100_int')
+      int? sevenDaysAvgScore0100Int});
 }
 
 /// @nodoc
@@ -105,9 +97,8 @@ class __$$OverallScoresImplCopyWithImpl<$Res>
     extends _$OverallScoresCopyWithImpl<$Res, _$OverallScoresImpl>
     implements _$$OverallScoresImplCopyWith<$Res> {
   __$$OverallScoresImplCopyWithImpl(
-    _$OverallScoresImpl _value,
-    $Res Function(_$OverallScoresImpl) _then,
-  ) : super(_value, _then);
+      _$OverallScoresImpl _value, $Res Function(_$OverallScoresImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of OverallScores
   /// with the given fields replaced by the non-null parameter values.
@@ -117,29 +108,26 @@ class __$$OverallScoresImplCopyWithImpl<$Res>
     Object? globalScore0100Int = freezed,
     Object? sevenDaysAvgScore0100Int = freezed,
   }) {
-    return _then(
-      _$OverallScoresImpl(
-        globalScore0100Int: freezed == globalScore0100Int
-            ? _value.globalScore0100Int
-            : globalScore0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        sevenDaysAvgScore0100Int: freezed == sevenDaysAvgScore0100Int
-            ? _value.sevenDaysAvgScore0100Int
-            : sevenDaysAvgScore0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$OverallScoresImpl(
+      globalScore0100Int: freezed == globalScore0100Int
+          ? _value.globalScore0100Int
+          : globalScore0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sevenDaysAvgScore0100Int: freezed == sevenDaysAvgScore0100Int
+          ? _value.sevenDaysAvgScore0100Int
+          : sevenDaysAvgScore0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$OverallScoresImpl implements _OverallScores {
-  _$OverallScoresImpl({
-    @JsonKey(name: 'global_score_0_100_int') this.globalScore0100Int,
-    @JsonKey(name: 'seven_days_avg_score_0_100_int')
-    this.sevenDaysAvgScore0100Int,
-  });
+  _$OverallScoresImpl(
+      {@JsonKey(name: 'global_score_0_100_int') this.globalScore0100Int,
+      @JsonKey(name: 'seven_days_avg_score_0_100_int')
+      this.sevenDaysAvgScore0100Int});
 
   factory _$OverallScoresImpl.fromJson(Map<String, dynamic> json) =>
       _$$OverallScoresImplFromJson(json);
@@ -164,9 +152,7 @@ class _$OverallScoresImpl implements _OverallScores {
             (identical(other.globalScore0100Int, globalScore0100Int) ||
                 other.globalScore0100Int == globalScore0100Int) &&
             (identical(
-                  other.sevenDaysAvgScore0100Int,
-                  sevenDaysAvgScore0100Int,
-                ) ||
+                    other.sevenDaysAvgScore0100Int, sevenDaysAvgScore0100Int) ||
                 other.sevenDaysAvgScore0100Int == sevenDaysAvgScore0100Int));
   }
 
@@ -185,16 +171,17 @@ class _$OverallScoresImpl implements _OverallScores {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$OverallScoresImplToJson(this);
+    return _$$OverallScoresImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _OverallScores implements OverallScores {
-  factory _OverallScores({
-    @JsonKey(name: 'global_score_0_100_int') final int? globalScore0100Int,
-    @JsonKey(name: 'seven_days_avg_score_0_100_int')
-    final int? sevenDaysAvgScore0100Int,
-  }) = _$OverallScoresImpl;
+  factory _OverallScores(
+      {@JsonKey(name: 'global_score_0_100_int') final int? globalScore0100Int,
+      @JsonKey(name: 'seven_days_avg_score_0_100_int')
+      final int? sevenDaysAvgScore0100Int}) = _$OverallScoresImpl;
 
   factory _OverallScores.fromJson(Map<String, dynamic> json) =
       _$OverallScoresImpl.fromJson;

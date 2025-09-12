@@ -12,8 +12,7 @@ part of 'hydration.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Hydration _$HydrationFromJson(Map<String, dynamic> json) {
   return _Hydration.fromJson(json);
@@ -39,10 +38,9 @@ abstract class $HydrationCopyWith<$Res> {
   factory $HydrationCopyWith(Hydration value, $Res Function(Hydration) then) =
       _$HydrationCopyWithImpl<$Res, Hydration>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'water_total_consumption_mL_int')
-    int? waterTotalConsumptionMLInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'water_total_consumption_mL_int')
+      int? waterTotalConsumptionMLInt});
 }
 
 /// @nodoc
@@ -59,16 +57,15 @@ class _$HydrationCopyWithImpl<$Res, $Val extends Hydration>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? waterTotalConsumptionMLInt = freezed}) {
-    return _then(
-      _value.copyWith(
-            waterTotalConsumptionMLInt: freezed == waterTotalConsumptionMLInt
-                ? _value.waterTotalConsumptionMLInt
-                : waterTotalConsumptionMLInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? waterTotalConsumptionMLInt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      waterTotalConsumptionMLInt: freezed == waterTotalConsumptionMLInt
+          ? _value.waterTotalConsumptionMLInt
+          : waterTotalConsumptionMLInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -76,15 +73,13 @@ class _$HydrationCopyWithImpl<$Res, $Val extends Hydration>
 abstract class _$$HydrationImplCopyWith<$Res>
     implements $HydrationCopyWith<$Res> {
   factory _$$HydrationImplCopyWith(
-    _$HydrationImpl value,
-    $Res Function(_$HydrationImpl) then,
-  ) = __$$HydrationImplCopyWithImpl<$Res>;
+          _$HydrationImpl value, $Res Function(_$HydrationImpl) then) =
+      __$$HydrationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'water_total_consumption_mL_int')
-    int? waterTotalConsumptionMLInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'water_total_consumption_mL_int')
+      int? waterTotalConsumptionMLInt});
 }
 
 /// @nodoc
@@ -92,33 +87,31 @@ class __$$HydrationImplCopyWithImpl<$Res>
     extends _$HydrationCopyWithImpl<$Res, _$HydrationImpl>
     implements _$$HydrationImplCopyWith<$Res> {
   __$$HydrationImplCopyWithImpl(
-    _$HydrationImpl _value,
-    $Res Function(_$HydrationImpl) _then,
-  ) : super(_value, _then);
+      _$HydrationImpl _value, $Res Function(_$HydrationImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Hydration
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? waterTotalConsumptionMLInt = freezed}) {
-    return _then(
-      _$HydrationImpl(
-        waterTotalConsumptionMLInt: freezed == waterTotalConsumptionMLInt
-            ? _value.waterTotalConsumptionMLInt
-            : waterTotalConsumptionMLInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+  $Res call({
+    Object? waterTotalConsumptionMLInt = freezed,
+  }) {
+    return _then(_$HydrationImpl(
+      waterTotalConsumptionMLInt: freezed == waterTotalConsumptionMLInt
+          ? _value.waterTotalConsumptionMLInt
+          : waterTotalConsumptionMLInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HydrationImpl implements _Hydration {
-  _$HydrationImpl({
-    @JsonKey(name: 'water_total_consumption_mL_int')
-    this.waterTotalConsumptionMLInt,
-  });
+  _$HydrationImpl(
+      {@JsonKey(name: 'water_total_consumption_mL_int')
+      this.waterTotalConsumptionMLInt});
 
   factory _$HydrationImpl.fromJson(Map<String, dynamic> json) =>
       _$$HydrationImplFromJson(json);
@@ -137,10 +130,8 @@ class _$HydrationImpl implements _Hydration {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HydrationImpl &&
-            (identical(
-                  other.waterTotalConsumptionMLInt,
-                  waterTotalConsumptionMLInt,
-                ) ||
+            (identical(other.waterTotalConsumptionMLInt,
+                    waterTotalConsumptionMLInt) ||
                 other.waterTotalConsumptionMLInt ==
                     waterTotalConsumptionMLInt));
   }
@@ -159,15 +150,16 @@ class _$HydrationImpl implements _Hydration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HydrationImplToJson(this);
+    return _$$HydrationImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Hydration implements Hydration {
-  factory _Hydration({
-    @JsonKey(name: 'water_total_consumption_mL_int')
-    final int? waterTotalConsumptionMLInt,
-  }) = _$HydrationImpl;
+  factory _Hydration(
+      {@JsonKey(name: 'water_total_consumption_mL_int')
+      final int? waterTotalConsumptionMLInt}) = _$HydrationImpl;
 
   factory _Hydration.fromJson(Map<String, dynamic> json) =
       _$HydrationImpl.fromJson;

@@ -12,12 +12,10 @@ part of 'temperature_minimum_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TemperatureMinimumObject _$TemperatureMinimumObjectFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _TemperatureMinimumObject.fromJson(json);
 }
 
@@ -40,22 +38,19 @@ mixin _$TemperatureMinimumObject {
 
 /// @nodoc
 abstract class $TemperatureMinimumObjectCopyWith<$Res> {
-  factory $TemperatureMinimumObjectCopyWith(
-    TemperatureMinimumObject value,
-    $Res Function(TemperatureMinimumObject) then,
-  ) = _$TemperatureMinimumObjectCopyWithImpl<$Res, TemperatureMinimumObject>;
+  factory $TemperatureMinimumObjectCopyWith(TemperatureMinimumObject value,
+          $Res Function(TemperatureMinimumObject) then) =
+      _$TemperatureMinimumObjectCopyWithImpl<$Res, TemperatureMinimumObject>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
-class _$TemperatureMinimumObjectCopyWithImpl<
-  $Res,
-  $Val extends TemperatureMinimumObject
->
+class _$TemperatureMinimumObjectCopyWithImpl<$Res,
+        $Val extends TemperatureMinimumObject>
     implements $TemperatureMinimumObjectCopyWith<$Res> {
   _$TemperatureMinimumObjectCopyWithImpl(this._value, this._then);
 
@@ -72,19 +67,16 @@ class _$TemperatureMinimumObjectCopyWithImpl<
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-                ? _value.temperatureCelsiusFloat
-                : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            measurementTypeString: freezed == measurementTypeString
-                ? _value.measurementTypeString
-                : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -92,29 +84,26 @@ class _$TemperatureMinimumObjectCopyWithImpl<
 abstract class _$$TemperatureMinimumObjectImplCopyWith<$Res>
     implements $TemperatureMinimumObjectCopyWith<$Res> {
   factory _$$TemperatureMinimumObjectImplCopyWith(
-    _$TemperatureMinimumObjectImpl value,
-    $Res Function(_$TemperatureMinimumObjectImpl) then,
-  ) = __$$TemperatureMinimumObjectImplCopyWithImpl<$Res>;
+          _$TemperatureMinimumObjectImpl value,
+          $Res Function(_$TemperatureMinimumObjectImpl) then) =
+      __$$TemperatureMinimumObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
 class __$$TemperatureMinimumObjectImplCopyWithImpl<$Res>
-    extends
-        _$TemperatureMinimumObjectCopyWithImpl<
-          $Res,
-          _$TemperatureMinimumObjectImpl
-        >
+    extends _$TemperatureMinimumObjectCopyWithImpl<$Res,
+        _$TemperatureMinimumObjectImpl>
     implements _$$TemperatureMinimumObjectImplCopyWith<$Res> {
   __$$TemperatureMinimumObjectImplCopyWithImpl(
-    _$TemperatureMinimumObjectImpl _value,
-    $Res Function(_$TemperatureMinimumObjectImpl) _then,
-  ) : super(_value, _then);
+      _$TemperatureMinimumObjectImpl _value,
+      $Res Function(_$TemperatureMinimumObjectImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TemperatureMinimumObject
   /// with the given fields replaced by the non-null parameter values.
@@ -124,28 +113,25 @@ class __$$TemperatureMinimumObjectImplCopyWithImpl<$Res>
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _$TemperatureMinimumObjectImpl(
-        temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-            ? _value.temperatureCelsiusFloat
-            : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        measurementTypeString: freezed == measurementTypeString
-            ? _value.measurementTypeString
-            : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$TemperatureMinimumObjectImpl(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$TemperatureMinimumObjectImpl implements _TemperatureMinimumObject {
-  _$TemperatureMinimumObjectImpl({
-    @JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') this.measurementTypeString,
-  });
+  _$TemperatureMinimumObjectImpl(
+      {@JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') this.measurementTypeString});
 
   factory _$TemperatureMinimumObjectImpl.fromJson(Map<String, dynamic> json) =>
       _$$TemperatureMinimumObjectImplFromJson(json);
@@ -168,9 +154,7 @@ class _$TemperatureMinimumObjectImpl implements _TemperatureMinimumObject {
         (other.runtimeType == runtimeType &&
             other is _$TemperatureMinimumObjectImpl &&
             (identical(
-                  other.temperatureCelsiusFloat,
-                  temperatureCelsiusFloat,
-                ) ||
+                    other.temperatureCelsiusFloat, temperatureCelsiusFloat) ||
                 other.temperatureCelsiusFloat == temperatureCelsiusFloat) &&
             (identical(other.measurementTypeString, measurementTypeString) ||
                 other.measurementTypeString == measurementTypeString));
@@ -187,24 +171,23 @@ class _$TemperatureMinimumObjectImpl implements _TemperatureMinimumObject {
   @override
   @pragma('vm:prefer-inline')
   _$$TemperatureMinimumObjectImplCopyWith<_$TemperatureMinimumObjectImpl>
-  get copyWith =>
-      __$$TemperatureMinimumObjectImplCopyWithImpl<
-        _$TemperatureMinimumObjectImpl
-      >(this, _$identity);
+      get copyWith => __$$TemperatureMinimumObjectImplCopyWithImpl<
+          _$TemperatureMinimumObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TemperatureMinimumObjectImplToJson(this);
+    return _$$TemperatureMinimumObjectImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TemperatureMinimumObject implements TemperatureMinimumObject {
-  factory _TemperatureMinimumObject({
-    @JsonKey(name: 'temperature_celsius_float')
-    final double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string')
-    final String? measurementTypeString,
-  }) = _$TemperatureMinimumObjectImpl;
+  factory _TemperatureMinimumObject(
+      {@JsonKey(name: 'temperature_celsius_float')
+      final double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string')
+      final String? measurementTypeString}) = _$TemperatureMinimumObjectImpl;
 
   factory _TemperatureMinimumObject.fromJson(Map<String, dynamic> json) =
       _$TemperatureMinimumObjectImpl.fromJson;
@@ -221,5 +204,5 @@ abstract class _TemperatureMinimumObject implements TemperatureMinimumObject {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TemperatureMinimumObjectImplCopyWith<_$TemperatureMinimumObjectImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

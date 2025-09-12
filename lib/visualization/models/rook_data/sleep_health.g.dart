@@ -14,4 +14,6 @@ _$SleepHealthImpl _$$SleepHealthImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$SleepHealthImplToJson(_$SleepHealthImpl instance) =>
-    <String, dynamic>{'summary': instance.summary};
+    <String, dynamic>{
+      'summary': instance.summary,
+    };

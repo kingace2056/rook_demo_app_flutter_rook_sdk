@@ -33,37 +33,44 @@ _$DateRangeImpl _$$DateRangeImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$DateRangeImplToJson(_$DateRangeImpl instance) =>
-    <String, dynamic>{'earliest': instance.earliest, 'latest': instance.latest};
+    <String, dynamic>{
+      'earliest': instance.earliest,
+      'latest': instance.latest,
+    };
 
 _$AvailableDataTypesDataImpl _$$AvailableDataTypesDataImplFromJson(
-  Map<String, dynamic> json,
-) => _$AvailableDataTypesDataImpl(
-  userId: json['user_id'] as String?,
-  availableDataTypes: (json['available_data_types'] as List<dynamic>?)
-      ?.map((e) => e as String)
-      .toList(),
-  summary: json['summary'] == null
-      ? null
-      : DataSummary.fromJson(json['summary'] as Map<String, dynamic>),
-);
+        Map<String, dynamic> json) =>
+    _$AvailableDataTypesDataImpl(
+      userId: json['user_id'] as String?,
+      availableDataTypes: (json['available_data_types'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      summary: json['summary'] == null
+          ? null
+          : DataSummary.fromJson(json['summary'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$$AvailableDataTypesDataImplToJson(
-  _$AvailableDataTypesDataImpl instance,
-) => <String, dynamic>{
-  'user_id': instance.userId,
-  'available_data_types': instance.availableDataTypes,
-  'summary': instance.summary,
-};
+        _$AvailableDataTypesDataImpl instance) =>
+    <String, dynamic>{
+      'user_id': instance.userId,
+      'available_data_types': instance.availableDataTypes,
+      'summary': instance.summary,
+    };
 
 _$AvailableDataTypesResponseImpl _$$AvailableDataTypesResponseImplFromJson(
-  Map<String, dynamic> json,
-) => _$AvailableDataTypesResponseImpl(
-  success: json['success'] as bool?,
-  data: json['data'] == null
-      ? null
-      : AvailableDataTypesData.fromJson(json['data'] as Map<String, dynamic>),
-);
+        Map<String, dynamic> json) =>
+    _$AvailableDataTypesResponseImpl(
+      success: json['success'] as bool?,
+      data: json['data'] == null
+          ? null
+          : AvailableDataTypesData.fromJson(
+              json['data'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$$AvailableDataTypesResponseImplToJson(
-  _$AvailableDataTypesResponseImpl instance,
-) => <String, dynamic>{'success': instance.success, 'data': instance.data};
+        _$AvailableDataTypesResponseImpl instance) =>
+    <String, dynamic>{
+      'success': instance.success,
+      'data': instance.data,
+    };

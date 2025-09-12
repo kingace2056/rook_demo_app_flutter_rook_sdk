@@ -12,8 +12,7 @@ part of 'sleep_health.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SleepHealth _$SleepHealthFromJson(Map<String, dynamic> json) {
   return _SleepHealth.fromJson(json);
@@ -36,9 +35,8 @@ mixin _$SleepHealth {
 /// @nodoc
 abstract class $SleepHealthCopyWith<$Res> {
   factory $SleepHealthCopyWith(
-    SleepHealth value,
-    $Res Function(SleepHealth) then,
-  ) = _$SleepHealthCopyWithImpl<$Res, SleepHealth>;
+          SleepHealth value, $Res Function(SleepHealth) then) =
+      _$SleepHealthCopyWithImpl<$Res, SleepHealth>;
   @useResult
   $Res call({Summary? summary});
 
@@ -59,16 +57,15 @@ class _$SleepHealthCopyWithImpl<$Res, $Val extends SleepHealth>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? summary = freezed}) {
-    return _then(
-      _value.copyWith(
-            summary: freezed == summary
-                ? _value.summary
-                : summary // ignore: cast_nullable_to_non_nullable
-                      as Summary?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? summary = freezed,
+  }) {
+    return _then(_value.copyWith(
+      summary: freezed == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary?,
+    ) as $Val);
   }
 
   /// Create a copy of SleepHealth
@@ -90,9 +87,8 @@ class _$SleepHealthCopyWithImpl<$Res, $Val extends SleepHealth>
 abstract class _$$SleepHealthImplCopyWith<$Res>
     implements $SleepHealthCopyWith<$Res> {
   factory _$$SleepHealthImplCopyWith(
-    _$SleepHealthImpl value,
-    $Res Function(_$SleepHealthImpl) then,
-  ) = __$$SleepHealthImplCopyWithImpl<$Res>;
+          _$SleepHealthImpl value, $Res Function(_$SleepHealthImpl) then) =
+      __$$SleepHealthImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Summary? summary});
@@ -106,23 +102,22 @@ class __$$SleepHealthImplCopyWithImpl<$Res>
     extends _$SleepHealthCopyWithImpl<$Res, _$SleepHealthImpl>
     implements _$$SleepHealthImplCopyWith<$Res> {
   __$$SleepHealthImplCopyWithImpl(
-    _$SleepHealthImpl _value,
-    $Res Function(_$SleepHealthImpl) _then,
-  ) : super(_value, _then);
+      _$SleepHealthImpl _value, $Res Function(_$SleepHealthImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SleepHealth
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? summary = freezed}) {
-    return _then(
-      _$SleepHealthImpl(
-        summary: freezed == summary
-            ? _value.summary
-            : summary // ignore: cast_nullable_to_non_nullable
-                  as Summary?,
-      ),
-    );
+  $Res call({
+    Object? summary = freezed,
+  }) {
+    return _then(_$SleepHealthImpl(
+      summary: freezed == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary?,
+    ));
   }
 }
 
@@ -164,7 +159,9 @@ class _$SleepHealthImpl implements _SleepHealth {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SleepHealthImplToJson(this);
+    return _$$SleepHealthImplToJson(
+      this,
+    );
   }
 }
 

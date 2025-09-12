@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rook_impl/models/rook_data/sleep_summary.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/rook_data/sleep_summary.dart';
 
 import 'physical_summary.dart';
 

@@ -12,8 +12,7 @@ part of 'body_summary.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BodySummary _$BodySummaryFromJson(Map<String, dynamic> json) {
   return _BodySummary.fromJson(json);
@@ -56,24 +55,22 @@ mixin _$BodySummary {
 /// @nodoc
 abstract class $BodySummaryCopyWith<$Res> {
   factory $BodySummaryCopyWith(
-    BodySummary value,
-    $Res Function(BodySummary) then,
-  ) = _$BodySummaryCopyWithImpl<$Res, BodySummary>;
+          BodySummary value, $Res Function(BodySummary) then) =
+      _$BodySummaryCopyWithImpl<$Res, BodySummary>;
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'body_health') BodyHealth? bodyHealth,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'body_health') BodyHealth? bodyHealth,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   $BodyHealthCopyWith<$Res>? get bodyHealth;
 }
@@ -106,59 +103,56 @@ class _$BodySummaryCopyWithImpl<$Res, $Val extends BodySummary>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            id: freezed == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            version: freezed == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            documentVersion: freezed == documentVersion
-                ? _value.documentVersion
-                : documentVersion // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            bodyHealth: freezed == bodyHealth
-                ? _value.bodyHealth
-                : bodyHealth // ignore: cast_nullable_to_non_nullable
-                      as BodyHealth?,
-            createdAtRook: freezed == createdAtRook
-                ? _value.createdAtRook
-                : createdAtRook // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            webhookReceivedAt: freezed == webhookReceivedAt
-                ? _value.webhookReceivedAt
-                : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAt: freezed == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAt: freezed == updatedAt
-                ? _value.updatedAt
-                : updatedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            v: freezed == v
-                ? _value.v
-                : v // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bodyHealth: freezed == bodyHealth
+          ? _value.bodyHealth
+          : bodyHealth // ignore: cast_nullable_to_non_nullable
+              as BodyHealth?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 
   /// Create a copy of BodySummary
@@ -180,25 +174,23 @@ class _$BodySummaryCopyWithImpl<$Res, $Val extends BodySummary>
 abstract class _$$BodySummaryImplCopyWith<$Res>
     implements $BodySummaryCopyWith<$Res> {
   factory _$$BodySummaryImplCopyWith(
-    _$BodySummaryImpl value,
-    $Res Function(_$BodySummaryImpl) then,
-  ) = __$$BodySummaryImplCopyWithImpl<$Res>;
+          _$BodySummaryImpl value, $Res Function(_$BodySummaryImpl) then) =
+      __$$BodySummaryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'body_health') BodyHealth? bodyHealth,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'body_health') BodyHealth? bodyHealth,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   @override
   $BodyHealthCopyWith<$Res>? get bodyHealth;
@@ -209,9 +201,8 @@ class __$$BodySummaryImplCopyWithImpl<$Res>
     extends _$BodySummaryCopyWithImpl<$Res, _$BodySummaryImpl>
     implements _$$BodySummaryImplCopyWith<$Res> {
   __$$BodySummaryImplCopyWithImpl(
-    _$BodySummaryImpl _value,
-    $Res Function(_$BodySummaryImpl) _then,
-  ) : super(_value, _then);
+      _$BodySummaryImpl _value, $Res Function(_$BodySummaryImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BodySummary
   /// with the given fields replaced by the non-null parameter values.
@@ -231,78 +222,75 @@ class __$$BodySummaryImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _$BodySummaryImpl(
-        id: freezed == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        version: freezed == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        documentVersion: freezed == documentVersion
-            ? _value.documentVersion
-            : documentVersion // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        bodyHealth: freezed == bodyHealth
-            ? _value.bodyHealth
-            : bodyHealth // ignore: cast_nullable_to_non_nullable
-                  as BodyHealth?,
-        createdAtRook: freezed == createdAtRook
-            ? _value.createdAtRook
-            : createdAtRook // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        webhookReceivedAt: freezed == webhookReceivedAt
-            ? _value.webhookReceivedAt
-            : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAt: freezed == createdAt
-            ? _value.createdAt
-            : createdAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAt: freezed == updatedAt
-            ? _value.updatedAt
-            : updatedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        v: freezed == v
-            ? _value.v
-            : v // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$BodySummaryImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bodyHealth: freezed == bodyHealth
+          ? _value.bodyHealth
+          : bodyHealth // ignore: cast_nullable_to_non_nullable
+              as BodyHealth?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$BodySummaryImpl implements _BodySummary {
-  _$BodySummaryImpl({
-    @JsonKey(name: '_id') this.id,
-    this.version,
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'document_version') this.documentVersion,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'body_health') this.bodyHealth,
-    @JsonKey(name: 'created_at') this.createdAtRook,
-    @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
-    this.createdAt,
-    this.updatedAt,
-    @JsonKey(name: '__v') this.v,
-  });
+  _$BodySummaryImpl(
+      {@JsonKey(name: '_id') this.id,
+      this.version,
+      @JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'document_version') this.documentVersion,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'body_health') this.bodyHealth,
+      @JsonKey(name: 'created_at') this.createdAtRook,
+      @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
+      this.createdAt,
+      this.updatedAt,
+      @JsonKey(name: '__v') this.v});
 
   factory _$BodySummaryImpl.fromJson(Map<String, dynamic> json) =>
       _$$BodySummaryImplFromJson(json);
@@ -376,20 +364,19 @@ class _$BodySummaryImpl implements _BodySummary {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    version,
-    clientUuid,
-    userId,
-    documentVersion,
-    dataStructure,
-    bodyHealth,
-    createdAtRook,
-    webhookReceivedAt,
-    createdAt,
-    updatedAt,
-    v,
-  );
+      runtimeType,
+      id,
+      version,
+      clientUuid,
+      userId,
+      documentVersion,
+      dataStructure,
+      bodyHealth,
+      createdAtRook,
+      webhookReceivedAt,
+      createdAt,
+      updatedAt,
+      v);
 
   /// Create a copy of BodySummary
   /// with the given fields replaced by the non-null parameter values.
@@ -401,25 +388,26 @@ class _$BodySummaryImpl implements _BodySummary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BodySummaryImplToJson(this);
+    return _$$BodySummaryImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _BodySummary implements BodySummary {
-  factory _BodySummary({
-    @JsonKey(name: '_id') final String? id,
-    final int? version,
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'document_version') final int? documentVersion,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'body_health') final BodyHealth? bodyHealth,
-    @JsonKey(name: 'created_at') final DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
-    final DateTime? createdAt,
-    final DateTime? updatedAt,
-    @JsonKey(name: '__v') final int? v,
-  }) = _$BodySummaryImpl;
+  factory _BodySummary(
+      {@JsonKey(name: '_id') final String? id,
+      final int? version,
+      @JsonKey(name: 'client_uuid') final String? clientUuid,
+      @JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'document_version') final int? documentVersion,
+      @JsonKey(name: 'data_structure') final String? dataStructure,
+      @JsonKey(name: 'body_health') final BodyHealth? bodyHealth,
+      @JsonKey(name: 'created_at') final DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
+      @JsonKey(name: '__v') final int? v}) = _$BodySummaryImpl;
 
   factory _BodySummary.fromJson(Map<String, dynamic> json) =
       _$BodySummaryImpl.fromJson;

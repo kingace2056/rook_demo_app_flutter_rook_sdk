@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:rook_impl/core/constants/api_constants.dart';
-import 'package:rook_impl/core/network/dio_client.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/core/constants/api_constants.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/core/network/dio_client.dart';
 
 class UserDataService extends GetxService {
   late final DioClient _dioClient;

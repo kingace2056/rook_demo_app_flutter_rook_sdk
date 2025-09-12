@@ -12,8 +12,7 @@ part of 'rook_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RookData _$RookDataFromJson(Map<String, dynamic> json) {
   return _RookData.fromJson(json);
@@ -64,23 +63,20 @@ class _$RookDataCopyWithImpl<$Res, $Val extends RookData>
     Object? data = freezed,
     Object? meta = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            success: freezed == success
-                ? _value.success
-                : success // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            data: freezed == data
-                ? _value.data
-                : data // ignore: cast_nullable_to_non_nullable
-                      as List<Datum>?,
-            meta: freezed == meta
-                ? _value.meta
-                : meta // ignore: cast_nullable_to_non_nullable
-                      as Meta?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Datum>?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+    ) as $Val);
   }
 
   /// Create a copy of RookData
@@ -102,9 +98,8 @@ class _$RookDataCopyWithImpl<$Res, $Val extends RookData>
 abstract class _$$RookDataImplCopyWith<$Res>
     implements $RookDataCopyWith<$Res> {
   factory _$$RookDataImplCopyWith(
-    _$RookDataImpl value,
-    $Res Function(_$RookDataImpl) then,
-  ) = __$$RookDataImplCopyWithImpl<$Res>;
+          _$RookDataImpl value, $Res Function(_$RookDataImpl) then) =
+      __$$RookDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success, List<Datum>? data, Meta? meta});
@@ -118,9 +113,8 @@ class __$$RookDataImplCopyWithImpl<$Res>
     extends _$RookDataCopyWithImpl<$Res, _$RookDataImpl>
     implements _$$RookDataImplCopyWith<$Res> {
   __$$RookDataImplCopyWithImpl(
-    _$RookDataImpl _value,
-    $Res Function(_$RookDataImpl) _then,
-  ) : super(_value, _then);
+      _$RookDataImpl _value, $Res Function(_$RookDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of RookData
   /// with the given fields replaced by the non-null parameter values.
@@ -131,22 +125,20 @@ class __$$RookDataImplCopyWithImpl<$Res>
     Object? data = freezed,
     Object? meta = freezed,
   }) {
-    return _then(
-      _$RookDataImpl(
-        success: freezed == success
-            ? _value.success
-            : success // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        data: freezed == data
-            ? _value._data
-            : data // ignore: cast_nullable_to_non_nullable
-                  as List<Datum>?,
-        meta: freezed == meta
-            ? _value.meta
-            : meta // ignore: cast_nullable_to_non_nullable
-                  as Meta?,
-      ),
-    );
+    return _then(_$RookDataImpl(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      data: freezed == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Datum>?,
+      meta: freezed == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+    ));
   }
 }
 
@@ -154,7 +146,7 @@ class __$$RookDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RookDataImpl implements _RookData {
   _$RookDataImpl({this.success, final List<Datum>? data, this.meta})
-    : _data = data;
+      : _data = data;
 
   factory _$RookDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$RookDataImplFromJson(json);
@@ -192,11 +184,7 @@ class _$RookDataImpl implements _RookData {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    success,
-    const DeepCollectionEquality().hash(_data),
-    meta,
-  );
+      runtimeType, success, const DeepCollectionEquality().hash(_data), meta);
 
   /// Create a copy of RookData
   /// with the given fields replaced by the non-null parameter values.
@@ -208,16 +196,17 @@ class _$RookDataImpl implements _RookData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RookDataImplToJson(this);
+    return _$$RookDataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _RookData implements RookData {
-  factory _RookData({
-    final bool? success,
-    final List<Datum>? data,
-    final Meta? meta,
-  }) = _$RookDataImpl;
+  factory _RookData(
+      {final bool? success,
+      final List<Datum>? data,
+      final Meta? meta}) = _$RookDataImpl;
 
   factory _RookData.fromJson(Map<String, dynamic> json) =
       _$RookDataImpl.fromJson;

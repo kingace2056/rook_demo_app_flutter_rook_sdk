@@ -12,12 +12,10 @@ part of 'floors_climbed_granular_data_array.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FloorsClimbedGranularDataArray _$FloorsClimbedGranularDataArrayFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _FloorsClimbedGranularDataArray.fromJson(json);
 }
 
@@ -39,34 +37,28 @@ mixin _$FloorsClimbedGranularDataArray {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $FloorsClimbedGranularDataArrayCopyWith<FloorsClimbedGranularDataArray>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FloorsClimbedGranularDataArrayCopyWith<$Res> {
   factory $FloorsClimbedGranularDataArrayCopyWith(
-    FloorsClimbedGranularDataArray value,
-    $Res Function(FloorsClimbedGranularDataArray) then,
-  ) =
-      _$FloorsClimbedGranularDataArrayCopyWithImpl<
-        $Res,
-        FloorsClimbedGranularDataArray
-      >;
+          FloorsClimbedGranularDataArray value,
+          $Res Function(FloorsClimbedGranularDataArray) then) =
+      _$FloorsClimbedGranularDataArrayCopyWithImpl<$Res,
+          FloorsClimbedGranularDataArray>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'floors_climbed_float') int? floorsClimbedFloat,
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'interval_duration_seconds_float')
-    int? intervalDurationSecondsFloat,
-    @JsonKey(name: 'source_of_data_string') String? sourceOfDataString,
-  });
+  $Res call(
+      {@JsonKey(name: 'floors_climbed_float') int? floorsClimbedFloat,
+      @JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'interval_duration_seconds_float')
+      int? intervalDurationSecondsFloat,
+      @JsonKey(name: 'source_of_data_string') String? sourceOfDataString});
 }
 
 /// @nodoc
-class _$FloorsClimbedGranularDataArrayCopyWithImpl<
-  $Res,
-  $Val extends FloorsClimbedGranularDataArray
->
+class _$FloorsClimbedGranularDataArrayCopyWithImpl<$Res,
+        $Val extends FloorsClimbedGranularDataArray>
     implements $FloorsClimbedGranularDataArrayCopyWith<$Res> {
   _$FloorsClimbedGranularDataArrayCopyWithImpl(this._value, this._then);
 
@@ -85,28 +77,24 @@ class _$FloorsClimbedGranularDataArrayCopyWithImpl<
     Object? intervalDurationSecondsFloat = freezed,
     Object? sourceOfDataString = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            floorsClimbedFloat: freezed == floorsClimbedFloat
-                ? _value.floorsClimbedFloat
-                : floorsClimbedFloat // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            datetimeString: freezed == datetimeString
-                ? _value.datetimeString
-                : datetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            intervalDurationSecondsFloat:
-                freezed == intervalDurationSecondsFloat
-                ? _value.intervalDurationSecondsFloat
-                : intervalDurationSecondsFloat // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            sourceOfDataString: freezed == sourceOfDataString
-                ? _value.sourceOfDataString
-                : sourceOfDataString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      floorsClimbedFloat: freezed == floorsClimbedFloat
+          ? _value.floorsClimbedFloat
+          : floorsClimbedFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      intervalDurationSecondsFloat: freezed == intervalDurationSecondsFloat
+          ? _value.intervalDurationSecondsFloat
+          : intervalDurationSecondsFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sourceOfDataString: freezed == sourceOfDataString
+          ? _value.sourceOfDataString
+          : sourceOfDataString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -114,32 +102,28 @@ class _$FloorsClimbedGranularDataArrayCopyWithImpl<
 abstract class _$$FloorsClimbedGranularDataArrayImplCopyWith<$Res>
     implements $FloorsClimbedGranularDataArrayCopyWith<$Res> {
   factory _$$FloorsClimbedGranularDataArrayImplCopyWith(
-    _$FloorsClimbedGranularDataArrayImpl value,
-    $Res Function(_$FloorsClimbedGranularDataArrayImpl) then,
-  ) = __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<$Res>;
+          _$FloorsClimbedGranularDataArrayImpl value,
+          $Res Function(_$FloorsClimbedGranularDataArrayImpl) then) =
+      __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'floors_climbed_float') int? floorsClimbedFloat,
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'interval_duration_seconds_float')
-    int? intervalDurationSecondsFloat,
-    @JsonKey(name: 'source_of_data_string') String? sourceOfDataString,
-  });
+  $Res call(
+      {@JsonKey(name: 'floors_climbed_float') int? floorsClimbedFloat,
+      @JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'interval_duration_seconds_float')
+      int? intervalDurationSecondsFloat,
+      @JsonKey(name: 'source_of_data_string') String? sourceOfDataString});
 }
 
 /// @nodoc
 class __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<$Res>
-    extends
-        _$FloorsClimbedGranularDataArrayCopyWithImpl<
-          $Res,
-          _$FloorsClimbedGranularDataArrayImpl
-        >
+    extends _$FloorsClimbedGranularDataArrayCopyWithImpl<$Res,
+        _$FloorsClimbedGranularDataArrayImpl>
     implements _$$FloorsClimbedGranularDataArrayImplCopyWith<$Res> {
   __$$FloorsClimbedGranularDataArrayImplCopyWithImpl(
-    _$FloorsClimbedGranularDataArrayImpl _value,
-    $Res Function(_$FloorsClimbedGranularDataArrayImpl) _then,
-  ) : super(_value, _then);
+      _$FloorsClimbedGranularDataArrayImpl _value,
+      $Res Function(_$FloorsClimbedGranularDataArrayImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of FloorsClimbedGranularDataArray
   /// with the given fields replaced by the non-null parameter values.
@@ -151,26 +135,24 @@ class __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<$Res>
     Object? intervalDurationSecondsFloat = freezed,
     Object? sourceOfDataString = freezed,
   }) {
-    return _then(
-      _$FloorsClimbedGranularDataArrayImpl(
-        floorsClimbedFloat: freezed == floorsClimbedFloat
-            ? _value.floorsClimbedFloat
-            : floorsClimbedFloat // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        datetimeString: freezed == datetimeString
-            ? _value.datetimeString
-            : datetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        intervalDurationSecondsFloat: freezed == intervalDurationSecondsFloat
-            ? _value.intervalDurationSecondsFloat
-            : intervalDurationSecondsFloat // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        sourceOfDataString: freezed == sourceOfDataString
-            ? _value.sourceOfDataString
-            : sourceOfDataString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$FloorsClimbedGranularDataArrayImpl(
+      floorsClimbedFloat: freezed == floorsClimbedFloat
+          ? _value.floorsClimbedFloat
+          : floorsClimbedFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      intervalDurationSecondsFloat: freezed == intervalDurationSecondsFloat
+          ? _value.intervalDurationSecondsFloat
+          : intervalDurationSecondsFloat // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sourceOfDataString: freezed == sourceOfDataString
+          ? _value.sourceOfDataString
+          : sourceOfDataString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
@@ -178,17 +160,16 @@ class __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FloorsClimbedGranularDataArrayImpl
     implements _FloorsClimbedGranularDataArray {
-  _$FloorsClimbedGranularDataArrayImpl({
-    @JsonKey(name: 'floors_climbed_float') this.floorsClimbedFloat,
-    @JsonKey(name: 'datetime_string') this.datetimeString,
-    @JsonKey(name: 'interval_duration_seconds_float')
-    this.intervalDurationSecondsFloat,
-    @JsonKey(name: 'source_of_data_string') this.sourceOfDataString,
-  });
+  _$FloorsClimbedGranularDataArrayImpl(
+      {@JsonKey(name: 'floors_climbed_float') this.floorsClimbedFloat,
+      @JsonKey(name: 'datetime_string') this.datetimeString,
+      @JsonKey(name: 'interval_duration_seconds_float')
+      this.intervalDurationSecondsFloat,
+      @JsonKey(name: 'source_of_data_string') this.sourceOfDataString});
 
   factory _$FloorsClimbedGranularDataArrayImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$FloorsClimbedGranularDataArrayImplFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$FloorsClimbedGranularDataArrayImplFromJson(json);
 
   @override
   @JsonKey(name: 'floors_climbed_float')
@@ -217,10 +198,8 @@ class _$FloorsClimbedGranularDataArrayImpl
                 other.floorsClimbedFloat == floorsClimbedFloat) &&
             (identical(other.datetimeString, datetimeString) ||
                 other.datetimeString == datetimeString) &&
-            (identical(
-                  other.intervalDurationSecondsFloat,
-                  intervalDurationSecondsFloat,
-                ) ||
+            (identical(other.intervalDurationSecondsFloat,
+                    intervalDurationSecondsFloat) ||
                 other.intervalDurationSecondsFloat ==
                     intervalDurationSecondsFloat) &&
             (identical(other.sourceOfDataString, sourceOfDataString) ||
@@ -229,13 +208,8 @@ class _$FloorsClimbedGranularDataArrayImpl
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    floorsClimbedFloat,
-    datetimeString,
-    intervalDurationSecondsFloat,
-    sourceOfDataString,
-  );
+  int get hashCode => Object.hash(runtimeType, floorsClimbedFloat,
+      datetimeString, intervalDurationSecondsFloat, sourceOfDataString);
 
   /// Create a copy of FloorsClimbedGranularDataArray
   /// with the given fields replaced by the non-null parameter values.
@@ -243,28 +217,27 @@ class _$FloorsClimbedGranularDataArrayImpl
   @override
   @pragma('vm:prefer-inline')
   _$$FloorsClimbedGranularDataArrayImplCopyWith<
-    _$FloorsClimbedGranularDataArrayImpl
-  >
-  get copyWith =>
-      __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<
-        _$FloorsClimbedGranularDataArrayImpl
-      >(this, _$identity);
+          _$FloorsClimbedGranularDataArrayImpl>
+      get copyWith => __$$FloorsClimbedGranularDataArrayImplCopyWithImpl<
+          _$FloorsClimbedGranularDataArrayImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FloorsClimbedGranularDataArrayImplToJson(this);
+    return _$$FloorsClimbedGranularDataArrayImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _FloorsClimbedGranularDataArray
     implements FloorsClimbedGranularDataArray {
-  factory _FloorsClimbedGranularDataArray({
-    @JsonKey(name: 'floors_climbed_float') final int? floorsClimbedFloat,
-    @JsonKey(name: 'datetime_string') final DateTime? datetimeString,
-    @JsonKey(name: 'interval_duration_seconds_float')
-    final int? intervalDurationSecondsFloat,
-    @JsonKey(name: 'source_of_data_string') final String? sourceOfDataString,
-  }) = _$FloorsClimbedGranularDataArrayImpl;
+  factory _FloorsClimbedGranularDataArray(
+      {@JsonKey(name: 'floors_climbed_float') final int? floorsClimbedFloat,
+      @JsonKey(name: 'datetime_string') final DateTime? datetimeString,
+      @JsonKey(name: 'interval_duration_seconds_float')
+      final int? intervalDurationSecondsFloat,
+      @JsonKey(name: 'source_of_data_string')
+      final String? sourceOfDataString}) = _$FloorsClimbedGranularDataArrayImpl;
 
   factory _FloorsClimbedGranularDataArray.fromJson(Map<String, dynamic> json) =
       _$FloorsClimbedGranularDataArrayImpl.fromJson;
@@ -287,7 +260,6 @@ abstract class _FloorsClimbedGranularDataArray
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FloorsClimbedGranularDataArrayImplCopyWith<
-    _$FloorsClimbedGranularDataArrayImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
+          _$FloorsClimbedGranularDataArrayImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

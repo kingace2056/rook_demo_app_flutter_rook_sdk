@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
-import 'package:rook_impl/controllers/user_data_controller.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/controllers/user_data_controller.dart';
 
 class OverallDataView extends StatelessWidget {
   const OverallDataView({super.key});

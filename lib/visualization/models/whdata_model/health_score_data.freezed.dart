@@ -12,8 +12,7 @@ part of 'health_score_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HealthScoreData _$HealthScoreDataFromJson(Map<String, dynamic> json) {
   return _HealthScoreData.fromJson(json);
@@ -45,18 +44,16 @@ mixin _$HealthScoreData {
 /// @nodoc
 abstract class $HealthScoreDataCopyWith<$Res> {
   factory $HealthScoreDataCopyWith(
-    HealthScoreData value,
-    $Res Function(HealthScoreData) then,
-  ) = _$HealthScoreDataCopyWithImpl<$Res, HealthScoreData>;
+          HealthScoreData value, $Res Function(HealthScoreData) then) =
+      _$HealthScoreDataCopyWithImpl<$Res, HealthScoreData>;
   @useResult
-  $Res call({
-    Metadata? metadata,
-    @JsonKey(name: 'overall_scores') OverallScores? overallScores,
-    @JsonKey(name: 'physical_health_score')
-    PhysicalHealthScore? physicalHealthScore,
-    @JsonKey(name: 'sleep_health_score') SleepHealthScore? sleepHealthScore,
-    @JsonKey(name: 'body_health_score') BodyHealthScore? bodyHealthScore,
-  });
+  $Res call(
+      {Metadata? metadata,
+      @JsonKey(name: 'overall_scores') OverallScores? overallScores,
+      @JsonKey(name: 'physical_health_score')
+      PhysicalHealthScore? physicalHealthScore,
+      @JsonKey(name: 'sleep_health_score') SleepHealthScore? sleepHealthScore,
+      @JsonKey(name: 'body_health_score') BodyHealthScore? bodyHealthScore});
 
   $MetadataCopyWith<$Res>? get metadata;
   $OverallScoresCopyWith<$Res>? get overallScores;
@@ -86,31 +83,28 @@ class _$HealthScoreDataCopyWithImpl<$Res, $Val extends HealthScoreData>
     Object? sleepHealthScore = freezed,
     Object? bodyHealthScore = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            metadata: freezed == metadata
-                ? _value.metadata
-                : metadata // ignore: cast_nullable_to_non_nullable
-                      as Metadata?,
-            overallScores: freezed == overallScores
-                ? _value.overallScores
-                : overallScores // ignore: cast_nullable_to_non_nullable
-                      as OverallScores?,
-            physicalHealthScore: freezed == physicalHealthScore
-                ? _value.physicalHealthScore
-                : physicalHealthScore // ignore: cast_nullable_to_non_nullable
-                      as PhysicalHealthScore?,
-            sleepHealthScore: freezed == sleepHealthScore
-                ? _value.sleepHealthScore
-                : sleepHealthScore // ignore: cast_nullable_to_non_nullable
-                      as SleepHealthScore?,
-            bodyHealthScore: freezed == bodyHealthScore
-                ? _value.bodyHealthScore
-                : bodyHealthScore // ignore: cast_nullable_to_non_nullable
-                      as BodyHealthScore?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+      overallScores: freezed == overallScores
+          ? _value.overallScores
+          : overallScores // ignore: cast_nullable_to_non_nullable
+              as OverallScores?,
+      physicalHealthScore: freezed == physicalHealthScore
+          ? _value.physicalHealthScore
+          : physicalHealthScore // ignore: cast_nullable_to_non_nullable
+              as PhysicalHealthScore?,
+      sleepHealthScore: freezed == sleepHealthScore
+          ? _value.sleepHealthScore
+          : sleepHealthScore // ignore: cast_nullable_to_non_nullable
+              as SleepHealthScore?,
+      bodyHealthScore: freezed == bodyHealthScore
+          ? _value.bodyHealthScore
+          : bodyHealthScore // ignore: cast_nullable_to_non_nullable
+              as BodyHealthScore?,
+    ) as $Val);
   }
 
   /// Create a copy of HealthScoreData
@@ -150,9 +144,8 @@ class _$HealthScoreDataCopyWithImpl<$Res, $Val extends HealthScoreData>
       return null;
     }
 
-    return $PhysicalHealthScoreCopyWith<$Res>(_value.physicalHealthScore!, (
-      value,
-    ) {
+    return $PhysicalHealthScoreCopyWith<$Res>(_value.physicalHealthScore!,
+        (value) {
       return _then(_value.copyWith(physicalHealthScore: value) as $Val);
     });
   }
@@ -189,20 +182,18 @@ class _$HealthScoreDataCopyWithImpl<$Res, $Val extends HealthScoreData>
 /// @nodoc
 abstract class _$$HealthScoreDataImplCopyWith<$Res>
     implements $HealthScoreDataCopyWith<$Res> {
-  factory _$$HealthScoreDataImplCopyWith(
-    _$HealthScoreDataImpl value,
-    $Res Function(_$HealthScoreDataImpl) then,
-  ) = __$$HealthScoreDataImplCopyWithImpl<$Res>;
+  factory _$$HealthScoreDataImplCopyWith(_$HealthScoreDataImpl value,
+          $Res Function(_$HealthScoreDataImpl) then) =
+      __$$HealthScoreDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    Metadata? metadata,
-    @JsonKey(name: 'overall_scores') OverallScores? overallScores,
-    @JsonKey(name: 'physical_health_score')
-    PhysicalHealthScore? physicalHealthScore,
-    @JsonKey(name: 'sleep_health_score') SleepHealthScore? sleepHealthScore,
-    @JsonKey(name: 'body_health_score') BodyHealthScore? bodyHealthScore,
-  });
+  $Res call(
+      {Metadata? metadata,
+      @JsonKey(name: 'overall_scores') OverallScores? overallScores,
+      @JsonKey(name: 'physical_health_score')
+      PhysicalHealthScore? physicalHealthScore,
+      @JsonKey(name: 'sleep_health_score') SleepHealthScore? sleepHealthScore,
+      @JsonKey(name: 'body_health_score') BodyHealthScore? bodyHealthScore});
 
   @override
   $MetadataCopyWith<$Res>? get metadata;
@@ -221,9 +212,8 @@ class __$$HealthScoreDataImplCopyWithImpl<$Res>
     extends _$HealthScoreDataCopyWithImpl<$Res, _$HealthScoreDataImpl>
     implements _$$HealthScoreDataImplCopyWith<$Res> {
   __$$HealthScoreDataImplCopyWithImpl(
-    _$HealthScoreDataImpl _value,
-    $Res Function(_$HealthScoreDataImpl) _then,
-  ) : super(_value, _then);
+      _$HealthScoreDataImpl _value, $Res Function(_$HealthScoreDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of HealthScoreData
   /// with the given fields replaced by the non-null parameter values.
@@ -236,43 +226,40 @@ class __$$HealthScoreDataImplCopyWithImpl<$Res>
     Object? sleepHealthScore = freezed,
     Object? bodyHealthScore = freezed,
   }) {
-    return _then(
-      _$HealthScoreDataImpl(
-        metadata: freezed == metadata
-            ? _value.metadata
-            : metadata // ignore: cast_nullable_to_non_nullable
-                  as Metadata?,
-        overallScores: freezed == overallScores
-            ? _value.overallScores
-            : overallScores // ignore: cast_nullable_to_non_nullable
-                  as OverallScores?,
-        physicalHealthScore: freezed == physicalHealthScore
-            ? _value.physicalHealthScore
-            : physicalHealthScore // ignore: cast_nullable_to_non_nullable
-                  as PhysicalHealthScore?,
-        sleepHealthScore: freezed == sleepHealthScore
-            ? _value.sleepHealthScore
-            : sleepHealthScore // ignore: cast_nullable_to_non_nullable
-                  as SleepHealthScore?,
-        bodyHealthScore: freezed == bodyHealthScore
-            ? _value.bodyHealthScore
-            : bodyHealthScore // ignore: cast_nullable_to_non_nullable
-                  as BodyHealthScore?,
-      ),
-    );
+    return _then(_$HealthScoreDataImpl(
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+      overallScores: freezed == overallScores
+          ? _value.overallScores
+          : overallScores // ignore: cast_nullable_to_non_nullable
+              as OverallScores?,
+      physicalHealthScore: freezed == physicalHealthScore
+          ? _value.physicalHealthScore
+          : physicalHealthScore // ignore: cast_nullable_to_non_nullable
+              as PhysicalHealthScore?,
+      sleepHealthScore: freezed == sleepHealthScore
+          ? _value.sleepHealthScore
+          : sleepHealthScore // ignore: cast_nullable_to_non_nullable
+              as SleepHealthScore?,
+      bodyHealthScore: freezed == bodyHealthScore
+          ? _value.bodyHealthScore
+          : bodyHealthScore // ignore: cast_nullable_to_non_nullable
+              as BodyHealthScore?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HealthScoreDataImpl implements _HealthScoreData {
-  _$HealthScoreDataImpl({
-    this.metadata,
-    @JsonKey(name: 'overall_scores') this.overallScores,
-    @JsonKey(name: 'physical_health_score') this.physicalHealthScore,
-    @JsonKey(name: 'sleep_health_score') this.sleepHealthScore,
-    @JsonKey(name: 'body_health_score') this.bodyHealthScore,
-  });
+  _$HealthScoreDataImpl(
+      {this.metadata,
+      @JsonKey(name: 'overall_scores') this.overallScores,
+      @JsonKey(name: 'physical_health_score') this.physicalHealthScore,
+      @JsonKey(name: 'sleep_health_score') this.sleepHealthScore,
+      @JsonKey(name: 'body_health_score') this.bodyHealthScore});
 
   factory _$HealthScoreDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$HealthScoreDataImplFromJson(json);
@@ -316,14 +303,8 @@ class _$HealthScoreDataImpl implements _HealthScoreData {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    metadata,
-    overallScores,
-    physicalHealthScore,
-    sleepHealthScore,
-    bodyHealthScore,
-  );
+  int get hashCode => Object.hash(runtimeType, metadata, overallScores,
+      physicalHealthScore, sleepHealthScore, bodyHealthScore);
 
   /// Create a copy of HealthScoreData
   /// with the given fields replaced by the non-null parameter values.
@@ -332,26 +313,26 @@ class _$HealthScoreDataImpl implements _HealthScoreData {
   @pragma('vm:prefer-inline')
   _$$HealthScoreDataImplCopyWith<_$HealthScoreDataImpl> get copyWith =>
       __$$HealthScoreDataImplCopyWithImpl<_$HealthScoreDataImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HealthScoreDataImplToJson(this);
+    return _$$HealthScoreDataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _HealthScoreData implements HealthScoreData {
-  factory _HealthScoreData({
-    final Metadata? metadata,
-    @JsonKey(name: 'overall_scores') final OverallScores? overallScores,
-    @JsonKey(name: 'physical_health_score')
-    final PhysicalHealthScore? physicalHealthScore,
-    @JsonKey(name: 'sleep_health_score')
-    final SleepHealthScore? sleepHealthScore,
-    @JsonKey(name: 'body_health_score') final BodyHealthScore? bodyHealthScore,
-  }) = _$HealthScoreDataImpl;
+  factory _HealthScoreData(
+      {final Metadata? metadata,
+      @JsonKey(name: 'overall_scores') final OverallScores? overallScores,
+      @JsonKey(name: 'physical_health_score')
+      final PhysicalHealthScore? physicalHealthScore,
+      @JsonKey(name: 'sleep_health_score')
+      final SleepHealthScore? sleepHealthScore,
+      @JsonKey(name: 'body_health_score')
+      final BodyHealthScore? bodyHealthScore}) = _$HealthScoreDataImpl;
 
   factory _HealthScoreData.fromJson(Map<String, dynamic> json) =
       _$HealthScoreDataImpl.fromJson;

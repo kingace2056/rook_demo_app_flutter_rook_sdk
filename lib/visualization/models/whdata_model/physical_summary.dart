@@ -1,13 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:rook_impl/models/whdata_model/activity.dart';
-import 'package:rook_impl/models/whdata_model/calories.dart';
-import 'package:rook_impl/models/whdata_model/distance.dart';
-import 'package:rook_impl/models/whdata_model/heart_rate.dart';
-import 'package:rook_impl/models/whdata_model/metadata.dart';
-import 'package:rook_impl/models/whdata_model/oxygenation.dart';
-import 'package:rook_impl/models/whdata_model/stress.dart';
-
-import 'physical_health.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/activity.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/calories.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/distance.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/heart_rate.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/metadata.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/stress.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/models/whdata_model/oxygenation.dart';
 
 part 'physical_summary.freezed.dart';
 part 'physical_summary.g.dart';
@@ -26,7 +24,6 @@ class PhysicalSummary with _$PhysicalSummary {
     @JsonKey(name: 'oxygenation') Oxygenation? oxygenation,
     @JsonKey(name: 'stress') Stress? stress,
     @JsonKey(name: 'metadata') Metadata? metadata,
-
     @JsonKey(name: '__v') int? v,
   }) = _PhysicalSummary;
 

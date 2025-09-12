@@ -11,8 +11,7 @@ _$BloodPressureImpl _$$BloodPressureImplFromJson(Map<String, dynamic> json) =>
       bloodPressureAvgObject: json['blood_pressure_avg_object'] == null
           ? null
           : BloodPressureAvgObject.fromJson(
-              json['blood_pressure_avg_object'] as Map<String, dynamic>,
-            ),
+              json['blood_pressure_avg_object'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$BloodPressureImplToJson(_$BloodPressureImpl instance) =>

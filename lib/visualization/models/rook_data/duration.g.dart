@@ -17,8 +17,8 @@ _$DurationImpl _$$DurationImplFromJson(Map<String, dynamic> json) =>
       sleepDateString: json['sleep_date_string'] == null
           ? null
           : DateTime.parse(json['sleep_date_string'] as String),
-      sleepDurationSecondsInt: (json['sleep_duration_seconds_int'] as num?)
-          ?.toInt(),
+      sleepDurationSecondsInt:
+          (json['sleep_duration_seconds_int'] as num?)?.toInt(),
       timeInBedSecondsInt: (json['time_in_bed_seconds_int'] as num?)?.toInt(),
       lightSleepDurationSecondsInt:
           (json['light_sleep_duration_seconds_int'] as num?)?.toInt(),
@@ -34,10 +34,10 @@ _$DurationImpl _$$DurationImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$DurationImplToJson(_$DurationImpl instance) =>
     <String, dynamic>{
-      'sleep_start_datetime_string': instance.sleepStartDatetimeString
-          ?.toIso8601String(),
-      'sleep_end_datetime_string': instance.sleepEndDatetimeString
-          ?.toIso8601String(),
+      'sleep_start_datetime_string':
+          instance.sleepStartDatetimeString?.toIso8601String(),
+      'sleep_end_datetime_string':
+          instance.sleepEndDatetimeString?.toIso8601String(),
       'sleep_date_string': instance.sleepDateString?.toIso8601String(),
       'sleep_duration_seconds_int': instance.sleepDurationSecondsInt,
       'time_in_bed_seconds_int': instance.timeInBedSecondsInt,

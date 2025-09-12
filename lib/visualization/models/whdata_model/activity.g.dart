@@ -10,8 +10,8 @@ _$ActivityImpl _$$ActivityImplFromJson(Map<String, dynamic> json) =>
     _$ActivityImpl(
       activeSecondsInt: (json['active_seconds_int'] as num?)?.toInt(),
       restSecondsInt: (json['rest_seconds_int'] as num?)?.toInt(),
-      lowIntensitySecondsInt: (json['low_intensity_seconds_int'] as num?)
-          ?.toInt(),
+      lowIntensitySecondsInt:
+          (json['low_intensity_seconds_int'] as num?)?.toInt(),
       moderateIntensitySecondsInt:
           (json['moderate_intensity_seconds_int'] as num?)?.toInt(),
       vigorousIntensitySecondsInt:

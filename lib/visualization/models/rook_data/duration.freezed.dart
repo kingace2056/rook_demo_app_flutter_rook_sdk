@@ -12,8 +12,7 @@ part of 'duration.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Duration _$DurationFromJson(Map<String, dynamic> json) {
   return _Duration.fromJson(json);
@@ -57,25 +56,24 @@ abstract class $DurationCopyWith<$Res> {
   factory $DurationCopyWith(Duration value, $Res Function(Duration) then) =
       _$DurationCopyWithImpl<$Res, Duration>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'sleep_start_datetime_string')
-    DateTime? sleepStartDatetimeString,
-    @JsonKey(name: 'sleep_end_datetime_string')
-    DateTime? sleepEndDatetimeString,
-    @JsonKey(name: 'sleep_date_string') DateTime? sleepDateString,
-    @JsonKey(name: 'sleep_duration_seconds_int') int? sleepDurationSecondsInt,
-    @JsonKey(name: 'time_in_bed_seconds_int') int? timeInBedSecondsInt,
-    @JsonKey(name: 'light_sleep_duration_seconds_int')
-    int? lightSleepDurationSecondsInt,
-    @JsonKey(name: 'rem_sleep_duration_seconds_int')
-    int? remSleepDurationSecondsInt,
-    @JsonKey(name: 'deep_sleep_duration_seconds_int')
-    int? deepSleepDurationSecondsInt,
-    @JsonKey(name: 'time_to_fall_asleep_seconds_int')
-    int? timeToFallAsleepSecondsInt,
-    @JsonKey(name: 'time_awake_during_sleep_seconds_int')
-    int? timeAwakeDuringSleepSecondsInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'sleep_start_datetime_string')
+      DateTime? sleepStartDatetimeString,
+      @JsonKey(name: 'sleep_end_datetime_string')
+      DateTime? sleepEndDatetimeString,
+      @JsonKey(name: 'sleep_date_string') DateTime? sleepDateString,
+      @JsonKey(name: 'sleep_duration_seconds_int') int? sleepDurationSecondsInt,
+      @JsonKey(name: 'time_in_bed_seconds_int') int? timeInBedSecondsInt,
+      @JsonKey(name: 'light_sleep_duration_seconds_int')
+      int? lightSleepDurationSecondsInt,
+      @JsonKey(name: 'rem_sleep_duration_seconds_int')
+      int? remSleepDurationSecondsInt,
+      @JsonKey(name: 'deep_sleep_duration_seconds_int')
+      int? deepSleepDurationSecondsInt,
+      @JsonKey(name: 'time_to_fall_asleep_seconds_int')
+      int? timeToFallAsleepSecondsInt,
+      @JsonKey(name: 'time_awake_during_sleep_seconds_int')
+      int? timeAwakeDuringSleepSecondsInt});
 }
 
 /// @nodoc
@@ -104,53 +102,48 @@ class _$DurationCopyWithImpl<$Res, $Val extends Duration>
     Object? timeToFallAsleepSecondsInt = freezed,
     Object? timeAwakeDuringSleepSecondsInt = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            sleepStartDatetimeString: freezed == sleepStartDatetimeString
-                ? _value.sleepStartDatetimeString
-                : sleepStartDatetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            sleepEndDatetimeString: freezed == sleepEndDatetimeString
-                ? _value.sleepEndDatetimeString
-                : sleepEndDatetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            sleepDateString: freezed == sleepDateString
-                ? _value.sleepDateString
-                : sleepDateString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            sleepDurationSecondsInt: freezed == sleepDurationSecondsInt
-                ? _value.sleepDurationSecondsInt
-                : sleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            timeInBedSecondsInt: freezed == timeInBedSecondsInt
-                ? _value.timeInBedSecondsInt
-                : timeInBedSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            lightSleepDurationSecondsInt:
-                freezed == lightSleepDurationSecondsInt
-                ? _value.lightSleepDurationSecondsInt
-                : lightSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            remSleepDurationSecondsInt: freezed == remSleepDurationSecondsInt
-                ? _value.remSleepDurationSecondsInt
-                : remSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            deepSleepDurationSecondsInt: freezed == deepSleepDurationSecondsInt
-                ? _value.deepSleepDurationSecondsInt
-                : deepSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            timeToFallAsleepSecondsInt: freezed == timeToFallAsleepSecondsInt
-                ? _value.timeToFallAsleepSecondsInt
-                : timeToFallAsleepSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            timeAwakeDuringSleepSecondsInt:
-                freezed == timeAwakeDuringSleepSecondsInt
-                ? _value.timeAwakeDuringSleepSecondsInt
-                : timeAwakeDuringSleepSecondsInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      sleepStartDatetimeString: freezed == sleepStartDatetimeString
+          ? _value.sleepStartDatetimeString
+          : sleepStartDatetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      sleepEndDatetimeString: freezed == sleepEndDatetimeString
+          ? _value.sleepEndDatetimeString
+          : sleepEndDatetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      sleepDateString: freezed == sleepDateString
+          ? _value.sleepDateString
+          : sleepDateString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      sleepDurationSecondsInt: freezed == sleepDurationSecondsInt
+          ? _value.sleepDurationSecondsInt
+          : sleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      timeInBedSecondsInt: freezed == timeInBedSecondsInt
+          ? _value.timeInBedSecondsInt
+          : timeInBedSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lightSleepDurationSecondsInt: freezed == lightSleepDurationSecondsInt
+          ? _value.lightSleepDurationSecondsInt
+          : lightSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      remSleepDurationSecondsInt: freezed == remSleepDurationSecondsInt
+          ? _value.remSleepDurationSecondsInt
+          : remSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      deepSleepDurationSecondsInt: freezed == deepSleepDurationSecondsInt
+          ? _value.deepSleepDurationSecondsInt
+          : deepSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      timeToFallAsleepSecondsInt: freezed == timeToFallAsleepSecondsInt
+          ? _value.timeToFallAsleepSecondsInt
+          : timeToFallAsleepSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      timeAwakeDuringSleepSecondsInt: freezed == timeAwakeDuringSleepSecondsInt
+          ? _value.timeAwakeDuringSleepSecondsInt
+          : timeAwakeDuringSleepSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -158,30 +151,28 @@ class _$DurationCopyWithImpl<$Res, $Val extends Duration>
 abstract class _$$DurationImplCopyWith<$Res>
     implements $DurationCopyWith<$Res> {
   factory _$$DurationImplCopyWith(
-    _$DurationImpl value,
-    $Res Function(_$DurationImpl) then,
-  ) = __$$DurationImplCopyWithImpl<$Res>;
+          _$DurationImpl value, $Res Function(_$DurationImpl) then) =
+      __$$DurationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'sleep_start_datetime_string')
-    DateTime? sleepStartDatetimeString,
-    @JsonKey(name: 'sleep_end_datetime_string')
-    DateTime? sleepEndDatetimeString,
-    @JsonKey(name: 'sleep_date_string') DateTime? sleepDateString,
-    @JsonKey(name: 'sleep_duration_seconds_int') int? sleepDurationSecondsInt,
-    @JsonKey(name: 'time_in_bed_seconds_int') int? timeInBedSecondsInt,
-    @JsonKey(name: 'light_sleep_duration_seconds_int')
-    int? lightSleepDurationSecondsInt,
-    @JsonKey(name: 'rem_sleep_duration_seconds_int')
-    int? remSleepDurationSecondsInt,
-    @JsonKey(name: 'deep_sleep_duration_seconds_int')
-    int? deepSleepDurationSecondsInt,
-    @JsonKey(name: 'time_to_fall_asleep_seconds_int')
-    int? timeToFallAsleepSecondsInt,
-    @JsonKey(name: 'time_awake_during_sleep_seconds_int')
-    int? timeAwakeDuringSleepSecondsInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'sleep_start_datetime_string')
+      DateTime? sleepStartDatetimeString,
+      @JsonKey(name: 'sleep_end_datetime_string')
+      DateTime? sleepEndDatetimeString,
+      @JsonKey(name: 'sleep_date_string') DateTime? sleepDateString,
+      @JsonKey(name: 'sleep_duration_seconds_int') int? sleepDurationSecondsInt,
+      @JsonKey(name: 'time_in_bed_seconds_int') int? timeInBedSecondsInt,
+      @JsonKey(name: 'light_sleep_duration_seconds_int')
+      int? lightSleepDurationSecondsInt,
+      @JsonKey(name: 'rem_sleep_duration_seconds_int')
+      int? remSleepDurationSecondsInt,
+      @JsonKey(name: 'deep_sleep_duration_seconds_int')
+      int? deepSleepDurationSecondsInt,
+      @JsonKey(name: 'time_to_fall_asleep_seconds_int')
+      int? timeToFallAsleepSecondsInt,
+      @JsonKey(name: 'time_awake_during_sleep_seconds_int')
+      int? timeAwakeDuringSleepSecondsInt});
 }
 
 /// @nodoc
@@ -189,9 +180,8 @@ class __$$DurationImplCopyWithImpl<$Res>
     extends _$DurationCopyWithImpl<$Res, _$DurationImpl>
     implements _$$DurationImplCopyWith<$Res> {
   __$$DurationImplCopyWithImpl(
-    _$DurationImpl _value,
-    $Res Function(_$DurationImpl) _then,
-  ) : super(_value, _then);
+      _$DurationImpl _value, $Res Function(_$DurationImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Duration
   /// with the given fields replaced by the non-null parameter values.
@@ -209,74 +199,71 @@ class __$$DurationImplCopyWithImpl<$Res>
     Object? timeToFallAsleepSecondsInt = freezed,
     Object? timeAwakeDuringSleepSecondsInt = freezed,
   }) {
-    return _then(
-      _$DurationImpl(
-        sleepStartDatetimeString: freezed == sleepStartDatetimeString
-            ? _value.sleepStartDatetimeString
-            : sleepStartDatetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        sleepEndDatetimeString: freezed == sleepEndDatetimeString
-            ? _value.sleepEndDatetimeString
-            : sleepEndDatetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        sleepDateString: freezed == sleepDateString
-            ? _value.sleepDateString
-            : sleepDateString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        sleepDurationSecondsInt: freezed == sleepDurationSecondsInt
-            ? _value.sleepDurationSecondsInt
-            : sleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        timeInBedSecondsInt: freezed == timeInBedSecondsInt
-            ? _value.timeInBedSecondsInt
-            : timeInBedSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        lightSleepDurationSecondsInt: freezed == lightSleepDurationSecondsInt
-            ? _value.lightSleepDurationSecondsInt
-            : lightSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        remSleepDurationSecondsInt: freezed == remSleepDurationSecondsInt
-            ? _value.remSleepDurationSecondsInt
-            : remSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        deepSleepDurationSecondsInt: freezed == deepSleepDurationSecondsInt
-            ? _value.deepSleepDurationSecondsInt
-            : deepSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        timeToFallAsleepSecondsInt: freezed == timeToFallAsleepSecondsInt
-            ? _value.timeToFallAsleepSecondsInt
-            : timeToFallAsleepSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        timeAwakeDuringSleepSecondsInt:
-            freezed == timeAwakeDuringSleepSecondsInt
-            ? _value.timeAwakeDuringSleepSecondsInt
-            : timeAwakeDuringSleepSecondsInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$DurationImpl(
+      sleepStartDatetimeString: freezed == sleepStartDatetimeString
+          ? _value.sleepStartDatetimeString
+          : sleepStartDatetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      sleepEndDatetimeString: freezed == sleepEndDatetimeString
+          ? _value.sleepEndDatetimeString
+          : sleepEndDatetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      sleepDateString: freezed == sleepDateString
+          ? _value.sleepDateString
+          : sleepDateString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      sleepDurationSecondsInt: freezed == sleepDurationSecondsInt
+          ? _value.sleepDurationSecondsInt
+          : sleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      timeInBedSecondsInt: freezed == timeInBedSecondsInt
+          ? _value.timeInBedSecondsInt
+          : timeInBedSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lightSleepDurationSecondsInt: freezed == lightSleepDurationSecondsInt
+          ? _value.lightSleepDurationSecondsInt
+          : lightSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      remSleepDurationSecondsInt: freezed == remSleepDurationSecondsInt
+          ? _value.remSleepDurationSecondsInt
+          : remSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      deepSleepDurationSecondsInt: freezed == deepSleepDurationSecondsInt
+          ? _value.deepSleepDurationSecondsInt
+          : deepSleepDurationSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      timeToFallAsleepSecondsInt: freezed == timeToFallAsleepSecondsInt
+          ? _value.timeToFallAsleepSecondsInt
+          : timeToFallAsleepSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      timeAwakeDuringSleepSecondsInt: freezed == timeAwakeDuringSleepSecondsInt
+          ? _value.timeAwakeDuringSleepSecondsInt
+          : timeAwakeDuringSleepSecondsInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DurationImpl implements _Duration {
-  _$DurationImpl({
-    @JsonKey(name: 'sleep_start_datetime_string') this.sleepStartDatetimeString,
-    @JsonKey(name: 'sleep_end_datetime_string') this.sleepEndDatetimeString,
-    @JsonKey(name: 'sleep_date_string') this.sleepDateString,
-    @JsonKey(name: 'sleep_duration_seconds_int') this.sleepDurationSecondsInt,
-    @JsonKey(name: 'time_in_bed_seconds_int') this.timeInBedSecondsInt,
-    @JsonKey(name: 'light_sleep_duration_seconds_int')
-    this.lightSleepDurationSecondsInt,
-    @JsonKey(name: 'rem_sleep_duration_seconds_int')
-    this.remSleepDurationSecondsInt,
-    @JsonKey(name: 'deep_sleep_duration_seconds_int')
-    this.deepSleepDurationSecondsInt,
-    @JsonKey(name: 'time_to_fall_asleep_seconds_int')
-    this.timeToFallAsleepSecondsInt,
-    @JsonKey(name: 'time_awake_during_sleep_seconds_int')
-    this.timeAwakeDuringSleepSecondsInt,
-  });
+  _$DurationImpl(
+      {@JsonKey(name: 'sleep_start_datetime_string')
+      this.sleepStartDatetimeString,
+      @JsonKey(name: 'sleep_end_datetime_string') this.sleepEndDatetimeString,
+      @JsonKey(name: 'sleep_date_string') this.sleepDateString,
+      @JsonKey(name: 'sleep_duration_seconds_int') this.sleepDurationSecondsInt,
+      @JsonKey(name: 'time_in_bed_seconds_int') this.timeInBedSecondsInt,
+      @JsonKey(name: 'light_sleep_duration_seconds_int')
+      this.lightSleepDurationSecondsInt,
+      @JsonKey(name: 'rem_sleep_duration_seconds_int')
+      this.remSleepDurationSecondsInt,
+      @JsonKey(name: 'deep_sleep_duration_seconds_int')
+      this.deepSleepDurationSecondsInt,
+      @JsonKey(name: 'time_to_fall_asleep_seconds_int')
+      this.timeToFallAsleepSecondsInt,
+      @JsonKey(name: 'time_awake_during_sleep_seconds_int')
+      this.timeAwakeDuringSleepSecondsInt});
 
   factory _$DurationImpl.fromJson(Map<String, dynamic> json) =>
       _$$DurationImplFromJson(json);
@@ -322,50 +309,32 @@ class _$DurationImpl implements _Duration {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DurationImpl &&
-            (identical(
-                  other.sleepStartDatetimeString,
-                  sleepStartDatetimeString,
-                ) ||
+            (identical(other.sleepStartDatetimeString, sleepStartDatetimeString) ||
                 other.sleepStartDatetimeString == sleepStartDatetimeString) &&
             (identical(other.sleepEndDatetimeString, sleepEndDatetimeString) ||
                 other.sleepEndDatetimeString == sleepEndDatetimeString) &&
             (identical(other.sleepDateString, sleepDateString) ||
                 other.sleepDateString == sleepDateString) &&
-            (identical(
-                  other.sleepDurationSecondsInt,
-                  sleepDurationSecondsInt,
-                ) ||
+            (identical(other.sleepDurationSecondsInt, sleepDurationSecondsInt) ||
                 other.sleepDurationSecondsInt == sleepDurationSecondsInt) &&
             (identical(other.timeInBedSecondsInt, timeInBedSecondsInt) ||
                 other.timeInBedSecondsInt == timeInBedSecondsInt) &&
-            (identical(
-                  other.lightSleepDurationSecondsInt,
-                  lightSleepDurationSecondsInt,
-                ) ||
+            (identical(other.lightSleepDurationSecondsInt,
+                    lightSleepDurationSecondsInt) ||
                 other.lightSleepDurationSecondsInt ==
                     lightSleepDurationSecondsInt) &&
-            (identical(
-                  other.remSleepDurationSecondsInt,
-                  remSleepDurationSecondsInt,
-                ) ||
+            (identical(other.remSleepDurationSecondsInt, remSleepDurationSecondsInt) ||
                 other.remSleepDurationSecondsInt ==
                     remSleepDurationSecondsInt) &&
-            (identical(
-                  other.deepSleepDurationSecondsInt,
-                  deepSleepDurationSecondsInt,
-                ) ||
+            (identical(other.deepSleepDurationSecondsInt,
+                    deepSleepDurationSecondsInt) ||
                 other.deepSleepDurationSecondsInt ==
                     deepSleepDurationSecondsInt) &&
-            (identical(
-                  other.timeToFallAsleepSecondsInt,
-                  timeToFallAsleepSecondsInt,
-                ) ||
+            (identical(other.timeToFallAsleepSecondsInt, timeToFallAsleepSecondsInt) ||
                 other.timeToFallAsleepSecondsInt ==
                     timeToFallAsleepSecondsInt) &&
-            (identical(
-                  other.timeAwakeDuringSleepSecondsInt,
-                  timeAwakeDuringSleepSecondsInt,
-                ) ||
+            (identical(other.timeAwakeDuringSleepSecondsInt,
+                    timeAwakeDuringSleepSecondsInt) ||
                 other.timeAwakeDuringSleepSecondsInt ==
                     timeAwakeDuringSleepSecondsInt));
   }
@@ -373,18 +342,17 @@ class _$DurationImpl implements _Duration {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    sleepStartDatetimeString,
-    sleepEndDatetimeString,
-    sleepDateString,
-    sleepDurationSecondsInt,
-    timeInBedSecondsInt,
-    lightSleepDurationSecondsInt,
-    remSleepDurationSecondsInt,
-    deepSleepDurationSecondsInt,
-    timeToFallAsleepSecondsInt,
-    timeAwakeDuringSleepSecondsInt,
-  );
+      runtimeType,
+      sleepStartDatetimeString,
+      sleepEndDatetimeString,
+      sleepDateString,
+      sleepDurationSecondsInt,
+      timeInBedSecondsInt,
+      lightSleepDurationSecondsInt,
+      remSleepDurationSecondsInt,
+      deepSleepDurationSecondsInt,
+      timeToFallAsleepSecondsInt,
+      timeAwakeDuringSleepSecondsInt);
 
   /// Create a copy of Duration
   /// with the given fields replaced by the non-null parameter values.
@@ -396,31 +364,32 @@ class _$DurationImpl implements _Duration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DurationImplToJson(this);
+    return _$$DurationImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Duration implements Duration {
-  factory _Duration({
-    @JsonKey(name: 'sleep_start_datetime_string')
-    final DateTime? sleepStartDatetimeString,
-    @JsonKey(name: 'sleep_end_datetime_string')
-    final DateTime? sleepEndDatetimeString,
-    @JsonKey(name: 'sleep_date_string') final DateTime? sleepDateString,
-    @JsonKey(name: 'sleep_duration_seconds_int')
-    final int? sleepDurationSecondsInt,
-    @JsonKey(name: 'time_in_bed_seconds_int') final int? timeInBedSecondsInt,
-    @JsonKey(name: 'light_sleep_duration_seconds_int')
-    final int? lightSleepDurationSecondsInt,
-    @JsonKey(name: 'rem_sleep_duration_seconds_int')
-    final int? remSleepDurationSecondsInt,
-    @JsonKey(name: 'deep_sleep_duration_seconds_int')
-    final int? deepSleepDurationSecondsInt,
-    @JsonKey(name: 'time_to_fall_asleep_seconds_int')
-    final int? timeToFallAsleepSecondsInt,
-    @JsonKey(name: 'time_awake_during_sleep_seconds_int')
-    final int? timeAwakeDuringSleepSecondsInt,
-  }) = _$DurationImpl;
+  factory _Duration(
+      {@JsonKey(name: 'sleep_start_datetime_string')
+      final DateTime? sleepStartDatetimeString,
+      @JsonKey(name: 'sleep_end_datetime_string')
+      final DateTime? sleepEndDatetimeString,
+      @JsonKey(name: 'sleep_date_string') final DateTime? sleepDateString,
+      @JsonKey(name: 'sleep_duration_seconds_int')
+      final int? sleepDurationSecondsInt,
+      @JsonKey(name: 'time_in_bed_seconds_int') final int? timeInBedSecondsInt,
+      @JsonKey(name: 'light_sleep_duration_seconds_int')
+      final int? lightSleepDurationSecondsInt,
+      @JsonKey(name: 'rem_sleep_duration_seconds_int')
+      final int? remSleepDurationSecondsInt,
+      @JsonKey(name: 'deep_sleep_duration_seconds_int')
+      final int? deepSleepDurationSecondsInt,
+      @JsonKey(name: 'time_to_fall_asleep_seconds_int')
+      final int? timeToFallAsleepSecondsInt,
+      @JsonKey(name: 'time_awake_during_sleep_seconds_int')
+      final int? timeAwakeDuringSleepSecondsInt}) = _$DurationImpl;
 
   factory _Duration.fromJson(Map<String, dynamic> json) =
       _$DurationImpl.fromJson;

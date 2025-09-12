@@ -12,8 +12,7 @@ part of 'raw_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RawData _$RawDataFromJson(Map<String, dynamic> json) {
   return _RawData.fromJson(json);
@@ -49,15 +48,14 @@ abstract class $RawDataCopyWith<$Res> {
   factory $RawDataCopyWith(RawData value, $Res Function(RawData) then) =
       _$RawDataCopyWithImpl<$Res, RawData>;
   @useResult
-  $Res call({
-    int? version,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'pre_existing_data') bool? preExistingData,
-    @JsonKey(name: 'sleep_health') SleepHealth? sleepHealth,
-  });
+  $Res call(
+      {int? version,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'pre_existing_data') bool? preExistingData,
+      @JsonKey(name: 'sleep_health') SleepHealth? sleepHealth});
 
   $SleepHealthCopyWith<$Res>? get sleepHealth;
 }
@@ -85,39 +83,36 @@ class _$RawDataCopyWithImpl<$Res, $Val extends RawData>
     Object? preExistingData = freezed,
     Object? sleepHealth = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            version: freezed == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            documentVersion: freezed == documentVersion
-                ? _value.documentVersion
-                : documentVersion // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            preExistingData: freezed == preExistingData
-                ? _value.preExistingData
-                : preExistingData // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            sleepHealth: freezed == sleepHealth
-                ? _value.sleepHealth
-                : sleepHealth // ignore: cast_nullable_to_non_nullable
-                      as SleepHealth?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      preExistingData: freezed == preExistingData
+          ? _value.preExistingData
+          : preExistingData // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sleepHealth: freezed == sleepHealth
+          ? _value.sleepHealth
+          : sleepHealth // ignore: cast_nullable_to_non_nullable
+              as SleepHealth?,
+    ) as $Val);
   }
 
   /// Create a copy of RawData
@@ -138,20 +133,18 @@ class _$RawDataCopyWithImpl<$Res, $Val extends RawData>
 /// @nodoc
 abstract class _$$RawDataImplCopyWith<$Res> implements $RawDataCopyWith<$Res> {
   factory _$$RawDataImplCopyWith(
-    _$RawDataImpl value,
-    $Res Function(_$RawDataImpl) then,
-  ) = __$$RawDataImplCopyWithImpl<$Res>;
+          _$RawDataImpl value, $Res Function(_$RawDataImpl) then) =
+      __$$RawDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? version,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'pre_existing_data') bool? preExistingData,
-    @JsonKey(name: 'sleep_health') SleepHealth? sleepHealth,
-  });
+  $Res call(
+      {int? version,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'pre_existing_data') bool? preExistingData,
+      @JsonKey(name: 'sleep_health') SleepHealth? sleepHealth});
 
   @override
   $SleepHealthCopyWith<$Res>? get sleepHealth;
@@ -162,9 +155,8 @@ class __$$RawDataImplCopyWithImpl<$Res>
     extends _$RawDataCopyWithImpl<$Res, _$RawDataImpl>
     implements _$$RawDataImplCopyWith<$Res> {
   __$$RawDataImplCopyWithImpl(
-    _$RawDataImpl _value,
-    $Res Function(_$RawDataImpl) _then,
-  ) : super(_value, _then);
+      _$RawDataImpl _value, $Res Function(_$RawDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of RawData
   /// with the given fields replaced by the non-null parameter values.
@@ -179,53 +171,50 @@ class __$$RawDataImplCopyWithImpl<$Res>
     Object? preExistingData = freezed,
     Object? sleepHealth = freezed,
   }) {
-    return _then(
-      _$RawDataImpl(
-        version: freezed == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        documentVersion: freezed == documentVersion
-            ? _value.documentVersion
-            : documentVersion // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        preExistingData: freezed == preExistingData
-            ? _value.preExistingData
-            : preExistingData // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        sleepHealth: freezed == sleepHealth
-            ? _value.sleepHealth
-            : sleepHealth // ignore: cast_nullable_to_non_nullable
-                  as SleepHealth?,
-      ),
-    );
+    return _then(_$RawDataImpl(
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      preExistingData: freezed == preExistingData
+          ? _value.preExistingData
+          : preExistingData // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sleepHealth: freezed == sleepHealth
+          ? _value.sleepHealth
+          : sleepHealth // ignore: cast_nullable_to_non_nullable
+              as SleepHealth?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RawDataImpl implements _RawData {
-  _$RawDataImpl({
-    this.version,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'document_version') this.documentVersion,
-    @JsonKey(name: 'pre_existing_data') this.preExistingData,
-    @JsonKey(name: 'sleep_health') this.sleepHealth,
-  });
+  _$RawDataImpl(
+      {this.version,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'document_version') this.documentVersion,
+      @JsonKey(name: 'pre_existing_data') this.preExistingData,
+      @JsonKey(name: 'sleep_health') this.sleepHealth});
 
   factory _$RawDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$RawDataImplFromJson(json);
@@ -277,16 +266,8 @@ class _$RawDataImpl implements _RawData {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    version,
-    dataStructure,
-    clientUuid,
-    userId,
-    documentVersion,
-    preExistingData,
-    sleepHealth,
-  );
+  int get hashCode => Object.hash(runtimeType, version, dataStructure,
+      clientUuid, userId, documentVersion, preExistingData, sleepHealth);
 
   /// Create a copy of RawData
   /// with the given fields replaced by the non-null parameter values.
@@ -298,20 +279,22 @@ class _$RawDataImpl implements _RawData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RawDataImplToJson(this);
+    return _$$RawDataImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _RawData implements RawData {
-  factory _RawData({
-    final int? version,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'document_version') final int? documentVersion,
-    @JsonKey(name: 'pre_existing_data') final bool? preExistingData,
-    @JsonKey(name: 'sleep_health') final SleepHealth? sleepHealth,
-  }) = _$RawDataImpl;
+  factory _RawData(
+          {final int? version,
+          @JsonKey(name: 'data_structure') final String? dataStructure,
+          @JsonKey(name: 'client_uuid') final String? clientUuid,
+          @JsonKey(name: 'user_id') final String? userId,
+          @JsonKey(name: 'document_version') final int? documentVersion,
+          @JsonKey(name: 'pre_existing_data') final bool? preExistingData,
+          @JsonKey(name: 'sleep_health') final SleepHealth? sleepHealth}) =
+      _$RawDataImpl;
 
   factory _RawData.fromJson(Map<String, dynamic> json) = _$RawDataImpl.fromJson;
 

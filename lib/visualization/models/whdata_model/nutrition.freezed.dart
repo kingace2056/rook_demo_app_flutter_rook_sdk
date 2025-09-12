@@ -12,8 +12,7 @@ part of 'nutrition.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Nutrition _$NutritionFromJson(Map<String, dynamic> json) {
   return _Nutrition.fromJson(json);
@@ -59,22 +58,21 @@ abstract class $NutritionCopyWith<$Res> {
   factory $NutritionCopyWith(Nutrition value, $Res Function(Nutrition) then) =
       _$NutritionCopyWithImpl<$Res, Nutrition>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'food_intake_float') double? foodIntakeFloat,
-    @JsonKey(name: 'calories_intake_kcal_float')
-    double? caloriesIntakeKcalFloat,
-    @JsonKey(name: 'protein_intake_g_float') double? proteinIntakeGFloat,
-    @JsonKey(name: 'sugar_intake_g_float') double? sugarIntakeGFloat,
-    @JsonKey(name: 'fat_intake_g_float') double? fatIntakeGFloat,
-    @JsonKey(name: 'trans_fat_intake_g_float') double? transFatIntakeGFloat,
-    @JsonKey(name: 'carbohydrates_intake_g_float')
-    double? carbohydratesIntakeGFloat,
-    @JsonKey(name: 'fiber_intake_g_float') double? fiberIntakeGFloat,
-    @JsonKey(name: 'alcohol_intake_g_float') double? alcoholIntakeGFloat,
-    @JsonKey(name: 'sodium_intake_mg_float') double? sodiumIntakeMgFloat,
-    @JsonKey(name: 'cholesterol_intake_mg_float')
-    double? cholesterolIntakeMgFloat,
-  });
+  $Res call(
+      {@JsonKey(name: 'food_intake_float') double? foodIntakeFloat,
+      @JsonKey(name: 'calories_intake_kcal_float')
+      double? caloriesIntakeKcalFloat,
+      @JsonKey(name: 'protein_intake_g_float') double? proteinIntakeGFloat,
+      @JsonKey(name: 'sugar_intake_g_float') double? sugarIntakeGFloat,
+      @JsonKey(name: 'fat_intake_g_float') double? fatIntakeGFloat,
+      @JsonKey(name: 'trans_fat_intake_g_float') double? transFatIntakeGFloat,
+      @JsonKey(name: 'carbohydrates_intake_g_float')
+      double? carbohydratesIntakeGFloat,
+      @JsonKey(name: 'fiber_intake_g_float') double? fiberIntakeGFloat,
+      @JsonKey(name: 'alcohol_intake_g_float') double? alcoholIntakeGFloat,
+      @JsonKey(name: 'sodium_intake_mg_float') double? sodiumIntakeMgFloat,
+      @JsonKey(name: 'cholesterol_intake_mg_float')
+      double? cholesterolIntakeMgFloat});
 }
 
 /// @nodoc
@@ -104,55 +102,52 @@ class _$NutritionCopyWithImpl<$Res, $Val extends Nutrition>
     Object? sodiumIntakeMgFloat = freezed,
     Object? cholesterolIntakeMgFloat = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            foodIntakeFloat: freezed == foodIntakeFloat
-                ? _value.foodIntakeFloat
-                : foodIntakeFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            caloriesIntakeKcalFloat: freezed == caloriesIntakeKcalFloat
-                ? _value.caloriesIntakeKcalFloat
-                : caloriesIntakeKcalFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            proteinIntakeGFloat: freezed == proteinIntakeGFloat
-                ? _value.proteinIntakeGFloat
-                : proteinIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            sugarIntakeGFloat: freezed == sugarIntakeGFloat
-                ? _value.sugarIntakeGFloat
-                : sugarIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            fatIntakeGFloat: freezed == fatIntakeGFloat
-                ? _value.fatIntakeGFloat
-                : fatIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            transFatIntakeGFloat: freezed == transFatIntakeGFloat
-                ? _value.transFatIntakeGFloat
-                : transFatIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            carbohydratesIntakeGFloat: freezed == carbohydratesIntakeGFloat
-                ? _value.carbohydratesIntakeGFloat
-                : carbohydratesIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            fiberIntakeGFloat: freezed == fiberIntakeGFloat
-                ? _value.fiberIntakeGFloat
-                : fiberIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            alcoholIntakeGFloat: freezed == alcoholIntakeGFloat
-                ? _value.alcoholIntakeGFloat
-                : alcoholIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            sodiumIntakeMgFloat: freezed == sodiumIntakeMgFloat
-                ? _value.sodiumIntakeMgFloat
-                : sodiumIntakeMgFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            cholesterolIntakeMgFloat: freezed == cholesterolIntakeMgFloat
-                ? _value.cholesterolIntakeMgFloat
-                : cholesterolIntakeMgFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      foodIntakeFloat: freezed == foodIntakeFloat
+          ? _value.foodIntakeFloat
+          : foodIntakeFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      caloriesIntakeKcalFloat: freezed == caloriesIntakeKcalFloat
+          ? _value.caloriesIntakeKcalFloat
+          : caloriesIntakeKcalFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      proteinIntakeGFloat: freezed == proteinIntakeGFloat
+          ? _value.proteinIntakeGFloat
+          : proteinIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      sugarIntakeGFloat: freezed == sugarIntakeGFloat
+          ? _value.sugarIntakeGFloat
+          : sugarIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fatIntakeGFloat: freezed == fatIntakeGFloat
+          ? _value.fatIntakeGFloat
+          : fatIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      transFatIntakeGFloat: freezed == transFatIntakeGFloat
+          ? _value.transFatIntakeGFloat
+          : transFatIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      carbohydratesIntakeGFloat: freezed == carbohydratesIntakeGFloat
+          ? _value.carbohydratesIntakeGFloat
+          : carbohydratesIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fiberIntakeGFloat: freezed == fiberIntakeGFloat
+          ? _value.fiberIntakeGFloat
+          : fiberIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      alcoholIntakeGFloat: freezed == alcoholIntakeGFloat
+          ? _value.alcoholIntakeGFloat
+          : alcoholIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      sodiumIntakeMgFloat: freezed == sodiumIntakeMgFloat
+          ? _value.sodiumIntakeMgFloat
+          : sodiumIntakeMgFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      cholesterolIntakeMgFloat: freezed == cholesterolIntakeMgFloat
+          ? _value.cholesterolIntakeMgFloat
+          : cholesterolIntakeMgFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ) as $Val);
   }
 }
 
@@ -160,27 +155,25 @@ class _$NutritionCopyWithImpl<$Res, $Val extends Nutrition>
 abstract class _$$NutritionImplCopyWith<$Res>
     implements $NutritionCopyWith<$Res> {
   factory _$$NutritionImplCopyWith(
-    _$NutritionImpl value,
-    $Res Function(_$NutritionImpl) then,
-  ) = __$$NutritionImplCopyWithImpl<$Res>;
+          _$NutritionImpl value, $Res Function(_$NutritionImpl) then) =
+      __$$NutritionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'food_intake_float') double? foodIntakeFloat,
-    @JsonKey(name: 'calories_intake_kcal_float')
-    double? caloriesIntakeKcalFloat,
-    @JsonKey(name: 'protein_intake_g_float') double? proteinIntakeGFloat,
-    @JsonKey(name: 'sugar_intake_g_float') double? sugarIntakeGFloat,
-    @JsonKey(name: 'fat_intake_g_float') double? fatIntakeGFloat,
-    @JsonKey(name: 'trans_fat_intake_g_float') double? transFatIntakeGFloat,
-    @JsonKey(name: 'carbohydrates_intake_g_float')
-    double? carbohydratesIntakeGFloat,
-    @JsonKey(name: 'fiber_intake_g_float') double? fiberIntakeGFloat,
-    @JsonKey(name: 'alcohol_intake_g_float') double? alcoholIntakeGFloat,
-    @JsonKey(name: 'sodium_intake_mg_float') double? sodiumIntakeMgFloat,
-    @JsonKey(name: 'cholesterol_intake_mg_float')
-    double? cholesterolIntakeMgFloat,
-  });
+  $Res call(
+      {@JsonKey(name: 'food_intake_float') double? foodIntakeFloat,
+      @JsonKey(name: 'calories_intake_kcal_float')
+      double? caloriesIntakeKcalFloat,
+      @JsonKey(name: 'protein_intake_g_float') double? proteinIntakeGFloat,
+      @JsonKey(name: 'sugar_intake_g_float') double? sugarIntakeGFloat,
+      @JsonKey(name: 'fat_intake_g_float') double? fatIntakeGFloat,
+      @JsonKey(name: 'trans_fat_intake_g_float') double? transFatIntakeGFloat,
+      @JsonKey(name: 'carbohydrates_intake_g_float')
+      double? carbohydratesIntakeGFloat,
+      @JsonKey(name: 'fiber_intake_g_float') double? fiberIntakeGFloat,
+      @JsonKey(name: 'alcohol_intake_g_float') double? alcoholIntakeGFloat,
+      @JsonKey(name: 'sodium_intake_mg_float') double? sodiumIntakeMgFloat,
+      @JsonKey(name: 'cholesterol_intake_mg_float')
+      double? cholesterolIntakeMgFloat});
 }
 
 /// @nodoc
@@ -188,9 +181,8 @@ class __$$NutritionImplCopyWithImpl<$Res>
     extends _$NutritionCopyWithImpl<$Res, _$NutritionImpl>
     implements _$$NutritionImplCopyWith<$Res> {
   __$$NutritionImplCopyWithImpl(
-    _$NutritionImpl _value,
-    $Res Function(_$NutritionImpl) _then,
-  ) : super(_value, _then);
+      _$NutritionImpl _value, $Res Function(_$NutritionImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Nutrition
   /// with the given fields replaced by the non-null parameter values.
@@ -209,74 +201,72 @@ class __$$NutritionImplCopyWithImpl<$Res>
     Object? sodiumIntakeMgFloat = freezed,
     Object? cholesterolIntakeMgFloat = freezed,
   }) {
-    return _then(
-      _$NutritionImpl(
-        foodIntakeFloat: freezed == foodIntakeFloat
-            ? _value.foodIntakeFloat
-            : foodIntakeFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        caloriesIntakeKcalFloat: freezed == caloriesIntakeKcalFloat
-            ? _value.caloriesIntakeKcalFloat
-            : caloriesIntakeKcalFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        proteinIntakeGFloat: freezed == proteinIntakeGFloat
-            ? _value.proteinIntakeGFloat
-            : proteinIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        sugarIntakeGFloat: freezed == sugarIntakeGFloat
-            ? _value.sugarIntakeGFloat
-            : sugarIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        fatIntakeGFloat: freezed == fatIntakeGFloat
-            ? _value.fatIntakeGFloat
-            : fatIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        transFatIntakeGFloat: freezed == transFatIntakeGFloat
-            ? _value.transFatIntakeGFloat
-            : transFatIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        carbohydratesIntakeGFloat: freezed == carbohydratesIntakeGFloat
-            ? _value.carbohydratesIntakeGFloat
-            : carbohydratesIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        fiberIntakeGFloat: freezed == fiberIntakeGFloat
-            ? _value.fiberIntakeGFloat
-            : fiberIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        alcoholIntakeGFloat: freezed == alcoholIntakeGFloat
-            ? _value.alcoholIntakeGFloat
-            : alcoholIntakeGFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        sodiumIntakeMgFloat: freezed == sodiumIntakeMgFloat
-            ? _value.sodiumIntakeMgFloat
-            : sodiumIntakeMgFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        cholesterolIntakeMgFloat: freezed == cholesterolIntakeMgFloat
-            ? _value.cholesterolIntakeMgFloat
-            : cholesterolIntakeMgFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-      ),
-    );
+    return _then(_$NutritionImpl(
+      foodIntakeFloat: freezed == foodIntakeFloat
+          ? _value.foodIntakeFloat
+          : foodIntakeFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      caloriesIntakeKcalFloat: freezed == caloriesIntakeKcalFloat
+          ? _value.caloriesIntakeKcalFloat
+          : caloriesIntakeKcalFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      proteinIntakeGFloat: freezed == proteinIntakeGFloat
+          ? _value.proteinIntakeGFloat
+          : proteinIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      sugarIntakeGFloat: freezed == sugarIntakeGFloat
+          ? _value.sugarIntakeGFloat
+          : sugarIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fatIntakeGFloat: freezed == fatIntakeGFloat
+          ? _value.fatIntakeGFloat
+          : fatIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      transFatIntakeGFloat: freezed == transFatIntakeGFloat
+          ? _value.transFatIntakeGFloat
+          : transFatIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      carbohydratesIntakeGFloat: freezed == carbohydratesIntakeGFloat
+          ? _value.carbohydratesIntakeGFloat
+          : carbohydratesIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fiberIntakeGFloat: freezed == fiberIntakeGFloat
+          ? _value.fiberIntakeGFloat
+          : fiberIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      alcoholIntakeGFloat: freezed == alcoholIntakeGFloat
+          ? _value.alcoholIntakeGFloat
+          : alcoholIntakeGFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      sodiumIntakeMgFloat: freezed == sodiumIntakeMgFloat
+          ? _value.sodiumIntakeMgFloat
+          : sodiumIntakeMgFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      cholesterolIntakeMgFloat: freezed == cholesterolIntakeMgFloat
+          ? _value.cholesterolIntakeMgFloat
+          : cholesterolIntakeMgFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NutritionImpl implements _Nutrition {
-  _$NutritionImpl({
-    @JsonKey(name: 'food_intake_float') this.foodIntakeFloat,
-    @JsonKey(name: 'calories_intake_kcal_float') this.caloriesIntakeKcalFloat,
-    @JsonKey(name: 'protein_intake_g_float') this.proteinIntakeGFloat,
-    @JsonKey(name: 'sugar_intake_g_float') this.sugarIntakeGFloat,
-    @JsonKey(name: 'fat_intake_g_float') this.fatIntakeGFloat,
-    @JsonKey(name: 'trans_fat_intake_g_float') this.transFatIntakeGFloat,
-    @JsonKey(name: 'carbohydrates_intake_g_float')
-    this.carbohydratesIntakeGFloat,
-    @JsonKey(name: 'fiber_intake_g_float') this.fiberIntakeGFloat,
-    @JsonKey(name: 'alcohol_intake_g_float') this.alcoholIntakeGFloat,
-    @JsonKey(name: 'sodium_intake_mg_float') this.sodiumIntakeMgFloat,
-    @JsonKey(name: 'cholesterol_intake_mg_float') this.cholesterolIntakeMgFloat,
-  });
+  _$NutritionImpl(
+      {@JsonKey(name: 'food_intake_float') this.foodIntakeFloat,
+      @JsonKey(name: 'calories_intake_kcal_float') this.caloriesIntakeKcalFloat,
+      @JsonKey(name: 'protein_intake_g_float') this.proteinIntakeGFloat,
+      @JsonKey(name: 'sugar_intake_g_float') this.sugarIntakeGFloat,
+      @JsonKey(name: 'fat_intake_g_float') this.fatIntakeGFloat,
+      @JsonKey(name: 'trans_fat_intake_g_float') this.transFatIntakeGFloat,
+      @JsonKey(name: 'carbohydrates_intake_g_float')
+      this.carbohydratesIntakeGFloat,
+      @JsonKey(name: 'fiber_intake_g_float') this.fiberIntakeGFloat,
+      @JsonKey(name: 'alcohol_intake_g_float') this.alcoholIntakeGFloat,
+      @JsonKey(name: 'sodium_intake_mg_float') this.sodiumIntakeMgFloat,
+      @JsonKey(name: 'cholesterol_intake_mg_float')
+      this.cholesterolIntakeMgFloat});
 
   factory _$NutritionImpl.fromJson(Map<String, dynamic> json) =>
       _$$NutritionImplFromJson(json);
@@ -328,9 +318,7 @@ class _$NutritionImpl implements _Nutrition {
             (identical(other.foodIntakeFloat, foodIntakeFloat) ||
                 other.foodIntakeFloat == foodIntakeFloat) &&
             (identical(
-                  other.caloriesIntakeKcalFloat,
-                  caloriesIntakeKcalFloat,
-                ) ||
+                    other.caloriesIntakeKcalFloat, caloriesIntakeKcalFloat) ||
                 other.caloriesIntakeKcalFloat == caloriesIntakeKcalFloat) &&
             (identical(other.proteinIntakeGFloat, proteinIntakeGFloat) ||
                 other.proteinIntakeGFloat == proteinIntakeGFloat) &&
@@ -340,10 +328,8 @@ class _$NutritionImpl implements _Nutrition {
                 other.fatIntakeGFloat == fatIntakeGFloat) &&
             (identical(other.transFatIntakeGFloat, transFatIntakeGFloat) ||
                 other.transFatIntakeGFloat == transFatIntakeGFloat) &&
-            (identical(
-                  other.carbohydratesIntakeGFloat,
-                  carbohydratesIntakeGFloat,
-                ) ||
+            (identical(other.carbohydratesIntakeGFloat,
+                    carbohydratesIntakeGFloat) ||
                 other.carbohydratesIntakeGFloat == carbohydratesIntakeGFloat) &&
             (identical(other.fiberIntakeGFloat, fiberIntakeGFloat) ||
                 other.fiberIntakeGFloat == fiberIntakeGFloat) &&
@@ -352,28 +338,25 @@ class _$NutritionImpl implements _Nutrition {
             (identical(other.sodiumIntakeMgFloat, sodiumIntakeMgFloat) ||
                 other.sodiumIntakeMgFloat == sodiumIntakeMgFloat) &&
             (identical(
-                  other.cholesterolIntakeMgFloat,
-                  cholesterolIntakeMgFloat,
-                ) ||
+                    other.cholesterolIntakeMgFloat, cholesterolIntakeMgFloat) ||
                 other.cholesterolIntakeMgFloat == cholesterolIntakeMgFloat));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    foodIntakeFloat,
-    caloriesIntakeKcalFloat,
-    proteinIntakeGFloat,
-    sugarIntakeGFloat,
-    fatIntakeGFloat,
-    transFatIntakeGFloat,
-    carbohydratesIntakeGFloat,
-    fiberIntakeGFloat,
-    alcoholIntakeGFloat,
-    sodiumIntakeMgFloat,
-    cholesterolIntakeMgFloat,
-  );
+      runtimeType,
+      foodIntakeFloat,
+      caloriesIntakeKcalFloat,
+      proteinIntakeGFloat,
+      sugarIntakeGFloat,
+      fatIntakeGFloat,
+      transFatIntakeGFloat,
+      carbohydratesIntakeGFloat,
+      fiberIntakeGFloat,
+      alcoholIntakeGFloat,
+      sodiumIntakeMgFloat,
+      cholesterolIntakeMgFloat);
 
   /// Create a copy of Nutrition
   /// with the given fields replaced by the non-null parameter values.
@@ -385,28 +368,32 @@ class _$NutritionImpl implements _Nutrition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NutritionImplToJson(this);
+    return _$$NutritionImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Nutrition implements Nutrition {
-  factory _Nutrition({
-    @JsonKey(name: 'food_intake_float') final double? foodIntakeFloat,
-    @JsonKey(name: 'calories_intake_kcal_float')
-    final double? caloriesIntakeKcalFloat,
-    @JsonKey(name: 'protein_intake_g_float') final double? proteinIntakeGFloat,
-    @JsonKey(name: 'sugar_intake_g_float') final double? sugarIntakeGFloat,
-    @JsonKey(name: 'fat_intake_g_float') final double? fatIntakeGFloat,
-    @JsonKey(name: 'trans_fat_intake_g_float')
-    final double? transFatIntakeGFloat,
-    @JsonKey(name: 'carbohydrates_intake_g_float')
-    final double? carbohydratesIntakeGFloat,
-    @JsonKey(name: 'fiber_intake_g_float') final double? fiberIntakeGFloat,
-    @JsonKey(name: 'alcohol_intake_g_float') final double? alcoholIntakeGFloat,
-    @JsonKey(name: 'sodium_intake_mg_float') final double? sodiumIntakeMgFloat,
-    @JsonKey(name: 'cholesterol_intake_mg_float')
-    final double? cholesterolIntakeMgFloat,
-  }) = _$NutritionImpl;
+  factory _Nutrition(
+      {@JsonKey(name: 'food_intake_float') final double? foodIntakeFloat,
+      @JsonKey(name: 'calories_intake_kcal_float')
+      final double? caloriesIntakeKcalFloat,
+      @JsonKey(name: 'protein_intake_g_float')
+      final double? proteinIntakeGFloat,
+      @JsonKey(name: 'sugar_intake_g_float') final double? sugarIntakeGFloat,
+      @JsonKey(name: 'fat_intake_g_float') final double? fatIntakeGFloat,
+      @JsonKey(name: 'trans_fat_intake_g_float')
+      final double? transFatIntakeGFloat,
+      @JsonKey(name: 'carbohydrates_intake_g_float')
+      final double? carbohydratesIntakeGFloat,
+      @JsonKey(name: 'fiber_intake_g_float') final double? fiberIntakeGFloat,
+      @JsonKey(name: 'alcohol_intake_g_float')
+      final double? alcoholIntakeGFloat,
+      @JsonKey(name: 'sodium_intake_mg_float')
+      final double? sodiumIntakeMgFloat,
+      @JsonKey(name: 'cholesterol_intake_mg_float')
+      final double? cholesterolIntakeMgFloat}) = _$NutritionImpl;
 
   factory _Nutrition.fromJson(Map<String, dynamic> json) =
       _$NutritionImpl.fromJson;

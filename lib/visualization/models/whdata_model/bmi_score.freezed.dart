@@ -12,8 +12,7 @@ part of 'bmi_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BmiScore _$BmiScoreFromJson(Map<String, dynamic> json) {
   return _BmiScore.fromJson(json);
@@ -48,14 +47,13 @@ abstract class $BmiScoreCopyWith<$Res> {
   factory $BmiScoreCopyWith(BmiScore value, $Res Function(BmiScore) then) =
       _$BmiScoreCopyWithImpl<$Res, BmiScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    bool? calculatedWithMissingUserInfoBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      bool? calculatedWithMissingUserInfoBool});
 }
 
 /// @nodoc
@@ -79,32 +77,29 @@ class _$BmiScoreCopyWithImpl<$Res, $Val extends BmiScore>
     Object? score0100Int = freezed,
     Object? calculatedWithMissingUserInfoBool = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            datetimeString: freezed == datetimeString
-                ? _value.datetimeString
-                : datetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAtString: freezed == createdAtString
-                ? _value.createdAtString
-                : createdAtString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAtString: freezed == updatedAtString
-                ? _value.updatedAtString
-                : updatedAtString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            score0100Int: freezed == score0100Int
-                ? _value.score0100Int
-                : score0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            calculatedWithMissingUserInfoBool:
-                freezed == calculatedWithMissingUserInfoBool
-                ? _value.calculatedWithMissingUserInfoBool
-                : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAtString: freezed == createdAtString
+          ? _value.createdAtString
+          : createdAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAtString: freezed == updatedAtString
+          ? _value.updatedAtString
+          : updatedAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      calculatedWithMissingUserInfoBool: freezed ==
+              calculatedWithMissingUserInfoBool
+          ? _value.calculatedWithMissingUserInfoBool
+          : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
   }
 }
 
@@ -112,19 +107,17 @@ class _$BmiScoreCopyWithImpl<$Res, $Val extends BmiScore>
 abstract class _$$BmiScoreImplCopyWith<$Res>
     implements $BmiScoreCopyWith<$Res> {
   factory _$$BmiScoreImplCopyWith(
-    _$BmiScoreImpl value,
-    $Res Function(_$BmiScoreImpl) then,
-  ) = __$$BmiScoreImplCopyWithImpl<$Res>;
+          _$BmiScoreImpl value, $Res Function(_$BmiScoreImpl) then) =
+      __$$BmiScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    bool? calculatedWithMissingUserInfoBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      bool? calculatedWithMissingUserInfoBool});
 }
 
 /// @nodoc
@@ -132,9 +125,8 @@ class __$$BmiScoreImplCopyWithImpl<$Res>
     extends _$BmiScoreCopyWithImpl<$Res, _$BmiScoreImpl>
     implements _$$BmiScoreImplCopyWith<$Res> {
   __$$BmiScoreImplCopyWithImpl(
-    _$BmiScoreImpl _value,
-    $Res Function(_$BmiScoreImpl) _then,
-  ) : super(_value, _then);
+      _$BmiScoreImpl _value, $Res Function(_$BmiScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BmiScore
   /// with the given fields replaced by the non-null parameter values.
@@ -147,45 +139,42 @@ class __$$BmiScoreImplCopyWithImpl<$Res>
     Object? score0100Int = freezed,
     Object? calculatedWithMissingUserInfoBool = freezed,
   }) {
-    return _then(
-      _$BmiScoreImpl(
-        datetimeString: freezed == datetimeString
-            ? _value.datetimeString
-            : datetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAtString: freezed == createdAtString
-            ? _value.createdAtString
-            : createdAtString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAtString: freezed == updatedAtString
-            ? _value.updatedAtString
-            : updatedAtString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        score0100Int: freezed == score0100Int
-            ? _value.score0100Int
-            : score0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        calculatedWithMissingUserInfoBool:
-            freezed == calculatedWithMissingUserInfoBool
-            ? _value.calculatedWithMissingUserInfoBool
-            : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      ),
-    );
+    return _then(_$BmiScoreImpl(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAtString: freezed == createdAtString
+          ? _value.createdAtString
+          : createdAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAtString: freezed == updatedAtString
+          ? _value.updatedAtString
+          : updatedAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      calculatedWithMissingUserInfoBool: freezed ==
+              calculatedWithMissingUserInfoBool
+          ? _value.calculatedWithMissingUserInfoBool
+          : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$BmiScoreImpl implements _BmiScore {
-  _$BmiScoreImpl({
-    @JsonKey(name: 'datetime_string') this.datetimeString,
-    @JsonKey(name: 'created_at_string') this.createdAtString,
-    @JsonKey(name: 'updated_at_string') this.updatedAtString,
-    @JsonKey(name: 'score_0_100_int') this.score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    this.calculatedWithMissingUserInfoBool,
-  });
+  _$BmiScoreImpl(
+      {@JsonKey(name: 'datetime_string') this.datetimeString,
+      @JsonKey(name: 'created_at_string') this.createdAtString,
+      @JsonKey(name: 'updated_at_string') this.updatedAtString,
+      @JsonKey(name: 'score_0_100_int') this.score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      this.calculatedWithMissingUserInfoBool});
 
   factory _$BmiScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$BmiScoreImplFromJson(json);
@@ -224,24 +213,16 @@ class _$BmiScoreImpl implements _BmiScore {
                 other.updatedAtString == updatedAtString) &&
             (identical(other.score0100Int, score0100Int) ||
                 other.score0100Int == score0100Int) &&
-            (identical(
-                  other.calculatedWithMissingUserInfoBool,
-                  calculatedWithMissingUserInfoBool,
-                ) ||
+            (identical(other.calculatedWithMissingUserInfoBool,
+                    calculatedWithMissingUserInfoBool) ||
                 other.calculatedWithMissingUserInfoBool ==
                     calculatedWithMissingUserInfoBool));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    datetimeString,
-    createdAtString,
-    updatedAtString,
-    score0100Int,
-    calculatedWithMissingUserInfoBool,
-  );
+  int get hashCode => Object.hash(runtimeType, datetimeString, createdAtString,
+      updatedAtString, score0100Int, calculatedWithMissingUserInfoBool);
 
   /// Create a copy of BmiScore
   /// with the given fields replaced by the non-null parameter values.
@@ -253,19 +234,20 @@ class _$BmiScoreImpl implements _BmiScore {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BmiScoreImplToJson(this);
+    return _$$BmiScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _BmiScore implements BmiScore {
-  factory _BmiScore({
-    @JsonKey(name: 'datetime_string') final DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') final DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') final DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') final int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    final bool? calculatedWithMissingUserInfoBool,
-  }) = _$BmiScoreImpl;
+  factory _BmiScore(
+      {@JsonKey(name: 'datetime_string') final DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') final DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') final DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') final int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      final bool? calculatedWithMissingUserInfoBool}) = _$BmiScoreImpl;
 
   factory _BmiScore.fromJson(Map<String, dynamic> json) =
       _$BmiScoreImpl.fromJson;

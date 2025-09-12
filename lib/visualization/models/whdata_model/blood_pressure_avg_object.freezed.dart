@@ -12,12 +12,10 @@ part of 'blood_pressure_avg_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BloodPressureAvgObject _$BloodPressureAvgObjectFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _BloodPressureAvgObject.fromJson(json);
 }
 
@@ -40,22 +38,18 @@ mixin _$BloodPressureAvgObject {
 
 /// @nodoc
 abstract class $BloodPressureAvgObjectCopyWith<$Res> {
-  factory $BloodPressureAvgObjectCopyWith(
-    BloodPressureAvgObject value,
-    $Res Function(BloodPressureAvgObject) then,
-  ) = _$BloodPressureAvgObjectCopyWithImpl<$Res, BloodPressureAvgObject>;
+  factory $BloodPressureAvgObjectCopyWith(BloodPressureAvgObject value,
+          $Res Function(BloodPressureAvgObject) then) =
+      _$BloodPressureAvgObjectCopyWithImpl<$Res, BloodPressureAvgObject>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'systolic_mmHg_int') int? systolicMmHgInt,
-    @JsonKey(name: 'diastolic_mmHg_int') int? diastolicMmHgInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'systolic_mmHg_int') int? systolicMmHgInt,
+      @JsonKey(name: 'diastolic_mmHg_int') int? diastolicMmHgInt});
 }
 
 /// @nodoc
-class _$BloodPressureAvgObjectCopyWithImpl<
-  $Res,
-  $Val extends BloodPressureAvgObject
->
+class _$BloodPressureAvgObjectCopyWithImpl<$Res,
+        $Val extends BloodPressureAvgObject>
     implements $BloodPressureAvgObjectCopyWith<$Res> {
   _$BloodPressureAvgObjectCopyWithImpl(this._value, this._then);
 
@@ -72,19 +66,16 @@ class _$BloodPressureAvgObjectCopyWithImpl<
     Object? systolicMmHgInt = freezed,
     Object? diastolicMmHgInt = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            systolicMmHgInt: freezed == systolicMmHgInt
-                ? _value.systolicMmHgInt
-                : systolicMmHgInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            diastolicMmHgInt: freezed == diastolicMmHgInt
-                ? _value.diastolicMmHgInt
-                : diastolicMmHgInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      systolicMmHgInt: freezed == systolicMmHgInt
+          ? _value.systolicMmHgInt
+          : systolicMmHgInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      diastolicMmHgInt: freezed == diastolicMmHgInt
+          ? _value.diastolicMmHgInt
+          : diastolicMmHgInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 }
 
@@ -92,26 +83,25 @@ class _$BloodPressureAvgObjectCopyWithImpl<
 abstract class _$$BloodPressureAvgObjectImplCopyWith<$Res>
     implements $BloodPressureAvgObjectCopyWith<$Res> {
   factory _$$BloodPressureAvgObjectImplCopyWith(
-    _$BloodPressureAvgObjectImpl value,
-    $Res Function(_$BloodPressureAvgObjectImpl) then,
-  ) = __$$BloodPressureAvgObjectImplCopyWithImpl<$Res>;
+          _$BloodPressureAvgObjectImpl value,
+          $Res Function(_$BloodPressureAvgObjectImpl) then) =
+      __$$BloodPressureAvgObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'systolic_mmHg_int') int? systolicMmHgInt,
-    @JsonKey(name: 'diastolic_mmHg_int') int? diastolicMmHgInt,
-  });
+  $Res call(
+      {@JsonKey(name: 'systolic_mmHg_int') int? systolicMmHgInt,
+      @JsonKey(name: 'diastolic_mmHg_int') int? diastolicMmHgInt});
 }
 
 /// @nodoc
 class __$$BloodPressureAvgObjectImplCopyWithImpl<$Res>
-    extends
-        _$BloodPressureAvgObjectCopyWithImpl<$Res, _$BloodPressureAvgObjectImpl>
+    extends _$BloodPressureAvgObjectCopyWithImpl<$Res,
+        _$BloodPressureAvgObjectImpl>
     implements _$$BloodPressureAvgObjectImplCopyWith<$Res> {
   __$$BloodPressureAvgObjectImplCopyWithImpl(
-    _$BloodPressureAvgObjectImpl _value,
-    $Res Function(_$BloodPressureAvgObjectImpl) _then,
-  ) : super(_value, _then);
+      _$BloodPressureAvgObjectImpl _value,
+      $Res Function(_$BloodPressureAvgObjectImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BloodPressureAvgObject
   /// with the given fields replaced by the non-null parameter values.
@@ -121,28 +111,25 @@ class __$$BloodPressureAvgObjectImplCopyWithImpl<$Res>
     Object? systolicMmHgInt = freezed,
     Object? diastolicMmHgInt = freezed,
   }) {
-    return _then(
-      _$BloodPressureAvgObjectImpl(
-        systolicMmHgInt: freezed == systolicMmHgInt
-            ? _value.systolicMmHgInt
-            : systolicMmHgInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        diastolicMmHgInt: freezed == diastolicMmHgInt
-            ? _value.diastolicMmHgInt
-            : diastolicMmHgInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$BloodPressureAvgObjectImpl(
+      systolicMmHgInt: freezed == systolicMmHgInt
+          ? _value.systolicMmHgInt
+          : systolicMmHgInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      diastolicMmHgInt: freezed == diastolicMmHgInt
+          ? _value.diastolicMmHgInt
+          : diastolicMmHgInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$BloodPressureAvgObjectImpl implements _BloodPressureAvgObject {
-  _$BloodPressureAvgObjectImpl({
-    @JsonKey(name: 'systolic_mmHg_int') this.systolicMmHgInt,
-    @JsonKey(name: 'diastolic_mmHg_int') this.diastolicMmHgInt,
-  });
+  _$BloodPressureAvgObjectImpl(
+      {@JsonKey(name: 'systolic_mmHg_int') this.systolicMmHgInt,
+      @JsonKey(name: 'diastolic_mmHg_int') this.diastolicMmHgInt});
 
   factory _$BloodPressureAvgObjectImpl.fromJson(Map<String, dynamic> json) =>
       _$$BloodPressureAvgObjectImplFromJson(json);
@@ -181,23 +168,22 @@ class _$BloodPressureAvgObjectImpl implements _BloodPressureAvgObject {
   @override
   @pragma('vm:prefer-inline')
   _$$BloodPressureAvgObjectImplCopyWith<_$BloodPressureAvgObjectImpl>
-  get copyWith =>
-      __$$BloodPressureAvgObjectImplCopyWithImpl<_$BloodPressureAvgObjectImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$BloodPressureAvgObjectImplCopyWithImpl<
+          _$BloodPressureAvgObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BloodPressureAvgObjectImplToJson(this);
+    return _$$BloodPressureAvgObjectImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _BloodPressureAvgObject implements BloodPressureAvgObject {
-  factory _BloodPressureAvgObject({
-    @JsonKey(name: 'systolic_mmHg_int') final int? systolicMmHgInt,
-    @JsonKey(name: 'diastolic_mmHg_int') final int? diastolicMmHgInt,
-  }) = _$BloodPressureAvgObjectImpl;
+  factory _BloodPressureAvgObject(
+          {@JsonKey(name: 'systolic_mmHg_int') final int? systolicMmHgInt,
+          @JsonKey(name: 'diastolic_mmHg_int') final int? diastolicMmHgInt}) =
+      _$BloodPressureAvgObjectImpl;
 
   factory _BloodPressureAvgObject.fromJson(Map<String, dynamic> json) =
       _$BloodPressureAvgObjectImpl.fromJson;
@@ -214,5 +200,5 @@ abstract class _BloodPressureAvgObject implements BloodPressureAvgObject {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BloodPressureAvgObjectImplCopyWith<_$BloodPressureAvgObjectImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

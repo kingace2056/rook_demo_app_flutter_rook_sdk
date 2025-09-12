@@ -12,8 +12,7 @@ part of 'blood_pressure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BloodPressure _$BloodPressureFromJson(Map<String, dynamic> json) {
   return _BloodPressure.fromJson(json);
@@ -38,14 +37,12 @@ mixin _$BloodPressure {
 /// @nodoc
 abstract class $BloodPressureCopyWith<$Res> {
   factory $BloodPressureCopyWith(
-    BloodPressure value,
-    $Res Function(BloodPressure) then,
-  ) = _$BloodPressureCopyWithImpl<$Res, BloodPressure>;
+          BloodPressure value, $Res Function(BloodPressure) then) =
+      _$BloodPressureCopyWithImpl<$Res, BloodPressure>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'blood_pressure_avg_object')
-    BloodPressureAvgObject? bloodPressureAvgObject,
-  });
+  $Res call(
+      {@JsonKey(name: 'blood_pressure_avg_object')
+      BloodPressureAvgObject? bloodPressureAvgObject});
 
   $BloodPressureAvgObjectCopyWith<$Res>? get bloodPressureAvgObject;
 }
@@ -64,16 +61,15 @@ class _$BloodPressureCopyWithImpl<$Res, $Val extends BloodPressure>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? bloodPressureAvgObject = freezed}) {
-    return _then(
-      _value.copyWith(
-            bloodPressureAvgObject: freezed == bloodPressureAvgObject
-                ? _value.bloodPressureAvgObject
-                : bloodPressureAvgObject // ignore: cast_nullable_to_non_nullable
-                      as BloodPressureAvgObject?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? bloodPressureAvgObject = freezed,
+  }) {
+    return _then(_value.copyWith(
+      bloodPressureAvgObject: freezed == bloodPressureAvgObject
+          ? _value.bloodPressureAvgObject
+          : bloodPressureAvgObject // ignore: cast_nullable_to_non_nullable
+              as BloodPressureAvgObject?,
+    ) as $Val);
   }
 
   /// Create a copy of BloodPressure
@@ -85,12 +81,10 @@ class _$BloodPressureCopyWithImpl<$Res, $Val extends BloodPressure>
       return null;
     }
 
-    return $BloodPressureAvgObjectCopyWith<$Res>(
-      _value.bloodPressureAvgObject!,
-      (value) {
-        return _then(_value.copyWith(bloodPressureAvgObject: value) as $Val);
-      },
-    );
+    return $BloodPressureAvgObjectCopyWith<$Res>(_value.bloodPressureAvgObject!,
+        (value) {
+      return _then(_value.copyWith(bloodPressureAvgObject: value) as $Val);
+    });
   }
 }
 
@@ -98,15 +92,13 @@ class _$BloodPressureCopyWithImpl<$Res, $Val extends BloodPressure>
 abstract class _$$BloodPressureImplCopyWith<$Res>
     implements $BloodPressureCopyWith<$Res> {
   factory _$$BloodPressureImplCopyWith(
-    _$BloodPressureImpl value,
-    $Res Function(_$BloodPressureImpl) then,
-  ) = __$$BloodPressureImplCopyWithImpl<$Res>;
+          _$BloodPressureImpl value, $Res Function(_$BloodPressureImpl) then) =
+      __$$BloodPressureImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'blood_pressure_avg_object')
-    BloodPressureAvgObject? bloodPressureAvgObject,
-  });
+  $Res call(
+      {@JsonKey(name: 'blood_pressure_avg_object')
+      BloodPressureAvgObject? bloodPressureAvgObject});
 
   @override
   $BloodPressureAvgObjectCopyWith<$Res>? get bloodPressureAvgObject;
@@ -117,32 +109,31 @@ class __$$BloodPressureImplCopyWithImpl<$Res>
     extends _$BloodPressureCopyWithImpl<$Res, _$BloodPressureImpl>
     implements _$$BloodPressureImplCopyWith<$Res> {
   __$$BloodPressureImplCopyWithImpl(
-    _$BloodPressureImpl _value,
-    $Res Function(_$BloodPressureImpl) _then,
-  ) : super(_value, _then);
+      _$BloodPressureImpl _value, $Res Function(_$BloodPressureImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BloodPressure
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? bloodPressureAvgObject = freezed}) {
-    return _then(
-      _$BloodPressureImpl(
-        bloodPressureAvgObject: freezed == bloodPressureAvgObject
-            ? _value.bloodPressureAvgObject
-            : bloodPressureAvgObject // ignore: cast_nullable_to_non_nullable
-                  as BloodPressureAvgObject?,
-      ),
-    );
+  $Res call({
+    Object? bloodPressureAvgObject = freezed,
+  }) {
+    return _then(_$BloodPressureImpl(
+      bloodPressureAvgObject: freezed == bloodPressureAvgObject
+          ? _value.bloodPressureAvgObject
+          : bloodPressureAvgObject // ignore: cast_nullable_to_non_nullable
+              as BloodPressureAvgObject?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$BloodPressureImpl implements _BloodPressure {
-  _$BloodPressureImpl({
-    @JsonKey(name: 'blood_pressure_avg_object') this.bloodPressureAvgObject,
-  });
+  _$BloodPressureImpl(
+      {@JsonKey(name: 'blood_pressure_avg_object')
+      this.bloodPressureAvgObject});
 
   factory _$BloodPressureImpl.fromJson(Map<String, dynamic> json) =>
       _$$BloodPressureImplFromJson(json);
@@ -179,15 +170,17 @@ class _$BloodPressureImpl implements _BloodPressure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BloodPressureImplToJson(this);
+    return _$$BloodPressureImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _BloodPressure implements BloodPressure {
-  factory _BloodPressure({
-    @JsonKey(name: 'blood_pressure_avg_object')
-    final BloodPressureAvgObject? bloodPressureAvgObject,
-  }) = _$BloodPressureImpl;
+  factory _BloodPressure(
+          {@JsonKey(name: 'blood_pressure_avg_object')
+          final BloodPressureAvgObject? bloodPressureAvgObject}) =
+      _$BloodPressureImpl;
 
   factory _BloodPressure.fromJson(Map<String, dynamic> json) =
       _$BloodPressureImpl.fromJson;

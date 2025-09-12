@@ -12,12 +12,10 @@ part of 'temperature_delta_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TemperatureDeltaObject _$TemperatureDeltaObjectFromJson(
-  Map<String, dynamic> json,
-) {
+    Map<String, dynamic> json) {
   return _TemperatureDeltaObject.fromJson(json);
 }
 
@@ -40,22 +38,19 @@ mixin _$TemperatureDeltaObject {
 
 /// @nodoc
 abstract class $TemperatureDeltaObjectCopyWith<$Res> {
-  factory $TemperatureDeltaObjectCopyWith(
-    TemperatureDeltaObject value,
-    $Res Function(TemperatureDeltaObject) then,
-  ) = _$TemperatureDeltaObjectCopyWithImpl<$Res, TemperatureDeltaObject>;
+  factory $TemperatureDeltaObjectCopyWith(TemperatureDeltaObject value,
+          $Res Function(TemperatureDeltaObject) then) =
+      _$TemperatureDeltaObjectCopyWithImpl<$Res, TemperatureDeltaObject>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
-class _$TemperatureDeltaObjectCopyWithImpl<
-  $Res,
-  $Val extends TemperatureDeltaObject
->
+class _$TemperatureDeltaObjectCopyWithImpl<$Res,
+        $Val extends TemperatureDeltaObject>
     implements $TemperatureDeltaObjectCopyWith<$Res> {
   _$TemperatureDeltaObjectCopyWithImpl(this._value, this._then);
 
@@ -72,19 +67,16 @@ class _$TemperatureDeltaObjectCopyWithImpl<
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-                ? _value.temperatureCelsiusFloat
-                : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            measurementTypeString: freezed == measurementTypeString
-                ? _value.measurementTypeString
-                : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -92,26 +84,26 @@ class _$TemperatureDeltaObjectCopyWithImpl<
 abstract class _$$TemperatureDeltaObjectImplCopyWith<$Res>
     implements $TemperatureDeltaObjectCopyWith<$Res> {
   factory _$$TemperatureDeltaObjectImplCopyWith(
-    _$TemperatureDeltaObjectImpl value,
-    $Res Function(_$TemperatureDeltaObjectImpl) then,
-  ) = __$$TemperatureDeltaObjectImplCopyWithImpl<$Res>;
+          _$TemperatureDeltaObjectImpl value,
+          $Res Function(_$TemperatureDeltaObjectImpl) then) =
+      __$$TemperatureDeltaObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
 class __$$TemperatureDeltaObjectImplCopyWithImpl<$Res>
-    extends
-        _$TemperatureDeltaObjectCopyWithImpl<$Res, _$TemperatureDeltaObjectImpl>
+    extends _$TemperatureDeltaObjectCopyWithImpl<$Res,
+        _$TemperatureDeltaObjectImpl>
     implements _$$TemperatureDeltaObjectImplCopyWith<$Res> {
   __$$TemperatureDeltaObjectImplCopyWithImpl(
-    _$TemperatureDeltaObjectImpl _value,
-    $Res Function(_$TemperatureDeltaObjectImpl) _then,
-  ) : super(_value, _then);
+      _$TemperatureDeltaObjectImpl _value,
+      $Res Function(_$TemperatureDeltaObjectImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TemperatureDeltaObject
   /// with the given fields replaced by the non-null parameter values.
@@ -121,28 +113,25 @@ class __$$TemperatureDeltaObjectImplCopyWithImpl<$Res>
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _$TemperatureDeltaObjectImpl(
-        temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-            ? _value.temperatureCelsiusFloat
-            : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        measurementTypeString: freezed == measurementTypeString
-            ? _value.measurementTypeString
-            : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$TemperatureDeltaObjectImpl(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$TemperatureDeltaObjectImpl implements _TemperatureDeltaObject {
-  _$TemperatureDeltaObjectImpl({
-    @JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') this.measurementTypeString,
-  });
+  _$TemperatureDeltaObjectImpl(
+      {@JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') this.measurementTypeString});
 
   factory _$TemperatureDeltaObjectImpl.fromJson(Map<String, dynamic> json) =>
       _$$TemperatureDeltaObjectImplFromJson(json);
@@ -165,9 +154,7 @@ class _$TemperatureDeltaObjectImpl implements _TemperatureDeltaObject {
         (other.runtimeType == runtimeType &&
             other is _$TemperatureDeltaObjectImpl &&
             (identical(
-                  other.temperatureCelsiusFloat,
-                  temperatureCelsiusFloat,
-                ) ||
+                    other.temperatureCelsiusFloat, temperatureCelsiusFloat) ||
                 other.temperatureCelsiusFloat == temperatureCelsiusFloat) &&
             (identical(other.measurementTypeString, measurementTypeString) ||
                 other.measurementTypeString == measurementTypeString));
@@ -184,25 +171,23 @@ class _$TemperatureDeltaObjectImpl implements _TemperatureDeltaObject {
   @override
   @pragma('vm:prefer-inline')
   _$$TemperatureDeltaObjectImplCopyWith<_$TemperatureDeltaObjectImpl>
-  get copyWith =>
-      __$$TemperatureDeltaObjectImplCopyWithImpl<_$TemperatureDeltaObjectImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith => __$$TemperatureDeltaObjectImplCopyWithImpl<
+          _$TemperatureDeltaObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TemperatureDeltaObjectImplToJson(this);
+    return _$$TemperatureDeltaObjectImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TemperatureDeltaObject implements TemperatureDeltaObject {
-  factory _TemperatureDeltaObject({
-    @JsonKey(name: 'temperature_celsius_float')
-    final double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string')
-    final String? measurementTypeString,
-  }) = _$TemperatureDeltaObjectImpl;
+  factory _TemperatureDeltaObject(
+      {@JsonKey(name: 'temperature_celsius_float')
+      final double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string')
+      final String? measurementTypeString}) = _$TemperatureDeltaObjectImpl;
 
   factory _TemperatureDeltaObject.fromJson(Map<String, dynamic> json) =
       _$TemperatureDeltaObjectImpl.fromJson;
@@ -219,5 +204,5 @@ abstract class _TemperatureDeltaObject implements TemperatureDeltaObject {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TemperatureDeltaObjectImplCopyWith<_$TemperatureDeltaObjectImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,8 +12,7 @@ part of 'health_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HealthScore _$HealthScoreFromJson(Map<String, dynamic> json) {
   return _HealthScore.fromJson(json);
@@ -56,24 +55,22 @@ mixin _$HealthScore {
 /// @nodoc
 abstract class $HealthScoreCopyWith<$Res> {
   factory $HealthScoreCopyWith(
-    HealthScore value,
-    $Res Function(HealthScore) then,
-  ) = _$HealthScoreCopyWithImpl<$Res, HealthScore>;
+          HealthScore value, $Res Function(HealthScore) then) =
+      _$HealthScoreCopyWithImpl<$Res, HealthScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'health_score_data') HealthScoreData? healthScoreData,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'health_score_data') HealthScoreData? healthScoreData,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   $HealthScoreDataCopyWith<$Res>? get healthScoreData;
 }
@@ -106,59 +103,56 @@ class _$HealthScoreCopyWithImpl<$Res, $Val extends HealthScore>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            id: freezed == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            version: freezed == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            documentVersion: freezed == documentVersion
-                ? _value.documentVersion
-                : documentVersion // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            healthScoreData: freezed == healthScoreData
-                ? _value.healthScoreData
-                : healthScoreData // ignore: cast_nullable_to_non_nullable
-                      as HealthScoreData?,
-            createdAtRook: freezed == createdAtRook
-                ? _value.createdAtRook
-                : createdAtRook // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            webhookReceivedAt: freezed == webhookReceivedAt
-                ? _value.webhookReceivedAt
-                : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAt: freezed == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAt: freezed == updatedAt
-                ? _value.updatedAt
-                : updatedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            v: freezed == v
-                ? _value.v
-                : v // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      healthScoreData: freezed == healthScoreData
+          ? _value.healthScoreData
+          : healthScoreData // ignore: cast_nullable_to_non_nullable
+              as HealthScoreData?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 
   /// Create a copy of HealthScore
@@ -180,25 +174,23 @@ class _$HealthScoreCopyWithImpl<$Res, $Val extends HealthScore>
 abstract class _$$HealthScoreImplCopyWith<$Res>
     implements $HealthScoreCopyWith<$Res> {
   factory _$$HealthScoreImplCopyWith(
-    _$HealthScoreImpl value,
-    $Res Function(_$HealthScoreImpl) then,
-  ) = __$$HealthScoreImplCopyWithImpl<$Res>;
+          _$HealthScoreImpl value, $Res Function(_$HealthScoreImpl) then) =
+      __$$HealthScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'health_score_data') HealthScoreData? healthScoreData,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'health_score_data') HealthScoreData? healthScoreData,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   @override
   $HealthScoreDataCopyWith<$Res>? get healthScoreData;
@@ -209,9 +201,8 @@ class __$$HealthScoreImplCopyWithImpl<$Res>
     extends _$HealthScoreCopyWithImpl<$Res, _$HealthScoreImpl>
     implements _$$HealthScoreImplCopyWith<$Res> {
   __$$HealthScoreImplCopyWithImpl(
-    _$HealthScoreImpl _value,
-    $Res Function(_$HealthScoreImpl) _then,
-  ) : super(_value, _then);
+      _$HealthScoreImpl _value, $Res Function(_$HealthScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of HealthScore
   /// with the given fields replaced by the non-null parameter values.
@@ -231,78 +222,75 @@ class __$$HealthScoreImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _$HealthScoreImpl(
-        id: freezed == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        version: freezed == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        documentVersion: freezed == documentVersion
-            ? _value.documentVersion
-            : documentVersion // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        healthScoreData: freezed == healthScoreData
-            ? _value.healthScoreData
-            : healthScoreData // ignore: cast_nullable_to_non_nullable
-                  as HealthScoreData?,
-        createdAtRook: freezed == createdAtRook
-            ? _value.createdAtRook
-            : createdAtRook // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        webhookReceivedAt: freezed == webhookReceivedAt
-            ? _value.webhookReceivedAt
-            : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAt: freezed == createdAt
-            ? _value.createdAt
-            : createdAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAt: freezed == updatedAt
-            ? _value.updatedAt
-            : updatedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        v: freezed == v
-            ? _value.v
-            : v // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$HealthScoreImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      healthScoreData: freezed == healthScoreData
+          ? _value.healthScoreData
+          : healthScoreData // ignore: cast_nullable_to_non_nullable
+              as HealthScoreData?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HealthScoreImpl implements _HealthScore {
-  _$HealthScoreImpl({
-    @JsonKey(name: '_id') this.id,
-    this.version,
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'document_version') this.documentVersion,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'health_score_data') this.healthScoreData,
-    @JsonKey(name: 'created_at') this.createdAtRook,
-    @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
-    this.createdAt,
-    this.updatedAt,
-    @JsonKey(name: '__v') this.v,
-  });
+  _$HealthScoreImpl(
+      {@JsonKey(name: '_id') this.id,
+      this.version,
+      @JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'document_version') this.documentVersion,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'health_score_data') this.healthScoreData,
+      @JsonKey(name: 'created_at') this.createdAtRook,
+      @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
+      this.createdAt,
+      this.updatedAt,
+      @JsonKey(name: '__v') this.v});
 
   factory _$HealthScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$HealthScoreImplFromJson(json);
@@ -376,20 +364,19 @@ class _$HealthScoreImpl implements _HealthScore {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    version,
-    clientUuid,
-    userId,
-    documentVersion,
-    dataStructure,
-    healthScoreData,
-    createdAtRook,
-    webhookReceivedAt,
-    createdAt,
-    updatedAt,
-    v,
-  );
+      runtimeType,
+      id,
+      version,
+      clientUuid,
+      userId,
+      documentVersion,
+      dataStructure,
+      healthScoreData,
+      createdAtRook,
+      webhookReceivedAt,
+      createdAt,
+      updatedAt,
+      v);
 
   /// Create a copy of HealthScore
   /// with the given fields replaced by the non-null parameter values.
@@ -401,25 +388,27 @@ class _$HealthScoreImpl implements _HealthScore {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HealthScoreImplToJson(this);
+    return _$$HealthScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _HealthScore implements HealthScore {
-  factory _HealthScore({
-    @JsonKey(name: '_id') final String? id,
-    final int? version,
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'document_version') final int? documentVersion,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'health_score_data') final HealthScoreData? healthScoreData,
-    @JsonKey(name: 'created_at') final DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
-    final DateTime? createdAt,
-    final DateTime? updatedAt,
-    @JsonKey(name: '__v') final int? v,
-  }) = _$HealthScoreImpl;
+  factory _HealthScore(
+      {@JsonKey(name: '_id') final String? id,
+      final int? version,
+      @JsonKey(name: 'client_uuid') final String? clientUuid,
+      @JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'document_version') final int? documentVersion,
+      @JsonKey(name: 'data_structure') final String? dataStructure,
+      @JsonKey(name: 'health_score_data')
+      final HealthScoreData? healthScoreData,
+      @JsonKey(name: 'created_at') final DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
+      @JsonKey(name: '__v') final int? v}) = _$HealthScoreImpl;
 
   factory _HealthScore.fromJson(Map<String, dynamic> json) =
       _$HealthScoreImpl.fromJson;

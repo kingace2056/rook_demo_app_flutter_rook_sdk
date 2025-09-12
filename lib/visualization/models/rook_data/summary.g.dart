@@ -11,9 +11,10 @@ _$SummaryImpl _$$SummaryImplFromJson(Map<String, dynamic> json) =>
       sleepSummary: json['sleep_summary'] == null
           ? null
           : SleepSummaryData.fromJson(
-              json['sleep_summary'] as Map<String, dynamic>,
-            ),
+              json['sleep_summary'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$SummaryImplToJson(_$SummaryImpl instance) =>
-    <String, dynamic>{'sleep_summary': instance.sleepSummary};
+    <String, dynamic>{
+      'sleep_summary': instance.sleepSummary,
+    };

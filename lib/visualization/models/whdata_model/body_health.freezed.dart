@@ -12,8 +12,7 @@ part of 'body_health.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BodyHealth _$BodyHealthFromJson(Map<String, dynamic> json) {
   return _BodyHealth.fromJson(json);
@@ -36,9 +35,8 @@ mixin _$BodyHealth {
 /// @nodoc
 abstract class $BodyHealthCopyWith<$Res> {
   factory $BodyHealthCopyWith(
-    BodyHealth value,
-    $Res Function(BodyHealth) then,
-  ) = _$BodyHealthCopyWithImpl<$Res, BodyHealth>;
+          BodyHealth value, $Res Function(BodyHealth) then) =
+      _$BodyHealthCopyWithImpl<$Res, BodyHealth>;
   @useResult
   $Res call({Events? events});
 
@@ -59,16 +57,15 @@ class _$BodyHealthCopyWithImpl<$Res, $Val extends BodyHealth>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? events = freezed}) {
-    return _then(
-      _value.copyWith(
-            events: freezed == events
-                ? _value.events
-                : events // ignore: cast_nullable_to_non_nullable
-                      as Events?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? events = freezed,
+  }) {
+    return _then(_value.copyWith(
+      events: freezed == events
+          ? _value.events
+          : events // ignore: cast_nullable_to_non_nullable
+              as Events?,
+    ) as $Val);
   }
 
   /// Create a copy of BodyHealth
@@ -90,9 +87,8 @@ class _$BodyHealthCopyWithImpl<$Res, $Val extends BodyHealth>
 abstract class _$$BodyHealthImplCopyWith<$Res>
     implements $BodyHealthCopyWith<$Res> {
   factory _$$BodyHealthImplCopyWith(
-    _$BodyHealthImpl value,
-    $Res Function(_$BodyHealthImpl) then,
-  ) = __$$BodyHealthImplCopyWithImpl<$Res>;
+          _$BodyHealthImpl value, $Res Function(_$BodyHealthImpl) then) =
+      __$$BodyHealthImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Events? events});
@@ -106,23 +102,22 @@ class __$$BodyHealthImplCopyWithImpl<$Res>
     extends _$BodyHealthCopyWithImpl<$Res, _$BodyHealthImpl>
     implements _$$BodyHealthImplCopyWith<$Res> {
   __$$BodyHealthImplCopyWithImpl(
-    _$BodyHealthImpl _value,
-    $Res Function(_$BodyHealthImpl) _then,
-  ) : super(_value, _then);
+      _$BodyHealthImpl _value, $Res Function(_$BodyHealthImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BodyHealth
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? events = freezed}) {
-    return _then(
-      _$BodyHealthImpl(
-        events: freezed == events
-            ? _value.events
-            : events // ignore: cast_nullable_to_non_nullable
-                  as Events?,
-      ),
-    );
+  $Res call({
+    Object? events = freezed,
+  }) {
+    return _then(_$BodyHealthImpl(
+      events: freezed == events
+          ? _value.events
+          : events // ignore: cast_nullable_to_non_nullable
+              as Events?,
+    ));
   }
 }
 
@@ -164,7 +159,9 @@ class _$BodyHealthImpl implements _BodyHealth {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BodyHealthImplToJson(this);
+    return _$$BodyHealthImplToJson(
+      this,
+    );
   }
 }
 

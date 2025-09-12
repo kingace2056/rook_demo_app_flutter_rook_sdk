@@ -12,8 +12,7 @@ part of 'physical_health_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PhysicalHealthScore _$PhysicalHealthScoreFromJson(Map<String, dynamic> json) {
   return _PhysicalHealthScore.fromJson(json);
@@ -43,16 +42,14 @@ mixin _$PhysicalHealthScore {
 /// @nodoc
 abstract class $PhysicalHealthScoreCopyWith<$Res> {
   factory $PhysicalHealthScoreCopyWith(
-    PhysicalHealthScore value,
-    $Res Function(PhysicalHealthScore) then,
-  ) = _$PhysicalHealthScoreCopyWithImpl<$Res, PhysicalHealthScore>;
+          PhysicalHealthScore value, $Res Function(PhysicalHealthScore) then) =
+      _$PhysicalHealthScoreCopyWithImpl<$Res, PhysicalHealthScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calories_score') CaloriesScore? caloriesScore,
-    @JsonKey(name: 'activity_score') ActivityScore? activityScore,
-    @JsonKey(name: 'steps_score') StepsScore? stepsScore,
-  });
+  $Res call(
+      {@JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calories_score') CaloriesScore? caloriesScore,
+      @JsonKey(name: 'activity_score') ActivityScore? activityScore,
+      @JsonKey(name: 'steps_score') StepsScore? stepsScore});
 
   $CaloriesScoreCopyWith<$Res>? get caloriesScore;
   $ActivityScoreCopyWith<$Res>? get activityScore;
@@ -79,27 +76,24 @@ class _$PhysicalHealthScoreCopyWithImpl<$Res, $Val extends PhysicalHealthScore>
     Object? activityScore = freezed,
     Object? stepsScore = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            score0100Int: freezed == score0100Int
-                ? _value.score0100Int
-                : score0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            caloriesScore: freezed == caloriesScore
-                ? _value.caloriesScore
-                : caloriesScore // ignore: cast_nullable_to_non_nullable
-                      as CaloriesScore?,
-            activityScore: freezed == activityScore
-                ? _value.activityScore
-                : activityScore // ignore: cast_nullable_to_non_nullable
-                      as ActivityScore?,
-            stepsScore: freezed == stepsScore
-                ? _value.stepsScore
-                : stepsScore // ignore: cast_nullable_to_non_nullable
-                      as StepsScore?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      caloriesScore: freezed == caloriesScore
+          ? _value.caloriesScore
+          : caloriesScore // ignore: cast_nullable_to_non_nullable
+              as CaloriesScore?,
+      activityScore: freezed == activityScore
+          ? _value.activityScore
+          : activityScore // ignore: cast_nullable_to_non_nullable
+              as ActivityScore?,
+      stepsScore: freezed == stepsScore
+          ? _value.stepsScore
+          : stepsScore // ignore: cast_nullable_to_non_nullable
+              as StepsScore?,
+    ) as $Val);
   }
 
   /// Create a copy of PhysicalHealthScore
@@ -148,18 +142,16 @@ class _$PhysicalHealthScoreCopyWithImpl<$Res, $Val extends PhysicalHealthScore>
 /// @nodoc
 abstract class _$$PhysicalHealthScoreImplCopyWith<$Res>
     implements $PhysicalHealthScoreCopyWith<$Res> {
-  factory _$$PhysicalHealthScoreImplCopyWith(
-    _$PhysicalHealthScoreImpl value,
-    $Res Function(_$PhysicalHealthScoreImpl) then,
-  ) = __$$PhysicalHealthScoreImplCopyWithImpl<$Res>;
+  factory _$$PhysicalHealthScoreImplCopyWith(_$PhysicalHealthScoreImpl value,
+          $Res Function(_$PhysicalHealthScoreImpl) then) =
+      __$$PhysicalHealthScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calories_score') CaloriesScore? caloriesScore,
-    @JsonKey(name: 'activity_score') ActivityScore? activityScore,
-    @JsonKey(name: 'steps_score') StepsScore? stepsScore,
-  });
+  $Res call(
+      {@JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calories_score') CaloriesScore? caloriesScore,
+      @JsonKey(name: 'activity_score') ActivityScore? activityScore,
+      @JsonKey(name: 'steps_score') StepsScore? stepsScore});
 
   @override
   $CaloriesScoreCopyWith<$Res>? get caloriesScore;
@@ -173,10 +165,9 @@ abstract class _$$PhysicalHealthScoreImplCopyWith<$Res>
 class __$$PhysicalHealthScoreImplCopyWithImpl<$Res>
     extends _$PhysicalHealthScoreCopyWithImpl<$Res, _$PhysicalHealthScoreImpl>
     implements _$$PhysicalHealthScoreImplCopyWith<$Res> {
-  __$$PhysicalHealthScoreImplCopyWithImpl(
-    _$PhysicalHealthScoreImpl _value,
-    $Res Function(_$PhysicalHealthScoreImpl) _then,
-  ) : super(_value, _then);
+  __$$PhysicalHealthScoreImplCopyWithImpl(_$PhysicalHealthScoreImpl _value,
+      $Res Function(_$PhysicalHealthScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of PhysicalHealthScore
   /// with the given fields replaced by the non-null parameter values.
@@ -188,38 +179,35 @@ class __$$PhysicalHealthScoreImplCopyWithImpl<$Res>
     Object? activityScore = freezed,
     Object? stepsScore = freezed,
   }) {
-    return _then(
-      _$PhysicalHealthScoreImpl(
-        score0100Int: freezed == score0100Int
-            ? _value.score0100Int
-            : score0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        caloriesScore: freezed == caloriesScore
-            ? _value.caloriesScore
-            : caloriesScore // ignore: cast_nullable_to_non_nullable
-                  as CaloriesScore?,
-        activityScore: freezed == activityScore
-            ? _value.activityScore
-            : activityScore // ignore: cast_nullable_to_non_nullable
-                  as ActivityScore?,
-        stepsScore: freezed == stepsScore
-            ? _value.stepsScore
-            : stepsScore // ignore: cast_nullable_to_non_nullable
-                  as StepsScore?,
-      ),
-    );
+    return _then(_$PhysicalHealthScoreImpl(
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      caloriesScore: freezed == caloriesScore
+          ? _value.caloriesScore
+          : caloriesScore // ignore: cast_nullable_to_non_nullable
+              as CaloriesScore?,
+      activityScore: freezed == activityScore
+          ? _value.activityScore
+          : activityScore // ignore: cast_nullable_to_non_nullable
+              as ActivityScore?,
+      stepsScore: freezed == stepsScore
+          ? _value.stepsScore
+          : stepsScore // ignore: cast_nullable_to_non_nullable
+              as StepsScore?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PhysicalHealthScoreImpl implements _PhysicalHealthScore {
-  _$PhysicalHealthScoreImpl({
-    @JsonKey(name: 'score_0_100_int') this.score0100Int,
-    @JsonKey(name: 'calories_score') this.caloriesScore,
-    @JsonKey(name: 'activity_score') this.activityScore,
-    @JsonKey(name: 'steps_score') this.stepsScore,
-  });
+  _$PhysicalHealthScoreImpl(
+      {@JsonKey(name: 'score_0_100_int') this.score0100Int,
+      @JsonKey(name: 'calories_score') this.caloriesScore,
+      @JsonKey(name: 'activity_score') this.activityScore,
+      @JsonKey(name: 'steps_score') this.stepsScore});
 
   factory _$PhysicalHealthScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$PhysicalHealthScoreImplFromJson(json);
@@ -260,12 +248,7 @@ class _$PhysicalHealthScoreImpl implements _PhysicalHealthScore {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    score0100Int,
-    caloriesScore,
-    activityScore,
-    stepsScore,
-  );
+      runtimeType, score0100Int, caloriesScore, activityScore, stepsScore);
 
   /// Create a copy of PhysicalHealthScore
   /// with the given fields replaced by the non-null parameter values.
@@ -274,23 +257,23 @@ class _$PhysicalHealthScoreImpl implements _PhysicalHealthScore {
   @pragma('vm:prefer-inline')
   _$$PhysicalHealthScoreImplCopyWith<_$PhysicalHealthScoreImpl> get copyWith =>
       __$$PhysicalHealthScoreImplCopyWithImpl<_$PhysicalHealthScoreImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PhysicalHealthScoreImplToJson(this);
+    return _$$PhysicalHealthScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _PhysicalHealthScore implements PhysicalHealthScore {
-  factory _PhysicalHealthScore({
-    @JsonKey(name: 'score_0_100_int') final int? score0100Int,
-    @JsonKey(name: 'calories_score') final CaloriesScore? caloriesScore,
-    @JsonKey(name: 'activity_score') final ActivityScore? activityScore,
-    @JsonKey(name: 'steps_score') final StepsScore? stepsScore,
-  }) = _$PhysicalHealthScoreImpl;
+  factory _PhysicalHealthScore(
+          {@JsonKey(name: 'score_0_100_int') final int? score0100Int,
+          @JsonKey(name: 'calories_score') final CaloriesScore? caloriesScore,
+          @JsonKey(name: 'activity_score') final ActivityScore? activityScore,
+          @JsonKey(name: 'steps_score') final StepsScore? stepsScore}) =
+      _$PhysicalHealthScoreImpl;
 
   factory _PhysicalHealthScore.fromJson(Map<String, dynamic> json) =
       _$PhysicalHealthScoreImpl.fromJson;

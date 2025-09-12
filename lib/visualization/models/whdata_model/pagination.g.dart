@@ -13,4 +13,7 @@ _$PaginationImpl _$$PaginationImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$PaginationImplToJson(_$PaginationImpl instance) =>
-    <String, dynamic>{'limit': instance.limit, 'skip': instance.skip};
+    <String, dynamic>{
+      'limit': instance.limit,
+      'skip': instance.skip,
+    };

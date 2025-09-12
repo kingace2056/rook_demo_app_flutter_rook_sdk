@@ -12,8 +12,7 @@ part of 'temperature_avg_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TemperatureAvgObject _$TemperatureAvgObjectFromJson(Map<String, dynamic> json) {
   return _TemperatureAvgObject.fromJson(json);
@@ -38,22 +37,19 @@ mixin _$TemperatureAvgObject {
 
 /// @nodoc
 abstract class $TemperatureAvgObjectCopyWith<$Res> {
-  factory $TemperatureAvgObjectCopyWith(
-    TemperatureAvgObject value,
-    $Res Function(TemperatureAvgObject) then,
-  ) = _$TemperatureAvgObjectCopyWithImpl<$Res, TemperatureAvgObject>;
+  factory $TemperatureAvgObjectCopyWith(TemperatureAvgObject value,
+          $Res Function(TemperatureAvgObject) then) =
+      _$TemperatureAvgObjectCopyWithImpl<$Res, TemperatureAvgObject>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
-class _$TemperatureAvgObjectCopyWithImpl<
-  $Res,
-  $Val extends TemperatureAvgObject
->
+class _$TemperatureAvgObjectCopyWithImpl<$Res,
+        $Val extends TemperatureAvgObject>
     implements $TemperatureAvgObjectCopyWith<$Res> {
   _$TemperatureAvgObjectCopyWithImpl(this._value, this._then);
 
@@ -70,45 +66,40 @@ class _$TemperatureAvgObjectCopyWithImpl<
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-                ? _value.temperatureCelsiusFloat
-                : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            measurementTypeString: freezed == measurementTypeString
-                ? _value.measurementTypeString
-                : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$TemperatureAvgObjectImplCopyWith<$Res>
     implements $TemperatureAvgObjectCopyWith<$Res> {
-  factory _$$TemperatureAvgObjectImplCopyWith(
-    _$TemperatureAvgObjectImpl value,
-    $Res Function(_$TemperatureAvgObjectImpl) then,
-  ) = __$$TemperatureAvgObjectImplCopyWithImpl<$Res>;
+  factory _$$TemperatureAvgObjectImplCopyWith(_$TemperatureAvgObjectImpl value,
+          $Res Function(_$TemperatureAvgObjectImpl) then) =
+      __$$TemperatureAvgObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_celsius_float') double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') String? measurementTypeString,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_celsius_float')
+      double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') String? measurementTypeString});
 }
 
 /// @nodoc
 class __$$TemperatureAvgObjectImplCopyWithImpl<$Res>
     extends _$TemperatureAvgObjectCopyWithImpl<$Res, _$TemperatureAvgObjectImpl>
     implements _$$TemperatureAvgObjectImplCopyWith<$Res> {
-  __$$TemperatureAvgObjectImplCopyWithImpl(
-    _$TemperatureAvgObjectImpl _value,
-    $Res Function(_$TemperatureAvgObjectImpl) _then,
-  ) : super(_value, _then);
+  __$$TemperatureAvgObjectImplCopyWithImpl(_$TemperatureAvgObjectImpl _value,
+      $Res Function(_$TemperatureAvgObjectImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TemperatureAvgObject
   /// with the given fields replaced by the non-null parameter values.
@@ -118,28 +109,25 @@ class __$$TemperatureAvgObjectImplCopyWithImpl<$Res>
     Object? temperatureCelsiusFloat = freezed,
     Object? measurementTypeString = freezed,
   }) {
-    return _then(
-      _$TemperatureAvgObjectImpl(
-        temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
-            ? _value.temperatureCelsiusFloat
-            : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        measurementTypeString: freezed == measurementTypeString
-            ? _value.measurementTypeString
-            : measurementTypeString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$TemperatureAvgObjectImpl(
+      temperatureCelsiusFloat: freezed == temperatureCelsiusFloat
+          ? _value.temperatureCelsiusFloat
+          : temperatureCelsiusFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      measurementTypeString: freezed == measurementTypeString
+          ? _value.measurementTypeString
+          : measurementTypeString // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$TemperatureAvgObjectImpl implements _TemperatureAvgObject {
-  _$TemperatureAvgObjectImpl({
-    @JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string') this.measurementTypeString,
-  });
+  _$TemperatureAvgObjectImpl(
+      {@JsonKey(name: 'temperature_celsius_float') this.temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string') this.measurementTypeString});
 
   factory _$TemperatureAvgObjectImpl.fromJson(Map<String, dynamic> json) =>
       _$$TemperatureAvgObjectImplFromJson(json);
@@ -162,9 +150,7 @@ class _$TemperatureAvgObjectImpl implements _TemperatureAvgObject {
         (other.runtimeType == runtimeType &&
             other is _$TemperatureAvgObjectImpl &&
             (identical(
-                  other.temperatureCelsiusFloat,
-                  temperatureCelsiusFloat,
-                ) ||
+                    other.temperatureCelsiusFloat, temperatureCelsiusFloat) ||
                 other.temperatureCelsiusFloat == temperatureCelsiusFloat) &&
             (identical(other.measurementTypeString, measurementTypeString) ||
                 other.measurementTypeString == measurementTypeString));
@@ -181,25 +167,24 @@ class _$TemperatureAvgObjectImpl implements _TemperatureAvgObject {
   @override
   @pragma('vm:prefer-inline')
   _$$TemperatureAvgObjectImplCopyWith<_$TemperatureAvgObjectImpl>
-  get copyWith =>
-      __$$TemperatureAvgObjectImplCopyWithImpl<_$TemperatureAvgObjectImpl>(
-        this,
-        _$identity,
-      );
+      get copyWith =>
+          __$$TemperatureAvgObjectImplCopyWithImpl<_$TemperatureAvgObjectImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TemperatureAvgObjectImplToJson(this);
+    return _$$TemperatureAvgObjectImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TemperatureAvgObject implements TemperatureAvgObject {
-  factory _TemperatureAvgObject({
-    @JsonKey(name: 'temperature_celsius_float')
-    final double? temperatureCelsiusFloat,
-    @JsonKey(name: 'measurement_type_string')
-    final String? measurementTypeString,
-  }) = _$TemperatureAvgObjectImpl;
+  factory _TemperatureAvgObject(
+      {@JsonKey(name: 'temperature_celsius_float')
+      final double? temperatureCelsiusFloat,
+      @JsonKey(name: 'measurement_type_string')
+      final String? measurementTypeString}) = _$TemperatureAvgObjectImpl;
 
   factory _TemperatureAvgObject.fromJson(Map<String, dynamic> json) =
       _$TemperatureAvgObjectImpl.fromJson;
@@ -216,5 +201,5 @@ abstract class _TemperatureAvgObject implements TemperatureAvgObject {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TemperatureAvgObjectImplCopyWith<_$TemperatureAvgObjectImpl>
-  get copyWith => throw _privateConstructorUsedError;
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -14,4 +14,6 @@ _$EventDataImpl _$$EventDataImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$EventDataImplToJson(_$EventDataImpl instance) =>
-    <String, dynamic>{'heart_rate_event': instance.heartRateEvent};
+    <String, dynamic>{
+      'heart_rate_event': instance.heartRateEvent,
+    };

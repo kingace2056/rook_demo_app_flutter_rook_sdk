@@ -12,8 +12,7 @@ part of 'health_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HealthEvent _$HealthEventFromJson(Map<String, dynamic> json) {
   return _HealthEvent.fromJson(json);
@@ -61,27 +60,25 @@ mixin _$HealthEvent {
 /// @nodoc
 abstract class $HealthEventCopyWith<$Res> {
   factory $HealthEventCopyWith(
-    HealthEvent value,
-    $Res Function(HealthEvent) then,
-  ) = _$HealthEventCopyWithImpl<$Res, HealthEvent>;
+          HealthEvent value, $Res Function(HealthEvent) then) =
+      _$HealthEventCopyWithImpl<$Res, HealthEvent>;
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'auto_detected') bool? autoDetected,
-    @JsonKey(name: 'event_type') String? eventType,
-    @JsonKey(name: 'event_data') EventData? eventData,
-    Metadata? metadata,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'auto_detected') bool? autoDetected,
+      @JsonKey(name: 'event_type') String? eventType,
+      @JsonKey(name: 'event_data') EventData? eventData,
+      Metadata? metadata,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   $EventDataCopyWith<$Res>? get eventData;
   $MetadataCopyWith<$Res>? get metadata;
@@ -118,71 +115,68 @@ class _$HealthEventCopyWithImpl<$Res, $Val extends HealthEvent>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            id: freezed == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            version: freezed == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            documentVersion: freezed == documentVersion
-                ? _value.documentVersion
-                : documentVersion // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            autoDetected: freezed == autoDetected
-                ? _value.autoDetected
-                : autoDetected // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            eventType: freezed == eventType
-                ? _value.eventType
-                : eventType // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            eventData: freezed == eventData
-                ? _value.eventData
-                : eventData // ignore: cast_nullable_to_non_nullable
-                      as EventData?,
-            metadata: freezed == metadata
-                ? _value.metadata
-                : metadata // ignore: cast_nullable_to_non_nullable
-                      as Metadata?,
-            createdAtRook: freezed == createdAtRook
-                ? _value.createdAtRook
-                : createdAtRook // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            webhookReceivedAt: freezed == webhookReceivedAt
-                ? _value.webhookReceivedAt
-                : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAt: freezed == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAt: freezed == updatedAt
-                ? _value.updatedAt
-                : updatedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            v: freezed == v
-                ? _value.v
-                : v // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      autoDetected: freezed == autoDetected
+          ? _value.autoDetected
+          : autoDetected // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      eventType: freezed == eventType
+          ? _value.eventType
+          : eventType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eventData: freezed == eventData
+          ? _value.eventData
+          : eventData // ignore: cast_nullable_to_non_nullable
+              as EventData?,
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 
   /// Create a copy of HealthEvent
@@ -218,28 +212,26 @@ class _$HealthEventCopyWithImpl<$Res, $Val extends HealthEvent>
 abstract class _$$HealthEventImplCopyWith<$Res>
     implements $HealthEventCopyWith<$Res> {
   factory _$$HealthEventImplCopyWith(
-    _$HealthEventImpl value,
-    $Res Function(_$HealthEventImpl) then,
-  ) = __$$HealthEventImplCopyWithImpl<$Res>;
+          _$HealthEventImpl value, $Res Function(_$HealthEventImpl) then) =
+      __$$HealthEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'auto_detected') bool? autoDetected,
-    @JsonKey(name: 'event_type') String? eventType,
-    @JsonKey(name: 'event_data') EventData? eventData,
-    Metadata? metadata,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'auto_detected') bool? autoDetected,
+      @JsonKey(name: 'event_type') String? eventType,
+      @JsonKey(name: 'event_data') EventData? eventData,
+      Metadata? metadata,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   @override
   $EventDataCopyWith<$Res>? get eventData;
@@ -252,9 +244,8 @@ class __$$HealthEventImplCopyWithImpl<$Res>
     extends _$HealthEventCopyWithImpl<$Res, _$HealthEventImpl>
     implements _$$HealthEventImplCopyWith<$Res> {
   __$$HealthEventImplCopyWithImpl(
-    _$HealthEventImpl _value,
-    $Res Function(_$HealthEventImpl) _then,
-  ) : super(_value, _then);
+      _$HealthEventImpl _value, $Res Function(_$HealthEventImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of HealthEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -277,93 +268,90 @@ class __$$HealthEventImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _$HealthEventImpl(
-        id: freezed == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        version: freezed == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        documentVersion: freezed == documentVersion
-            ? _value.documentVersion
-            : documentVersion // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        autoDetected: freezed == autoDetected
-            ? _value.autoDetected
-            : autoDetected // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        eventType: freezed == eventType
-            ? _value.eventType
-            : eventType // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        eventData: freezed == eventData
-            ? _value.eventData
-            : eventData // ignore: cast_nullable_to_non_nullable
-                  as EventData?,
-        metadata: freezed == metadata
-            ? _value.metadata
-            : metadata // ignore: cast_nullable_to_non_nullable
-                  as Metadata?,
-        createdAtRook: freezed == createdAtRook
-            ? _value.createdAtRook
-            : createdAtRook // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        webhookReceivedAt: freezed == webhookReceivedAt
-            ? _value.webhookReceivedAt
-            : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAt: freezed == createdAt
-            ? _value.createdAt
-            : createdAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAt: freezed == updatedAt
-            ? _value.updatedAt
-            : updatedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        v: freezed == v
-            ? _value.v
-            : v // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$HealthEventImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      autoDetected: freezed == autoDetected
+          ? _value.autoDetected
+          : autoDetected // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      eventType: freezed == eventType
+          ? _value.eventType
+          : eventType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eventData: freezed == eventData
+          ? _value.eventData
+          : eventData // ignore: cast_nullable_to_non_nullable
+              as EventData?,
+      metadata: freezed == metadata
+          ? _value.metadata
+          : metadata // ignore: cast_nullable_to_non_nullable
+              as Metadata?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HealthEventImpl implements _HealthEvent {
-  _$HealthEventImpl({
-    @JsonKey(name: '_id') this.id,
-    this.version,
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'document_version') this.documentVersion,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'auto_detected') this.autoDetected,
-    @JsonKey(name: 'event_type') this.eventType,
-    @JsonKey(name: 'event_data') this.eventData,
-    this.metadata,
-    @JsonKey(name: 'created_at') this.createdAtRook,
-    @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
-    this.createdAt,
-    this.updatedAt,
-    @JsonKey(name: '__v') this.v,
-  });
+  _$HealthEventImpl(
+      {@JsonKey(name: '_id') this.id,
+      this.version,
+      @JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'document_version') this.documentVersion,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'auto_detected') this.autoDetected,
+      @JsonKey(name: 'event_type') this.eventType,
+      @JsonKey(name: 'event_data') this.eventData,
+      this.metadata,
+      @JsonKey(name: 'created_at') this.createdAtRook,
+      @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
+      this.createdAt,
+      this.updatedAt,
+      @JsonKey(name: '__v') this.v});
 
   factory _$HealthEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$HealthEventImplFromJson(json);
@@ -451,23 +439,22 @@ class _$HealthEventImpl implements _HealthEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    version,
-    clientUuid,
-    userId,
-    documentVersion,
-    dataStructure,
-    autoDetected,
-    eventType,
-    eventData,
-    metadata,
-    createdAtRook,
-    webhookReceivedAt,
-    createdAt,
-    updatedAt,
-    v,
-  );
+      runtimeType,
+      id,
+      version,
+      clientUuid,
+      userId,
+      documentVersion,
+      dataStructure,
+      autoDetected,
+      eventType,
+      eventData,
+      metadata,
+      createdAtRook,
+      webhookReceivedAt,
+      createdAt,
+      updatedAt,
+      v);
 
   /// Create a copy of HealthEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -479,28 +466,29 @@ class _$HealthEventImpl implements _HealthEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HealthEventImplToJson(this);
+    return _$$HealthEventImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _HealthEvent implements HealthEvent {
-  factory _HealthEvent({
-    @JsonKey(name: '_id') final String? id,
-    final int? version,
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'document_version') final int? documentVersion,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'auto_detected') final bool? autoDetected,
-    @JsonKey(name: 'event_type') final String? eventType,
-    @JsonKey(name: 'event_data') final EventData? eventData,
-    final Metadata? metadata,
-    @JsonKey(name: 'created_at') final DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
-    final DateTime? createdAt,
-    final DateTime? updatedAt,
-    @JsonKey(name: '__v') final int? v,
-  }) = _$HealthEventImpl;
+  factory _HealthEvent(
+      {@JsonKey(name: '_id') final String? id,
+      final int? version,
+      @JsonKey(name: 'client_uuid') final String? clientUuid,
+      @JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'document_version') final int? documentVersion,
+      @JsonKey(name: 'data_structure') final String? dataStructure,
+      @JsonKey(name: 'auto_detected') final bool? autoDetected,
+      @JsonKey(name: 'event_type') final String? eventType,
+      @JsonKey(name: 'event_data') final EventData? eventData,
+      final Metadata? metadata,
+      @JsonKey(name: 'created_at') final DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
+      @JsonKey(name: '__v') final int? v}) = _$HealthEventImpl;
 
   factory _HealthEvent.fromJson(Map<String, dynamic> json) =
       _$HealthEventImpl.fromJson;

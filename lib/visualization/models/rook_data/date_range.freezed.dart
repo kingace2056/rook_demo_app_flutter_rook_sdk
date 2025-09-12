@@ -12,8 +12,7 @@ part of 'date_range.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DateRange _$DateRangeFromJson(Map<String, dynamic> json) {
   return _DateRange.fromJson(json);
@@ -41,10 +40,9 @@ abstract class $DateRangeCopyWith<$Res> {
   factory $DateRangeCopyWith(DateRange value, $Res Function(DateRange) then) =
       _$DateRangeCopyWithImpl<$Res, DateRange>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'start_date') DateTime? startDate,
-    @JsonKey(name: 'end_date') DateTime? endDate,
-  });
+  $Res call(
+      {@JsonKey(name: 'start_date') DateTime? startDate,
+      @JsonKey(name: 'end_date') DateTime? endDate});
 }
 
 /// @nodoc
@@ -61,20 +59,20 @@ class _$DateRangeCopyWithImpl<$Res, $Val extends DateRange>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? startDate = freezed, Object? endDate = freezed}) {
-    return _then(
-      _value.copyWith(
-            startDate: freezed == startDate
-                ? _value.startDate
-                : startDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            endDate: freezed == endDate
-                ? _value.endDate
-                : endDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? startDate = freezed,
+    Object? endDate = freezed,
+  }) {
+    return _then(_value.copyWith(
+      startDate: freezed == startDate
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      endDate: freezed == endDate
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ) as $Val);
   }
 }
 
@@ -82,15 +80,13 @@ class _$DateRangeCopyWithImpl<$Res, $Val extends DateRange>
 abstract class _$$DateRangeImplCopyWith<$Res>
     implements $DateRangeCopyWith<$Res> {
   factory _$$DateRangeImplCopyWith(
-    _$DateRangeImpl value,
-    $Res Function(_$DateRangeImpl) then,
-  ) = __$$DateRangeImplCopyWithImpl<$Res>;
+          _$DateRangeImpl value, $Res Function(_$DateRangeImpl) then) =
+      __$$DateRangeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'start_date') DateTime? startDate,
-    @JsonKey(name: 'end_date') DateTime? endDate,
-  });
+  $Res call(
+      {@JsonKey(name: 'start_date') DateTime? startDate,
+      @JsonKey(name: 'end_date') DateTime? endDate});
 }
 
 /// @nodoc
@@ -98,37 +94,36 @@ class __$$DateRangeImplCopyWithImpl<$Res>
     extends _$DateRangeCopyWithImpl<$Res, _$DateRangeImpl>
     implements _$$DateRangeImplCopyWith<$Res> {
   __$$DateRangeImplCopyWithImpl(
-    _$DateRangeImpl _value,
-    $Res Function(_$DateRangeImpl) _then,
-  ) : super(_value, _then);
+      _$DateRangeImpl _value, $Res Function(_$DateRangeImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DateRange
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? startDate = freezed, Object? endDate = freezed}) {
-    return _then(
-      _$DateRangeImpl(
-        startDate: freezed == startDate
-            ? _value.startDate
-            : startDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        endDate: freezed == endDate
-            ? _value.endDate
-            : endDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-      ),
-    );
+  $Res call({
+    Object? startDate = freezed,
+    Object? endDate = freezed,
+  }) {
+    return _then(_$DateRangeImpl(
+      startDate: freezed == startDate
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      endDate: freezed == endDate
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DateRangeImpl implements _DateRange {
-  _$DateRangeImpl({
-    @JsonKey(name: 'start_date') this.startDate,
-    @JsonKey(name: 'end_date') this.endDate,
-  });
+  _$DateRangeImpl(
+      {@JsonKey(name: 'start_date') this.startDate,
+      @JsonKey(name: 'end_date') this.endDate});
 
   factory _$DateRangeImpl.fromJson(Map<String, dynamic> json) =>
       _$$DateRangeImplFromJson(json);
@@ -169,15 +164,16 @@ class _$DateRangeImpl implements _DateRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DateRangeImplToJson(this);
+    return _$$DateRangeImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _DateRange implements DateRange {
-  factory _DateRange({
-    @JsonKey(name: 'start_date') final DateTime? startDate,
-    @JsonKey(name: 'end_date') final DateTime? endDate,
-  }) = _$DateRangeImpl;
+  factory _DateRange(
+      {@JsonKey(name: 'start_date') final DateTime? startDate,
+      @JsonKey(name: 'end_date') final DateTime? endDate}) = _$DateRangeImpl;
 
   factory _DateRange.fromJson(Map<String, dynamic> json) =
       _$DateRangeImpl.fromJson;

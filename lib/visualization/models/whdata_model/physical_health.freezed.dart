@@ -12,8 +12,7 @@ part of 'physical_health.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PhysicalHealth _$PhysicalHealthFromJson(Map<String, dynamic> json) {
   return _PhysicalHealth.fromJson(json);
@@ -36,9 +35,8 @@ mixin _$PhysicalHealth {
 /// @nodoc
 abstract class $PhysicalHealthCopyWith<$Res> {
   factory $PhysicalHealthCopyWith(
-    PhysicalHealth value,
-    $Res Function(PhysicalHealth) then,
-  ) = _$PhysicalHealthCopyWithImpl<$Res, PhysicalHealth>;
+          PhysicalHealth value, $Res Function(PhysicalHealth) then) =
+      _$PhysicalHealthCopyWithImpl<$Res, PhysicalHealth>;
   @useResult
   $Res call({Summary? summary});
 
@@ -59,16 +57,15 @@ class _$PhysicalHealthCopyWithImpl<$Res, $Val extends PhysicalHealth>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? summary = freezed}) {
-    return _then(
-      _value.copyWith(
-            summary: freezed == summary
-                ? _value.summary
-                : summary // ignore: cast_nullable_to_non_nullable
-                      as Summary?,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? summary = freezed,
+  }) {
+    return _then(_value.copyWith(
+      summary: freezed == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary?,
+    ) as $Val);
   }
 
   /// Create a copy of PhysicalHealth
@@ -89,10 +86,9 @@ class _$PhysicalHealthCopyWithImpl<$Res, $Val extends PhysicalHealth>
 /// @nodoc
 abstract class _$$PhysicalHealthImplCopyWith<$Res>
     implements $PhysicalHealthCopyWith<$Res> {
-  factory _$$PhysicalHealthImplCopyWith(
-    _$PhysicalHealthImpl value,
-    $Res Function(_$PhysicalHealthImpl) then,
-  ) = __$$PhysicalHealthImplCopyWithImpl<$Res>;
+  factory _$$PhysicalHealthImplCopyWith(_$PhysicalHealthImpl value,
+          $Res Function(_$PhysicalHealthImpl) then) =
+      __$$PhysicalHealthImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Summary? summary});
@@ -106,23 +102,22 @@ class __$$PhysicalHealthImplCopyWithImpl<$Res>
     extends _$PhysicalHealthCopyWithImpl<$Res, _$PhysicalHealthImpl>
     implements _$$PhysicalHealthImplCopyWith<$Res> {
   __$$PhysicalHealthImplCopyWithImpl(
-    _$PhysicalHealthImpl _value,
-    $Res Function(_$PhysicalHealthImpl) _then,
-  ) : super(_value, _then);
+      _$PhysicalHealthImpl _value, $Res Function(_$PhysicalHealthImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of PhysicalHealth
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? summary = freezed}) {
-    return _then(
-      _$PhysicalHealthImpl(
-        summary: freezed == summary
-            ? _value.summary
-            : summary // ignore: cast_nullable_to_non_nullable
-                  as Summary?,
-      ),
-    );
+  $Res call({
+    Object? summary = freezed,
+  }) {
+    return _then(_$PhysicalHealthImpl(
+      summary: freezed == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary?,
+    ));
   }
 }
 
@@ -161,13 +156,13 @@ class _$PhysicalHealthImpl implements _PhysicalHealth {
   @pragma('vm:prefer-inline')
   _$$PhysicalHealthImplCopyWith<_$PhysicalHealthImpl> get copyWith =>
       __$$PhysicalHealthImplCopyWithImpl<_$PhysicalHealthImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PhysicalHealthImplToJson(this);
+    return _$$PhysicalHealthImplToJson(
+      this,
+    );
   }
 }
 

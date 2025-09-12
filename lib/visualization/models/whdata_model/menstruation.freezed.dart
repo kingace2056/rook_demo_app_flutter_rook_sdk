@@ -12,8 +12,7 @@ part of 'menstruation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Menstruation _$MenstruationFromJson(Map<String, dynamic> json) {
   return _Menstruation.fromJson(json);
@@ -53,24 +52,23 @@ mixin _$Menstruation {
 /// @nodoc
 abstract class $MenstruationCopyWith<$Res> {
   factory $MenstruationCopyWith(
-    Menstruation value,
-    $Res Function(Menstruation) then,
-  ) = _$MenstruationCopyWithImpl<$Res, Menstruation>;
+          Menstruation value, $Res Function(Menstruation) then) =
+      _$MenstruationCopyWithImpl<$Res, Menstruation>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'last_updated_datetime_string')
-    DateTime? lastUpdatedDatetimeString,
-    @JsonKey(name: 'period_start_date_string') DateTime? periodStartDateString,
-    @JsonKey(name: 'cycle_day_int') int? cycleDayInt,
-    @JsonKey(name: 'predicted_cycle_length_days_int')
-    int? predictedCycleLengthDaysInt,
-    @JsonKey(name: 'cycle_length_days_int') int? cycleLengthDaysInt,
-    @JsonKey(name: 'current_phase_string') String? currentPhaseString,
-    @JsonKey(name: 'length_of_current_phase_days_int')
-    int? lengthOfCurrentPhaseDaysInt,
-    @JsonKey(name: 'days_until_next_phase_int') int? daysUntilNextPhaseInt,
-    @JsonKey(name: 'is_a_predicted_cycle_bool') bool? isAPredictedCycleBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'last_updated_datetime_string')
+      DateTime? lastUpdatedDatetimeString,
+      @JsonKey(name: 'period_start_date_string')
+      DateTime? periodStartDateString,
+      @JsonKey(name: 'cycle_day_int') int? cycleDayInt,
+      @JsonKey(name: 'predicted_cycle_length_days_int')
+      int? predictedCycleLengthDaysInt,
+      @JsonKey(name: 'cycle_length_days_int') int? cycleLengthDaysInt,
+      @JsonKey(name: 'current_phase_string') String? currentPhaseString,
+      @JsonKey(name: 'length_of_current_phase_days_int')
+      int? lengthOfCurrentPhaseDaysInt,
+      @JsonKey(name: 'days_until_next_phase_int') int? daysUntilNextPhaseInt,
+      @JsonKey(name: 'is_a_predicted_cycle_bool') bool? isAPredictedCycleBool});
 }
 
 /// @nodoc
@@ -98,47 +96,44 @@ class _$MenstruationCopyWithImpl<$Res, $Val extends Menstruation>
     Object? daysUntilNextPhaseInt = freezed,
     Object? isAPredictedCycleBool = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            lastUpdatedDatetimeString: freezed == lastUpdatedDatetimeString
-                ? _value.lastUpdatedDatetimeString
-                : lastUpdatedDatetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            periodStartDateString: freezed == periodStartDateString
-                ? _value.periodStartDateString
-                : periodStartDateString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            cycleDayInt: freezed == cycleDayInt
-                ? _value.cycleDayInt
-                : cycleDayInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            predictedCycleLengthDaysInt: freezed == predictedCycleLengthDaysInt
-                ? _value.predictedCycleLengthDaysInt
-                : predictedCycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            cycleLengthDaysInt: freezed == cycleLengthDaysInt
-                ? _value.cycleLengthDaysInt
-                : cycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            currentPhaseString: freezed == currentPhaseString
-                ? _value.currentPhaseString
-                : currentPhaseString // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            lengthOfCurrentPhaseDaysInt: freezed == lengthOfCurrentPhaseDaysInt
-                ? _value.lengthOfCurrentPhaseDaysInt
-                : lengthOfCurrentPhaseDaysInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            daysUntilNextPhaseInt: freezed == daysUntilNextPhaseInt
-                ? _value.daysUntilNextPhaseInt
-                : daysUntilNextPhaseInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            isAPredictedCycleBool: freezed == isAPredictedCycleBool
-                ? _value.isAPredictedCycleBool
-                : isAPredictedCycleBool // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      lastUpdatedDatetimeString: freezed == lastUpdatedDatetimeString
+          ? _value.lastUpdatedDatetimeString
+          : lastUpdatedDatetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      periodStartDateString: freezed == periodStartDateString
+          ? _value.periodStartDateString
+          : periodStartDateString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      cycleDayInt: freezed == cycleDayInt
+          ? _value.cycleDayInt
+          : cycleDayInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      predictedCycleLengthDaysInt: freezed == predictedCycleLengthDaysInt
+          ? _value.predictedCycleLengthDaysInt
+          : predictedCycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cycleLengthDaysInt: freezed == cycleLengthDaysInt
+          ? _value.cycleLengthDaysInt
+          : cycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      currentPhaseString: freezed == currentPhaseString
+          ? _value.currentPhaseString
+          : currentPhaseString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lengthOfCurrentPhaseDaysInt: freezed == lengthOfCurrentPhaseDaysInt
+          ? _value.lengthOfCurrentPhaseDaysInt
+          : lengthOfCurrentPhaseDaysInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      daysUntilNextPhaseInt: freezed == daysUntilNextPhaseInt
+          ? _value.daysUntilNextPhaseInt
+          : daysUntilNextPhaseInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      isAPredictedCycleBool: freezed == isAPredictedCycleBool
+          ? _value.isAPredictedCycleBool
+          : isAPredictedCycleBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
   }
 }
 
@@ -146,25 +141,24 @@ class _$MenstruationCopyWithImpl<$Res, $Val extends Menstruation>
 abstract class _$$MenstruationImplCopyWith<$Res>
     implements $MenstruationCopyWith<$Res> {
   factory _$$MenstruationImplCopyWith(
-    _$MenstruationImpl value,
-    $Res Function(_$MenstruationImpl) then,
-  ) = __$$MenstruationImplCopyWithImpl<$Res>;
+          _$MenstruationImpl value, $Res Function(_$MenstruationImpl) then) =
+      __$$MenstruationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'last_updated_datetime_string')
-    DateTime? lastUpdatedDatetimeString,
-    @JsonKey(name: 'period_start_date_string') DateTime? periodStartDateString,
-    @JsonKey(name: 'cycle_day_int') int? cycleDayInt,
-    @JsonKey(name: 'predicted_cycle_length_days_int')
-    int? predictedCycleLengthDaysInt,
-    @JsonKey(name: 'cycle_length_days_int') int? cycleLengthDaysInt,
-    @JsonKey(name: 'current_phase_string') String? currentPhaseString,
-    @JsonKey(name: 'length_of_current_phase_days_int')
-    int? lengthOfCurrentPhaseDaysInt,
-    @JsonKey(name: 'days_until_next_phase_int') int? daysUntilNextPhaseInt,
-    @JsonKey(name: 'is_a_predicted_cycle_bool') bool? isAPredictedCycleBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'last_updated_datetime_string')
+      DateTime? lastUpdatedDatetimeString,
+      @JsonKey(name: 'period_start_date_string')
+      DateTime? periodStartDateString,
+      @JsonKey(name: 'cycle_day_int') int? cycleDayInt,
+      @JsonKey(name: 'predicted_cycle_length_days_int')
+      int? predictedCycleLengthDaysInt,
+      @JsonKey(name: 'cycle_length_days_int') int? cycleLengthDaysInt,
+      @JsonKey(name: 'current_phase_string') String? currentPhaseString,
+      @JsonKey(name: 'length_of_current_phase_days_int')
+      int? lengthOfCurrentPhaseDaysInt,
+      @JsonKey(name: 'days_until_next_phase_int') int? daysUntilNextPhaseInt,
+      @JsonKey(name: 'is_a_predicted_cycle_bool') bool? isAPredictedCycleBool});
 }
 
 /// @nodoc
@@ -172,9 +166,8 @@ class __$$MenstruationImplCopyWithImpl<$Res>
     extends _$MenstruationCopyWithImpl<$Res, _$MenstruationImpl>
     implements _$$MenstruationImplCopyWith<$Res> {
   __$$MenstruationImplCopyWithImpl(
-    _$MenstruationImpl _value,
-    $Res Function(_$MenstruationImpl) _then,
-  ) : super(_value, _then);
+      _$MenstruationImpl _value, $Res Function(_$MenstruationImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Menstruation
   /// with the given fields replaced by the non-null parameter values.
@@ -191,66 +184,63 @@ class __$$MenstruationImplCopyWithImpl<$Res>
     Object? daysUntilNextPhaseInt = freezed,
     Object? isAPredictedCycleBool = freezed,
   }) {
-    return _then(
-      _$MenstruationImpl(
-        lastUpdatedDatetimeString: freezed == lastUpdatedDatetimeString
-            ? _value.lastUpdatedDatetimeString
-            : lastUpdatedDatetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        periodStartDateString: freezed == periodStartDateString
-            ? _value.periodStartDateString
-            : periodStartDateString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        cycleDayInt: freezed == cycleDayInt
-            ? _value.cycleDayInt
-            : cycleDayInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        predictedCycleLengthDaysInt: freezed == predictedCycleLengthDaysInt
-            ? _value.predictedCycleLengthDaysInt
-            : predictedCycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        cycleLengthDaysInt: freezed == cycleLengthDaysInt
-            ? _value.cycleLengthDaysInt
-            : cycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        currentPhaseString: freezed == currentPhaseString
-            ? _value.currentPhaseString
-            : currentPhaseString // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        lengthOfCurrentPhaseDaysInt: freezed == lengthOfCurrentPhaseDaysInt
-            ? _value.lengthOfCurrentPhaseDaysInt
-            : lengthOfCurrentPhaseDaysInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        daysUntilNextPhaseInt: freezed == daysUntilNextPhaseInt
-            ? _value.daysUntilNextPhaseInt
-            : daysUntilNextPhaseInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        isAPredictedCycleBool: freezed == isAPredictedCycleBool
-            ? _value.isAPredictedCycleBool
-            : isAPredictedCycleBool // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      ),
-    );
+    return _then(_$MenstruationImpl(
+      lastUpdatedDatetimeString: freezed == lastUpdatedDatetimeString
+          ? _value.lastUpdatedDatetimeString
+          : lastUpdatedDatetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      periodStartDateString: freezed == periodStartDateString
+          ? _value.periodStartDateString
+          : periodStartDateString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      cycleDayInt: freezed == cycleDayInt
+          ? _value.cycleDayInt
+          : cycleDayInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      predictedCycleLengthDaysInt: freezed == predictedCycleLengthDaysInt
+          ? _value.predictedCycleLengthDaysInt
+          : predictedCycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cycleLengthDaysInt: freezed == cycleLengthDaysInt
+          ? _value.cycleLengthDaysInt
+          : cycleLengthDaysInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      currentPhaseString: freezed == currentPhaseString
+          ? _value.currentPhaseString
+          : currentPhaseString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lengthOfCurrentPhaseDaysInt: freezed == lengthOfCurrentPhaseDaysInt
+          ? _value.lengthOfCurrentPhaseDaysInt
+          : lengthOfCurrentPhaseDaysInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      daysUntilNextPhaseInt: freezed == daysUntilNextPhaseInt
+          ? _value.daysUntilNextPhaseInt
+          : daysUntilNextPhaseInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      isAPredictedCycleBool: freezed == isAPredictedCycleBool
+          ? _value.isAPredictedCycleBool
+          : isAPredictedCycleBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MenstruationImpl implements _Menstruation {
-  _$MenstruationImpl({
-    @JsonKey(name: 'last_updated_datetime_string')
-    this.lastUpdatedDatetimeString,
-    @JsonKey(name: 'period_start_date_string') this.periodStartDateString,
-    @JsonKey(name: 'cycle_day_int') this.cycleDayInt,
-    @JsonKey(name: 'predicted_cycle_length_days_int')
-    this.predictedCycleLengthDaysInt,
-    @JsonKey(name: 'cycle_length_days_int') this.cycleLengthDaysInt,
-    @JsonKey(name: 'current_phase_string') this.currentPhaseString,
-    @JsonKey(name: 'length_of_current_phase_days_int')
-    this.lengthOfCurrentPhaseDaysInt,
-    @JsonKey(name: 'days_until_next_phase_int') this.daysUntilNextPhaseInt,
-    @JsonKey(name: 'is_a_predicted_cycle_bool') this.isAPredictedCycleBool,
-  });
+  _$MenstruationImpl(
+      {@JsonKey(name: 'last_updated_datetime_string')
+      this.lastUpdatedDatetimeString,
+      @JsonKey(name: 'period_start_date_string') this.periodStartDateString,
+      @JsonKey(name: 'cycle_day_int') this.cycleDayInt,
+      @JsonKey(name: 'predicted_cycle_length_days_int')
+      this.predictedCycleLengthDaysInt,
+      @JsonKey(name: 'cycle_length_days_int') this.cycleLengthDaysInt,
+      @JsonKey(name: 'current_phase_string') this.currentPhaseString,
+      @JsonKey(name: 'length_of_current_phase_days_int')
+      this.lengthOfCurrentPhaseDaysInt,
+      @JsonKey(name: 'days_until_next_phase_int') this.daysUntilNextPhaseInt,
+      @JsonKey(name: 'is_a_predicted_cycle_bool') this.isAPredictedCycleBool});
 
   factory _$MenstruationImpl.fromJson(Map<String, dynamic> json) =>
       _$$MenstruationImplFromJson(json);
@@ -293,29 +283,23 @@ class _$MenstruationImpl implements _Menstruation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MenstruationImpl &&
-            (identical(
-                  other.lastUpdatedDatetimeString,
-                  lastUpdatedDatetimeString,
-                ) ||
+            (identical(other.lastUpdatedDatetimeString,
+                    lastUpdatedDatetimeString) ||
                 other.lastUpdatedDatetimeString == lastUpdatedDatetimeString) &&
             (identical(other.periodStartDateString, periodStartDateString) ||
                 other.periodStartDateString == periodStartDateString) &&
             (identical(other.cycleDayInt, cycleDayInt) ||
                 other.cycleDayInt == cycleDayInt) &&
-            (identical(
-                  other.predictedCycleLengthDaysInt,
-                  predictedCycleLengthDaysInt,
-                ) ||
+            (identical(other.predictedCycleLengthDaysInt,
+                    predictedCycleLengthDaysInt) ||
                 other.predictedCycleLengthDaysInt ==
                     predictedCycleLengthDaysInt) &&
             (identical(other.cycleLengthDaysInt, cycleLengthDaysInt) ||
                 other.cycleLengthDaysInt == cycleLengthDaysInt) &&
             (identical(other.currentPhaseString, currentPhaseString) ||
                 other.currentPhaseString == currentPhaseString) &&
-            (identical(
-                  other.lengthOfCurrentPhaseDaysInt,
-                  lengthOfCurrentPhaseDaysInt,
-                ) ||
+            (identical(other.lengthOfCurrentPhaseDaysInt,
+                    lengthOfCurrentPhaseDaysInt) ||
                 other.lengthOfCurrentPhaseDaysInt ==
                     lengthOfCurrentPhaseDaysInt) &&
             (identical(other.daysUntilNextPhaseInt, daysUntilNextPhaseInt) ||
@@ -327,17 +311,16 @@ class _$MenstruationImpl implements _Menstruation {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    lastUpdatedDatetimeString,
-    periodStartDateString,
-    cycleDayInt,
-    predictedCycleLengthDaysInt,
-    cycleLengthDaysInt,
-    currentPhaseString,
-    lengthOfCurrentPhaseDaysInt,
-    daysUntilNextPhaseInt,
-    isAPredictedCycleBool,
-  );
+      runtimeType,
+      lastUpdatedDatetimeString,
+      periodStartDateString,
+      cycleDayInt,
+      predictedCycleLengthDaysInt,
+      cycleLengthDaysInt,
+      currentPhaseString,
+      lengthOfCurrentPhaseDaysInt,
+      daysUntilNextPhaseInt,
+      isAPredictedCycleBool);
 
   /// Create a copy of Menstruation
   /// with the given fields replaced by the non-null parameter values.
@@ -349,28 +332,29 @@ class _$MenstruationImpl implements _Menstruation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MenstruationImplToJson(this);
+    return _$$MenstruationImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Menstruation implements Menstruation {
-  factory _Menstruation({
-    @JsonKey(name: 'last_updated_datetime_string')
-    final DateTime? lastUpdatedDatetimeString,
-    @JsonKey(name: 'period_start_date_string')
-    final DateTime? periodStartDateString,
-    @JsonKey(name: 'cycle_day_int') final int? cycleDayInt,
-    @JsonKey(name: 'predicted_cycle_length_days_int')
-    final int? predictedCycleLengthDaysInt,
-    @JsonKey(name: 'cycle_length_days_int') final int? cycleLengthDaysInt,
-    @JsonKey(name: 'current_phase_string') final String? currentPhaseString,
-    @JsonKey(name: 'length_of_current_phase_days_int')
-    final int? lengthOfCurrentPhaseDaysInt,
-    @JsonKey(name: 'days_until_next_phase_int')
-    final int? daysUntilNextPhaseInt,
-    @JsonKey(name: 'is_a_predicted_cycle_bool')
-    final bool? isAPredictedCycleBool,
-  }) = _$MenstruationImpl;
+  factory _Menstruation(
+      {@JsonKey(name: 'last_updated_datetime_string')
+      final DateTime? lastUpdatedDatetimeString,
+      @JsonKey(name: 'period_start_date_string')
+      final DateTime? periodStartDateString,
+      @JsonKey(name: 'cycle_day_int') final int? cycleDayInt,
+      @JsonKey(name: 'predicted_cycle_length_days_int')
+      final int? predictedCycleLengthDaysInt,
+      @JsonKey(name: 'cycle_length_days_int') final int? cycleLengthDaysInt,
+      @JsonKey(name: 'current_phase_string') final String? currentPhaseString,
+      @JsonKey(name: 'length_of_current_phase_days_int')
+      final int? lengthOfCurrentPhaseDaysInt,
+      @JsonKey(name: 'days_until_next_phase_int')
+      final int? daysUntilNextPhaseInt,
+      @JsonKey(name: 'is_a_predicted_cycle_bool')
+      final bool? isAPredictedCycleBool}) = _$MenstruationImpl;
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) =
       _$MenstruationImpl.fromJson;

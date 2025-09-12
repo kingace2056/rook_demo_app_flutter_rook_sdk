@@ -7,11 +7,11 @@ part of 'mood.dart';
 // **************************************************************************
 
 _$MoodImpl _$$MoodImplFromJson(Map<String, dynamic> json) => _$MoodImpl(
-  moodMinimumScaleInt: (json['mood_minimum_scale_int'] as num?)?.toInt(),
-  moodAvgScaleInt: (json['mood_avg_scale_int'] as num?)?.toInt(),
-  moodMaximumScaleInt: (json['mood_maximum_scale_int'] as num?)?.toInt(),
-  moodDeltaScaleInt: (json['mood_delta_scale_int'] as num?)?.toInt(),
-);
+      moodMinimumScaleInt: (json['mood_minimum_scale_int'] as num?)?.toInt(),
+      moodAvgScaleInt: (json['mood_avg_scale_int'] as num?)?.toInt(),
+      moodMaximumScaleInt: (json['mood_maximum_scale_int'] as num?)?.toInt(),
+      moodDeltaScaleInt: (json['mood_delta_scale_int'] as num?)?.toInt(),
+    );
 
 Map<String, dynamic> _$$MoodImplToJson(_$MoodImpl instance) =>
     <String, dynamic>{

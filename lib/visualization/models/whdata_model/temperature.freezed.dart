@@ -12,8 +12,7 @@ part of 'temperature.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Temperature _$TemperatureFromJson(Map<String, dynamic> json) {
   return _Temperature.fromJson(json);
@@ -47,20 +46,18 @@ mixin _$Temperature {
 /// @nodoc
 abstract class $TemperatureCopyWith<$Res> {
   factory $TemperatureCopyWith(
-    Temperature value,
-    $Res Function(Temperature) then,
-  ) = _$TemperatureCopyWithImpl<$Res, Temperature>;
+          Temperature value, $Res Function(Temperature) then) =
+      _$TemperatureCopyWithImpl<$Res, Temperature>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_avg_object')
-    TemperatureAvgObject? temperatureAvgObject,
-    @JsonKey(name: 'temperature_maximum_object')
-    TemperatureMaximumObject? temperatureMaximumObject,
-    @JsonKey(name: 'temperature_minimum_object')
-    TemperatureMinimumObject? temperatureMinimumObject,
-    @JsonKey(name: 'temperature_delta_object')
-    TemperatureDeltaObject? temperatureDeltaObject,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_avg_object')
+      TemperatureAvgObject? temperatureAvgObject,
+      @JsonKey(name: 'temperature_maximum_object')
+      TemperatureMaximumObject? temperatureMaximumObject,
+      @JsonKey(name: 'temperature_minimum_object')
+      TemperatureMinimumObject? temperatureMinimumObject,
+      @JsonKey(name: 'temperature_delta_object')
+      TemperatureDeltaObject? temperatureDeltaObject});
 
   $TemperatureAvgObjectCopyWith<$Res>? get temperatureAvgObject;
   $TemperatureMaximumObjectCopyWith<$Res>? get temperatureMaximumObject;
@@ -88,27 +85,24 @@ class _$TemperatureCopyWithImpl<$Res, $Val extends Temperature>
     Object? temperatureMinimumObject = freezed,
     Object? temperatureDeltaObject = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            temperatureAvgObject: freezed == temperatureAvgObject
-                ? _value.temperatureAvgObject
-                : temperatureAvgObject // ignore: cast_nullable_to_non_nullable
-                      as TemperatureAvgObject?,
-            temperatureMaximumObject: freezed == temperatureMaximumObject
-                ? _value.temperatureMaximumObject
-                : temperatureMaximumObject // ignore: cast_nullable_to_non_nullable
-                      as TemperatureMaximumObject?,
-            temperatureMinimumObject: freezed == temperatureMinimumObject
-                ? _value.temperatureMinimumObject
-                : temperatureMinimumObject // ignore: cast_nullable_to_non_nullable
-                      as TemperatureMinimumObject?,
-            temperatureDeltaObject: freezed == temperatureDeltaObject
-                ? _value.temperatureDeltaObject
-                : temperatureDeltaObject // ignore: cast_nullable_to_non_nullable
-                      as TemperatureDeltaObject?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      temperatureAvgObject: freezed == temperatureAvgObject
+          ? _value.temperatureAvgObject
+          : temperatureAvgObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureAvgObject?,
+      temperatureMaximumObject: freezed == temperatureMaximumObject
+          ? _value.temperatureMaximumObject
+          : temperatureMaximumObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureMaximumObject?,
+      temperatureMinimumObject: freezed == temperatureMinimumObject
+          ? _value.temperatureMinimumObject
+          : temperatureMinimumObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureMinimumObject?,
+      temperatureDeltaObject: freezed == temperatureDeltaObject
+          ? _value.temperatureDeltaObject
+          : temperatureDeltaObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureDeltaObject?,
+    ) as $Val);
   }
 
   /// Create a copy of Temperature
@@ -120,9 +114,8 @@ class _$TemperatureCopyWithImpl<$Res, $Val extends Temperature>
       return null;
     }
 
-    return $TemperatureAvgObjectCopyWith<$Res>(_value.temperatureAvgObject!, (
-      value,
-    ) {
+    return $TemperatureAvgObjectCopyWith<$Res>(_value.temperatureAvgObject!,
+        (value) {
       return _then(_value.copyWith(temperatureAvgObject: value) as $Val);
     });
   }
@@ -137,11 +130,9 @@ class _$TemperatureCopyWithImpl<$Res, $Val extends Temperature>
     }
 
     return $TemperatureMaximumObjectCopyWith<$Res>(
-      _value.temperatureMaximumObject!,
-      (value) {
-        return _then(_value.copyWith(temperatureMaximumObject: value) as $Val);
-      },
-    );
+        _value.temperatureMaximumObject!, (value) {
+      return _then(_value.copyWith(temperatureMaximumObject: value) as $Val);
+    });
   }
 
   /// Create a copy of Temperature
@@ -154,11 +145,9 @@ class _$TemperatureCopyWithImpl<$Res, $Val extends Temperature>
     }
 
     return $TemperatureMinimumObjectCopyWith<$Res>(
-      _value.temperatureMinimumObject!,
-      (value) {
-        return _then(_value.copyWith(temperatureMinimumObject: value) as $Val);
-      },
-    );
+        _value.temperatureMinimumObject!, (value) {
+      return _then(_value.copyWith(temperatureMinimumObject: value) as $Val);
+    });
   }
 
   /// Create a copy of Temperature
@@ -170,12 +159,10 @@ class _$TemperatureCopyWithImpl<$Res, $Val extends Temperature>
       return null;
     }
 
-    return $TemperatureDeltaObjectCopyWith<$Res>(
-      _value.temperatureDeltaObject!,
-      (value) {
-        return _then(_value.copyWith(temperatureDeltaObject: value) as $Val);
-      },
-    );
+    return $TemperatureDeltaObjectCopyWith<$Res>(_value.temperatureDeltaObject!,
+        (value) {
+      return _then(_value.copyWith(temperatureDeltaObject: value) as $Val);
+    });
   }
 }
 
@@ -183,21 +170,19 @@ class _$TemperatureCopyWithImpl<$Res, $Val extends Temperature>
 abstract class _$$TemperatureImplCopyWith<$Res>
     implements $TemperatureCopyWith<$Res> {
   factory _$$TemperatureImplCopyWith(
-    _$TemperatureImpl value,
-    $Res Function(_$TemperatureImpl) then,
-  ) = __$$TemperatureImplCopyWithImpl<$Res>;
+          _$TemperatureImpl value, $Res Function(_$TemperatureImpl) then) =
+      __$$TemperatureImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'temperature_avg_object')
-    TemperatureAvgObject? temperatureAvgObject,
-    @JsonKey(name: 'temperature_maximum_object')
-    TemperatureMaximumObject? temperatureMaximumObject,
-    @JsonKey(name: 'temperature_minimum_object')
-    TemperatureMinimumObject? temperatureMinimumObject,
-    @JsonKey(name: 'temperature_delta_object')
-    TemperatureDeltaObject? temperatureDeltaObject,
-  });
+  $Res call(
+      {@JsonKey(name: 'temperature_avg_object')
+      TemperatureAvgObject? temperatureAvgObject,
+      @JsonKey(name: 'temperature_maximum_object')
+      TemperatureMaximumObject? temperatureMaximumObject,
+      @JsonKey(name: 'temperature_minimum_object')
+      TemperatureMinimumObject? temperatureMinimumObject,
+      @JsonKey(name: 'temperature_delta_object')
+      TemperatureDeltaObject? temperatureDeltaObject});
 
   @override
   $TemperatureAvgObjectCopyWith<$Res>? get temperatureAvgObject;
@@ -214,9 +199,8 @@ class __$$TemperatureImplCopyWithImpl<$Res>
     extends _$TemperatureCopyWithImpl<$Res, _$TemperatureImpl>
     implements _$$TemperatureImplCopyWith<$Res> {
   __$$TemperatureImplCopyWithImpl(
-    _$TemperatureImpl _value,
-    $Res Function(_$TemperatureImpl) _then,
-  ) : super(_value, _then);
+      _$TemperatureImpl _value, $Res Function(_$TemperatureImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Temperature
   /// with the given fields replaced by the non-null parameter values.
@@ -228,38 +212,37 @@ class __$$TemperatureImplCopyWithImpl<$Res>
     Object? temperatureMinimumObject = freezed,
     Object? temperatureDeltaObject = freezed,
   }) {
-    return _then(
-      _$TemperatureImpl(
-        temperatureAvgObject: freezed == temperatureAvgObject
-            ? _value.temperatureAvgObject
-            : temperatureAvgObject // ignore: cast_nullable_to_non_nullable
-                  as TemperatureAvgObject?,
-        temperatureMaximumObject: freezed == temperatureMaximumObject
-            ? _value.temperatureMaximumObject
-            : temperatureMaximumObject // ignore: cast_nullable_to_non_nullable
-                  as TemperatureMaximumObject?,
-        temperatureMinimumObject: freezed == temperatureMinimumObject
-            ? _value.temperatureMinimumObject
-            : temperatureMinimumObject // ignore: cast_nullable_to_non_nullable
-                  as TemperatureMinimumObject?,
-        temperatureDeltaObject: freezed == temperatureDeltaObject
-            ? _value.temperatureDeltaObject
-            : temperatureDeltaObject // ignore: cast_nullable_to_non_nullable
-                  as TemperatureDeltaObject?,
-      ),
-    );
+    return _then(_$TemperatureImpl(
+      temperatureAvgObject: freezed == temperatureAvgObject
+          ? _value.temperatureAvgObject
+          : temperatureAvgObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureAvgObject?,
+      temperatureMaximumObject: freezed == temperatureMaximumObject
+          ? _value.temperatureMaximumObject
+          : temperatureMaximumObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureMaximumObject?,
+      temperatureMinimumObject: freezed == temperatureMinimumObject
+          ? _value.temperatureMinimumObject
+          : temperatureMinimumObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureMinimumObject?,
+      temperatureDeltaObject: freezed == temperatureDeltaObject
+          ? _value.temperatureDeltaObject
+          : temperatureDeltaObject // ignore: cast_nullable_to_non_nullable
+              as TemperatureDeltaObject?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$TemperatureImpl implements _Temperature {
-  _$TemperatureImpl({
-    @JsonKey(name: 'temperature_avg_object') this.temperatureAvgObject,
-    @JsonKey(name: 'temperature_maximum_object') this.temperatureMaximumObject,
-    @JsonKey(name: 'temperature_minimum_object') this.temperatureMinimumObject,
-    @JsonKey(name: 'temperature_delta_object') this.temperatureDeltaObject,
-  });
+  _$TemperatureImpl(
+      {@JsonKey(name: 'temperature_avg_object') this.temperatureAvgObject,
+      @JsonKey(name: 'temperature_maximum_object')
+      this.temperatureMaximumObject,
+      @JsonKey(name: 'temperature_minimum_object')
+      this.temperatureMinimumObject,
+      @JsonKey(name: 'temperature_delta_object') this.temperatureDeltaObject});
 
   factory _$TemperatureImpl.fromJson(Map<String, dynamic> json) =>
       _$$TemperatureImplFromJson(json);
@@ -290,14 +273,10 @@ class _$TemperatureImpl implements _Temperature {
             (identical(other.temperatureAvgObject, temperatureAvgObject) ||
                 other.temperatureAvgObject == temperatureAvgObject) &&
             (identical(
-                  other.temperatureMaximumObject,
-                  temperatureMaximumObject,
-                ) ||
+                    other.temperatureMaximumObject, temperatureMaximumObject) ||
                 other.temperatureMaximumObject == temperatureMaximumObject) &&
             (identical(
-                  other.temperatureMinimumObject,
-                  temperatureMinimumObject,
-                ) ||
+                    other.temperatureMinimumObject, temperatureMinimumObject) ||
                 other.temperatureMinimumObject == temperatureMinimumObject) &&
             (identical(other.temperatureDeltaObject, temperatureDeltaObject) ||
                 other.temperatureDeltaObject == temperatureDeltaObject));
@@ -306,12 +285,11 @@ class _$TemperatureImpl implements _Temperature {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    temperatureAvgObject,
-    temperatureMaximumObject,
-    temperatureMinimumObject,
-    temperatureDeltaObject,
-  );
+      runtimeType,
+      temperatureAvgObject,
+      temperatureMaximumObject,
+      temperatureMinimumObject,
+      temperatureDeltaObject);
 
   /// Create a copy of Temperature
   /// with the given fields replaced by the non-null parameter values.
@@ -323,21 +301,23 @@ class _$TemperatureImpl implements _Temperature {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TemperatureImplToJson(this);
+    return _$$TemperatureImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Temperature implements Temperature {
-  factory _Temperature({
-    @JsonKey(name: 'temperature_avg_object')
-    final TemperatureAvgObject? temperatureAvgObject,
-    @JsonKey(name: 'temperature_maximum_object')
-    final TemperatureMaximumObject? temperatureMaximumObject,
-    @JsonKey(name: 'temperature_minimum_object')
-    final TemperatureMinimumObject? temperatureMinimumObject,
-    @JsonKey(name: 'temperature_delta_object')
-    final TemperatureDeltaObject? temperatureDeltaObject,
-  }) = _$TemperatureImpl;
+  factory _Temperature(
+          {@JsonKey(name: 'temperature_avg_object')
+          final TemperatureAvgObject? temperatureAvgObject,
+          @JsonKey(name: 'temperature_maximum_object')
+          final TemperatureMaximumObject? temperatureMaximumObject,
+          @JsonKey(name: 'temperature_minimum_object')
+          final TemperatureMinimumObject? temperatureMinimumObject,
+          @JsonKey(name: 'temperature_delta_object')
+          final TemperatureDeltaObject? temperatureDeltaObject}) =
+      _$TemperatureImpl;
 
   factory _Temperature.fromJson(Map<String, dynamic> json) =
       _$TemperatureImpl.fromJson;

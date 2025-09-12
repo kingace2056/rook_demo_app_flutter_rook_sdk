@@ -9,8 +9,8 @@ part of 'overall_scores.dart';
 _$OverallScoresImpl _$$OverallScoresImplFromJson(Map<String, dynamic> json) =>
     _$OverallScoresImpl(
       globalScore0100Int: (json['global_score_0_100_int'] as num?)?.toInt(),
-      sevenDaysAvgScore0100Int: (json['seven_days_avg_score_0_100_int'] as num?)
-          ?.toInt(),
+      sevenDaysAvgScore0100Int:
+          (json['seven_days_avg_score_0_100_int'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$OverallScoresImplToJson(_$OverallScoresImpl instance) =>

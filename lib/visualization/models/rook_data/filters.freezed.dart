@@ -12,8 +12,7 @@ part of 'filters.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Filters _$FiltersFromJson(Map<String, dynamic> json) {
   return _Filters.fromJson(json);
@@ -42,11 +41,10 @@ abstract class $FiltersCopyWith<$Res> {
   factory $FiltersCopyWith(Filters value, $Res Function(Filters) then) =
       _$FiltersCopyWithImpl<$Res, Filters>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'date_range') DateRange? dateRange,
-  });
+  $Res call(
+      {@JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'date_range') DateRange? dateRange});
 
   $DateRangeCopyWith<$Res>? get dateRange;
 }
@@ -70,23 +68,20 @@ class _$FiltersCopyWithImpl<$Res, $Val extends Filters>
     Object? dataStructure = freezed,
     Object? dateRange = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            dateRange: freezed == dateRange
-                ? _value.dateRange
-                : dateRange // ignore: cast_nullable_to_non_nullable
-                      as DateRange?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dateRange: freezed == dateRange
+          ? _value.dateRange
+          : dateRange // ignore: cast_nullable_to_non_nullable
+              as DateRange?,
+    ) as $Val);
   }
 
   /// Create a copy of Filters
@@ -107,16 +102,14 @@ class _$FiltersCopyWithImpl<$Res, $Val extends Filters>
 /// @nodoc
 abstract class _$$FiltersImplCopyWith<$Res> implements $FiltersCopyWith<$Res> {
   factory _$$FiltersImplCopyWith(
-    _$FiltersImpl value,
-    $Res Function(_$FiltersImpl) then,
-  ) = __$$FiltersImplCopyWithImpl<$Res>;
+          _$FiltersImpl value, $Res Function(_$FiltersImpl) then) =
+      __$$FiltersImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'date_range') DateRange? dateRange,
-  });
+  $Res call(
+      {@JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'date_range') DateRange? dateRange});
 
   @override
   $DateRangeCopyWith<$Res>? get dateRange;
@@ -127,9 +120,8 @@ class __$$FiltersImplCopyWithImpl<$Res>
     extends _$FiltersCopyWithImpl<$Res, _$FiltersImpl>
     implements _$$FiltersImplCopyWith<$Res> {
   __$$FiltersImplCopyWithImpl(
-    _$FiltersImpl _value,
-    $Res Function(_$FiltersImpl) _then,
-  ) : super(_value, _then);
+      _$FiltersImpl _value, $Res Function(_$FiltersImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of Filters
   /// with the given fields replaced by the non-null parameter values.
@@ -140,33 +132,30 @@ class __$$FiltersImplCopyWithImpl<$Res>
     Object? dataStructure = freezed,
     Object? dateRange = freezed,
   }) {
-    return _then(
-      _$FiltersImpl(
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        dateRange: freezed == dateRange
-            ? _value.dateRange
-            : dateRange // ignore: cast_nullable_to_non_nullable
-                  as DateRange?,
-      ),
-    );
+    return _then(_$FiltersImpl(
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dateRange: freezed == dateRange
+          ? _value.dateRange
+          : dateRange // ignore: cast_nullable_to_non_nullable
+              as DateRange?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FiltersImpl implements _Filters {
-  _$FiltersImpl({
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'date_range') this.dateRange,
-  });
+  _$FiltersImpl(
+      {@JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'date_range') this.dateRange});
 
   factory _$FiltersImpl.fromJson(Map<String, dynamic> json) =>
       _$$FiltersImplFromJson(json);
@@ -214,16 +203,17 @@ class _$FiltersImpl implements _Filters {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FiltersImplToJson(this);
+    return _$$FiltersImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Filters implements Filters {
-  factory _Filters({
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'date_range') final DateRange? dateRange,
-  }) = _$FiltersImpl;
+  factory _Filters(
+      {@JsonKey(name: 'client_uuid') final String? clientUuid,
+      @JsonKey(name: 'data_structure') final String? dataStructure,
+      @JsonKey(name: 'date_range') final DateRange? dateRange}) = _$FiltersImpl;
 
   factory _Filters.fromJson(Map<String, dynamic> json) = _$FiltersImpl.fromJson;
 

@@ -14,4 +14,6 @@ _$BodyHealthImpl _$$BodyHealthImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$BodyHealthImplToJson(_$BodyHealthImpl instance) =>
-    <String, dynamic>{'events': instance.events};
+    <String, dynamic>{
+      'events': instance.events,
+    };

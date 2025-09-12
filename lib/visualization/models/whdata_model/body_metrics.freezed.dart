@@ -12,8 +12,7 @@ part of 'body_metrics.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BodyMetrics _$BodyMetricsFromJson(Map<String, dynamic> json) {
   return _BodyMetrics.fromJson(json);
@@ -53,24 +52,23 @@ mixin _$BodyMetrics {
 /// @nodoc
 abstract class $BodyMetricsCopyWith<$Res> {
   factory $BodyMetricsCopyWith(
-    BodyMetrics value,
-    $Res Function(BodyMetrics) then,
-  ) = _$BodyMetricsCopyWithImpl<$Res, BodyMetrics>;
+          BodyMetrics value, $Res Function(BodyMetrics) then) =
+      _$BodyMetricsCopyWithImpl<$Res, BodyMetrics>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'waist_circumference_cm_int') int? waistCircumferenceCmInt,
-    @JsonKey(name: 'hip_circumference_cm_int') int? hipCircumferenceCmInt,
-    @JsonKey(name: 'chest_circumference_cm_int') int? chestCircumferenceCmInt,
-    @JsonKey(name: 'bone_composition_percentage_int')
-    int? boneCompositionPercentageInt,
-    @JsonKey(name: 'muscle_composition_percentage_int')
-    int? muscleCompositionPercentageInt,
-    @JsonKey(name: 'water_composition_percentage_int')
-    int? waterCompositionPercentageInt,
-    @JsonKey(name: 'weight_kg_float') double? weightKgFloat,
-    @JsonKey(name: 'height_cm_int') int? heightCmInt,
-    @JsonKey(name: 'bmi_float') double? bmiFloat,
-  });
+  $Res call(
+      {@JsonKey(name: 'waist_circumference_cm_int')
+      int? waistCircumferenceCmInt,
+      @JsonKey(name: 'hip_circumference_cm_int') int? hipCircumferenceCmInt,
+      @JsonKey(name: 'chest_circumference_cm_int') int? chestCircumferenceCmInt,
+      @JsonKey(name: 'bone_composition_percentage_int')
+      int? boneCompositionPercentageInt,
+      @JsonKey(name: 'muscle_composition_percentage_int')
+      int? muscleCompositionPercentageInt,
+      @JsonKey(name: 'water_composition_percentage_int')
+      int? waterCompositionPercentageInt,
+      @JsonKey(name: 'weight_kg_float') double? weightKgFloat,
+      @JsonKey(name: 'height_cm_int') int? heightCmInt,
+      @JsonKey(name: 'bmi_float') double? bmiFloat});
 }
 
 /// @nodoc
@@ -98,50 +96,44 @@ class _$BodyMetricsCopyWithImpl<$Res, $Val extends BodyMetrics>
     Object? heightCmInt = freezed,
     Object? bmiFloat = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            waistCircumferenceCmInt: freezed == waistCircumferenceCmInt
-                ? _value.waistCircumferenceCmInt
-                : waistCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            hipCircumferenceCmInt: freezed == hipCircumferenceCmInt
-                ? _value.hipCircumferenceCmInt
-                : hipCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            chestCircumferenceCmInt: freezed == chestCircumferenceCmInt
-                ? _value.chestCircumferenceCmInt
-                : chestCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            boneCompositionPercentageInt:
-                freezed == boneCompositionPercentageInt
-                ? _value.boneCompositionPercentageInt
-                : boneCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            muscleCompositionPercentageInt:
-                freezed == muscleCompositionPercentageInt
-                ? _value.muscleCompositionPercentageInt
-                : muscleCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            waterCompositionPercentageInt:
-                freezed == waterCompositionPercentageInt
-                ? _value.waterCompositionPercentageInt
-                : waterCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            weightKgFloat: freezed == weightKgFloat
-                ? _value.weightKgFloat
-                : weightKgFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-            heightCmInt: freezed == heightCmInt
-                ? _value.heightCmInt
-                : heightCmInt // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            bmiFloat: freezed == bmiFloat
-                ? _value.bmiFloat
-                : bmiFloat // ignore: cast_nullable_to_non_nullable
-                      as double?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      waistCircumferenceCmInt: freezed == waistCircumferenceCmInt
+          ? _value.waistCircumferenceCmInt
+          : waistCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hipCircumferenceCmInt: freezed == hipCircumferenceCmInt
+          ? _value.hipCircumferenceCmInt
+          : hipCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      chestCircumferenceCmInt: freezed == chestCircumferenceCmInt
+          ? _value.chestCircumferenceCmInt
+          : chestCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      boneCompositionPercentageInt: freezed == boneCompositionPercentageInt
+          ? _value.boneCompositionPercentageInt
+          : boneCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      muscleCompositionPercentageInt: freezed == muscleCompositionPercentageInt
+          ? _value.muscleCompositionPercentageInt
+          : muscleCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      waterCompositionPercentageInt: freezed == waterCompositionPercentageInt
+          ? _value.waterCompositionPercentageInt
+          : waterCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      weightKgFloat: freezed == weightKgFloat
+          ? _value.weightKgFloat
+          : weightKgFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      heightCmInt: freezed == heightCmInt
+          ? _value.heightCmInt
+          : heightCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      bmiFloat: freezed == bmiFloat
+          ? _value.bmiFloat
+          : bmiFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ) as $Val);
   }
 }
 
@@ -149,25 +141,24 @@ class _$BodyMetricsCopyWithImpl<$Res, $Val extends BodyMetrics>
 abstract class _$$BodyMetricsImplCopyWith<$Res>
     implements $BodyMetricsCopyWith<$Res> {
   factory _$$BodyMetricsImplCopyWith(
-    _$BodyMetricsImpl value,
-    $Res Function(_$BodyMetricsImpl) then,
-  ) = __$$BodyMetricsImplCopyWithImpl<$Res>;
+          _$BodyMetricsImpl value, $Res Function(_$BodyMetricsImpl) then) =
+      __$$BodyMetricsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'waist_circumference_cm_int') int? waistCircumferenceCmInt,
-    @JsonKey(name: 'hip_circumference_cm_int') int? hipCircumferenceCmInt,
-    @JsonKey(name: 'chest_circumference_cm_int') int? chestCircumferenceCmInt,
-    @JsonKey(name: 'bone_composition_percentage_int')
-    int? boneCompositionPercentageInt,
-    @JsonKey(name: 'muscle_composition_percentage_int')
-    int? muscleCompositionPercentageInt,
-    @JsonKey(name: 'water_composition_percentage_int')
-    int? waterCompositionPercentageInt,
-    @JsonKey(name: 'weight_kg_float') double? weightKgFloat,
-    @JsonKey(name: 'height_cm_int') int? heightCmInt,
-    @JsonKey(name: 'bmi_float') double? bmiFloat,
-  });
+  $Res call(
+      {@JsonKey(name: 'waist_circumference_cm_int')
+      int? waistCircumferenceCmInt,
+      @JsonKey(name: 'hip_circumference_cm_int') int? hipCircumferenceCmInt,
+      @JsonKey(name: 'chest_circumference_cm_int') int? chestCircumferenceCmInt,
+      @JsonKey(name: 'bone_composition_percentage_int')
+      int? boneCompositionPercentageInt,
+      @JsonKey(name: 'muscle_composition_percentage_int')
+      int? muscleCompositionPercentageInt,
+      @JsonKey(name: 'water_composition_percentage_int')
+      int? waterCompositionPercentageInt,
+      @JsonKey(name: 'weight_kg_float') double? weightKgFloat,
+      @JsonKey(name: 'height_cm_int') int? heightCmInt,
+      @JsonKey(name: 'bmi_float') double? bmiFloat});
 }
 
 /// @nodoc
@@ -175,9 +166,8 @@ class __$$BodyMetricsImplCopyWithImpl<$Res>
     extends _$BodyMetricsCopyWithImpl<$Res, _$BodyMetricsImpl>
     implements _$$BodyMetricsImplCopyWith<$Res> {
   __$$BodyMetricsImplCopyWithImpl(
-    _$BodyMetricsImpl _value,
-    $Res Function(_$BodyMetricsImpl) _then,
-  ) : super(_value, _then);
+      _$BodyMetricsImpl _value, $Res Function(_$BodyMetricsImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of BodyMetrics
   /// with the given fields replaced by the non-null parameter values.
@@ -194,67 +184,64 @@ class __$$BodyMetricsImplCopyWithImpl<$Res>
     Object? heightCmInt = freezed,
     Object? bmiFloat = freezed,
   }) {
-    return _then(
-      _$BodyMetricsImpl(
-        waistCircumferenceCmInt: freezed == waistCircumferenceCmInt
-            ? _value.waistCircumferenceCmInt
-            : waistCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        hipCircumferenceCmInt: freezed == hipCircumferenceCmInt
-            ? _value.hipCircumferenceCmInt
-            : hipCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        chestCircumferenceCmInt: freezed == chestCircumferenceCmInt
-            ? _value.chestCircumferenceCmInt
-            : chestCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        boneCompositionPercentageInt: freezed == boneCompositionPercentageInt
-            ? _value.boneCompositionPercentageInt
-            : boneCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        muscleCompositionPercentageInt:
-            freezed == muscleCompositionPercentageInt
-            ? _value.muscleCompositionPercentageInt
-            : muscleCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        waterCompositionPercentageInt: freezed == waterCompositionPercentageInt
-            ? _value.waterCompositionPercentageInt
-            : waterCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        weightKgFloat: freezed == weightKgFloat
-            ? _value.weightKgFloat
-            : weightKgFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-        heightCmInt: freezed == heightCmInt
-            ? _value.heightCmInt
-            : heightCmInt // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        bmiFloat: freezed == bmiFloat
-            ? _value.bmiFloat
-            : bmiFloat // ignore: cast_nullable_to_non_nullable
-                  as double?,
-      ),
-    );
+    return _then(_$BodyMetricsImpl(
+      waistCircumferenceCmInt: freezed == waistCircumferenceCmInt
+          ? _value.waistCircumferenceCmInt
+          : waistCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hipCircumferenceCmInt: freezed == hipCircumferenceCmInt
+          ? _value.hipCircumferenceCmInt
+          : hipCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      chestCircumferenceCmInt: freezed == chestCircumferenceCmInt
+          ? _value.chestCircumferenceCmInt
+          : chestCircumferenceCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      boneCompositionPercentageInt: freezed == boneCompositionPercentageInt
+          ? _value.boneCompositionPercentageInt
+          : boneCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      muscleCompositionPercentageInt: freezed == muscleCompositionPercentageInt
+          ? _value.muscleCompositionPercentageInt
+          : muscleCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      waterCompositionPercentageInt: freezed == waterCompositionPercentageInt
+          ? _value.waterCompositionPercentageInt
+          : waterCompositionPercentageInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      weightKgFloat: freezed == weightKgFloat
+          ? _value.weightKgFloat
+          : weightKgFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+      heightCmInt: freezed == heightCmInt
+          ? _value.heightCmInt
+          : heightCmInt // ignore: cast_nullable_to_non_nullable
+              as int?,
+      bmiFloat: freezed == bmiFloat
+          ? _value.bmiFloat
+          : bmiFloat // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$BodyMetricsImpl implements _BodyMetrics {
-  _$BodyMetricsImpl({
-    @JsonKey(name: 'waist_circumference_cm_int') this.waistCircumferenceCmInt,
-    @JsonKey(name: 'hip_circumference_cm_int') this.hipCircumferenceCmInt,
-    @JsonKey(name: 'chest_circumference_cm_int') this.chestCircumferenceCmInt,
-    @JsonKey(name: 'bone_composition_percentage_int')
-    this.boneCompositionPercentageInt,
-    @JsonKey(name: 'muscle_composition_percentage_int')
-    this.muscleCompositionPercentageInt,
-    @JsonKey(name: 'water_composition_percentage_int')
-    this.waterCompositionPercentageInt,
-    @JsonKey(name: 'weight_kg_float') this.weightKgFloat,
-    @JsonKey(name: 'height_cm_int') this.heightCmInt,
-    @JsonKey(name: 'bmi_float') this.bmiFloat,
-  });
+  _$BodyMetricsImpl(
+      {@JsonKey(name: 'waist_circumference_cm_int')
+      this.waistCircumferenceCmInt,
+      @JsonKey(name: 'hip_circumference_cm_int') this.hipCircumferenceCmInt,
+      @JsonKey(name: 'chest_circumference_cm_int') this.chestCircumferenceCmInt,
+      @JsonKey(name: 'bone_composition_percentage_int')
+      this.boneCompositionPercentageInt,
+      @JsonKey(name: 'muscle_composition_percentage_int')
+      this.muscleCompositionPercentageInt,
+      @JsonKey(name: 'water_composition_percentage_int')
+      this.waterCompositionPercentageInt,
+      @JsonKey(name: 'weight_kg_float') this.weightKgFloat,
+      @JsonKey(name: 'height_cm_int') this.heightCmInt,
+      @JsonKey(name: 'bmi_float') this.bmiFloat});
 
   factory _$BodyMetricsImpl.fromJson(Map<String, dynamic> json) =>
       _$$BodyMetricsImplFromJson(json);
@@ -298,33 +285,23 @@ class _$BodyMetricsImpl implements _BodyMetrics {
         (other.runtimeType == runtimeType &&
             other is _$BodyMetricsImpl &&
             (identical(
-                  other.waistCircumferenceCmInt,
-                  waistCircumferenceCmInt,
-                ) ||
+                    other.waistCircumferenceCmInt, waistCircumferenceCmInt) ||
                 other.waistCircumferenceCmInt == waistCircumferenceCmInt) &&
             (identical(other.hipCircumferenceCmInt, hipCircumferenceCmInt) ||
                 other.hipCircumferenceCmInt == hipCircumferenceCmInt) &&
             (identical(
-                  other.chestCircumferenceCmInt,
-                  chestCircumferenceCmInt,
-                ) ||
+                    other.chestCircumferenceCmInt, chestCircumferenceCmInt) ||
                 other.chestCircumferenceCmInt == chestCircumferenceCmInt) &&
-            (identical(
-                  other.boneCompositionPercentageInt,
-                  boneCompositionPercentageInt,
-                ) ||
+            (identical(other.boneCompositionPercentageInt,
+                    boneCompositionPercentageInt) ||
                 other.boneCompositionPercentageInt ==
                     boneCompositionPercentageInt) &&
-            (identical(
-                  other.muscleCompositionPercentageInt,
-                  muscleCompositionPercentageInt,
-                ) ||
+            (identical(other.muscleCompositionPercentageInt,
+                    muscleCompositionPercentageInt) ||
                 other.muscleCompositionPercentageInt ==
                     muscleCompositionPercentageInt) &&
-            (identical(
-                  other.waterCompositionPercentageInt,
-                  waterCompositionPercentageInt,
-                ) ||
+            (identical(other.waterCompositionPercentageInt,
+                    waterCompositionPercentageInt) ||
                 other.waterCompositionPercentageInt ==
                     waterCompositionPercentageInt) &&
             (identical(other.weightKgFloat, weightKgFloat) ||
@@ -338,17 +315,16 @@ class _$BodyMetricsImpl implements _BodyMetrics {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    waistCircumferenceCmInt,
-    hipCircumferenceCmInt,
-    chestCircumferenceCmInt,
-    boneCompositionPercentageInt,
-    muscleCompositionPercentageInt,
-    waterCompositionPercentageInt,
-    weightKgFloat,
-    heightCmInt,
-    bmiFloat,
-  );
+      runtimeType,
+      waistCircumferenceCmInt,
+      hipCircumferenceCmInt,
+      chestCircumferenceCmInt,
+      boneCompositionPercentageInt,
+      muscleCompositionPercentageInt,
+      waterCompositionPercentageInt,
+      weightKgFloat,
+      heightCmInt,
+      bmiFloat);
 
   /// Create a copy of BodyMetrics
   /// with the given fields replaced by the non-null parameter values.
@@ -360,27 +336,29 @@ class _$BodyMetricsImpl implements _BodyMetrics {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BodyMetricsImplToJson(this);
+    return _$$BodyMetricsImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _BodyMetrics implements BodyMetrics {
-  factory _BodyMetrics({
-    @JsonKey(name: 'waist_circumference_cm_int')
-    final int? waistCircumferenceCmInt,
-    @JsonKey(name: 'hip_circumference_cm_int') final int? hipCircumferenceCmInt,
-    @JsonKey(name: 'chest_circumference_cm_int')
-    final int? chestCircumferenceCmInt,
-    @JsonKey(name: 'bone_composition_percentage_int')
-    final int? boneCompositionPercentageInt,
-    @JsonKey(name: 'muscle_composition_percentage_int')
-    final int? muscleCompositionPercentageInt,
-    @JsonKey(name: 'water_composition_percentage_int')
-    final int? waterCompositionPercentageInt,
-    @JsonKey(name: 'weight_kg_float') final double? weightKgFloat,
-    @JsonKey(name: 'height_cm_int') final int? heightCmInt,
-    @JsonKey(name: 'bmi_float') final double? bmiFloat,
-  }) = _$BodyMetricsImpl;
+  factory _BodyMetrics(
+      {@JsonKey(name: 'waist_circumference_cm_int')
+      final int? waistCircumferenceCmInt,
+      @JsonKey(name: 'hip_circumference_cm_int')
+      final int? hipCircumferenceCmInt,
+      @JsonKey(name: 'chest_circumference_cm_int')
+      final int? chestCircumferenceCmInt,
+      @JsonKey(name: 'bone_composition_percentage_int')
+      final int? boneCompositionPercentageInt,
+      @JsonKey(name: 'muscle_composition_percentage_int')
+      final int? muscleCompositionPercentageInt,
+      @JsonKey(name: 'water_composition_percentage_int')
+      final int? waterCompositionPercentageInt,
+      @JsonKey(name: 'weight_kg_float') final double? weightKgFloat,
+      @JsonKey(name: 'height_cm_int') final int? heightCmInt,
+      @JsonKey(name: 'bmi_float') final double? bmiFloat}) = _$BodyMetricsImpl;
 
   factory _BodyMetrics.fromJson(Map<String, dynamic> json) =
       _$BodyMetricsImpl.fromJson;

@@ -12,8 +12,7 @@ part of 'raw_webhook.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RawWebhook _$RawWebhookFromJson(Map<String, dynamic> json) {
   return _RawWebhook.fromJson(json);
@@ -57,25 +56,23 @@ mixin _$RawWebhook {
 /// @nodoc
 abstract class $RawWebhookCopyWith<$Res> {
   factory $RawWebhookCopyWith(
-    RawWebhook value,
-    $Res Function(RawWebhook) then,
-  ) = _$RawWebhookCopyWithImpl<$Res, RawWebhook>;
+          RawWebhook value, $Res Function(RawWebhook) then) =
+      _$RawWebhookCopyWithImpl<$Res, RawWebhook>;
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'raw_data') RawData? rawData,
-    bool? processed,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'raw_data') RawData? rawData,
+      bool? processed,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   $RawDataCopyWith<$Res>? get rawData;
 }
@@ -109,63 +106,60 @@ class _$RawWebhookCopyWithImpl<$Res, $Val extends RawWebhook>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            id: freezed == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            version: freezed == version
-                ? _value.version
-                : version // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            clientUuid: freezed == clientUuid
-                ? _value.clientUuid
-                : clientUuid // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            documentVersion: freezed == documentVersion
-                ? _value.documentVersion
-                : documentVersion // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            dataStructure: freezed == dataStructure
-                ? _value.dataStructure
-                : dataStructure // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            rawData: freezed == rawData
-                ? _value.rawData
-                : rawData // ignore: cast_nullable_to_non_nullable
-                      as RawData?,
-            processed: freezed == processed
-                ? _value.processed
-                : processed // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            createdAtRook: freezed == createdAtRook
-                ? _value.createdAtRook
-                : createdAtRook // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            webhookReceivedAt: freezed == webhookReceivedAt
-                ? _value.webhookReceivedAt
-                : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAt: freezed == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAt: freezed == updatedAt
-                ? _value.updatedAt
-                : updatedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            v: freezed == v
-                ? _value.v
-                : v // ignore: cast_nullable_to_non_nullable
-                      as int?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rawData: freezed == rawData
+          ? _value.rawData
+          : rawData // ignore: cast_nullable_to_non_nullable
+              as RawData?,
+      processed: freezed == processed
+          ? _value.processed
+          : processed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
   }
 
   /// Create a copy of RawWebhook
@@ -187,26 +181,24 @@ class _$RawWebhookCopyWithImpl<$Res, $Val extends RawWebhook>
 abstract class _$$RawWebhookImplCopyWith<$Res>
     implements $RawWebhookCopyWith<$Res> {
   factory _$$RawWebhookImplCopyWith(
-    _$RawWebhookImpl value,
-    $Res Function(_$RawWebhookImpl) then,
-  ) = __$$RawWebhookImplCopyWithImpl<$Res>;
+          _$RawWebhookImpl value, $Res Function(_$RawWebhookImpl) then) =
+      __$$RawWebhookImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: '_id') String? id,
-    int? version,
-    @JsonKey(name: 'client_uuid') String? clientUuid,
-    @JsonKey(name: 'user_id') String? userId,
-    @JsonKey(name: 'document_version') int? documentVersion,
-    @JsonKey(name: 'data_structure') String? dataStructure,
-    @JsonKey(name: 'raw_data') RawData? rawData,
-    bool? processed,
-    @JsonKey(name: 'created_at') DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
-  });
+  $Res call(
+      {@JsonKey(name: '_id') String? id,
+      int? version,
+      @JsonKey(name: 'client_uuid') String? clientUuid,
+      @JsonKey(name: 'user_id') String? userId,
+      @JsonKey(name: 'document_version') int? documentVersion,
+      @JsonKey(name: 'data_structure') String? dataStructure,
+      @JsonKey(name: 'raw_data') RawData? rawData,
+      bool? processed,
+      @JsonKey(name: 'created_at') DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') DateTime? webhookReceivedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      @JsonKey(name: '__v') int? v});
 
   @override
   $RawDataCopyWith<$Res>? get rawData;
@@ -217,9 +209,8 @@ class __$$RawWebhookImplCopyWithImpl<$Res>
     extends _$RawWebhookCopyWithImpl<$Res, _$RawWebhookImpl>
     implements _$$RawWebhookImplCopyWith<$Res> {
   __$$RawWebhookImplCopyWithImpl(
-    _$RawWebhookImpl _value,
-    $Res Function(_$RawWebhookImpl) _then,
-  ) : super(_value, _then);
+      _$RawWebhookImpl _value, $Res Function(_$RawWebhookImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of RawWebhook
   /// with the given fields replaced by the non-null parameter values.
@@ -240,83 +231,80 @@ class __$$RawWebhookImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? v = freezed,
   }) {
-    return _then(
-      _$RawWebhookImpl(
-        id: freezed == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        version: freezed == version
-            ? _value.version
-            : version // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        clientUuid: freezed == clientUuid
-            ? _value.clientUuid
-            : clientUuid // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        documentVersion: freezed == documentVersion
-            ? _value.documentVersion
-            : documentVersion // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        dataStructure: freezed == dataStructure
-            ? _value.dataStructure
-            : dataStructure // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        rawData: freezed == rawData
-            ? _value.rawData
-            : rawData // ignore: cast_nullable_to_non_nullable
-                  as RawData?,
-        processed: freezed == processed
-            ? _value.processed
-            : processed // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        createdAtRook: freezed == createdAtRook
-            ? _value.createdAtRook
-            : createdAtRook // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        webhookReceivedAt: freezed == webhookReceivedAt
-            ? _value.webhookReceivedAt
-            : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAt: freezed == createdAt
-            ? _value.createdAt
-            : createdAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAt: freezed == updatedAt
-            ? _value.updatedAt
-            : updatedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        v: freezed == v
-            ? _value.v
-            : v // ignore: cast_nullable_to_non_nullable
-                  as int?,
-      ),
-    );
+    return _then(_$RawWebhookImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+      clientUuid: freezed == clientUuid
+          ? _value.clientUuid
+          : clientUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      documentVersion: freezed == documentVersion
+          ? _value.documentVersion
+          : documentVersion // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dataStructure: freezed == dataStructure
+          ? _value.dataStructure
+          : dataStructure // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rawData: freezed == rawData
+          ? _value.rawData
+          : rawData // ignore: cast_nullable_to_non_nullable
+              as RawData?,
+      processed: freezed == processed
+          ? _value.processed
+          : processed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      createdAtRook: freezed == createdAtRook
+          ? _value.createdAtRook
+          : createdAtRook // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      webhookReceivedAt: freezed == webhookReceivedAt
+          ? _value.webhookReceivedAt
+          : webhookReceivedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      v: freezed == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RawWebhookImpl implements _RawWebhook {
-  _$RawWebhookImpl({
-    @JsonKey(name: '_id') this.id,
-    this.version,
-    @JsonKey(name: 'client_uuid') this.clientUuid,
-    @JsonKey(name: 'user_id') this.userId,
-    @JsonKey(name: 'document_version') this.documentVersion,
-    @JsonKey(name: 'data_structure') this.dataStructure,
-    @JsonKey(name: 'raw_data') this.rawData,
-    this.processed,
-    @JsonKey(name: 'created_at') this.createdAtRook,
-    @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
-    this.createdAt,
-    this.updatedAt,
-    @JsonKey(name: '__v') this.v,
-  });
+  _$RawWebhookImpl(
+      {@JsonKey(name: '_id') this.id,
+      this.version,
+      @JsonKey(name: 'client_uuid') this.clientUuid,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'document_version') this.documentVersion,
+      @JsonKey(name: 'data_structure') this.dataStructure,
+      @JsonKey(name: 'raw_data') this.rawData,
+      this.processed,
+      @JsonKey(name: 'created_at') this.createdAtRook,
+      @JsonKey(name: 'webhook_received_at') this.webhookReceivedAt,
+      this.createdAt,
+      this.updatedAt,
+      @JsonKey(name: '__v') this.v});
 
   factory _$RawWebhookImpl.fromJson(Map<String, dynamic> json) =>
       _$$RawWebhookImplFromJson(json);
@@ -393,21 +381,20 @@ class _$RawWebhookImpl implements _RawWebhook {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    version,
-    clientUuid,
-    userId,
-    documentVersion,
-    dataStructure,
-    rawData,
-    processed,
-    createdAtRook,
-    webhookReceivedAt,
-    createdAt,
-    updatedAt,
-    v,
-  );
+      runtimeType,
+      id,
+      version,
+      clientUuid,
+      userId,
+      documentVersion,
+      dataStructure,
+      rawData,
+      processed,
+      createdAtRook,
+      webhookReceivedAt,
+      createdAt,
+      updatedAt,
+      v);
 
   /// Create a copy of RawWebhook
   /// with the given fields replaced by the non-null parameter values.
@@ -419,26 +406,27 @@ class _$RawWebhookImpl implements _RawWebhook {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RawWebhookImplToJson(this);
+    return _$$RawWebhookImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _RawWebhook implements RawWebhook {
-  factory _RawWebhook({
-    @JsonKey(name: '_id') final String? id,
-    final int? version,
-    @JsonKey(name: 'client_uuid') final String? clientUuid,
-    @JsonKey(name: 'user_id') final String? userId,
-    @JsonKey(name: 'document_version') final int? documentVersion,
-    @JsonKey(name: 'data_structure') final String? dataStructure,
-    @JsonKey(name: 'raw_data') final RawData? rawData,
-    final bool? processed,
-    @JsonKey(name: 'created_at') final DateTime? createdAtRook,
-    @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
-    final DateTime? createdAt,
-    final DateTime? updatedAt,
-    @JsonKey(name: '__v') final int? v,
-  }) = _$RawWebhookImpl;
+  factory _RawWebhook(
+      {@JsonKey(name: '_id') final String? id,
+      final int? version,
+      @JsonKey(name: 'client_uuid') final String? clientUuid,
+      @JsonKey(name: 'user_id') final String? userId,
+      @JsonKey(name: 'document_version') final int? documentVersion,
+      @JsonKey(name: 'data_structure') final String? dataStructure,
+      @JsonKey(name: 'raw_data') final RawData? rawData,
+      final bool? processed,
+      @JsonKey(name: 'created_at') final DateTime? createdAtRook,
+      @JsonKey(name: 'webhook_received_at') final DateTime? webhookReceivedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
+      @JsonKey(name: '__v') final int? v}) = _$RawWebhookImpl;
 
   factory _RawWebhook.fromJson(Map<String, dynamic> json) =
       _$RawWebhookImpl.fromJson;

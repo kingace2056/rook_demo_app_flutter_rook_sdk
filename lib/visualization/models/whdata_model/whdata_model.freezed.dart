@@ -12,8 +12,7 @@ part of 'whdata_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WhdataModel _$WhdataModelFromJson(Map<String, dynamic> json) {
   return _WhdataModel.fromJson(json);
@@ -38,9 +37,8 @@ mixin _$WhdataModel {
 /// @nodoc
 abstract class $WhdataModelCopyWith<$Res> {
   factory $WhdataModelCopyWith(
-    WhdataModel value,
-    $Res Function(WhdataModel) then,
-  ) = _$WhdataModelCopyWithImpl<$Res, WhdataModel>;
+          WhdataModel value, $Res Function(WhdataModel) then) =
+      _$WhdataModelCopyWithImpl<$Res, WhdataModel>;
   @useResult
   $Res call({bool? success, Data? data, Pagination? pagination});
 
@@ -67,23 +65,20 @@ class _$WhdataModelCopyWithImpl<$Res, $Val extends WhdataModel>
     Object? data = freezed,
     Object? pagination = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            success: freezed == success
-                ? _value.success
-                : success // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            data: freezed == data
-                ? _value.data
-                : data // ignore: cast_nullable_to_non_nullable
-                      as Data?,
-            pagination: freezed == pagination
-                ? _value.pagination
-                : pagination // ignore: cast_nullable_to_non_nullable
-                      as Pagination?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Data?,
+      pagination: freezed == pagination
+          ? _value.pagination
+          : pagination // ignore: cast_nullable_to_non_nullable
+              as Pagination?,
+    ) as $Val);
   }
 
   /// Create a copy of WhdataModel
@@ -119,9 +114,8 @@ class _$WhdataModelCopyWithImpl<$Res, $Val extends WhdataModel>
 abstract class _$$WhdataModelImplCopyWith<$Res>
     implements $WhdataModelCopyWith<$Res> {
   factory _$$WhdataModelImplCopyWith(
-    _$WhdataModelImpl value,
-    $Res Function(_$WhdataModelImpl) then,
-  ) = __$$WhdataModelImplCopyWithImpl<$Res>;
+          _$WhdataModelImpl value, $Res Function(_$WhdataModelImpl) then) =
+      __$$WhdataModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success, Data? data, Pagination? pagination});
@@ -137,9 +131,8 @@ class __$$WhdataModelImplCopyWithImpl<$Res>
     extends _$WhdataModelCopyWithImpl<$Res, _$WhdataModelImpl>
     implements _$$WhdataModelImplCopyWith<$Res> {
   __$$WhdataModelImplCopyWithImpl(
-    _$WhdataModelImpl _value,
-    $Res Function(_$WhdataModelImpl) _then,
-  ) : super(_value, _then);
+      _$WhdataModelImpl _value, $Res Function(_$WhdataModelImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of WhdataModel
   /// with the given fields replaced by the non-null parameter values.
@@ -150,22 +143,20 @@ class __$$WhdataModelImplCopyWithImpl<$Res>
     Object? data = freezed,
     Object? pagination = freezed,
   }) {
-    return _then(
-      _$WhdataModelImpl(
-        success: freezed == success
-            ? _value.success
-            : success // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        data: freezed == data
-            ? _value.data
-            : data // ignore: cast_nullable_to_non_nullable
-                  as Data?,
-        pagination: freezed == pagination
-            ? _value.pagination
-            : pagination // ignore: cast_nullable_to_non_nullable
-                  as Pagination?,
-      ),
-    );
+    return _then(_$WhdataModelImpl(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Data?,
+      pagination: freezed == pagination
+          ? _value.pagination
+          : pagination // ignore: cast_nullable_to_non_nullable
+              as Pagination?,
+    ));
   }
 }
 
@@ -214,16 +205,17 @@ class _$WhdataModelImpl implements _WhdataModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WhdataModelImplToJson(this);
+    return _$$WhdataModelImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _WhdataModel implements WhdataModel {
-  factory _WhdataModel({
-    final bool? success,
-    final Data? data,
-    final Pagination? pagination,
-  }) = _$WhdataModelImpl;
+  factory _WhdataModel(
+      {final bool? success,
+      final Data? data,
+      final Pagination? pagination}) = _$WhdataModelImpl;
 
   factory _WhdataModel.fromJson(Map<String, dynamic> json) =
       _$WhdataModelImpl.fromJson;

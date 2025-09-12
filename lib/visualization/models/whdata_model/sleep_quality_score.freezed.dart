@@ -12,8 +12,7 @@ part of 'sleep_quality_score.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SleepQualityScore _$SleepQualityScoreFromJson(Map<String, dynamic> json) {
   return _SleepQualityScore.fromJson(json);
@@ -46,18 +45,16 @@ mixin _$SleepQualityScore {
 /// @nodoc
 abstract class $SleepQualityScoreCopyWith<$Res> {
   factory $SleepQualityScoreCopyWith(
-    SleepQualityScore value,
-    $Res Function(SleepQualityScore) then,
-  ) = _$SleepQualityScoreCopyWithImpl<$Res, SleepQualityScore>;
+          SleepQualityScore value, $Res Function(SleepQualityScore) then) =
+      _$SleepQualityScoreCopyWithImpl<$Res, SleepQualityScore>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    bool? calculatedWithMissingUserInfoBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      bool? calculatedWithMissingUserInfoBool});
 }
 
 /// @nodoc
@@ -81,62 +78,56 @@ class _$SleepQualityScoreCopyWithImpl<$Res, $Val extends SleepQualityScore>
     Object? score0100Int = freezed,
     Object? calculatedWithMissingUserInfoBool = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            datetimeString: freezed == datetimeString
-                ? _value.datetimeString
-                : datetimeString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            createdAtString: freezed == createdAtString
-                ? _value.createdAtString
-                : createdAtString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            updatedAtString: freezed == updatedAtString
-                ? _value.updatedAtString
-                : updatedAtString // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            score0100Int: freezed == score0100Int
-                ? _value.score0100Int
-                : score0100Int // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            calculatedWithMissingUserInfoBool:
-                freezed == calculatedWithMissingUserInfoBool
-                ? _value.calculatedWithMissingUserInfoBool
-                : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAtString: freezed == createdAtString
+          ? _value.createdAtString
+          : createdAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAtString: freezed == updatedAtString
+          ? _value.updatedAtString
+          : updatedAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      calculatedWithMissingUserInfoBool: freezed ==
+              calculatedWithMissingUserInfoBool
+          ? _value.calculatedWithMissingUserInfoBool
+          : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$SleepQualityScoreImplCopyWith<$Res>
     implements $SleepQualityScoreCopyWith<$Res> {
-  factory _$$SleepQualityScoreImplCopyWith(
-    _$SleepQualityScoreImpl value,
-    $Res Function(_$SleepQualityScoreImpl) then,
-  ) = __$$SleepQualityScoreImplCopyWithImpl<$Res>;
+  factory _$$SleepQualityScoreImplCopyWith(_$SleepQualityScoreImpl value,
+          $Res Function(_$SleepQualityScoreImpl) then) =
+      __$$SleepQualityScoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'datetime_string') DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    bool? calculatedWithMissingUserInfoBool,
-  });
+  $Res call(
+      {@JsonKey(name: 'datetime_string') DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      bool? calculatedWithMissingUserInfoBool});
 }
 
 /// @nodoc
 class __$$SleepQualityScoreImplCopyWithImpl<$Res>
     extends _$SleepQualityScoreCopyWithImpl<$Res, _$SleepQualityScoreImpl>
     implements _$$SleepQualityScoreImplCopyWith<$Res> {
-  __$$SleepQualityScoreImplCopyWithImpl(
-    _$SleepQualityScoreImpl _value,
-    $Res Function(_$SleepQualityScoreImpl) _then,
-  ) : super(_value, _then);
+  __$$SleepQualityScoreImplCopyWithImpl(_$SleepQualityScoreImpl _value,
+      $Res Function(_$SleepQualityScoreImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SleepQualityScore
   /// with the given fields replaced by the non-null parameter values.
@@ -149,45 +140,42 @@ class __$$SleepQualityScoreImplCopyWithImpl<$Res>
     Object? score0100Int = freezed,
     Object? calculatedWithMissingUserInfoBool = freezed,
   }) {
-    return _then(
-      _$SleepQualityScoreImpl(
-        datetimeString: freezed == datetimeString
-            ? _value.datetimeString
-            : datetimeString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        createdAtString: freezed == createdAtString
-            ? _value.createdAtString
-            : createdAtString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        updatedAtString: freezed == updatedAtString
-            ? _value.updatedAtString
-            : updatedAtString // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        score0100Int: freezed == score0100Int
-            ? _value.score0100Int
-            : score0100Int // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        calculatedWithMissingUserInfoBool:
-            freezed == calculatedWithMissingUserInfoBool
-            ? _value.calculatedWithMissingUserInfoBool
-            : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      ),
-    );
+    return _then(_$SleepQualityScoreImpl(
+      datetimeString: freezed == datetimeString
+          ? _value.datetimeString
+          : datetimeString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAtString: freezed == createdAtString
+          ? _value.createdAtString
+          : createdAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAtString: freezed == updatedAtString
+          ? _value.updatedAtString
+          : updatedAtString // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      score0100Int: freezed == score0100Int
+          ? _value.score0100Int
+          : score0100Int // ignore: cast_nullable_to_non_nullable
+              as int?,
+      calculatedWithMissingUserInfoBool: freezed ==
+              calculatedWithMissingUserInfoBool
+          ? _value.calculatedWithMissingUserInfoBool
+          : calculatedWithMissingUserInfoBool // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SleepQualityScoreImpl implements _SleepQualityScore {
-  _$SleepQualityScoreImpl({
-    @JsonKey(name: 'datetime_string') this.datetimeString,
-    @JsonKey(name: 'created_at_string') this.createdAtString,
-    @JsonKey(name: 'updated_at_string') this.updatedAtString,
-    @JsonKey(name: 'score_0_100_int') this.score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    this.calculatedWithMissingUserInfoBool,
-  });
+  _$SleepQualityScoreImpl(
+      {@JsonKey(name: 'datetime_string') this.datetimeString,
+      @JsonKey(name: 'created_at_string') this.createdAtString,
+      @JsonKey(name: 'updated_at_string') this.updatedAtString,
+      @JsonKey(name: 'score_0_100_int') this.score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      this.calculatedWithMissingUserInfoBool});
 
   factory _$SleepQualityScoreImpl.fromJson(Map<String, dynamic> json) =>
       _$$SleepQualityScoreImplFromJson(json);
@@ -226,24 +214,16 @@ class _$SleepQualityScoreImpl implements _SleepQualityScore {
                 other.updatedAtString == updatedAtString) &&
             (identical(other.score0100Int, score0100Int) ||
                 other.score0100Int == score0100Int) &&
-            (identical(
-                  other.calculatedWithMissingUserInfoBool,
-                  calculatedWithMissingUserInfoBool,
-                ) ||
+            (identical(other.calculatedWithMissingUserInfoBool,
+                    calculatedWithMissingUserInfoBool) ||
                 other.calculatedWithMissingUserInfoBool ==
                     calculatedWithMissingUserInfoBool));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    datetimeString,
-    createdAtString,
-    updatedAtString,
-    score0100Int,
-    calculatedWithMissingUserInfoBool,
-  );
+  int get hashCode => Object.hash(runtimeType, datetimeString, createdAtString,
+      updatedAtString, score0100Int, calculatedWithMissingUserInfoBool);
 
   /// Create a copy of SleepQualityScore
   /// with the given fields replaced by the non-null parameter values.
@@ -252,25 +232,24 @@ class _$SleepQualityScoreImpl implements _SleepQualityScore {
   @pragma('vm:prefer-inline')
   _$$SleepQualityScoreImplCopyWith<_$SleepQualityScoreImpl> get copyWith =>
       __$$SleepQualityScoreImplCopyWithImpl<_$SleepQualityScoreImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SleepQualityScoreImplToJson(this);
+    return _$$SleepQualityScoreImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SleepQualityScore implements SleepQualityScore {
-  factory _SleepQualityScore({
-    @JsonKey(name: 'datetime_string') final DateTime? datetimeString,
-    @JsonKey(name: 'created_at_string') final DateTime? createdAtString,
-    @JsonKey(name: 'updated_at_string') final DateTime? updatedAtString,
-    @JsonKey(name: 'score_0_100_int') final int? score0100Int,
-    @JsonKey(name: 'calculated_with_missing_user_info_bool')
-    final bool? calculatedWithMissingUserInfoBool,
-  }) = _$SleepQualityScoreImpl;
+  factory _SleepQualityScore(
+      {@JsonKey(name: 'datetime_string') final DateTime? datetimeString,
+      @JsonKey(name: 'created_at_string') final DateTime? createdAtString,
+      @JsonKey(name: 'updated_at_string') final DateTime? updatedAtString,
+      @JsonKey(name: 'score_0_100_int') final int? score0100Int,
+      @JsonKey(name: 'calculated_with_missing_user_info_bool')
+      final bool? calculatedWithMissingUserInfoBool}) = _$SleepQualityScoreImpl;
 
   factory _SleepQualityScore.fromJson(Map<String, dynamic> json) =
       _$SleepQualityScoreImpl.fromJson;

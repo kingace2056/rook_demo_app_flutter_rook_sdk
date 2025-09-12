@@ -12,8 +12,7 @@ part of 'meta.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Meta _$MetaFromJson(Map<String, dynamic> json) {
   return _Meta.fromJson(json);
@@ -43,14 +42,13 @@ abstract class $MetaCopyWith<$Res> {
   factory $MetaCopyWith(Meta value, $Res Function(Meta) then) =
       _$MetaCopyWithImpl<$Res, Meta>;
   @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String? userId,
-    int? total,
-    int? returned,
-    int? limit,
-    int? skip,
-    Filters? filters,
-  });
+  $Res call(
+      {@JsonKey(name: 'user_id') String? userId,
+      int? total,
+      int? returned,
+      int? limit,
+      int? skip,
+      Filters? filters});
 
   $FiltersCopyWith<$Res>? get filters;
 }
@@ -77,35 +75,32 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
     Object? skip = freezed,
     Object? filters = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            userId: freezed == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            total: freezed == total
-                ? _value.total
-                : total // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            returned: freezed == returned
-                ? _value.returned
-                : returned // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            limit: freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            skip: freezed == skip
-                ? _value.skip
-                : skip // ignore: cast_nullable_to_non_nullable
-                      as int?,
-            filters: freezed == filters
-                ? _value.filters
-                : filters // ignore: cast_nullable_to_non_nullable
-                      as Filters?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      total: freezed == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int?,
+      returned: freezed == returned
+          ? _value.returned
+          : returned // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      skip: freezed == skip
+          ? _value.skip
+          : skip // ignore: cast_nullable_to_non_nullable
+              as int?,
+      filters: freezed == filters
+          ? _value.filters
+          : filters // ignore: cast_nullable_to_non_nullable
+              as Filters?,
+    ) as $Val);
   }
 
   /// Create a copy of Meta
@@ -126,19 +121,17 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
 /// @nodoc
 abstract class _$$MetaImplCopyWith<$Res> implements $MetaCopyWith<$Res> {
   factory _$$MetaImplCopyWith(
-    _$MetaImpl value,
-    $Res Function(_$MetaImpl) then,
-  ) = __$$MetaImplCopyWithImpl<$Res>;
+          _$MetaImpl value, $Res Function(_$MetaImpl) then) =
+      __$$MetaImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(name: 'user_id') String? userId,
-    int? total,
-    int? returned,
-    int? limit,
-    int? skip,
-    Filters? filters,
-  });
+  $Res call(
+      {@JsonKey(name: 'user_id') String? userId,
+      int? total,
+      int? returned,
+      int? limit,
+      int? skip,
+      Filters? filters});
 
   @override
   $FiltersCopyWith<$Res>? get filters;
@@ -149,7 +142,7 @@ class __$$MetaImplCopyWithImpl<$Res>
     extends _$MetaCopyWithImpl<$Res, _$MetaImpl>
     implements _$$MetaImplCopyWith<$Res> {
   __$$MetaImplCopyWithImpl(_$MetaImpl _value, $Res Function(_$MetaImpl) _then)
-    : super(_value, _then);
+      : super(_value, _then);
 
   /// Create a copy of Meta
   /// with the given fields replaced by the non-null parameter values.
@@ -163,48 +156,45 @@ class __$$MetaImplCopyWithImpl<$Res>
     Object? skip = freezed,
     Object? filters = freezed,
   }) {
-    return _then(
-      _$MetaImpl(
-        userId: freezed == userId
-            ? _value.userId
-            : userId // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        total: freezed == total
-            ? _value.total
-            : total // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        returned: freezed == returned
-            ? _value.returned
-            : returned // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        limit: freezed == limit
-            ? _value.limit
-            : limit // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        skip: freezed == skip
-            ? _value.skip
-            : skip // ignore: cast_nullable_to_non_nullable
-                  as int?,
-        filters: freezed == filters
-            ? _value.filters
-            : filters // ignore: cast_nullable_to_non_nullable
-                  as Filters?,
-      ),
-    );
+    return _then(_$MetaImpl(
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      total: freezed == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int?,
+      returned: freezed == returned
+          ? _value.returned
+          : returned // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      skip: freezed == skip
+          ? _value.skip
+          : skip // ignore: cast_nullable_to_non_nullable
+              as int?,
+      filters: freezed == filters
+          ? _value.filters
+          : filters // ignore: cast_nullable_to_non_nullable
+              as Filters?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MetaImpl implements _Meta {
-  _$MetaImpl({
-    @JsonKey(name: 'user_id') this.userId,
-    this.total,
-    this.returned,
-    this.limit,
-    this.skip,
-    this.filters,
-  });
+  _$MetaImpl(
+      {@JsonKey(name: 'user_id') this.userId,
+      this.total,
+      this.returned,
+      this.limit,
+      this.skip,
+      this.filters});
 
   factory _$MetaImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetaImplFromJson(json);
@@ -257,19 +247,20 @@ class _$MetaImpl implements _Meta {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MetaImplToJson(this);
+    return _$$MetaImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Meta implements Meta {
-  factory _Meta({
-    @JsonKey(name: 'user_id') final String? userId,
-    final int? total,
-    final int? returned,
-    final int? limit,
-    final int? skip,
-    final Filters? filters,
-  }) = _$MetaImpl;
+  factory _Meta(
+      {@JsonKey(name: 'user_id') final String? userId,
+      final int? total,
+      final int? returned,
+      final int? limit,
+      final int? skip,
+      final Filters? filters}) = _$MetaImpl;
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$MetaImpl.fromJson;
 

@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:rook_impl/core/constants/api_constants.dart';
+import 'package:rook_sdk_demo_app_flutter/visualization/core/constants/api_constants.dart';
 
 class HeartRateService {
   static final Dio _dio = Dio();

@@ -17,8 +17,7 @@ _$HealthScoreImpl _$$HealthScoreImplFromJson(Map<String, dynamic> json) =>
       healthScoreData: json['health_score_data'] == null
           ? null
           : HealthScoreData.fromJson(
-              json['health_score_data'] as Map<String, dynamic>,
-            ),
+              json['health_score_data'] as Map<String, dynamic>),
       createdAtRook: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
